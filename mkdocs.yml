@@ -1,0 +1,31 @@
+site_name: Yiheng的笔记本
+site_url: http://example.com/
+nav:
+  - 🏡 主页: 
+    - index.md
+    - ❤️ 关于我: home/about.md
+  - License: license.md
+  - 1. user-guide: user-guide/getting-started.md
+  - 2. user-guide: user-guide/configuration-options.md
+theme: 
+  name: material
+  features:
+    - navigation.tabs # 一级导航在横着的导航栏
+    - content.code.annotate # 可以在代码块中增添点击展示的注释，参见 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
+    # - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
+    - navigation.indexes # 将 index 页面直接附到小节名上
+    - navigation.top # 回到顶部按钮
+    # - navigation.sections # 二级导航是粗体
+    # - navigation.expand # 导航默认展开
+    - toc.follow # toc 跟随
+    # - toc.integrate # 文档 toc 集成到总目录中
+  font: 
+    text: Noto Serif Sc # Roboto
+    code: Roboto Mono
+  language: 'zh'
+  palette:
+    - scheme: default
+  icon: 
+    logo: material/notebook-outline 
+  custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
+
