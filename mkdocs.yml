@@ -6,7 +6,7 @@ repo_url: https://github.com/codeheng/codeheng.github.io
 nav:
   - 🏡 主页: 
     - index.md
-    - ❤️ 关于我: home/about.md
+    - ❤️ 关于我: home/about.md  
   - 核心基础知识:
     - 核心基础知识/index.md
   - 安全:
@@ -62,6 +62,7 @@ edit_uri: ""
 copyright: '本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用'
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/status.css
 
 markdown_extensions:
   - toc:
