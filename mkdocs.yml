@@ -1,5 +1,8 @@
 site_name: Yiheng的笔记本
-site_url: http://example.com/
+site_url: http://yiheng.github.io
+repo_name: Yiheng's NoteBook
+repo_url: https://github.com/codeheng/yh.github.io
+
 nav:
   - 🏡 主页: 
     - index.md
@@ -7,6 +10,8 @@ nav:
   - License: license.md
   - 1. user-guide: user-guide/getting-started.md
   - 2. user-guide: user-guide/configuration-options.md
+
+
 theme: 
   name: material
   features:
@@ -24,8 +29,74 @@ theme:
     code: Roboto Mono
   language: 'zh'
   palette:
+    # Palette toggle for light mode
     - scheme: default
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: grey
+      accent: grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   icon: 
     logo: material/notebook-outline 
   custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
+edit_uri: ""
+copyright: '本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用'
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - toc:
+      permalink: true # link for each title
+      slugify: !!python/name:pymdownx.slugs.uslugify # enable Unicode link
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - meta
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      # smart_enable: all
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
+      auto_append:
+        - includes/abbreviations.md
+      base_path: ["docs"]
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
