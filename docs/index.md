@@ -1,10 +1,20 @@
 # o(〃'▽'〃)o Hi!
 
-这里是小黄（Yiheng）的个人笔记本哦！
+
+## 简介
+这里是小黄（Yiheng）的个人笔记本哦！📓
+
+在这里我想简要记录自己学过的一些知识, 或许也可能是自己的絮絮叨叨。
 
 !!! danger ""
 
-    <center> ⭐ [来看看一恒君吧！](https://github.com/SaltyfishShop) ⭐ </center>
+    <center> ⭐ [终于等到你了, 来瞧瞧一恒君吧！](https://github.com/codeheng) ⭐ </center>
 
 
+
+???+ success "仰望的大佬们! "
+
+    - [鹤翔万里的笔记本！](https://note.tonycrane.cc/) （真的好强，膜拜！🧎‍♂️）
+    - [咸鱼暄的代码空间！](https://xuan-insr.github.io/) （C++佬! 主要参考对象,特此感谢🙏）
+    - [Bowling's TechStack](https://note.bowling233.top/) （好整洁!!! 🤩）
 
