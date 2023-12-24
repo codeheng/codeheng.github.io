@@ -189,7 +189,7 @@ Ps: 关于流程图 / 时序图 / 甘特图..
 ## 4.markdown编辑器
 - [Typora](https://typora.io/) （收费$ 14.99）
 - [VsCode](https://code.visualstudio.com/) + [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) （推荐🌹）
-- [Obsidian](https://obsidian.md/)
+- [Obsidian](https://obsidian.md/) （据说很强大，还没详细用过）
 
 ## 5. 关于mkdocs
 > 基于 python 的静态网站生成器，适合笔记本 / 文档类网站
