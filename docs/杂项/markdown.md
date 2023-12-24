@@ -185,3 +185,27 @@ footnote[^1] and note[^note]
 
 Ps: 关于流程图 / 时序图 / 甘特图.. 
 -> 参考[mermaid.js](https://mermaid.js.org/intro/)
+
+## 4.markdown编辑器
+- [Typora](https://typora.io/) （收费$ 14.99）
+- [VsCode](https://code.visualstudio.com/) + [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) （推荐🌹）
+- [Obsidian](https://obsidian.md/)
+
+## 5. 关于mkdocs
+> 基于 python 的静态网站生成器，适合笔记本 / 文档类网站
+
+PS: 真的好看！！(✧∀✧)
+
+- [官网](https://www.mkdocs.org)
+- 推荐主题：[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
+
+**实现逻辑**: 所有都在 `mkdocs.yml` 中进行配置，通过 nav 规定网站导航，从中读取 md 源文件，解析后嵌入主题的 HTML 框架中
+
+常用命令:
+```shell
+$ pip install mkdocs # 安装
+$ mkdocs new <name>  # 新建
+$ mkdocs serve       # 实时预览
+$ mkdocs build       # 构建
+$ mkdocs gh-deploy   # 部署
+```
