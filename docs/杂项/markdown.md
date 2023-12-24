@@ -114,5 +114,73 @@ PS: markdown 中一般可以直接使用 html 语法和 css 样式
 
 ## 3.  扩展语法
 ### 表格
+```markdown
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+```
+输出如下:
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心
+
+仅可处理简单的表格，[关于复杂的表格](https://www.tablesgenerator.com/)
+### 脚注
+!!! note
+
+    使用[^脚注名]插入脚注
+
+在文中任意位置添加`[^脚注名]:脚注内容` 来定义脚注内容
+
+- 脚注名只是标记、匹配使用的，可以是任何字符串
+- 最终的编号一般由在**文中出现的顺序**决定
+
+比如:
+```markdown
+[^note]: note content
+
+footnote[^1] and note[^note]
+
+[^1]: footnote content
+```
+生成如下:
+
+[^note]: note content
+
+footnote[^1] and note[^note]
+
+[^1]: footnote content
+### 任务列表
+!!! note 
+
+    使用`- [  ]` 插入未完成任务 ; 使用`- [x]`  插入未完成任务
     
-____
+    - 可以和其它列表混合使用
+如:
+```markdown
+- [ ] to do list
+- [x] finished
+```
+生成如下: 
+
+- [ ] to do list
+- [x] finished
+
+### 公式
+!!! note 
+
+    一般使用一对\$作为行内公式标记，一对$$作为块级公式标记
+
+关于公式处理的一切都不在 markdown->HTML 的过程中,如图所示:
+
+![](assets/Snipaste_2023-12-24_14-33-53.jpg)
+
+- HTML 保留公式文本，交给[MathJax](https://www.mathjax.org/)或[KaTex](https://katex.org/)等 js库来处理
+    * 内部均使用[LaTeX](https://www.latex-project.org/) 公式语法
+
+Ps: 关于流程图 / 时序图 / 甘特图.. 
+-> 参考[mermaid.js](https://mermaid.js.org/intro/)

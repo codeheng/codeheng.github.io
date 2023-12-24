@@ -39,14 +39,14 @@ theme:
       primary: cyan
       accent: cyan
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
       primary: grey
       accent: grey
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to light mode
   icon: 
     logo: material/notebook-outline 
@@ -75,7 +75,6 @@ plugins:
       separator: '[\s\u200b\-]'  # 中文搜索, pip install jieba
       # 参考:https://squidfunk.github.io/mkdocs-material/blog/2022/05/05/chinese-search-support/?h=%E4%B8%AD%E6%96%87
   - statistics
-
 markdown_extensions:
 # Python Markdown
   - toc:
