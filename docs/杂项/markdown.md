@@ -121,12 +121,13 @@ PS: markdown 中一般可以直接使用 html 语法和 css 样式
 | Paragraph   | Text        | And more      |
 ```
 输出如下:
+
 | Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
 
-通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心
+在标题行中的连字符左侧，右侧或两侧添加冒号`:`，将列中的文本对齐到左，右或居中
 
 仅可处理简单的表格，[关于复杂的表格](https://www.tablesgenerator.com/)
 ### 脚注

@@ -14,6 +14,7 @@ nav:
   - 杂项:
     - 杂项/index.md
     - MarkDown教程: 杂项/markdown.md
+    - Vim教程: 杂项/Vim.md
 
 theme: 
   name: material
@@ -75,11 +76,12 @@ plugins:
       separator: '[\s\u200b\-]'  # 中文搜索, pip install jieba
       # 参考:https://squidfunk.github.io/mkdocs-material/blog/2022/05/05/chinese-search-support/?h=%E4%B8%AD%E6%96%87
   - statistics
+
+
 markdown_extensions:
 # Python Markdown
   - toc:
       permalink: true # link for each title
-      slugify: !!python/name:pymdownx.slugs.uslugify # enable Unicode link
       title: Table of Content 
   - admonition
   - pymdownx.details
@@ -100,7 +102,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
