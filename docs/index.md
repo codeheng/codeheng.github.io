@@ -20,7 +20,7 @@ statistics: True
     - [咸鱼暄的代码空间！](https://xuan-insr.github.io/) （C++佬! 主要参考对象,特此感谢🙏）
     - [Bowling's TechStack](https://note.bowling233.top/) （好整洁!!! 🤩）
 
-???+ inline "站点统计"
+???+ inline "站点统计 "
 
     <center>页面数：{{ pages }} </center>
 
@@ -28,6 +28,7 @@ statistics: True
 
     <center>代码块行数: {{ codes }} </center>
 
+    
 ???+ warning "努力搬砖中...🚧"
 
     <center>😎</center><br> 

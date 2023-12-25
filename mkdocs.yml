@@ -15,25 +15,35 @@ nav:
     - 杂项/index.md
     - MarkDown教程: 杂项/markdown.md
     - Vim教程: 杂项/Vim.md
+  - 生活:
+    - 生活/index.md
 
 theme: 
   name: material
-  favicon: logo.ico
+  favicon: assets/logo.ico
+
+  icon: 
+    logo: material/notebook-outline
+  
   features:
     - search.highlight
     - navigation.tabs # 一级导航在横着的导航栏
+    - navigation.instant # 即时加载 ref: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#:~:text=%C2%B6-,Instant%20loading,%C2%B6,-5.0.0
     - content.code.annotate # 可以在代码块中增添点击展示的注释，参见 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
-    # - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
+    #- navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
     - navigation.indexes # 将 index 页面直接附到小节名上
     - navigation.top # 回到顶部按钮
     # - navigation.sections # 二级导航是粗体
     # - navigation.expand # 导航默认展开
     - toc.follow # toc 跟随
     # - toc.integrate # 文档 toc 集成到总目录中
+  
   font: 
     text: Noto Serif SC
     code: Roboto Mono
+  
   language: 'zh'
+
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -49,14 +59,14 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  icon: 
-    logo: material/notebook-outline 
+        
   custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
 extra:
   analytics:
     provider: google
-    property: G-JT9BRCXKJJ
+    #property: G-JT9BRCXKJJ
+    property: G-XXXXXXXXXX
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/codeheng
@@ -66,52 +76,62 @@ extra:
 
 edit_uri: ""
 copyright: '本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用'
+
 extra_css:
   - stylesheets/extra.css
   - stylesheets/status.css
 
-# Plugins
+extra_javascript:
+  - javascripts/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Plugin
 plugins:
   - search:
       separator: '[\s\u200b\-]'  # 中文搜索, pip install jieba
       # 参考:https://squidfunk.github.io/mkdocs-material/blog/2022/05/05/chinese-search-support/?h=%E4%B8%AD%E6%96%87
   - statistics
+  - git-revision-date #每页底部显示文档最后更新日期，安装 pip install mkdocs-git-revision-date-plugin
+  - git-revision-date-localized:  #每个页面底部添加本地化更新和创建日期，安装pip install mkdocs-git-revision-date-localized-plugin
+      type: date #日期格式，有效值为date、datetime、iso_date、iso_datetime,timeago
+      #fallback_to_build_date: true  #默认false，启用则回退到mkdocs build执行的时间
+      enable_creation_date: true  #最后更新日期旁边显示与页面关联的文件的创建日期
 
 
 markdown_extensions:
 # Python Markdown
-  - toc:
+  - toc: #目录
       permalink: true # link for each title
       title: Table of Content 
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+  - admonition #警告或标注
+  - pymdownx.details #细节折叠
+  - pymdownx.superfences #超级围栏
 
 
-  - abbr
-  - attr_list
-  - def_list
-  - footnotes
-  - tables
-  - meta
-  - md_in_html
-  - pymdownx.arithmatex:
+  - abbr #缩写或名词
+  - attr_list #属性列表（按钮-颜色图标）
+  - def_list #定义列表
+  - footnotes #行内脚注
+  - tables #表格
+  - meta #元数据
+  - md_in_html #HTML 中的 Markdown
+  - pymdownx.arithmatex: #数学公式
       generic: true
-  - pymdownx.betterem:
-      # smart_enable: all
-  - pymdownx.caret
+  - pymdownx.betterem: #粗体斜体
+      smart_enable: all
+  - pymdownx.caret #插入角标符号(`^`)
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.keys
+  - pymdownx.highlight #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
+  - pymdownx.inlinehilite #行内高亮
+  - pymdownx.keys #键盘键和组合  
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: squidfunk
       repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
+  - pymdownx.mark #双等号(`==`)
+  - pymdownx.smartsymbols #智能符号
   - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
       auto_append:
         - includes/abbreviations.md
@@ -121,9 +141,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
+  - pymdownx.tabbed: #内容选项卡
       alternate_style: true 
-  - pymdownx.tasklist:
+  - pymdownx.tasklist: #任务列表
       custom_checkbox: true
   - admonition
   - pymdownx.details
