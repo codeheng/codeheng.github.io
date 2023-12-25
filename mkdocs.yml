@@ -124,6 +124,7 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
+
   - pymdownx.inlinehilite #行内高亮
   - pymdownx.keys #键盘键和组合  
   - pymdownx.magiclink:
@@ -136,7 +137,7 @@ markdown_extensions:
       auto_append:
         - includes/abbreviations.md
       base_path: ["docs"]
-  - pymdownx.superfences:
+  - pymdownx.superfences: # 此配置启用对Mermaid.js图表的本机支持
       custom_fences:
         - name: mermaid
           class: mermaid
