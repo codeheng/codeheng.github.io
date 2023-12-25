@@ -21,6 +21,7 @@ jobs:
       # - run: git clone https://github.com/smd1121/mkdocs-toolchain.git && cd mkdocs-toolchain/mkdocs-statistics-plugin && pip install -e .
       - run: pip install mkdocs-statistics-plugin
       - run: pip install neoteroi-mkdocs
+      - run: pip install git-revision-date
       - run: mkdocs gh-deploy --force
       - uses: peaceiris/actions-gh-pages@v3
         with:
