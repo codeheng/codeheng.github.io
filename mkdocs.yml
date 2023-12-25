@@ -91,7 +91,7 @@ plugins:
       separator: '[\s\u200b\-]'  # 中文搜索, pip install jieba
       # 参考:https://squidfunk.github.io/mkdocs-material/blog/2022/05/05/chinese-search-support/?h=%E4%B8%AD%E6%96%87
   - statistics
-  - git-revision-date #每页底部显示文档最后更新日期，安装 pip install mkdocs-git-revision-date-plugin
+  #- git-revision-date #每页底部显示文档最后更新日期，安装 pip install mkdocs-git-revision-date-plugin
   - git-revision-date-localized:  #每个页面底部添加本地化更新和创建日期，安装pip install mkdocs-git-revision-date-localized-plugin
       type: date #日期格式，有效值为date、datetime、iso_date、iso_datetime,timeago
       #fallback_to_build_date: true  #默认false，启用则回退到mkdocs build执行的时间
