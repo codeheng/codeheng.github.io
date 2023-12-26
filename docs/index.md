@@ -1,5 +1,6 @@
 ---
 statistics: True
+comments: true
 ---
 
 # o(〃'▽'〃)o Hi!

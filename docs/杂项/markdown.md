@@ -292,6 +292,28 @@ The HTML specification is maintained by the W3C.
 
     默认，Markdown 会忽略原始 HTML 块级元素中的任何内容，启用扩展后，原始 HTML 块级元素的内容可以解析为 Markdown
 
+    在 HTML 扩展中使用带有文字 figure 和 figcaption 标签的 Markdown，可做图片标题或者说明。
+
+    
+    === "示例"
+        ```
+        <figure markdown>
+            ![Image title](https://dummyimage.com/600x400/){ width="300" }
+            <figcaption>Image caption</figcaption>
+        </figure>
+        ```
+    
+    === "结果"
+        
+        <figure markdown>
+            ![Image title](https://dummyimage.com/600x400/){ width="300" }
+            <figcaption>Image caption</figcaption>
+        </figure>
+    
+
+
+
+
 7. 格式化
     
     - `pymdownx.caret` 插入角标符号`^`, 此时下划线可用`^^HELLO^^`
@@ -486,3 +508,12 @@ The HTML specification is maintained by the W3C.
                 D --> B;
                 B ---->|No| E[Yay!];
             ```
+
+11. emoji
+
+    - [配置](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=em#with-animations-docsstylesheetsextracss:~:text=to%20your%20clipboard.-,Configuration,-%C2%B6)
+    
+    - [表情库](https://emojipedia.org/) 🥰  
+
+
+
