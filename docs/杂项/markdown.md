@@ -140,21 +140,8 @@ PS: markdown 中一般可以直接使用 html 语法和 css 样式
 - 脚注名只是标记、匹配使用的，可以是任何字符串
 - 最终的编号一般由在**文中出现的顺序**决定
 
-比如:
-```markdown
-[^note]: note content
+PS: [详见PY&MD](#jump)
 
-footnote[^1] and note[^note]
-
-[^1]: footnote content
-```
-生成如下:
-
-[^note]: note content
-
-footnote[^1] and note[^note]
-
-[^1]: footnote content
 ### 任务列表
 !!! note 
 
@@ -210,6 +197,292 @@ $ mkdocs build       # 构建
 $ mkdocs gh-deploy   # 部署
 ```
 
-**TO DO**: 
+### [Python Markdown](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=abbr#abbreviations:~:text=CodeHilite-,Python%20Markdown,%C2%B6,-Material%20for%20MkDocs)
 
-- [ ] 关于MD在mkdocs里面的特殊用法
+关于MD在mkdocs里面的一些特殊用法，即支持的Extensions
+!!! note 
+    
+    均需要在`mkdocs.yml`内的`markdown_extensions`项内进行添加配置，然后进行使用。
+
+1. `abbr`  缩写或名词。用作对一些专有名词(缩写)进行额外的解释，可用`*[]`来定义
+```markdown
+The HTML specification is maintained by the W3C.
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+```
+显示为 :
+The HTML specification is maintained by the W3C.
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+
+    （PS: 示例来自官网）
+
+2. `admonition` 警告或标注, 用于提供辅助内容
+
+    **如何使用?**
+
+    - 以 `!!!` 开头，后跟一个用作类型限定的关键字。<u>内容在下一行，需要缩进四个空格</u>
+         * 若以`???`开头，则内容是可以折叠的
+
+    **常见关键词:** note, abstract, tip, success, question, warning, failure, danger, bug, quote
+    
+    默认情况下，标题 = 类型限定关键字，但可以通过在关键字后面添加带引号的关键字来修改,并且引号里面支持Markdown
+
+    E.g. `!!! note "Hello World!"`, 显示如下: 
+    !!! note "Hello World!" 
+
+    **内联块(即侧边栏)**，使用`inline + end`修饰符
+
+    e.g. ` !!! inline note `  为左对齐，而` !!! inline end note ` 为右对齐
+
+    若想要添加自定义警告的类型，只需要颜色和`*.svg`图标 --> [参考](https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=pied+piper#custom-admonitions:~:text=%7D-,Custom%20admonitions,%C2%B6,-If%20you%20want)
+
+3. attr_list 属性列表, 允许为所有内联和块级元素添加属性，将任何链接变成按钮,使用花括号对其进行后缀并将`.md-button`类选择器添加到其中
+
+    e.g.`[百度](https://www.baidu.com){.md-button}`-->  [百度](https://www.baidu.com){ .md-button }
+
+    若要显示一个填充的主按钮，同时添加`.md-button--primary`
+
+    - e.g. `[百度](https://www.baidu.com){.md-button .md-button--primary}`
+
+
+4. def_list 定义列表，可用枚举任意键值对的列表，例如函数或模块的参数
+
+    !!! example 
+        
+        === "语法规则"
+            ```markdown
+            `param1`
+            : xxxx
+
+            `param2`
+            : yyyy
+            ```
+        === "显示结果"
+            `param1`
+            : xxx
+
+            `param2`
+            : yyyy        
+
+5. <span id = "jump">footnotes 行内脚注, 用方括号括起来，开头必须插入符号`^`,具体内容再另起一行进行定义</span>
+    
+    !!! example
+
+        ```markdown
+        Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+        [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        [^2]:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+        nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+        massa, nec semper lorem quam in massa.
+        ``` 
+    
+    显示结果 : 
+    Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+    [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    [^2]:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+6. md_in_html  
+
+    默认，Markdown 会忽略原始 HTML 块级元素中的任何内容，启用扩展后，原始 HTML 块级元素的内容可以解析为 Markdown
+
+7. 格式化
+    
+    - `pymdownx.caret` 插入角标符号`^`, 此时下划线可用`^^HELLO^^`
+        * ^^HELLO^^ 
+    - `pymdownx.mark`  插入双等号`==`, 可进行高亮
+        * ==HELLO==
+    - `pymdownx.keys`  插入键盘键以及组合
+        * `++enter++` --> ++enter++
+        * `++ctrl+alt+del++` --> ++ctrl+alt+del++
+
+8. 代码高亮 `pymdownx.highlight`
+    
+    !!! example 
+
+        === "带有行号的代码块用法"
+
+            ```markdown
+                ``` py linenums="1"
+                def bubble_sort(items):
+                    for i in range(len(items)):
+                        for j in range(len(items) - 1 - i):
+                            if items[j] > items[j + 1]:
+                                items[j], items[j + 1] = items[j + 1], items[j]
+                ```
+            ```
+        === "显示结果"
+
+            ``` py linenums="1"
+            def bubble_sort(items):
+                for i in range(len(items)):
+                    for j in range(len(items) - 1 - i):
+                        if items[j] > items[j + 1]:
+                            items[j], items[j + 1] = items[j + 1], items[j]
+            ```
+        
+        === "带标题的"
+
+            ```markdown
+                ``` py title="bubble_sort.py"
+                def bubble_sort(items):
+                    for i in range(len(items)):
+                        for j in range(len(items) - 1 - i):
+                            if items[j] > items[j + 1]:
+                                items[j], items[j + 1] = items[j + 1], items[j]
+                ```
+            ```
+        === "显示结果"
+
+            ``` py title="bubble_sort.py"
+            def bubble_sort(items):
+                for i in range(len(items)):
+                    for j in range(len(items) - 1 - i):
+                        if items[j] > items[j + 1]:
+                            items[j], items[j + 1] = items[j + 1], items[j]
+            ```
+        === "强调某几行"
+
+            ```markdown
+                ``` py hl_lines="2 3"
+                def bubble_sort(items):
+                    for i in range(len(items)):
+                        for j in range(len(items) - 1 - i):
+                            if items[j] > items[j + 1]:
+                                items[j], items[j + 1] = items[j + 1], items[j]
+                ```
+            ```
+        === "结果"
+
+            ``` py hl_lines="2 3"
+            def bubble_sort(items):
+                for i in range(len(items)):
+                    for j in range(len(items) - 1 - i):
+                        if items[j] > items[j + 1]:
+                            items[j], items[j + 1] = items[j + 1], items[j]
+            ```
+
+9. pymdownx.tabbed 内容选项卡
+```
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+```
+
+    如下所示:
+    === "C"
+
+        ``` c
+        #include <stdio.h>
+
+        int main(void) {
+        printf("Hello world!\n");
+        return 0;
+        }
+        ```
+
+    === "C++"
+
+        ``` c++
+        #include <iostream>
+
+        int main(void) {
+        std::cout << "Hello world!" << std::endl;
+        return 0;
+        }
+        ```
+    当然也可以用别的类型的，比如note,example 等等
+    !!! example
+        
+        === "规则语法"
+
+            ```
+            !!! example
+
+                === "Unordered List"
+
+                    ``` markdown title="List, unordered"
+                    * Sed sagittis eleifend rutrum
+                    * Donec vitae suscipit est
+                    * Nulla tempor lobortis orci
+                    ```
+
+                === "Ordered List"
+
+                    ``` markdown title="List, ordered"
+                    1. Sed sagittis eleifend rutrum
+                    2. Donec vitae suscipit est
+                    3. Nulla tempor lobortis orci
+                    ```
+            ```
+
+        === "Unordered List"
+
+            ``` markdown title="List, unordered"
+            * Sed sagittis eleifend rutrum
+            * Donec vitae suscipit est
+            * Nulla tempor lobortis orci
+            ```
+
+        === "Ordered List"
+
+            ``` markdown title="List, ordered"
+            1. Sed sagittis eleifend rutrum
+            2. Donec vitae suscipit est
+            3. Nulla tempor lobortis orci
+            ```
+
+10.  图表 mermaid
+
+    
+    !!! example 
+        
+        === "语法规则"
+
+            ```markdown
+               
+                ``` mermaid
+                    graph LR
+                    A[Start] --> B{Error?};
+                    B -->|Yes| C[Hmm...];
+                    C --> D[Debug];
+                    D --> B;
+                    B ---->|No| E[Yay!];
+                ```
+            
+            ```
+        
+        === "结果"
+
+            ``` mermaid
+                graph LR
+                A[Start] --> B{Error?};
+                B -->|Yes| C[Hmm...];
+                C --> D[Debug];
+                D --> B;
+                B ---->|No| E[Yay!];
+            ```
