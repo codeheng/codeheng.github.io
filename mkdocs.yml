@@ -98,7 +98,6 @@ plugins:
       #fallback_to_build_date: true  #默认false，启用则回退到mkdocs build执行的时间
       enable_creation_date: true  #最后更新日期旁边显示与页面关联的文件的创建日期
 
-
 markdown_extensions:
 # Python Markdown
   - toc: #目录
