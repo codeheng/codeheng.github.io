@@ -6,6 +6,7 @@ repo_url: https://github.com/codeheng/codeheng.github.io
 nav:
   - 🏡 主页: 
     - index.md
+    - test.md
     - ❤️ 关于我: home/about.md  
   - 核心基础知识:
     - 核心基础知识/index.md
