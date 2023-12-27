@@ -11,6 +11,10 @@ nav:
     - 核心基础知识/index.md
   - 安全:
     - 安全/index.md
+    - 密码学:
+      - 基础: 安全/密码学/intro.md
+    - 区块链: 安全/区块链/blockchain.md
+
   - 杂项:
     - 杂项/index.md
     - MarkDown教程: 杂项/markdown.md
