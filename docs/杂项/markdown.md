@@ -5,7 +5,6 @@ comments: true
 [参考视频](https://www.bilibili.com/video/BV1pu4y1j7kA/?spm_id_from=333.999.0.0)
 
 
-
 ## 1. 介绍
 
 [Markdown CommonMark 标准文档](https://spec.commonmark.org/) 
@@ -171,7 +170,10 @@ PS: [详见PY&MD](#jump)
 ![](assets/Snipaste_2023-12-24_14-33-53.jpg)
 
 - HTML 保留公式文本，交给[MathJax](https://www.mathjax.org/)或[KaTex](https://katex.org/)等 js库来处理
+
     * 内部均使用[LaTeX](https://www.latex-project.org/) 公式语法
+- [LaTeX公式手册](https://www.cnblogs.com/1024th/p/11623258.html)
+
 
 Ps: 关于流程图 / 时序图 / 甘特图.. 
 -> 参考[mermaid.js](https://mermaid.js.org/intro/)
