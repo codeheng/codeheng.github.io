@@ -30,7 +30,7 @@
 #           keep_files: true
 
 
-name: ci 
+name: gh-deploy
 on:
   push:
     branches:
@@ -62,3 +62,35 @@ jobs:
       - run: pip install mkdocs-statistics-plugin
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
+
+
+# name: autoBuild
+# on:
+#   push:
+#     branches:
+#       - master
+#       - main
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
+#       - uses: actions/setup-python@v2
+#         with:
+#           python-version: 3.x
+#       - run: pip install mkdocs-material
+#       - run: pip install mkdocs-git-revision-date-localized-plugin
+#       - run: pip install jieba
+#       - run: pip install rich
+#       # - run: git clone https://github.com/smd1121/mkdocs-toolchain.git && cd mkdocs-toolchain/mkdocs-statistics-plugin && pip install -e .
+#       - run: pip install mkdocs-statistics-plugin
+#       - run: pip install neoteroi-mkdocs
+#       - run: mkdocs gh-deploy --force
+#       - uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           personal_token: ${{ secrets.TOKEN }}
+#           publish_dir: ./publish
+#           publish_branch: gh-pages
+#           keep_files: true
