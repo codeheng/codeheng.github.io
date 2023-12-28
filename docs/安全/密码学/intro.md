@@ -18,7 +18,7 @@ comments:
 
 - Older definition：在不安全信道上进行安全通信的研究
 - Newer definition: 在攻击者存在的情况下，对数据和计算的安全性提供严格的保证
-    * 不仅仅是保密性(confidentiality )，还有完整性(integrity)和真实性(authenticity)    
+    * 不仅仅是保密性(confidentiality)，还有完整性(integrity)和真实性(authenticity)    
 ### 定义Alice, Bob, Eve, and Mallory
 - Alice and Bob: 主要角色,试图通过不安全的通信通道互相发送消息
 - Eve: 一个窃听者(eavesdropper)，可以读取通过信道发送的任何数据
@@ -33,3 +33,19 @@ comments:
 
 - **对称密钥** Alice和Bob都有密钥值，必须使用这个共享的密钥值来保护他们的通信
 - **非对称密钥** 每个人都有一个密钥和相应的公钥
+
+### 定义：保密性，完整性，真实性
+- 保密性: 敌人不能 **读** 我们的消息  -->  进行加密( *encrypt* )
+- 完整性: 敌人不可能在不被发现的情况下 **改变** 我们的信息
+- 真实性: 可以确信消息是由声称编写它的人编写的。
+    * 在你能证明消息来自特定人之前，首先必须证明消息没有被更改
+
+PS: 保证完整性和真实性 --> 生成一个标签(tag)或签名(signature)
+
+### 定义：Kerckhoff原则
+> 即使密码系统的任何细节已为人悉知，只要密钥(keys)未泄漏，它也应是安全的
+
+我们将假设攻击者知道加密和解密算法，攻击者丢失的唯一信息是密钥
+
+## 3. 对称加密
+(Symmetric-Key Encryption)
