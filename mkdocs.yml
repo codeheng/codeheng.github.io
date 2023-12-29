@@ -31,7 +31,7 @@ theme:
   favicon: assets/logo.ico
 
   icon: 
-    logo: material/notebook-outline
+    logo: material/school-outline
   
   features:
     - search.highlight
