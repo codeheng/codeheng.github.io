@@ -41,6 +41,7 @@ Vim 起源于[Vi编辑器](https://en.wikipedia.org/wiki/Vi_(text_editor))(1976)
 > 在 Insert 和 Normal 模式下切换！
 
 - 按`i`可在闪烁光标的 **前面** 插入
+    * `10ihello [ESC]` → 会写下 hello hello hello hello hello hello hello hello hello hello 
 - 按`a`可在闪烁光标的 **后面** 插入
 - 按`I`可在 **当前行的第一个字符前面** 插入
 - 按`A`可在 **当前行最后面** 插入
@@ -50,7 +51,7 @@ Vim 起源于[Vi编辑器](https://en.wikipedia.org/wiki/Vi_(text_editor))(1976)
 ### 移动光标
 均要在普通模式下进行输入
 
-hjkl (对应←↓↑→)  , 也可以在前面加上数字。e.g. `4j` 向下移动4行
+hjkl (对应←↓↑→)  , 也可以在前面加上数字 4e.g. `4j` 向下移动4行
     ![hjkl](./assets/Snipaste_2023-12-27_16-18-08.jpg)
 PS: **不推荐用箭头，而是熟练用hjkl**（开始会很难用，很不习惯，克服！！）
 
@@ -62,19 +63,20 @@ PS: **不推荐用箭头，而是熟练用hjkl**（开始会很难用，很不�
 - `gg` 跳转到第一行
 - `G`  跳转到最后一行
 - 按照 **单词** 进行移动
-    * `w` 到下一个单词的 **开头**   
-    * `e` 到下一个单词的 **结尾**
-    * `b` 到上一个单词的开头
-    * `W` 移动到 **空白处之后** 的下一个单词的开头
+    * `w` 到下一个单词的 **开头**(jump forwards to the start of a word) 
+    * `W` 到下一个单词的开头(可包含标点符号)
+    * `e` 到下一个单词的 **结尾**(jump forwards to the end of a word)
     * `E` 移动到空白处之前的单词末尾
-    * `B` 移动到空白处之前的单词开头
+    * `b` 到上一个单词的 **开头**(jump backwards to the start of a word)
+    * `B` 到上一个单词的开头(可包括标点符号)
 ![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&spaceId=33208e54-ac5f-445e-8656-169c9506eefb&width=1810&userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&cache=v2)
-- `%` 匹配括号(`(),{},[]`)移动, PS: 需要先把光标先移到括号上
+- `%` 匹配括号`(),{},[]`移动, PS: 需要先把光标先移到括号上
 - `*` 和 `#`  匹配光标当前所在的单词，（*是下一个，#是上一个）
 
 ### 删除&复制&粘贴&撤销
 - `x`  删除当前光标所在的一个字符
 - `dd` 删除当前行，并把删除的行存到剪贴板里
+    * `d$`: 删除从光标处到行尾的文本(常用于注释)
 - `cw内容` 用 **内容** 替换从光标所在位置后到一个单词结尾的字符
 - `yy` 拷贝当前行； 同样的也可以前面加数字， e.g. `3yy` 从光标处复制3行
 - `p`  粘贴剪贴板的内容
@@ -94,7 +96,25 @@ PS: **不推荐用箭头，而是熟练用hjkl**（开始会很难用，很不�
 
 - 若多个匹配项，按`n`匹配到下一个,按`N`找上一个字符串
 
+部分替换：
+
+- `:s/[src]/[dst]`（只能在光标所在的行）, `/i`忽略大小写，`/g`全部匹配
+    * 比如：将此行的hello替换为world --> `:s/hello/world/ig`
+- 也可以制定范围，比如3~6行 --> `:3,6 s/hello/world/ig`
+
+全部替换：`:%s/[src][dst]` , 默认不区分大小写
+
+## Vim 进阶
+### Visual模式（块操作）
+按`v`可视化选择状态，左下角出现VISUAL，选中块后，可以对块进行d(删除)，y(复制)，x(剪切)
+
+`shift + v` 可选择一行，进行操作
+
+`ctrl + v` 可进行竖向选择, 比如批量注释代码:
+
+- 按`ctrl+v` ,选中要注释的行 --> 输入`I` ，然后输入`//` --> 再输入`esc`
+
 TO DO:
 
-- [ ] Visual 模式
-- [ ] 替换
+- [ ] 可视化补充
+- [ ] VIM配置 AND SO ON....
