@@ -14,7 +14,7 @@
         <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/blockchain/">
+        <link rel="next" href="../symmetric-key/">
       
       
       <link rel="icon" href="../../../assets/logo.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>基础 - Yiheng的笔记本</title>
+        <title>概述 - Yiheng的笔记本</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              基础
+              概述
             
           </span>
         </div>
@@ -610,6 +610,8 @@
       
         
       
+        
+      
     
     
     
@@ -658,7 +660,7 @@
           
   
   <span class="md-ellipsis">
-    基础
+    概述
   </span>
   
 
@@ -669,7 +671,7 @@
         
   
   <span class="md-ellipsis">
-    基础
+    概述
   </span>
   
 
@@ -751,9 +753,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-threat-models" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 对称加密
+      3. 威胁模型(threat models)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cryptography-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cryptography Roadmap
     </span>
   </a>
   
@@ -763,6 +774,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symmetric-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对称加密
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1144,9 +1176,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-threat-models" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 对称加密
+      3. 威胁模型(threat models)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cryptography-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cryptography Roadmap
     </span>
   </a>
   
@@ -1167,13 +1208,13 @@
                   
 
 
-  <h1>基础</h1>
+  <h1>概述</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 718 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1155 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <h2 id="1">1. 密码学简史<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>密码学(cryptography)一词来自拉丁语词根 <em>crypt</em> 和 <em>graphia</em>，前者意为秘密，后者意为书写。所以密码学就是研究如何写秘密信息。</p>
+<p><strong>密码学(cryptography)</strong> 一词来自拉丁语词根 <em>crypt</em> 和 <em>graphia</em>，前者意为秘密，后者意为书写。所以密码学就是研究如何写秘密信息。</p>
 <ul>
 <li>第一阶段的秘密消息方案可追溯到古代 &rarr;  <a href="https://zh.wikipedia.org/zh-cn/%E5%87%B1%E6%92%92%E5%AF%86%E7%A2%BC">凯撒密码Caesar cypher</a></li>
 <li>第二阶段:机械时代  &rarr; <a href="https://zh.wikipedia.org/zh-cn/%E6%81%A9%E5%B0%BC%E6%A0%BC%E7%8E%9B%E5%AF%86%E7%A0%81%E6%9C%BA">恩尼格玛Enigma密码机</a></li>
@@ -1211,7 +1252,10 @@
 </ul>
 <h3 id="_1">定义：保密性，完整性，真实性<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>保密性: 敌人不能 <strong>读</strong> 我们的消息  &rarr;  进行加密( <em>encrypt</em> )</li>
+<li>保密性: 敌人不能 <strong>读</strong> 我们的消息  &rarr;  进行加密( <em>encrypt</em> )<ul>
+<li>plaintext(明文) &rarr; ciphertext(密文)</li>
+</ul>
+</li>
 <li>完整性: 敌人不可能在不被发现的情况下 <strong>改变</strong> 我们的信息</li>
 <li>真实性: 可以确信消息是由声称编写它的人编写的。<ul>
 <li>在你能证明消息来自特定人之前，首先必须证明消息没有被更改</li>
@@ -1223,9 +1267,50 @@
 <blockquote>
 <p>即使密码系统的任何细节已为人悉知，只要密钥(keys)未泄漏，它也应是安全的</p>
 </blockquote>
-<p>我们将假设攻击者知道加密和解密算法，攻击者丢失的唯一信息是密钥</p>
-<h2 id="3">3. 对称加密<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>(Symmetric-Key Encryption)</p>
+<p>我们将假设攻击者知道加密和解密算法(甚至所有的信息)，除了 <strong>密钥</strong> 攻击者不知道</p>
+<h2 id="3-threat-models">3. 威胁模型(threat models)<a class="headerlink" href="#3-threat-models" title="Permanent link">&para;</a></h2>
+<p><mark><ins>如果Eve不仅仅是偷听/窃听呢？</ins></mark></p>
+<ul>
+<li>真实世界中有更多复杂的攻击，故也创造了更多复杂的threat models</li>
+</ul>
+<p>根据攻击者能够获取的不同明密文信息将其攻击能力分为几个模型:</p>
+<ol>
+<li>仅密文攻击(Ciphertext-only attack)<ul>
+<li>攻击者(Eve), 只获得了若干密文，并希望恢复明文(原始消息)</li>
+</ul>
+</li>
+<li>已知明文攻击(Known-Plaintext)<ul>
+<li>Eve拦截了一个加密消息，并且已经有了一些关于明文的部分信息</li>
+</ul>
+</li>
+<li>重放攻击(replay attack)<ul>
+<li>Eve 可以捕获 Alice 发送给 Bob 的加密消息，并重新发送加密消息给 Bob。</li>
+</ul>
+</li>
+<li>选择明文攻击(Chosen-Plaintext)<ul>
+<li>Eve 可以欺骗 Alice 加密 Eve 自己选择的任意消息，然后观察生成的密文。<ins>(如果 Eve 能够访问加密系统，或者能够生成导致 Alice 响应可预测消息的外部事件，则可能发生这种情况)</ins>。在其他时间点，Alice 加密了一个 Eve 不知道的消息；Eve 拦截了 Alice 消息的加密，并希望根据 Eve 关于先前加密观察到的内容来恢复消息</li>
+</ul>
+</li>
+<li>选择密文攻击(Chosen-Ciphertext)<ul>
+<li>Eve 可以欺骗 Bob 解密一些密文。Eve 希望利用这一点来了解另一些密文</li>
+</ul>
+</li>
+<li>选择明文-密文攻击(chosen plaintext-ciphertext)<ul>
+<li><strong>前两种情况的组合</strong>：Eve 可以欺骗 Alice 加密一些 Eve 选择的消息，并欺骗 Bob 解密一些 Eve 选择的密文</li>
+<li>最严重的威胁模型(实践中，密码学家也会使用的)</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../assets/Snipaste_2023-12-29_20-32-31.jpg" /></p>
+<h2 id="4-cryptography-roadmap">4. Cryptography Roadmap<a class="headerlink" href="#4-cryptography-roadmap" title="Permanent link">&para;</a></h2>
+<p><img alt="roadmap" src="../assets/2023-12-29_20-49-14.jpg" /></p>
+<ul>
+<li>Hash functions</li>
+<li>Pseudorandom number generators(伪随机生成器)</li>
+<li>Public key exchange公钥交换协议 (e.g. Diffie-Hellman)</li>
+<li>Key management密钥管理(certificates证书)</li>
+<li>Password management</li>
+</ul>
 
 
 
@@ -1248,7 +1333,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 29, 2023</span>
   </span>
 
     
@@ -1335,6 +1420,59 @@ buttons.forEach(function(button) {
 
 </div>
 
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+        data-repo="codeheng/codeheng.github.io"
+        data-repo-id="R_kgDOKzySPA"
+        data-category="General"
+        data-category-id="DIC_kwDOKzySPM4CbYS1"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
 
 
