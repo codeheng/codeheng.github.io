@@ -899,6 +899,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim 进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim 进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual模式（块操作）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1156,6 +1180,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim 进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim 进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual模式（块操作）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1173,7 +1221,7 @@
 
 <h1 id="vim">Vim<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 985 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1209 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
@@ -1212,7 +1260,10 @@
 <p>在 Insert 和 Normal 模式下切换！</p>
 </blockquote>
 <ul>
-<li>按<code>i</code>可在闪烁光标的 <strong>前面</strong> 插入</li>
+<li>按<code>i</code>可在闪烁光标的 <strong>前面</strong> 插入<ul>
+<li><code>10ihello [ESC]</code> → 会写下 hello hello hello hello hello hello hello hello hello hello </li>
+</ul>
+</li>
 <li>按<code>a</code>可在闪烁光标的 <strong>后面</strong> 插入</li>
 <li>按<code>I</code>可在 <strong>当前行的第一个字符前面</strong> 插入</li>
 <li>按<code>A</code>可在 <strong>当前行最后面</strong> 插入</li>
@@ -1221,7 +1272,7 @@
 </ul>
 <h3 id="_2">移动光标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>均要在普通模式下进行输入</p>
-<p>hjkl (对应←↓↑→)  , 也可以在前面加上数字。e.g. <code>4j</code> 向下移动4行
+<p>hjkl (对应←↓↑→)  , 也可以在前面加上数字 4e.g. <code>4j</code> 向下移动4行
     <img alt="hjkl" src="../assets/Snipaste_2023-12-27_16-18-08.jpg" />
 PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难用，很不习惯，克服！！）</p>
 <ul>
@@ -1233,22 +1284,25 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <li><code>gg</code> 跳转到第一行</li>
 <li><code>G</code>  跳转到最后一行</li>
 <li>按照 <strong>单词</strong> 进行移动<ul>
-<li><code>w</code> 到下一个单词的 <strong>开头</strong>   </li>
-<li><code>e</code> 到下一个单词的 <strong>结尾</strong></li>
-<li><code>b</code> 到上一个单词的开头</li>
-<li><code>W</code> 移动到 <strong>空白处之后</strong> 的下一个单词的开头</li>
+<li><code>w</code> 到下一个单词的 <strong>开头</strong>(jump forwards to the start of a word) </li>
+<li><code>W</code> 到下一个单词的开头(可包含标点符号)</li>
+<li><code>e</code> 到下一个单词的 <strong>结尾</strong>(jump forwards to the end of a word)</li>
 <li><code>E</code> 移动到空白处之前的单词末尾</li>
-<li><code>B</code> 移动到空白处之前的单词开头
+<li><code>b</code> 到上一个单词的 <strong>开头</strong>(jump backwards to the start of a word)</li>
+<li><code>B</code> 到上一个单词的开头(可包括标点符号)
 <img alt="" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&amp;id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&amp;spaceId=33208e54-ac5f-445e-8656-169c9506eefb&amp;width=1810&amp;userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&amp;cache=v2" /></li>
 </ul>
 </li>
-<li><code>%</code> 匹配括号(<code>(),{},[]</code>)移动, PS: 需要先把光标先移到括号上</li>
+<li><code>%</code> 匹配括号<code>(),{},[]</code>移动, PS: 需要先把光标先移到括号上</li>
 <li><code>*</code> 和 <code>#</code>  匹配光标当前所在的单词，（*是下一个，#是上一个）</li>
 </ul>
 <h3 id="_3">删除&amp;复制&amp;粘贴&amp;撤销<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>x</code>  删除当前光标所在的一个字符</li>
-<li><code>dd</code> 删除当前行，并把删除的行存到剪贴板里</li>
+<li><code>dd</code> 删除当前行，并把删除的行存到剪贴板里<ul>
+<li><code>d$</code>: 删除从光标处到行尾的文本(常用于注释)</li>
+</ul>
+</li>
 <li><code>cw内容</code> 用 <strong>内容</strong> 替换从光标所在位置后到一个单词结尾的字符</li>
 <li><code>yy</code> 拷贝当前行； 同样的也可以前面加数字， e.g. <code>3yy</code> 从光标处复制3行</li>
 <li><code>p</code>  粘贴剪贴板的内容</li>
@@ -1268,10 +1322,27 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <ul>
 <li>若多个匹配项，按<code>n</code>匹配到下一个,按<code>N</code>找上一个字符串</li>
 </ul>
+<p>部分替换：</p>
+<ul>
+<li><code>:s/[src]/[dst]</code>（只能在光标所在的行）, <code>/i</code>忽略大小写，<code>/g</code>全部匹配<ul>
+<li>比如：将此行的hello替换为world &rarr; <code>:s/hello/world/ig</code></li>
+</ul>
+</li>
+<li>也可以制定范围，比如3~6行 &rarr; <code>:3,6 s/hello/world/ig</code></li>
+</ul>
+<p>全部替换：<code>:%s/[src][dst]</code> , 默认不区分大小写</p>
+<h2 id="vim_3">Vim 进阶<a class="headerlink" href="#vim_3" title="Permanent link">&para;</a></h2>
+<h3 id="visual">Visual模式（块操作）<a class="headerlink" href="#visual" title="Permanent link">&para;</a></h3>
+<p>按<code>v</code>可视化选择状态，左下角出现VISUAL，选中块后，可以对块进行d(删除)，y(复制)，x(剪切)</p>
+<p><code>shift + v</code> 可选择一行，进行操作</p>
+<p><code>ctrl + v</code> 可进行竖向选择, 比如批量注释代码:</p>
+<ul>
+<li>按<code>ctrl+v</code> ,选中要注释的行 &rarr; 输入<code>I</code> ，然后输入<code>//</code> &rarr; 再输入<code>esc</code></li>
+</ul>
 <p>TO DO:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Visual 模式</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 替换</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 可视化补充</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VIM配置 AND SO ON....</li>
 </ul>
 
 
@@ -1295,7 +1366,7 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 29, 2023</span>
   </span>
 
     
