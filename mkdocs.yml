@@ -7,8 +7,10 @@ nav:
   - 🏡 主页: 
     - index.md
     - ❤️ 关于我: home/about.md  
+
   - 📖核心基础知识:
     - 核心基础知识/index.md
+
   - 🔐安全:
     - 安全/index.md
     - 密码学:
@@ -22,11 +24,14 @@ nav:
     - 杂项/index.md
     - MarkDown教程: 杂项/markdown.md
     - Vim教程: 杂项/Vim.md
+
   - 📚读书笔记: 
     - 读书笔记/index.md
     - 我们为什么要睡觉: 读书笔记/why_we_sleep.md
+
   - 💡生活:
     - 生活/index.md
+    - 2023年度总结: 生活/2023final.md
 
 theme: 
   name: material
@@ -143,6 +148,7 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark #双等号(`==`)
   - pymdownx.smartsymbols #智能符号
+  - pymdownx.tilde # 删除线
   - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
       auto_append:
         - includes/abbreviations.md
