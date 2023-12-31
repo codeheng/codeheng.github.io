@@ -5,10 +5,19 @@ comments: true
 ## 1. 密码学简史
 **密码学(cryptography)** 一词来自拉丁语词根 *crypt* 和 *graphia*，前者意为秘密，后者意为书写。所以密码学就是研究如何写秘密信息。
 
-- 第一阶段的秘密消息方案可追溯到古代 -->  [凯撒密码Caesar cypher](https://zh.wikipedia.org/zh-cn/%E5%87%B1%E6%92%92%E5%AF%86%E7%A2%BC)
+- 第一阶段的秘密消息方案可追溯到古代 -->  [凯撒密码Caesar cypher](https://zh.wikipedia.org/zh-cn/%E5%87%B1%E6%92%92%E5%AF%86%E7%A2%BC) (最早的密码方案)
 - 第二阶段:机械时代  --> [恩尼格玛Enigma密码机](https://zh.wikipedia.org/zh-cn/%E6%81%A9%E5%B0%BC%E6%A0%BC%E7%8E%9B%E5%AF%86%E7%A0%81%E6%9C%BA)
-- 现代密码学  --> Claude Shannon即[香农](https://zh.wikipedia.org/wiki/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C) --> 标准的加密系统[DES](https://zh.m.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86%E6%A8%99%E6%BA%96)
+    * [Enigma的操纵原理](https://docs.google.com/presentation/d/1UIjlmnl3S7PyReKxoxFLB5HOgAZOq_nDDgEu9MLQ4YU/edit#slide=id.g158228f6e6f_2_79)
+    * 被[Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing)破解，使欧洲战争缩短了大约一年
+- 现代密码学  --> 始于二战后[Claude Shannon](https://zh.wikipedia.org/wiki/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C)即香农 --> 标准的加密系统[DES](https://zh.m.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86%E6%A8%99%E6%BA%96)
     *  现代密码学涉及大量的数学
+    * "New Directions in Cryptography"(1976)展示了数论在密码学中的应用
+        + 作者: ^^Whitfield Diffie and Martin Hellman^^, 因这个论文于2015年获得图灵奖
+
+![](./assets/Snipaste_2023-12-31_15-28-53.jpg)
+
+总之: 密码学始于纸笔算法(凯撒密码)，然后转移到机器上(Enigma)，最后转移到了计算机上
+
 ## 2. 定义
 > 密码学中最基本的问题是确保在不安全的介质上通信的安全性
 
@@ -61,7 +70,7 @@ PS: 保证完整性和真实性 --> 生成一个标签(tag)或签名(signature)
     * Eve拦截了一个加密消息，并且已经有了一些关于明文的部分信息
 3. 重放攻击(replay attack)
     * Eve 可以捕获 Alice 发送给 Bob 的加密消息，并重新发送加密消息给 Bob。
-4. 选择明文攻击(Chosen-Plaintext)
+4. 选择明文攻击(Chosen-Plaintext) -->  **主要探讨这个**
     * Eve 可以欺骗 Alice 加密 Eve 自己选择的任意消息，然后观察生成的密文。^^(如果 Eve 能够访问加密系统，或者能够生成导致 Alice 响应可预测消息的外部事件，则可能发生这种情况)^^。在其他时间点，Alice 加密了一个 Eve 不知道的消息；Eve 拦截了 Alice 消息的加密，并希望根据 Eve 关于先前加密观察到的内容来恢复消息
 4. 选择密文攻击(Chosen-Ciphertext)
     * Eve 可以欺骗 Bob 解密一些密文。Eve 希望利用这一点来了解另一些密文
