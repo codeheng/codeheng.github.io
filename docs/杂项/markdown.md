@@ -2,13 +2,13 @@
 comments: true
 ---
 
-[参考视频](https://www.bilibili.com/video/BV1pu4y1j7kA/?spm_id_from=333.999.0.0)
+# Markdown
 
+[参考视频](https://www.bilibili.com/video/BV1pu4y1j7kA/?spm_id_from=333.999.0.0)
 
 ## 1. 介绍
 
-[Markdown CommonMark 标准文档](https://spec.commonmark.org/) 
-
+[Markdown CommonMark 标准文档](https://spec.commonmark.org/)
 **什么是Markdown？**
 
 - 是一种轻量级文本标记语言（markup language）
@@ -25,18 +25,19 @@ comments: true
 ## 2. 语法概述
 
 ### 标题
-!!! note
 
+!!! note
     `#` + 空格(开头)，后跟内容
     Ps:  # 和标题间至少一个空格
 
-* 使用 # 的称为 ATX 样式
-* 只有 1～6 级标题，7级以上不会变成标题格式
-* 可以跨过某一级，但不推荐
+- 使用 # 的称为 ATX 样式
+- 只有 1～6 级标题，7级以上不会变成标题格式
+- 可以跨过某一级，但不推荐
     + 明确好层级关系
-### 段落
-!!! note
 
+### 段落
+
+!!! note
     - 直接编写文本即为普通段落
     - 段落间通过空行来分割（有空行就有新的段落）
     - 段落内换行需要在行尾加两个空格（`<br>`）
@@ -46,6 +47,7 @@ __关于空格:__
 - 多个连续的空格会被解析为一个空格
 - 但是在代码块中，空格会被保留
 - 使用多个空格可以使用`&nbsp; &emsp;`等 HTML语法
+  
 ### 引言
 !!! note 
 
@@ -99,18 +101,18 @@ PS : 分割线上下最好都加空行
 ```
 若要显示原本用于格式化 Markdown 文档的字符，在字符前面添加反斜杠字符 \\ 。
 ### 插入图片和链接
-!!!note 
 
-    感叹号! - 方括号() - 圆括号结合的形式[]   =>  \!(图片描述)[图片位置/URL]  
+!!!note
+
+    `![图片描述](图片位置/URL)`
 
 常规 MD 语法插入图片无法调大小，使用 html 中img 的 style 可以调节
 
 `<img src="图片位置" alt="图片描述" style="..."/>`
 
-!!! note 
-    
+!!! note
     插入链接: 方括号[] 和 圆括号()组合
-    =>  \[文字描述](链接URL)
+    =>  `[文字描述](链接URL)`
 
 PS: markdown 中一般可以直接使用 html 语法和 css 样式
 
