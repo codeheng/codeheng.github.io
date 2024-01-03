@@ -809,7 +809,25 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      简介
+      定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组密码：正确性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组密码：安全性
     </span>
   </a>
   
@@ -1203,7 +1221,25 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      简介
+      定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组密码：正确性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组密码：安全性
     </span>
   </a>
   
@@ -1226,9 +1262,51 @@
 
 <h1 id="block-ciphers">Block-Ciphers(分组密码)<a class="headerlink" href="#block-ciphers" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 7 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 718 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
 </div>
-<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>因对于每次加密产生新的密钥是困难并且昂贵的，所以在大多数对称加密方案中，Alice和Bob共享密钥，并且使用此密钥进行重复和解密消息。 <br>
+<strong>分组密码则是实现这种对称加密方案的基本单元</strong></p>
+<blockquote>
+<p>分组密码: 一种加密/解密算法，用于加密固定大小的比特块</p>
+</blockquote>
+<p><strong>简介：</strong> 分组密码转换 <ins>n比特固定长度的输入</ins> 为 <ins>n比特固定长度的输出</ins> ，并且它有<span class="arithmatex">\(2^k\)</span>个不同的打乱设置，所以它也需要 <strong>k比特的密钥</strong> 作为输入，以确定应该使用哪种置乱设置，每个密钥对应一个不同的打乱设置。因攻击者不知道密钥，也将无法知道正在使用哪种加密模式，因此将无法解密使用分组密码加密的消息。</p>
+<p><img align="right" alt="image" src="../assets/BC-define.jpg" /></p>
+<p><strong>分组密码有两个操作：</strong></p>
+<ul>
+<li>加密：<span class="arithmatex">\(E_k(M)\)</span> &rarr; C<ul>
+<li>输入：k位密钥K和n位明文M</li>
+<li>输出：n位密文C</li>
+<li>也可以表示为: <span class="arithmatex">\(\{0,1\}^k \times \{0,1\}^n \rightarrow \{0,1\}^n\)</span></li>
+</ul>
+</li>
+<li>解密：<span class="arithmatex">\(D_k(C)\)</span> &rarr; M (即加密函数的逆)<ul>
+<li>输入：一个k位密钥和一个n位密文C</li>
+<li>输出：n位明文M</li>
+<li>也可以表示为: <span class="arithmatex">\(\{0,1\}^k \times \{0,1\}^n \rightarrow \{0,1\}^n\)</span></li>
+</ul>
+</li>
+<li>属性: <ul>
+<li>正确性：<span class="arithmatex">\(E_K\)</span>是个变换，<span class="arithmatex">\(D_K\)</span>是它的逆</li>
+<li>效率：加密/解密应该比较快</li>
+<li>安全性: E的行为类似于随机变换</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">分组密码：正确性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(E_K(M)\)</span> 必须是n位串上的置换(<a href="https://zh.wikipedia.org/wiki/%E5%8F%8C%E5%B0%84">双射函数</a>)</p>
+<ul>
+<li>每个输入必须对应一个唯一的输出</li>
+</ul>
+<p>假设<span class="arithmatex">\(E_K(M)\)</span>不是双射函数，那么两个输入可能对应相同的输出：<span class="arithmatex">\(E(K, x_1) = E(K, x_2) = y\)</span>，此时对于密文，将不能唯一地解密，即<span class="arithmatex">\(D(K, y) = x_1?\)</span> 还是<span class="arithmatex">\(D(K, y) = x_2?\)</span> </p>
+<p>所以如果给定相同的输入和密钥，分组密码应该总是给出相同的输出</p>
+<p>然如上所定义的分组密码是一类函数，即意味着分组密码有许多不同的实现。如今，最常用的分组密码实现被称为<a href="https://www.techtarget.com/searchsecurity/definition/Advanced-Encryption-Standard">Advanced Encryption Standard(AES)</a>，是由来自比利时的两位研究人员Joan Daemen和Vincent Rijmen在1998年响应NIST组织的竞赛而设计的</p>
+<h2 id="_3">分组密码：安全性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>分组密码(包括AES)本身并不是IND-CPA安全的，因为它们是确定的。也就是说，用相同的密钥对相同的消息加密两次会产生相同的输出两次</p>
+<p>安全分组密码的行为就像从n位字符串上的所有排列集中随机选择的排列</p>
+<ul>
+<li>随机变换：每个n位输入映射到一个随机选择的n位输出</li>
+</ul>
 
 
 
@@ -1251,7 +1329,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 2, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2024</span>
   </span>
 
     
