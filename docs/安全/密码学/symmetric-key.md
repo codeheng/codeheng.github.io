@@ -48,6 +48,15 @@ Q: 我们想从对称加密方案中得到什么属性？
 密码学属性通常被定义为对手可以“赢”或“输”的“游戏”。
 
 ### 定义: IND-CPA
+
+CPA VS. IND-CPA :
+
+- CPA (Chosen Plaintext Attack) : 选择明文攻击
+- IND-CPA (Indistinguishability under Chosen Plaintext Attack)：
+
+!!! quote 
+    CPA security is often called "IND-CPA" security, meaning "indistinguishability of ciphertexts under chosen-plaintext attack." （选择明文攻击下的密文不可区分性）
+
 1. Eve选择两个不同的信息$M_0$和$M_1$（长度必须是相同的），都发送给Alice
 2. Alice随机选择一个$M_b, 其中b \in \{0, 1\}$,进行加密，发送加密的消息给Eve
 3. 现在，Eve可以要求Alice对他选择的消息进行加密，Alice总会用密钥进行加密并返回，Eve可以重复数次。这一步允许Eve执行选择明文攻击，试图了解发送的消息
