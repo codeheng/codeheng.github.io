@@ -41,7 +41,7 @@ Vim 起源于[Vi编辑器](https://en.wikipedia.org/wiki/Vi_(text_editor))(1976)
 > 在 Insert 和 Normal 模式下切换！
 
 - 按`i`可在闪烁光标的 **前面** 插入
-    * `10ihello [ESC]` → 会写下 hello hello hello hello hello hello hello hello hello hello 
+    * `5ihello [ESC]` → 会写下 hello hello hello hello hello 
 - 按`a`可在闪烁光标的 **后面** 插入
 - 按`I`可在 **当前行的第一个字符前面** 插入
 - 按`A`可在 **当前行最后面** 插入
@@ -72,16 +72,23 @@ PS: **不推荐用箭头，而是熟练用hjkl**（开始会很难用，很不�
 ![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&spaceId=33208e54-ac5f-445e-8656-169c9506eefb&width=1810&userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&cache=v2)
 - `%` 匹配括号`(),{},[]`移动, PS: 需要先把光标先移到括号上
 - `*` 和 `#`  匹配光标当前所在的单词，（*是下一个，#是上一个）
+- Screen: `H` (top of screen), `M` (middle of screen), `L` (bottom of screen)
+- Scroll: `Ctrl-u`(up), `Ctrl-d` (down)
 
 ### 删除&复制&粘贴&撤销
 - `x`  删除当前光标所在的一个字符
 - `dd` 删除当前行，并把删除的行存到剪贴板里
     * `d$`: 删除从光标处到行尾的文本(常用于注释)
+    * `dw`: 删除一个单词，并存入剪贴板
+    * `d0`: 从光标处向前进行删除，并存入剪贴板
 - `cw内容` 用 **内容** 替换从光标所在位置后到一个单词结尾的字符
 - `yy` 拷贝当前行； 同样的也可以前面加数字， e.g. `3yy` 从光标处复制3行
 - `p`  粘贴剪贴板的内容
 - `u`  撤销
 - `Ctrl + r` 取消撤销
+- 对特殊符号里面的内容进行删除：
+    * `ci[`  : 删除[]里面的内容，并重新编辑
+    * `ci(` 和 `ci'` 同样
 
 ### 打开/保存/退出/改变文件
 - `:e <path/to/file>` 打开一个文件
