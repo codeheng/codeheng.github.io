@@ -165,7 +165,33 @@ Q: 是否需要填充信息？  --> 不需要，可以把XOR中比信息长的�
 
 ### CFB
 
-另一种流行的模式，其属性与CBC模式非常相似。**加密**： $C_0 = IV, C_i = E_K(C_{i - 1}) \bigoplus M_i$
+CFB另一种流行的模式，其属性与CBC模式非常相似。
+
+**加密**： $C_0 = IV, C_i = E_K(C_{i - 1}) \bigoplus M_i$
+
 ![CFB_encryption](https://textbook.cs161.org/assets/images/crypto/symmetric/CFB_encryption.png)
 
+**解密:** $M_i = E_K(C_{i - 1}) \bigoplus C_i$
+![](https://textbook.cs161.org/assets/images/crypto/symmetric/CFB_decryption.png)
+
 ### OFB
+
+在此模式下，对初始向量IV进行多次加密，得到一组值$Z_i$：$Z_0 = IV, Z_i = E_K(Z_{i - 1})$，$Z_i$被当作one-time pads中的密钥使用，即$C_i = Z_i \bigoplus M_i$，也就是密文是初始向量和这些单独块的连接:$C = IV \cdot C_1 \cdot C_2 \cdots C_m$
+
+![](https://textbook.cs161.org/assets/images/crypto/symmetric/OFB_encryption.png)
+
+**解密**： $M_i = C_i \bigoplus Z_i$
+
+![](https://textbook.cs161.org/assets/images/crypto/symmetric/OFB_decryption.png)
+
+
+## 总述
+
+分组密码是为 **保密性(confidentiality)** 而设计的(IND-CPA)
+
+但如果攻击者篡改了密文，并不能保证检测到它
+
+还记得Mallory么: 一个想要篡改消息的主动操纵者
+
+即可能会导致Lack of Integrity(完整性) and Authenticity(真实性)
+
