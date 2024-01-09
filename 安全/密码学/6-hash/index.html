@@ -890,6 +890,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hash算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      长度拓展攻击
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1394,6 +1427,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hash算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      长度拓展攻击
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1411,9 +1477,60 @@
 
 <h1 id="cryptographic-hashes">Cryptographic Hashes<a class="headerlink" href="#cryptographic-hashes" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 4 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 701 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
 </div>
 <h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>密码哈希/散列函数是一个函数H，当应用于消息时M时，可生成消息的固定长度的"指纹"</p>
+</blockquote>
+<p>对消息的任何更改，无论多么小，都会更改哈希值的许多位，并且无法检测输出是如何根据特定输入来进行更改的。<ins>可以看成以某种看似随机的方式改变结果的哈希值</ins></p>
+<p>哈希函数<span class="arithmatex">\(H(M)\)</span> :</p>
+<ul>
+<li>输入: 任意长度的消息M</li>
+<li>输出: 固定长度的n位哈希值</li>
+<li>有时也可写成<span class="arithmatex">\(\{0,1\}^* \rightarrow \{0,1\}^n\)</span></li>
+</ul>
+<p>例如：SHA-256哈希算法可用于散列任何大小的消息，但总产生256位的散列值</p>
+<h2 id="hash">Hash属性<a class="headerlink" href="#hash" title="Permanent link">&para;</a></h2>
+<ol>
+<li>正确性：Hash函数是确定的，即对相同的输入进行散列总是产生相同的输出</li>
+<li>计算效率非常高</li>
+<li>安全性:<ol>
+<li>单向性: 给出x很容易计算H(x)，然而给出输出y，不可能找到x，满足H(x) = y</li>
+<li>Collision-resistance：如果想找到<span class="arithmatex">\(x \neq x'\)</span>,但<span class="arithmatex">\(H(x) = H(x')\)</span>,不可能！<ul>
+<li>即不可能找到任意两个哈希值相同的输入</li>
+</ul>
+</li>
+<li>随机/不可预测性: 对于改变输入如何影响输出没有可预测的模式 </li>
+</ol>
+</li>
+</ol>
+<h2 id="hash_1">Hash算法<a class="headerlink" href="#hash_1" title="Permanent link">&para;</a></h2>
+<p>密码散列随着时间的推移而发展</p>
+<p>最早的哈希函数之一<a href="https://en.wikipedia.org/wiki/MD5">MD5</a>在2004年被<a href="https://www.tsinghua.edu.cn/info/1167/93827.htm">王小云</a>破解(她的成就是找到了MD5迅速碰撞的方法) </p>
+<p>SHA1(安全哈希算法)在2017年被打破，也是被王小云破解(🧎‍♀膜拜️ &rarr; <a href="http://www.xinhuanet.com/politics/2019-12/27/c_1125394020.htm">详见</a> )</p>
+<p>如今，常用的哈希算法主要有两个“家族”，它们被认为是安全的</p>
+<ul>
+<li>SHA2: 比如SHA-256、SHA-384和SHA-512，分别输出256,384,512bits</li>
+<li>SHA3：比如SHA3-256, SHA3-384, and SHA3-512</li>
+</ul>
+<p>唯一显著的区别是SHA2容易受到 <strong>长度扩展攻击</strong>(<em>length extension attack</em>)</p>
+<h3 id="_2">长度拓展攻击<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>给定<span class="arithmatex">\(H(M)\)</span>和消息M的长度，在不知道M内容的情况下，攻击者控制消息M'可计算<span class="arithmatex">\(H(M || M')\)</span></p>
+<ul>
+<li>该攻击适用 <ins>消息与密钥的长度</ins> 已知的情形下，采取H(密钥||消息)构造的散列函数</li>
+</ul>
+<p>SHA-256 (SHA-2的256位版本)是脆弱的，而SHA-3并不脆弱</p>
+<p>Q: 哈希能提供完整性吗?  &rarr;  <strong>取决于threat model</strong></p>
+<p>如果攻击者可以修改散列，则不能提供完整性</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Alice通过信道发送消息，并伴随着加密hash，Bob接收到该消息并计算该消息的哈希值，之后计算哈希是否与Alice发送的哈希相匹配，但信道存在Mallory，他可能修改消息和hash，故不能保证完整性</p>
+</div>
+<p>主要问题: 哈希是 <em>unkeyed(Without a key)</em> 函数</p>
+<ul>
+<li>没有密钥被用作输入，因此任何攻击者都可以计算任何值的哈希值</li>
+</ul>
 
 
 
