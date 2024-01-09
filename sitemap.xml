@@ -36,27 +36,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/BC_Opera/</loc>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/1-intro/</loc>
          <lastmod>2024-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/Block-Ciphers/</loc>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/2-symmetric-key/</loc>
          <lastmod>2024-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/intro/</loc>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/3-one_time_pad/</loc>
          <lastmod>2024-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/one_time_pad/</loc>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/4-Block-Ciphers/</loc>
          <lastmod>2024-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/symmetric-key/</loc>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/5-BC_Opera/</loc>
+         <lastmod>2024-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/6-hash/</loc>
+         <lastmod>2024-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/7-MACs/</loc>
          <lastmod>2024-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
