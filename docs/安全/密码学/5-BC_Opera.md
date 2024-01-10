@@ -193,5 +193,5 @@ CFB另一种流行的模式，其属性与CBC模式非常相似。
 
 还记得Mallory么: 一个想要篡改消息的主动操纵者
 
-即可能会导致Lack of Integrity(完整性) and Authenticity(真实性)
+即 **可能会导致Lack of Integrity(完整性) and Authenticity(真实性)**
 
