@@ -124,7 +124,7 @@ Q: MACs能提供真实性(authenticity)吗？ --> 取决于 threat model（如�
 Q: MACs能提供保密性(confidentiality)吗？ 
 
 - MACs是确定性的  -->  没有IND-CPA安全性
-- **通常没有保密性，因为可以泄露有关消息的信息**
+- ==**通常没有保密性，因为可以泄露有关消息的信息**==
     * HMAC不会泄露有关消息的信息，但它仍然是确定性的，故它不是IND-CPA安全的 
 
 ## 认证加密(Authenticated Encryption)
@@ -142,9 +142,77 @@ Q: MACs能提供保密性(confidentiality)吗？
 - 把提供保密性方案和提供完整性的方案结合起来
 - 使用一种方案，此方案能提供保密性和完整性
 
-### 结合的方案
+### One: 结合的方案
 
 可以使用：
 
 - 一种IND-CPA加密方案(如AES-CBC)：Enc(K,M)和Dec(K,M)
 - 不可伪造的MAC方案(如HMAC)：MAC(K, M)
+
+比如: Alice发送 **Enc($K_1$,M)和MAC($K_2$,M)**
+
+- 完整性?  --> YES, 攻击者无法篡改MAC
+- 保密性?  --> No, MAC不是IND-CPA安全
+
+Idea: 在密文而不是明文上来计算MAC即 **Enc($K_1$, M)和MAC($K_2$, Enc($K_1$, M))**
+
+- 完整性? -->  YES, 攻击者无法篡改MAC
+- 保密性? -->  YES, MAC可能会泄露关于密文的信息，但没关系
+
+Idea：不如把MAC也加密一下即 **Enc($K_1$,  M || MAC($K_2$, M))**
+
+- 完整性? -->  YES, 攻击者无法篡改MAC
+- 保密性? -->  YES, 一切都是加密的
+
+Q: 是先MAC再加密 还是先加密再MAC?
+
+1. 先MAC再加密(MAC-then-encrypt)
+       - 先计算 **MAC($K_2$, M)** -->  接着加密信息：**Enc($K_1$,  M || MAC($K_2$, M))**
+2. 先加密后MAC(encrypt-then-MAC)
+       - 先计算 **Enc($K_1$, M)** --> 接着 **MAC($K_2$, Enc($K_1$, M))**
+
+哪一个更好一些？
+
+- 理论上如果正确使用，两者都是IND-CPA和EU-CPA安全
+- 但 ^^先MAC后加密^^ 有缺陷：只有在解密之后才能知道是否发生了篡改
+    - 攻击者可以提供任意的篡改输入，不得不对其进行解密
+    - 通过解密函数传递攻击者选择的输入可能导致side-channel leaks即[旁路攻击](https://zh.wikipedia.org/wiki/%E6%97%81%E8%B7%AF%E6%94%BB%E5%87%BB)
+
+**总的来说: 会使用 ==先加密后MAC==，因为它对错误更健壮**
+
+**密钥Key重用**：在两个不同的情况中使用相同的密钥
+
+- PS: 多次使用相同的密钥用于相同的用途不是密钥重用
+    - 如：在相同的上下文中使用相同的密钥计算不同消息的HMAC
+- 重用密钥会导致底层算法相互干扰，影响安全保证
+    - 如：使用基于分组密码的MAC算法和分组密码链模式，则底层的分组密码可能不再安全
+
+最简单的解决方案:不要重复使用密钥!每次仅使用一个key
+
+- 加密一条数据，MAC一条数据?  --> 不同的用途，不同的key 
+- 把Alice的信息发给Bob，把Bob的信息发给Alice? --> 不同的用途，不同的key 
+- 加密Alice的一个文件并加密Alice另一个的文件?  --> 使用相同的密钥可能没有问题，但加密设计很难做到正确!
+- 加密用户元数据、加密文件元数据、加密文件数据? --> think about this in [Project 2](https://fa23.cs161.org/proj2/)
+
+!!! 补充
+    [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)1.0使用先MAC后加密: **Enc($K_1$, M || MAC($K_2$, M))**, 加密算法为AES-CBC
+
+### AEAD加密
+
+第二种：使用旨在提供 **机密性、完整性和真实性** 的方案
+
+^^AEAD = Authenticated Encryption with Additional Data^^
+
+- 一种算法，在明文上提供机密性和完整性，在附加数据上提供完整性
+- Additional data通常是上下文(例如内存地址)，所以不能在不破坏MAC的情况下改变上下文
+
+如果使用正确，那就再也不用担心MAC-then-encrypt
+
+例子: [Galois Counter Mode (GCM)](https://docs.google.com/presentation/d/1W0jd8EHdo7NVDMToB4sdOTT0X2RCkXRvFZw3AxGDfUU/edit#slide=id.g15aff661cce_0_227)
+
+如果不正确地使用AEAD模式会导致丢失保密性和完整性/身份验证
+
+!!! Question
+
+    1. 对称密钥加密方案需要随机性，那么如何安全地生成随机数?
+    2. 在讨论对称密钥方案时，假设Alice和Bob能够共享一个密钥。Alice和Bob如何在不安全的通道上共享对称密钥?
