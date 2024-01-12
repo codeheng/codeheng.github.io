@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="http://codeheng.github.io/%E6%9D%82%E9%A1%B9/">
+        <link rel="canonical" href="http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/8-PRNGs/">
       
       
-        <link rel="prev" href="../%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/4-chapter/">
+        <link rel="prev" href="../6-hash/">
       
       
-        <link rel="next" href="markdown/">
+        <link rel="next" href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/1-blockchain/">
       
       
-      <link rel="icon" href="../assets/logo.ico">
+      <link rel="icon" href="../../../assets/logo.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>杂项 - Yiheng的笔记本</title>
+        <title>伪随机数生成器 - Yiheng的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../stylesheets/status.css">
+      <link rel="stylesheet" href="../../../stylesheets/status.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -102,7 +102,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Yiheng的笔记本" class="md-header__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
+    <a href="../../.." title="Yiheng的笔记本" class="md-header__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg>
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              杂项
+              伪随机数生成器
             
           </span>
         </div>
@@ -231,7 +231,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -251,32 +251,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-tabs__link">
+        <a href="../../../%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-tabs__link">
           
   
     
   
   📖核心基础知识
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../%E5%AE%89%E5%85%A8/" class="md-tabs__link">
-          
-  
-    
-  
-  🔐安全
 
         </a>
       </li>
@@ -293,7 +273,27 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  🔐安全
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%9D%82%E9%A1%B9/" class="md-tabs__link">
           
   
     
@@ -313,7 +313,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        <a href="../../../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
           
   
     
@@ -333,7 +333,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../%E7%94%9F%E6%B4%BB/" class="md-tabs__link">
+        <a href="../../../%E7%94%9F%E6%B4%BB/" class="md-tabs__link">
           
   
     
@@ -368,7 +368,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Yiheng的笔记本" class="md-nav__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
+    <a href="../../.." title="Yiheng的笔记本" class="md-nav__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg>
@@ -423,7 +423,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../home/about/" class="md-nav__link">
+      <a href="../../../home/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,7 +507,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-nav__link ">
+            <a href="../../../%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -539,6 +539,8 @@
       
   
   
+    
+  
   
   
     
@@ -559,17 +561,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../%E5%AE%89%E5%85%A8/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -586,7 +588,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             🔐安全
@@ -599,8 +601,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -616,12 +620,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -635,7 +639,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             密码学
@@ -649,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/1-intro/" class="md-nav__link">
+      <a href="../1-intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/2-symmetric-key/" class="md-nav__link">
+      <a href="../2-symmetric-key/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/3-one_time_pad/" class="md-nav__link">
+      <a href="../3-one_time_pad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/4-Block-Ciphers/" class="md-nav__link">
+      <a href="../4-Block-Ciphers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/5-BC_Opera/" class="md-nav__link">
+      <a href="../5-BC_Opera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/7-MACs/" class="md-nav__link">
+      <a href="../7-MACs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/6-hash/" class="md-nav__link">
+      <a href="../6-hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,10 +854,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%AF%86%E7%A0%81%E5%AD%A6/8-PRNGs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    伪随机数生成器
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -862,6 +884,110 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Content
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entropy(熵)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNGs 介绍
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prng" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PRNG定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seeding-reseeding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seeding 和 Reseeding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prng_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG: 安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prng-rollback-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG: Rollback Resistance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -929,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/1-blockchain/" class="md-nav__link">
+      <a href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/1-blockchain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/2-intro/" class="md-nav__link">
+      <a href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/2-intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/3-chapter/" class="md-nav__link">
+      <a href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/3-chapter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/4-chapter/" class="md-nav__link">
+      <a href="../../%E5%8C%BA%E5%9D%97%E9%93%BE/4-chapter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,8 +1151,6 @@
       
   
   
-    
-  
   
   
     
@@ -1049,17 +1173,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../%E6%9D%82%E9%A1%B9/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1070,13 +1194,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             🔍杂项
@@ -1092,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="markdown/" class="md-nav__link">
+      <a href="../../../%E6%9D%82%E9%A1%B9/markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Vim/" class="md-nav__link">
+      <a href="../../../%E6%9D%82%E9%A1%B9/Vim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1134,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vscode/" class="md-nav__link">
+      <a href="../../../%E6%9D%82%E9%A1%B9/vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1311,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="md-nav__link ">
+            <a href="../../../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1220,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/why_we_sleep/" class="md-nav__link">
+      <a href="../../../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/why_we_sleep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,7 +1397,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../%E7%94%9F%E6%B4%BB/" class="md-nav__link ">
+            <a href="../../../%E7%94%9F%E6%B4%BB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1306,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%94%9F%E6%B4%BB/2024/2023final/" class="md-nav__link">
+      <a href="../../../%E7%94%9F%E6%B4%BB/2024/2023final/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,8 +1470,98 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Content
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entropy(熵)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNGs 介绍
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prng" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PRNG定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seeding-reseeding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seeding 和 Reseeding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prng_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG: 安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prng-rollback-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRNG: Rollback Resistance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1362,14 +1576,105 @@
                   
 
 
-<h1 id="_1">杂项<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+  <h1>伪随机数生成器</h1>
+
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 29 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 900 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>或许关于一些小工具的记录，或许乱七八糟可能有些用的东西~ </p>
-</div>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>PRNGs = Pseudorandom Number Generators(伪随机数生成器)</p>
+<p>之前<a href="../7-MACs/#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5">留的疑问</a>: <strong>对称密钥加密方案需要随机性，那么如何安全地生成随机数</strong>?</p>
+<h3 id="_2">随机性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>对于 <strong>对称加密</strong>，随机性是非常重要的!</p>
+<ul>
+<li>随机的key</li>
+<li>随机的IV/Nonce</li>
+<li>通用唯一标识符...等等</li>
+</ul>
+<p>如果攻击者可以预测一个随机数，可能会灾难性地失败，那如何安全生成随机数？</p>
+<p>在密码学中，随机性意味着 <strong>随机 + 不可预测</strong></p>
+<h3 id="entropy">Entropy(熵)<a class="headerlink" href="#entropy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Entropy is a scientific concept that is most commonly associated with <strong>a state of disorder</strong></p>
+</blockquote>
+<p><strong>熵： 不确定性的度量，即衡量结果的不可预测性</strong></p>
+<p>High entropy = unpredictable outcomes = desirable in cryptography</p>
+<p>均匀分布具有最高的熵(每个结果的可能性都相等，如: 公平抛硬币)</p>
+<ul>
+<li>通常用比特来衡量(3 bits的熵= 8个值的均匀随机分布)</li>
+</ul>
+<p><strong>真正的随机性</strong> ： </p>
+<p>为了生成真正的随机数，需要熵的物理来源</p>
+<ul>
+<li>CPU上不可预知的电路</li>
+<li>以非常精细的时间尺度测量人类活动(例如按下一个键的微秒)</li>
+</ul>
+<p>无偏熵通常需要结合多个熵源</p>
+<ul>
+<li>熵的总比特数是所有输入的熵比特数的总和<ul>
+<li>Many poor sources + 1 good source = good entropy</li>
+</ul>
+</li>
+</ul>
+<p><ins>真正随机性的问题：昂贵并且产生太慢 &amp; 物理熵源通常是有偏差的</ins></p>
+<h3 id="prngs">PRNGs 介绍<a class="headerlink" href="#prngs" title="Permanent link">&para;</a></h3>
+<p>伪随机数生成器(PRNGs):一种使用少量真正随机性来生成大量看上去随机输出的算法</p>
+<ul>
+<li>也被称为 <ins>确定性随机比特生成器</ins> deterministic random bit generators(DRBGs)</li>
+</ul>
+<p><strong>用途：</strong></p>
+<ul>
+<li>生成一些昂贵的真正随机性(例如CPU上的噪声电路)</li>
+<li>使用真正的随机性作为PRNG的输入</li>
+<li>使用PRNG快速而廉价地生成看起来随机的数字</li>
+</ul>
+<p><strong>PRNG是确定性的</strong>：根据一组算法生成输出, 然而对于无法看到内部状态的攻击者来说，在计算上无法将输出与真正的随机性区分开来</p>
+<h2 id="prng">PRNG定义<a class="headerlink" href="#prng" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>PRNG.Seed(randomness)</code>: 使用熵初始化内部状态<ul>
+<li>输入：一些真正的随机比特 </li>
+</ul>
+</li>
+<li><code>PRNG.Reseed(randomness)</code>：使用现有状态和熵更新内部状态<ul>
+<li>输入：更多真正的随机比特  </li>
+</ul>
+</li>
+<li><code>PRNG.Generate(n)</code>：生成n个伪随机比特<ul>
+<li>输入：一个数字n； 输出：n个伪随机比特</li>
+<li>根据需要更新内部状态</li>
+</ul>
+</li>
+</ol>
+<p><strong>属性：</strong></p>
+<ul>
+<li>正确性：是确定的</li>
+<li>高效性： 产生伪随机比特是效率高的</li>
+<li>安全性：与随机无法区分</li>
+<li>附加安全性：防回滚(Rollback resistance)</li>
+</ul>
+<h3 id="seeding-reseeding">Seeding 和 Reseeding<a class="headerlink" href="#seeding-reseeding" title="Permanent link">&para;</a></h3>
+<p>PRNG 应使用所有可用的熵源进行播种(Seed)</p>
+<ul>
+<li>将许多low-entropy源组合在一起应该会得到high-entropy输出</li>
+<li>如果一个源的熵为0，它不应该减少输出的熵</li>
+</ul>
+<p>Reseeding用于增加更多的熵，因为它变得可用</p>
+<ul>
+<li>用0熵进行Reseeding不应该减少内部状态或输出</li>
+</ul>
+<h3 id="prng_1">PRNG: 安全<a class="headerlink" href="#prng_1" title="Permanent link">&para;</a></h3>
+<p>Q: 能设计一个真正随机的PRNG吗?</p>
+<p>PRNG不可能是真正随机的</p>
+<ul>
+<li>给定初始种子，输出是确定的</li>
+<li>如果初始种子是s位长，那么只有<span class="arithmatex">\(2^s\)</span>个可能的输出序列</li>
+</ul>
+<p>安全的PRNG在计算上从陌生人到攻击者来说是无法区分的</p>
+<ul>
+<li>比如向攻击者展示一个真正的随机序列和一个从安全PRNG输出的序列，攻击者不应该能够在概率&gt; <ins><span class="arithmatex">\(1/2\)</span> +可忽略不计的情况下(negligible)</ins> 确定哪个是哪个</li>
+</ul>
+<p>等价定义：攻击者无法预测PRNG的未来输出</p>
+<h3 id="prng-rollback-resistance">PRNG: Rollback Resistance<a class="headerlink" href="#prng-rollback-resistance" title="Permanent link">&para;</a></h3>
 
 
 
@@ -1392,7 +1697,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2024</span>
   </span>
 
     
@@ -1402,7 +1707,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2024</span>
   </span>
 
     
@@ -1644,12 +1949,12 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
