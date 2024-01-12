@@ -22,6 +22,7 @@ nav:
         - 分组密码的操作模式: 安全/密码学/5-BC_Opera.md
         - MACs: 安全/密码学/7-MACs.md
       - 密码散列: 安全/密码学/6-hash.md
+      - 伪随机数生成器: 安全/密码学/8-PRNGs.md
     - 区块链: 
       - 概述: 安全/区块链/1-blockchain.md
       - 区块链简介: 安全/区块链/2-intro.md
