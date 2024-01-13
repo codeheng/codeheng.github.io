@@ -105,3 +105,107 @@ PRNG不可能是真正随机的
 等价定义：攻击者无法预测PRNG的未来输出
 
 ### PRNG: Rollback Resistance
+
+> 如果攻击者知道了PRNG的内部状态，则无法知道任何关于之前状态或输出的信息
+
+假设已经使用PRNG生成了100位，并且攻击者能够在生成第100位后立即了解到内部状态。如果PRNG是Rollback- Resistance的，那么攻击者就无法推断出任何关于之前生成的比特的信息
+
+**在安全PRNG中不需要Rollback-Resistance，但它是一个有用的属性**
+
+比如考虑一个使用单个PRNG为对称加密方案生成密钥和IV(或nonce)的密码系统
+
+- Alice使用相同的PRNG生成她的密钥和IV进行加密 
+- Mallory泄露了PRNG的内部状态
+- 如果PRNG不是Rollback-Resistant，Mallory能得出之前的PRNG输出，比如密钥
+
+## HMAC-DRBG
+
+PRNG有很多实现，但实践中最常用的是HMAC-DRBG，它利用HMAC的安全属性来构建PRNG
+
+**HMAC-DRBG保持两个值作为其内部状态的一部分: K 和 V**
+
+- K作为HMAC的秘钥
+- V被用作HMAC的"message"输入
+
+
+为了生成一个伪随机比特块，HMAC-DRBG在PRNG输出的前一个块上计算HMAC。这可以重复以生成所需的任意多的伪随机位
+
+回想一下，对于不知道密钥的攻击者来说，HMAC的输出看起来是随机的
+
+只要内部状态(包括K)是保密的，攻击者无法从随机比特中区分HMAC输出，因此PRNG是安全的
+
+**算法1：Generate(n)**：生成n位伪随机比特，没有额外的真正随机输入
+
+```py linenums="1"
+Generate(n):
+      output = ''
+      while len(output) < n:
+            V = HMAC(K, V)
+            output = output || V
+      K = HMAC(K, V || 0x00)
+      V = HMAC(K, V)
+      return output[0: n]
+```
+
+- 第4行，在前一个输出块上重复调用HMAC，重复循环这个过程，直到至少有n个输出位
+- 一旦有了足够的输出，使用两个额外的HMAC调用更新内部状态
+- 最后返回第一个n伪随机输出位
+
+Seed算法，Seed和Reseed使用真正的随机性作为HMAC的输入，并利用输出进行更新K和V
+
+**算法2：Seed(s)**: 用一些真正随机的比特s来初始化内部状态
+
+```py linenums="1"
+Seed(s):
+      K = 0
+      V = 0
+      K = HMAC(K, V || s || 0x00)
+      V = HMAC(K, V)
+      K = HMAC(K, V || s || 0x01)
+      V = HMAC(K, V)
+```
+
+Reseed算法与Seed算法相同，只是不需要将K和V重置为0
+
+```py linenums="1"
+Reseed(s):
+      K = HMAC(K, V || 0x00 || s)
+      V = HMAC(K, V)
+      K = HMAC(K, V || 0x01 || s)
+      V = HMAC(K, V)
+```
+
+安全性: 假设HMAC是安全的，那么HMAC-DRBG就是安全的、抗回滚的PRNG
+
+- 如果你破坏了HMAC-DRBG，你要么破坏了HMAC，要么破坏了底层的哈希函数
+
+## 应用: UUIDs
+
+> Universally Unique Identifiers (UUIDs)
+
+假设你现在有一组对象(比如文件)，需要为每个对象分配一个名称，名称必须是唯一的和不可预测的。--> **解决方法: 选择随机的值**
+
+- 如果使用了足够的随机性，那么两次生成相同随机值的概率就会非常小(基本上为0)
+
+UUIDs:
+
+- 128位唯一值
+- 要生成新的UUID，正确地Seed安全的PRNG，并生成一个随机值
+- 通常用十六进制书写:`00112233-4455-6677-8899-aabbccddeeff`
+
+## 总结
+
+真正的随机性需要对物理过程进行采样 --> 缓慢、昂贵且有偏差(低熵)
+
+PRNG:一种使用少量真正随机性来生成大量随机输出的算法
+
+- Seed(entropy):初始化内部状态
+- Reseed(entropy):向内部状态添加额外的熵
+- Generate(n):生成n位伪随机输出
+- 安全性: 在计算上与真正的随机比特无法区分
+
+CTR-DRBG: 在CTR模式下使用分组密码生成伪随机比特
+
+HMAC-DRBG: 使用HMAC的重复应用来生成伪随机比特
+
+应用: UUIDs
