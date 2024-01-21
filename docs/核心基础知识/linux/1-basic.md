@@ -64,7 +64,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 `cd path` 切换路径
 
 - path: 可以是相对路径，也可以是绝对路径
-- path中`~` 代表home, `.`代表当前路径，`..`代表上一级路径
+- path中`~` 代表home, `.`代表当前路径，`..`代表上一级路径，`-`上一次目录
 
 
 ### 用户配置
@@ -102,6 +102,9 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 `mv src dst` 移动文件或目录(也可重命名)
 
 `rm files` 删除文件，`-r` 递归删除目录; `-f` 强制删除；谨慎.[`rm -rf ./*`](https://www.zhihu.com/question/456544289)
+
+`chmod` 改变目录或文件的权限,e.g. `chmod +x file` 给file加上可执行权限
+![chmod](./assets/chmod.jpg){ align=center }
 
 **文件查找: `find 起始目录 查找条件 操作`**  e.g. `find /usr/include/ -name stdio.h`
 
@@ -168,6 +171,8 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 #### 网络管理
 
 `ifconfig` 查看和配置网络设备
+
+- 若报错，可能需要安装`sudo apt install net-tools`
 
 `route` 查看与设置路由
 
