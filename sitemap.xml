@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/intro/</loc>
+         <lastmod>2024-01-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/%E5%AE%89%E5%85%A8/%E5%8C%BA%E5%9D%97%E9%93%BE/1-blockchain/</loc>
          <lastmod>2024-01-21</lastmod>
          <changefreq>daily</changefreq>
