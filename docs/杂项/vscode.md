@@ -8,7 +8,7 @@ comments: true
 
     VScode 平常使用较为频繁，故对常见插件以及Tips进行归档 
 
-号称为宇宙第一编辑器——[VScode](https://code.visualstudio.com/) (doge)，难不成不相信？请看[Stack Overflow Survey 2023](https://survey.stackoverflow.co/2023/#most-popular-technologies-tools-tech:~:text=86%2C544%20responses-,Visual%20Studio%20Code,-73.71%25)，占比73.71%能和你闹？！**为何那么强?**  --> 太好看了(颜值即是正义) + Extensions太多了。
+号称为宇宙第一编辑器——[VScode](https://code.visualstudio.com/) (doge)，难不成不相信？请看[Stack Overflow Survey 2023](https://survey.stackoverflow.co/2023/#most-popular-technologies-tools-tech:~:text=86%2C544%20responses-,Visual%20Studio%20Code,-73.71%25)，占比73.71%能和你闹？！**为何那么强?**  --> ==太好看了(颜值即是正义) + Extensions太多了==
 
 - 结合Vim以及各种拓展插件，使得利用键盘更加高效，沉浸在writing中
 
