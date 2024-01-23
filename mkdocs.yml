@@ -52,6 +52,7 @@ nav:
   - 💪Workout:
     - workout/index.md
     - Zone 2: workout/zone2.md
+    - 减肥: workout/fat.md
 
 theme: 
   name: material
