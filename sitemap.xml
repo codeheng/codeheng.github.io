@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/algorithm/day1/</loc>
+         <lastmod>2024-01-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/linux/1-basic/</loc>
          <lastmod>2024-01-24</lastmod>
          <changefreq>daily</changefreq>
