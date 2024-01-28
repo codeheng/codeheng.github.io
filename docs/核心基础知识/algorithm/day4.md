@@ -63,5 +63,22 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 
 ## [142.环形链表II](https://leetcode.cn/problems/linked-list-cycle-ii/)
 
-- [ ] to do
+Q: 如何判断有环？ 判断出了如何找环的入口?
 
+- 快慢指针: 快的每次走两个，慢的走一个，若相遇则存在环
+- 找入口 --> [动图参考](https://code-thinking.cdn.bcebos.com/gifs/142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II%EF%BC%88%E6%B1%82%E5%85%A5%E5%8F%A3%EF%BC%89.gif), **太妙了!!**
+
+```c++ linenums="1"
+ListNode *detectCycle(ListNode *head) {
+    ListNode* fast = head, *slow = head;
+    while(fast && fast->next) {
+        slow = slow->next, fast = fast->next->next;
+        if (slow == fast) {
+            ListNode* idx1 = fast, *idx2 = head;
+            while(idx1 != idx2) idx1 = idx1->next, idx2 = idx2->next;
+            return idx1;
+        }
+    }
+    return nullptr;
+}
+```
