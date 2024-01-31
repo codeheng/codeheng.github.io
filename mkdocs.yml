@@ -82,6 +82,7 @@ theme:
     # - navigation.expand # 导航默认展开
     - toc.follow # toc 跟随
     # - toc.integrate # 文档 toc 集成到总目录中
+    - content.code.copy
   
   font: 
     text: Noto Serif SC
@@ -125,6 +126,7 @@ copyright: '本页面的全部内容在 <a href="https://creativecommons.org/lic
 extra_css:
   - stylesheets/extra.css
   - stylesheets/status.css
+  - stylesheets/neoteroi-mkdocs.css
 
 extra_javascript:
   - javascripts/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
@@ -151,7 +153,7 @@ markdown_extensions:
   - admonition #警告或标注
   - pymdownx.details #细节折叠
   - pymdownx.superfences #超级围栏
-
+  - pymdownx.critic 
 
   - abbr #缩写或名词
   - attr_list #属性列表（按钮-颜色图标）
