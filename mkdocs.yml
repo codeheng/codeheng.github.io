@@ -57,6 +57,8 @@ nav:
   - 💡生活:
     - 生活/index.md
     - 2023年度总结: 生活/2024/2023final.md
+    - 2024:
+      - 1月: 生活/2024/january.md
   
   - 💪Workout:
     - workout/index.md
@@ -126,7 +128,6 @@ copyright: '本页面的全部内容在 <a href="https://creativecommons.org/lic
 extra_css:
   - stylesheets/extra.css
   - stylesheets/status.css
-  - stylesheets/neoteroi-mkdocs.css
 
 extra_javascript:
   - javascripts/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
