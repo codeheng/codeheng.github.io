@@ -9,3 +9,4 @@ comments: true
 ==^^Public key exchange (e.g. Diffie-Hellman)^^==，Diffie-Hellman算法解决了 **在双方不直接传递密钥的情况下完成密钥交换**，这个神奇的交换原理完全由数学来进行支撑
 
 **Diffie-Hellman的目标通常是创建一个临时密钥**，临时密钥用于一系列加密和解密，一旦不再需要它就会被丢弃。因此，Diffie-Hellman算法是一种有效的方法，可以让双方在面对窃听者时就随机值达成一致
+
