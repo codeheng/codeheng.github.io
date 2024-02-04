@@ -22,12 +22,14 @@ PS: 插件以及Tips有很多很多，先从自己目前的整理>，后续学�
   
 - 前提： 键位不冲突
 
-`ctrl + shift + p` 开启命令选择区，可对安装的插件进行控制
+**`ctrl + shift + p` 开启命令选择区，和VScode进行聊天的窗口**
+
+`ctrl + ~` 在编辑器和terminal进行来回切换
 
 ## 拓展(Extension)
 
 1. 关于颜色样式的:
-    - 主题(theme): [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark), [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu), [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+    - 主题(theme): [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark), [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu), [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula), [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
     - 文件夹: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
     - 代码样式: [Prettier-Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 

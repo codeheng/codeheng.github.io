@@ -116,6 +116,13 @@ PS : 分割线上下最好都加空行
 
 PS: markdown 中一般可以直接使用 html 语法和 css 样式
 
+e.g 图片居中: 也可`right, left`
+```html linenums="1"
+<div align=center>
+	<img src="" alt="" style=""/>
+</div>
+```
+
 ## 3.  扩展语法
 ### 表格
 ```markdown

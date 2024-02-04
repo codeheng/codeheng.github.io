@@ -66,6 +66,7 @@ nav:
     - workout/index.md
     - Zone 2: workout/zone2.md
     - 减肥: workout/fat.md
+    - 血压: workout/blood_pressure.md
 
 theme: 
   name: material
