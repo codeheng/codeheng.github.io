@@ -29,7 +29,8 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 利用小根堆,每次将最小的弹出,剩下的就是前k个最大的
 
 - C++中`priority_queue`(优先队列)即是堆,只能队头取元素,队尾添元素(默认大根队)
-```cpp linenums="1"
+- 利用`map`对出现的频率进行排序
+```cpp linenums="1" hl_lines="4"
 vector<int> topKFrequent(vector<int>& nums, int k) {
     vector<int> res;
     unordered_map<int, int> map; //记录<nums[i],对应次数>
@@ -47,3 +48,8 @@ vector<int> topKFrequent(vector<int>& nums, int k) {
     return res;
 }
 ```
+
+Q: C++ 中栈里面的元素在内存中是连续分布的么？
+
+- 栈是[容器适配器](https://zhuanlan.zhihu.com/p/272627573)，底层容器使用不同的容器，导致栈内数据在内存中不一定是连续分布的
+- 默认底层容器是deque，即不连续的
