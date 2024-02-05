@@ -41,6 +41,7 @@ nav:
       - 密码散列: 安全/密码学/6-hash.md
       - 伪随机数生成器: 安全/密码学/8-PRNGs.md
       - Diffie-Hellman: 安全/密码学/10-Diffie_Hellman.md
+      - 公钥密码: 安全/密码学/11-Public-key_Cryptography.md
     - 区块链: 
       - 概述: 安全/区块链/1-blockchain.md
       - 区块链简介: 安全/区块链/2-intro.md
