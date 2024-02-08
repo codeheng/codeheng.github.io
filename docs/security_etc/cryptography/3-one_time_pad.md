@@ -23,13 +23,13 @@ comments: true
 
 ![example](./assets/Snipaste_2024-01-01_17-34-43.jpg)
 
-图中的$C$就是Alice要通过不安全信道发送给Bob的密文
+图中的$C$就是Alice要通过不security_etc信道发送给Bob的密文
 
 Q: Bob收到密文$C$之后，如何得到原来的信息M？--> 只需$C$和$K$的对应位进行XOR即可
 
 可以用如下三个步骤来描述：
 
-1. KeyGen(): 随机生成一个n位的密钥(假设Alice和Bob可以安全的共享)，对于one-time pad，我们为每条消息生成一个新密钥
+1. KeyGen(): 随机生成一个n位的密钥(假设Alice和Bob可以security_etc的共享)，对于one-time pad，我们为每条消息生成一个新密钥
 2. Enc(K, M) = K $\bigoplus$ M, 按位对M和K进行XOR得到C
 3. Dec(K, C) = K $\bigoplus$ C, 按位对C和K进行XOR得到M
 
@@ -42,12 +42,12 @@ Q: Bob收到密文$C$之后，如何得到原来的信息M？--> 只需$C$和$K$
 
     $\therefore$ Dec(K, Enc(K, M)) = Dec(K, K $\bigoplus$ M) = K $\bigoplus$ (K $\bigoplus$ M ) = M
 
-## 安全性
+## security_etc性
 
-要证明 *one-time pad* 是IND-CPA安全，即证Eve猜中正确信息的概率为$1/2$
+要证明 *one-time pad* 是IND-CPAsecurity_etc，即证Eve猜中正确信息的概率为$1/2$
 
-![证](./assets/证安全性.jpg)  
-因为K随机选择，所以两种可能性都是等可能的。Eve没有得到新的信息，即绝对是安全的。
+![证](./assets/证security_etc性.jpg)  
+因为K随机选择，所以两种可能性都是等可能的。Eve没有得到新的信息，即绝对是security_etc的。
 
 但 *one-time pad* 有一个致命的缺陷，即共享密钥K不能再次被使用传递另外的消息M'。
 
@@ -59,16 +59,16 @@ Q：如果将密钥利用了两次会怎么样？Two-Time Pads? 【如下所示�
 - 如果Eve知道$M_0$，就能推断出来$M_1$，反之亦然
 - 甚至Eve可以猜测$M_0$，并检查$M_1$是否相符
 
-**如果密钥被重复使用，*one-time pad* 将不安全**，故Alice和Bob必须对每条消息使用不同的密钥!
+**如果密钥被重复使用，*one-time pad* 将不security_etc**，故Alice和Bob必须对每条消息使用不同的密钥!
 
 ## 不实际性
 
 1. Key generation
-    - 为了保证安全性，必须为每条消息 **随机生成** 密钥，并且不能重用，但随机代价很高！
+    - 为了保证security_etc性，必须为每条消息 **随机生成** 密钥，并且不能重用，但随机代价很高！
 2. Key distribution
-    - 为了通信n位消息，需要首先安全地通信n位密钥
-    - 但如果有一种方法可以安全地传递n位密钥，就直接传递消息呗!
+    - 为了通信n位消息，需要首先security_etc地通信n位密钥
+    - 但如果有一种方法可以security_etc地传递n位密钥，就直接传递消息呗!
 3. 仅仅的实际应用: 提前沟通好密钥
-    - 假设你现在有一个安全的通道，但以后就没有了
-    - 现在使用安全通道提前通信密钥
-    - 以后使用 *one-time pad* 在不安全通道进行通信
+    - 假设你现在有一个security_etc的通道，但以后就没有了
+    - 现在使用security_etc通道提前通信密钥
+    - 以后使用 *one-time pad* 在不security_etc通道进行通信

@@ -22,7 +22,7 @@ comments: true
 
 1. 正确性：Hash函数是确定的，即对相同的输入进行散列总是产生相同的输出
 2. 计算效率非常高
-3. 安全性:
+3. security_etc性:
       1. 单向性: 给出x很容易计算H(x)，然而给出输出y，不可能找到x，满足H(x) = y
       2. Collision-resistance：如果想找到$x \neq x'$,但$H(x) = H(x')$,不可能！
          - 即不可能找到任意两个哈希值相同的输入
@@ -34,9 +34,9 @@ comments: true
 
 最早的哈希函数之一[MD5](https://en.wikipedia.org/wiki/MD5)在2004年被[王小云](https://www.tsinghua.edu.cn/info/1167/93827.htm)破解(她的成就是找到了MD5迅速碰撞的方法) 
 
-SHA1(安全哈希算法)在2017年被打破，也是被王小云破解(🧎‍♀膜拜️ --> [详见](http://www.xinhuanet.com/politics/2019-12/27/c_1125394020.htm) )
+SHA1(security_etc哈希算法)在2017年被打破，也是被王小云破解(🧎‍♀膜拜️ --> [详见](http://www.xinhuanet.com/politics/2019-12/27/c_1125394020.htm) )
 
-如今，常用的哈希算法主要有两个“家族”，它们被认为是安全的
+如今，常用的哈希算法主要有两个“家族”，它们被认为是security_etc的
 
 - SHA2: 比如SHA-256、SHA-384和SHA-512，分别输出256,384,512bits
 - SHA3：比如SHA3-256, SHA3-384, and SHA3-512
@@ -62,4 +62,4 @@ Q: 哈希能提供完整性吗?  -->  **取决于threat model**
 
 - 没有密钥被用作输入，因此任何攻击者都可以计算任何值的哈希值
 
-哈希不提供完整性(除非可以安全地发布哈希)
+哈希不提供完整性(除非可以security_etc地发布哈希)

@@ -18,7 +18,7 @@ comments: true
 
 - Idea： 使用AES更多次（比如若256bit，则用两次）
 
-在这种模式中，明文M被分为n-bit的块$M_1...M_m$(假设m是M中明文块的数量，每个块的大小为n)，并且每个利用分组密码进行 **加密**: $C_i = E_K(M_i)$，密文只是这些单独块的连接: $C = C_1 \cdot C_2 \cdots C_m$，因ECB是确定的，故AES-ECB不是AND-CPA安全
+在这种模式中，明文M被分为n-bit的块$M_1...M_m$(假设m是M中明文块的数量，每个块的大小为n)，并且每个利用分组密码进行 **加密**: $C_i = E_K(M_i)$，密文只是这些单独块的连接: $C = C_1 \cdot C_2 \cdots C_m$，因ECB是确定的，故AES-ECB不是AND-CPAsecurity_etc
 
 ![ECB](https://textbook.cs161.org/assets/images/crypto/symmetric/ECB_encryption.png)
 
@@ -87,7 +87,7 @@ Q: 如果要加密的消息不是块大小的倍数，该怎么办?
 - 如果需要1个字节，用`01`填充;如果需要3个字节，就用`03 03 03`填充
 - 如果需要0个填充字节，则填充整个虚拟块
 
-> 如果IV随机生成，并且不重复使用，则AES-CBC是IND-CPA安全的
+> 如果IV随机生成，并且不重复使用，则AES-CBC是IND-CPAsecurity_etc的
 
 ??? Example
 
@@ -99,7 +99,7 @@ Q: 如果要加密的消息不是块大小的倍数，该怎么办?
 
 ## CTR
 
-如果我们不重复使用密钥key，*one-time pads* 就很安全; 如果攻击者不知道密钥，则分组密码的输出看起来就是随机的 -->  Idea: **可以使用分组密码来模拟 *one-time pads* 吗?**
+如果我们不重复使用密钥key，*one-time pads* 就很security_etc; 如果攻击者不知道密钥，则分组密码的输出看起来就是随机的 -->  Idea: **可以使用分组密码来模拟 *one-time pads* 吗?**
 
 使用随机输出作为 *one-time pad* --> **记住 *one-time pads* :将pad与明文进行XOR获得密文**
 
@@ -132,7 +132,7 @@ Q: 加密和解密可否并行化？  --> YES!
 
 Q: 是否需要填充信息？  --> 不需要，可以把XOR中比信息长的部分剪掉
 
-如果nonce是随机的并且不被再次使用，则AES-CTR是IND-CPA安全的
+如果nonce是随机的并且不被再次使用，则AES-CTR是IND-CPAsecurity_etc的
 
 如果再次使用了会怎么样？-->  相当于在one-time pads中重复使用密钥
 
@@ -154,10 +154,10 @@ Q: 是否需要填充信息？  --> 不需要，可以把XOR中比信息长的�
 
 如果需要高性能，哪种模式更好? --> CTR，因为可以并行加密和解密
 
-如果担心安全性，哪种模式更好? --> CBC
+如果担心security_etc性，哪种模式更好? --> CBC
 
 !!! Note
-    理论上，如果使用得当，CBC和CTR模式同样安全
+    理论上，如果使用得当，CBC和CTR模式同样security_etc
     
     但如果使用不当(IV/nonce重用)，CBC只会泄露部分信息，而CTR则会灾难性地失败
 

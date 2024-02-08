@@ -9,69 +9,69 @@ nav:
     - ❤️ 关于我: home/about.md  
 
   - 📖核心基础知识:
-    - 核心基础知识/index.md
+    - core_knowledge/index.md
     - 算法:
       - LeetCode刷题:
         - 数组: 
-          - Day1 | Part1: 核心基础知识/algorithm/check_in_everyday/day1.md
-          - Day2 | Part2: 核心基础知识/algorithm/check_in_everyday/day2.md
+          - Day1 | Part1: core_knowledge/algorithm/check_in_everyday/day1.md
+          - Day2 | Part2: core_knowledge/algorithm/check_in_everyday/day2.md
         - 链表:
-          - Day3 | Part1: 核心基础知识/algorithm/check_in_everyday/day3.md
-          - Day4 | Part2: 核心基础知识/algorithm/check_in_everyday/day4.md
+          - Day3 | Part1: core_knowledge/algorithm/check_in_everyday/day3.md
+          - Day4 | Part2: core_knowledge/algorithm/check_in_everyday/day4.md
         - 哈希表:
-          - Day5 | Part1: 核心基础知识/algorithm/check_in_everyday/day5.md
-          - Day6 | Part2: 核心基础知识/algorithm/check_in_everyday/day6.md
+          - Day5 | Part1: core_knowledge/algorithm/check_in_everyday/day5.md
+          - Day6 | Part2: core_knowledge/algorithm/check_in_everyday/day6.md
         - 字符串: 
-          - Day7 | Part1: 核心基础知识/algorithm/check_in_everyday/day7.md
+          - Day7 | Part1: core_knowledge/algorithm/check_in_everyday/day7.md
         - 栈和队列: 
-          - Day8 | Part1: 核心基础知识/algorithm/check_in_everyday/day8.md
-          - Day9 | Part2: 核心基础知识/algorithm/check_in_everyday/day9.md
-          - Day10 | Part3: 核心基础知识/algorithm/check_in_everyday/day10.md
+          - Day8 | Part1: core_knowledge/algorithm/check_in_everyday/day8.md
+          - Day9 | Part2: core_knowledge/algorithm/check_in_everyday/day9.md
+          - Day10 | Part3: core_knowledge/algorithm/check_in_everyday/day10.md
         - 二叉树: 
-          - Day11 | Part1: 核心基础知识/algorithm/check_in_everyday/day11.md
-          - Day12 | Part2: 核心基础知识/algorithm/check_in_everyday/day12.md
-          - Day13 | Part3: 核心基础知识/algorithm/check_in_everyday/day13.md
+          - Day11 | Part1: core_knowledge/algorithm/check_in_everyday/day11.md
+          - Day12 | Part2: core_knowledge/algorithm/check_in_everyday/day12.md
+          - Day13 | Part3: core_knowledge/algorithm/check_in_everyday/day13.md
     - Linux: 
-      - 基础: 核心基础知识/linux/1-basic.md
+      - 基础: core_knowledge/linux/1-basic.md
 
   - 🔐安全:
-    - 安全/index.md
-    - 介绍: 安全/intro.md
+    - security_etc/index.md
+    - 介绍: security_etc/intro.md
     - 密码学:
-      - 概述: 安全/密码学/1-intro.md
+      - 概述: security_etc/密码学/1-intro.md
       - 对称加密: 
-        - 对称加密介绍: 安全/密码学/2-symmetric-key.md
-        - 一次性密码本: 安全/密码学/3-one_time_pad.md
-        - 分组密码: 安全/密码学/4-Block-Ciphers.md
-        - 分组密码的操作模式: 安全/密码学/5-BC_Opera.md
-        - MACs: 安全/密码学/7-MACs.md
-        - 流密码: 安全/密码学/9-stream.md
-      - 密码散列: 安全/密码学/6-hash.md
-      - 伪随机数生成器: 安全/密码学/8-PRNGs.md
-      - Diffie-Hellman: 安全/密码学/10-Diffie_Hellman.md
-      - 公钥密码: 安全/密码学/11-Public-key_Cryptography.md
+        - 对称加密介绍: security_etc/密码学/2-symmetric-key.md
+        - 一次性密码本: security_etc/密码学/3-one_time_pad.md
+        - 分组密码: security_etc/密码学/4-Block-Ciphers.md
+        - 分组密码的操作模式: security_etc/密码学/5-BC_Opera.md
+        - MACs: security_etc/密码学/7-MACs.md
+        - 流密码: security_etc/密码学/9-stream.md
+      - 密码散列: security_etc/密码学/6-hash.md
+      - 伪随机数生成器: security_etc/密码学/8-PRNGs.md
+      - Diffie-Hellman: security_etc/密码学/10-Diffie_Hellman.md
+      - 公钥密码: security_etc/密码学/11-Public-key_Cryptography.md
     - 区块链: 
-      - 概述: 安全/区块链/1-blockchain.md
-      - 区块链简介: 安全/区块链/2-intro.md
-      - 区块链:加密和挖矿: 安全/区块链/3-chapter.md
-      - 去中心化共识机制: 安全/区块链/4-chapter.md
+      - 概述: security_etc/区块链/1-blockchain.md
+      - 区块链简介: security_etc/区块链/2-intro.md
+      - 区块链:加密和挖矿: security_etc/区块链/3-chapter.md
+      - 去中心化共识机制: security_etc/区块链/4-chapter.md
       
 
   - 🔍杂项:
-    - 杂项/index.md
-    - MarkDown教程: 杂项/markdown.md
-    - Vim教程: 杂项/Vim.md
-    - VScode教程: 杂项/vscode.md
+    - mess/index.md
+    - MarkDown教程: mess/markdown.md
+    - Vim教程: mess/Vim.md
+    - VScode教程: mess/vscode.md
 
   - 📚读书笔记: 
-    - 读书笔记/index.md
-    - 我们为什么要睡觉: 读书笔记/why_we_sleep.md
+    - writing_note/index.md
+    - 我们为什么要睡觉: writing_note/why_we_sleep.md
 
   - 💡生活:
-    - 生活/index.md
-    - 2023年度总结: 生活/2024/2023final.md
+    - life/index.md
+    - 2023年度总结: life/2024/2023final.md
     - 2024:
-      - 1月: 生活/2024/24_january.md
+      - 1月: life/2024/24_january.md
   
   - 💪Workout:
     - workout/index.md

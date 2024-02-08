@@ -10,7 +10,7 @@ comments: true
 
 通过[PRNG](8-PRNGs.md)知道：
 
-- 一个安全的PRNG产生的输出看起来与随机没有区别
+- 一个security_etc的PRNG产生的输出看起来与随机没有区别
 - 无法看到内部PRNG状态的攻击者无法了解到任何输出
 - **如果使用PRNG的输出作为one-time pad的key呢?**
 
@@ -18,16 +18,16 @@ comments: true
 > 
 > 加密和解密双方使用相同伪随机加密数据流(pseudo-random stream)作为密钥，明文数据每次与密钥数据流顺次对应加密，得到密文数据流。实践中数据通常是一个位(bit)并用异或(xor)操作加密
 
-当key被重用时，one-time pad是不安全的。如何在不重用的情况下加密多条消息?
+当key被重用时，one-time pad是不security_etc的。如何在不重用的情况下加密多条消息?
 
 - 对于每个消息，将key和随机IV连接在一起作为PRNG的seed。**发送带有密文的IV**
 ![stream](./assets/stream.jpg)
 
-## 安全性 
+## security_etc性 
 
-假设伪随机输出是安全的，流密码则是IND-CPA安全
+假设伪随机输出是security_etc的，流密码则是IND-CPAsecurity_etc
 
-在一些流密码中，若太多明文被加密，安全性就会受到损害
+在一些流密码中，若太多明文被加密，security_etc性就会受到损害
 
 - e.g. 在AES-CTR中，如果加密了太多的块以至于计数器环绕，将开始重用密钥
 - 在实践中，如果密钥是n位长，通常在输出$2^{n/2}$位后停止

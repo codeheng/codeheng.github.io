@@ -28,7 +28,7 @@ comments: true
 
 ## ElGamal加密
 
-Diffie-Hellman密钥交换非常棒: 它让Alice和Bob通过一个不安全的通道分享秘密
+Diffie-Hellman密钥交换非常棒: 它让Alice和Bob通过一个不security_etc的通道分享秘密
 
 - 问题: Diffie-Hellman本身不能发送消息, $g^{ab} \bmod p$ 是随机的
 
