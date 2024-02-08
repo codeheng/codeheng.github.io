@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="http://codeheng.github.io/home/about/">
+        <link rel="canonical" href="http://codeheng.github.io/security_etc/cryptography/5-BC_Opera/">
       
       
-        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../../core_knowledge/">
-      
-      
-      <link rel="icon" href="../../assets/logo.ico">
+      <link rel="icon" href="../../../assets/logo.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
     
     
       
-        <title>❤️ 关于我 - Yiheng的笔记本</title>
+        <title>Block Cipher Modes of Operation - Yiheng的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/status.css">
+      <link rel="stylesheet" href="../../../stylesheets/status.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -88,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#block-cipher-modes-of-operation" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Yiheng的笔记本" class="md-header__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
+    <a href="../../.." title="Yiheng的笔记本" class="md-header__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg>
@@ -122,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ❤️ 关于我
+              Block Cipher Modes of Operation
             
           </span>
         </div>
@@ -227,13 +223,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../.." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -253,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../core_knowledge/" class="md-tabs__link">
+        <a href="../../../core_knowledge/" class="md-tabs__link">
           
   
     
@@ -273,7 +267,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../security_etc/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -293,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../mess/" class="md-tabs__link">
+        <a href="../../../mess/" class="md-tabs__link">
           
   
     
@@ -313,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../writing_note/" class="md-tabs__link">
+        <a href="../../../writing_note/" class="md-tabs__link">
           
   
     
@@ -333,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../life/" class="md-tabs__link">
+        <a href="../../../life/" class="md-tabs__link">
           
   
     
@@ -353,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../workout/" class="md-tabs__link">
+        <a href="../../../workout/" class="md-tabs__link">
           
   
     
@@ -388,7 +382,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Yiheng的笔记本" class="md-nav__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
+    <a href="../../.." title="Yiheng的笔记本" class="md-nav__button md-logo" aria-label="Yiheng的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg>
@@ -415,8 +409,6 @@
       
   
   
-    
-  
   
   
     
@@ -435,17 +427,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -462,7 +454,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             🏡 主页
@@ -475,30 +467,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ❤️ 关于我
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../home/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,46 +479,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of Content
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      联系我
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      学习经历
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -593,7 +525,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../core_knowledge/" class="md-nav__link ">
+            <a href="../../../core_knowledge/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -761,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day1/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day2/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day3/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day4/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day5/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day6/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day7/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day8/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day9/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1154,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day10/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1228,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day11/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day12/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/algorithm/check_in_everyday/day13/" class="md-nav__link">
+      <a href="../../../core_knowledge/algorithm/check_in_everyday/day13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core_knowledge/linux/1-basic/" class="md-nav__link">
+      <a href="../../../core_knowledge/linux/1-basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1353,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../security_etc/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1454,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/1-intro.md" class="md-nav__link">
+      <a href="../../密码学/1-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1598,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/2-symmetric-key.md" class="md-nav__link">
+      <a href="../../密码学/2-symmetric-key.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/3-one_time_pad.md" class="md-nav__link">
+      <a href="../../密码学/3-one_time_pad.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1640,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/4-Block-Ciphers.md" class="md-nav__link">
+      <a href="../../密码学/4-Block-Ciphers.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1661,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/5-BC_Opera.md" class="md-nav__link">
+      <a href="../../密码学/5-BC_Opera.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1682,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/7-MACs.md" class="md-nav__link">
+      <a href="../../密码学/7-MACs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1703,7 +1635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/9-stream.md" class="md-nav__link">
+      <a href="../../密码学/9-stream.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1732,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/6-hash.md" class="md-nav__link">
+      <a href="../../密码学/6-hash.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1753,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/8-PRNGs.md" class="md-nav__link">
+      <a href="../../密码学/8-PRNGs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1774,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/10-Diffie_Hellman.md" class="md-nav__link">
+      <a href="../../密码学/10-Diffie_Hellman.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1795,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/密码学/11-Public-key_Cryptography.md" class="md-nav__link">
+      <a href="../../密码学/11-Public-key_Cryptography.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1871,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/区块链/1-blockchain.md" class="md-nav__link">
+      <a href="../../区块链/1-blockchain.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1892,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/区块链/2-intro.md" class="md-nav__link">
+      <a href="../../区块链/2-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1913,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/区块链/3-chapter.md" class="md-nav__link">
+      <a href="../../区块链/3-chapter.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1934,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security_etc/区块链/4-chapter.md" class="md-nav__link">
+      <a href="../../区块链/4-chapter.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1999,7 +1931,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mess/" class="md-nav__link ">
+            <a href="../../../mess/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2032,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mess/markdown/" class="md-nav__link">
+      <a href="../../../mess/markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2053,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mess/Vim/" class="md-nav__link">
+      <a href="../../../mess/Vim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2074,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mess/vscode/" class="md-nav__link">
+      <a href="../../../mess/vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2059,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../writing_note/" class="md-nav__link ">
+            <a href="../../../writing_note/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2160,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing_note/why_we_sleep/" class="md-nav__link">
+      <a href="../../../writing_note/why_we_sleep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2215,7 +2147,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../life/" class="md-nav__link ">
+            <a href="../../../life/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2248,7 +2180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../life/2024/2023final/" class="md-nav__link">
+      <a href="../../../life/2024/2023final/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2310,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../life/2024/24_january/" class="md-nav__link">
+      <a href="../../../life/2024/24_january/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2375,7 +2307,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../workout/" class="md-nav__link ">
+            <a href="../../../workout/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2408,7 +2340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workout/zone2/" class="md-nav__link">
+      <a href="../../../workout/zone2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2429,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workout/fat/" class="md-nav__link">
+      <a href="../../../workout/fat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2450,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workout/blood_pressure/" class="md-nav__link">
+      <a href="../../../workout/blood_pressure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2500,18 +2432,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#ecb" class="md-nav__link">
     <span class="md-ellipsis">
-      联系我
+      ECB
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#cbc" class="md-nav__link">
     <span class="md-ellipsis">
-      学习经历
+      CBC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ctr" class="md-nav__link">
+    <span class="md-ellipsis">
+      CTR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-modes-of-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Modes of Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Modes of Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cfb" class="md-nav__link">
+    <span class="md-ellipsis">
+      CFB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofb" class="md-nav__link">
+    <span class="md-ellipsis">
+      OFB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总述
     </span>
   </a>
   
@@ -2532,21 +2515,165 @@
                   
 
 
-<h1 id="_1">关于我<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="block-cipher-modes-of-operation">Block Cipher Modes of Operation<a class="headerlink" href="#block-cipher-modes-of-operation" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 38 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1582 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
-<p>我叫黄一恒，来自山东菏泽，00年</p>
-<h3 id="_2">联系我<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="grid cards">
+<p>有几种 <strong>使用分组密码构建加密算法</strong> 的标准方法(或操作模式):</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z"/></svg></span> <strong>WeChat</strong>： yhkcaco  &rarr; <a href="https://github.com/codeheng/codeheng.github.io/blob/main/docs/home/assets/wechat.jpg?raw=true">点击扫码</a></li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></span> <strong>QQ</strong>: 1356410594</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg></span> <a href="https://space.bilibili.com/346574970?spm_id_from=333.1007.0.0">BiliBili</a> </li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg></span> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#105;&#104;&#101;&#110;&#103;&#104;&#104;&#104;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#121;&#105;&#104;&#101;&#110;&#103;&#104;&#104;&#104;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>ECB Mode (Electronic Code Book)</li>
+<li>CBC Mode (Cipher Block Chaining)</li>
+<li>Counter (CTR) Mode</li>
+<li>CFB Mode (Ciphertext Feedback Mode)</li>
+<li>OFB Mode (Output Feedback Mode)</li>
 </ul>
+<h2 id="ecb">ECB<a class="headerlink" href="#ecb" title="Permanent link">&para;</a></h2>
+<p>假设AES现在只能加密128bit的消息，那么如何加密更长的？(比如256bit)</p>
+<ul>
+<li>Idea： 使用AES更多次（比如若256bit，则用两次）</li>
+</ul>
+<p>在这种模式中，明文M被分为n-bit的块<span class="arithmatex">\(M_1...M_m\)</span>(假设m是M中明文块的数量，每个块的大小为n)，并且每个利用分组密码进行 <strong>加密</strong>: <span class="arithmatex">\(C_i = E_K(M_i)\)</span>，密文只是这些单独块的连接: <span class="arithmatex">\(C = C_1 \cdot C_2 \cdots C_m\)</span>，因ECB是确定的，故AES-ECB不是AND-CPAsecurity_etc</p>
+<p><img alt="ECB" src="https://textbook.cs161.org/assets/images/crypto/symmetric/ECB_encryption.png" /></p>
+<p>PS: <strong>解密</strong> &rarr; <span class="arithmatex">\(M_i = D_K(C_i)\)</span></p>
+<p>缺陷：可能泄露明文的信息。 比如：如果<span class="arithmatex">\(M_i = M_j\)</span>，则<span class="arithmatex">\(C_i = C_j\)</span></p>
+<details class="example">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">原始的图片</label><label for="__tabbed_1_2">利用ECB加密后的图片</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="origin" src="../assets/origin.jpg" /></p>
 </div>
-<h3 id="_3">学习经历<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="tabbed-block">
+<p><img alt="ECB加密" src="../assets/ECB%E5%8A%A0%E5%AF%86%E5%90%8E.jpg" /></p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="cbc">CBC<a class="headerlink" href="#cbc" title="Permanent link">&para;</a></h2>
+<p>通过添加一些 <strong>随机性</strong> 来解决上述问题</p>
+<p>给出初始化向量，它对于每种加密都是不同的。此时每个加密的第一个密文块将都是不同的!</p>
+<p>此时因第一个密文块的计算具有一定的随机性，之后再给后面的块添加随机性，如图</p>
+<p><img alt="CBC加密" src="https://textbook.cs161.org/assets/images/crypto/symmetric/CBC_encryption.png" /></p>
+<p><strong>加密</strong>：<span class="arithmatex">\(C_0 = IV, C_i = E_K(M_i \bigoplus C_{i - 1})\)</span></p>
+<ul>
+<li>将M拆分为m个明文块<span class="arithmatex">\(P_1 \cdots P_m\)</span>,每个块大小为n</li>
+<li>随机一个随机的IV</li>
+<li>计算并输出<span class="arithmatex">\((IV, C_1, \cdots, C_m)\)</span>作为整个密文</li>
+</ul>
+<p>那么如何进行解密？&rarr;  对密文两边先进行解密，再两边进行<span class="arithmatex">\(\bigoplus\)</span>操作，如下：</p>
+<div class="arithmatex">\[
+\begin{align}
+    &amp; \because C_i = E_K(M_i \bigoplus C_{i - 1}) \\
+    &amp; \therefore D_K(C_i) = D_K(E_K(M_i \bigoplus C_{i - 1})) \\
+    &amp; \therefore D_K(C_i) = M_i \bigoplus C_{i - 1} \\
+    &amp; \because D_K(C_i) \bigoplus C_{i - 1} = M_i \bigoplus C_{i - 1} \bigoplus C_{i - 1} \\
+    &amp; \therefore D_K(C_i) \bigoplus C_{i - 1} = M_i
+\end{align}
+\]</div>
+<p>即 <strong>解密</strong> ：<span class="arithmatex">\(M_i = D_K(C_i) \bigoplus C_{i - 1}\)</span></p>
+<p>Q: 加密和解密可以并行化吗？</p>
+<ul>
+<li>加密：不可以！必须等待区块i完成后才能加密区块i+1</li>
+<li>解密：可以！仅仅需要密文作为输入</li>
+</ul>
+<p><img alt="CBC解密" src="https://textbook.cs161.org/assets/images/crypto/symmetric/CBC_decryption.png" /></p>
+<p>Q: 如果要加密的消息不是块大小的倍数，该怎么办?</p>
+<p>(明文长度是块大小的倍数AES-CBC才可被定义)</p>
+<p><strong>解决办法: 填充消息，直到它是块大小的倍数</strong></p>
+<ul>
+<li>填充(padding):在消息的末尾添加虚拟字节(dummy bytes)，直到它达到适当的长度</li>
+</ul>
+<p>那么应该采取哪种填充的方案？</p>
+<p><ins>一个正确的填充方案是<a href="https://en.wikipedia.org/wiki/PKCS_7">PKCS#7</a>，根据所使用的填充字节数填充消息</ins></p>
+<ul>
+<li>如果需要1个字节，用<code>01</code>填充;如果需要3个字节，就用<code>03 03 03</code>填充</li>
+<li>如果需要0个填充字节，则填充整个虚拟块</li>
+</ul>
+<blockquote>
+<p>如果IV随机生成，并且不重复使用，则AES-CBC是IND-CPAsecurity_etc的</p>
+</blockquote>
+<details class="example">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">原始的图片</label><label for="__tabbed_2_2">利用随机的IV通过CBC加密后的图片</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="origin" src="../assets/origin.jpg" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="CBC_IV" src="../assets/CBC_withIV.jpg" /></p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="ctr">CTR<a class="headerlink" href="#ctr" title="Permanent link">&para;</a></h2>
+<p>如果我们不重复使用密钥key，<em>one-time pads</em> 就很security_etc; 如果攻击者不知道密钥，则分组密码的输出看起来就是随机的 &rarr;  Idea: <strong>可以使用分组密码来模拟 <em>one-time pads</em> 吗?</strong></p>
+<p>使用随机输出作为 <em>one-time pad</em> &rarr; <strong>记住 <em>one-time pads</em> :将pad与明文进行XOR获得密文</strong></p>
+<p><img alt="CTR" src="../assets/CTR.jpg" /></p>
+<p>那么应该用什么作为分组密码的输入? </p>
+<ul>
+<li>IND-CPA方案需要随机性，所以放置一个随机的nonce<ul>
+<li>PS: 这里的随机值被命名为nonce，其思想与CBC模式中的IV相同</li>
+</ul>
+</li>
+<li>counter每个块递增，以确保每个块密码输出是不同的</li>
+</ul>
+<p><img alt="CTR_encryption" src="../assets/CTR-encryption.jpg" /></p>
+<p><strong>加密Enc(K, M)</strong>：</p>
+<ul>
+<li>将M拆分为明文块<span class="arithmatex">\(P_1…P_m\)</span>(每个块大小为n)</li>
+<li>选择随机的nonce</li>
+<li>计算和输出<span class="arithmatex">\((Nonce, C_1,…,C_m)\)</span></li>
+</ul>
+<p>如何进行解密？ &rarr;  回想one-time pads:使用密文进行XOR以获得明文</p>
+<ul>
+<li>解析C为<span class="arithmatex">\((Nonce, C_1,…,C_m)\)</span></li>
+<li>计算<span class="arithmatex">\(P_i\)</span>，通过<span class="arithmatex">\(C_i\)</span>与<span class="arithmatex">\(E_k\)</span>在nonce和counter作用下的输出之间进行XOR</li>
+<li>连接结果明文并输出<span class="arithmatex">\(M = P_1…P_m\)</span></li>
+</ul>
+<p><img alt="CTR-decryption" src="../assets/CTR-decryption.jpg" />
+<ins>PS: 我们只使用分组密码加密，而不使用其解密</ins></p>
+<p>Q: 加密和解密可否并行化？  &rarr; YES!</p>
+<p>Q: 是否需要填充信息？  &rarr; 不需要，可以把XOR中比信息长的部分剪掉</p>
+<p>如果nonce是随机的并且不被再次使用，则AES-CTR是IND-CPAsecurity_etc的</p>
+<p>如果再次使用了会怎么样？&rarr;  相当于在one-time pads中重复使用密钥</p>
+<ul>
+<li>one-time pads中密钥重用是灾难性的:通常会泄露足够的信息，使攻击者推断出整个明文</li>
+</ul>
+<p><strong>IVs and Nonces</strong> ：</p>
+<p><strong>初始化向量(IV)</strong>：一个随机的，但公开的，一次性使用的值，将随机性引入算法</p>
+<ul>
+<li>对于CTR，使用nonce(一次使用的数字)，因为值必须是唯一的，而不一定是随机的</li>
+</ul>
+<p>不要重复使用IVs :</p>
+<ul>
+<li>在某些算法中，IV/nonce重用会泄漏有限的信息(例如CBC)</li>
+<li>在某些算法中，IV/nonce重用会导致灾难性故障(例如CTR)</li>
+</ul>
+<p><strong>比较</strong> ： </p>
+<p>如果需要高性能，哪种模式更好? &rarr; CTR，因为可以并行加密和解密</p>
+<p>如果担心security_etc性，哪种模式更好? &rarr; CBC</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>理论上，如果使用得当，CBC和CTR模式同样security_etc</p>
+<p>但如果使用不当(IV/nonce重用)，CBC只会泄露部分信息，而CTR则会灾难性地失败</p>
+</div>
+<h2 id="other-modes-of-operation">Other Modes of Operation<a class="headerlink" href="#other-modes-of-operation" title="Permanent link">&para;</a></h2>
+<h3 id="cfb">CFB<a class="headerlink" href="#cfb" title="Permanent link">&para;</a></h3>
+<p>CFB另一种流行的模式，其属性与CBC模式非常相似。</p>
+<p><strong>加密</strong>： <span class="arithmatex">\(C_0 = IV, C_i = E_K(C_{i - 1}) \bigoplus M_i\)</span></p>
+<p><img alt="CFB_encryption" src="https://textbook.cs161.org/assets/images/crypto/symmetric/CFB_encryption.png" /></p>
+<p><strong>解密:</strong> <span class="arithmatex">\(M_i = E_K(C_{i - 1}) \bigoplus C_i\)</span>
+<img alt="" src="https://textbook.cs161.org/assets/images/crypto/symmetric/CFB_decryption.png" /></p>
+<h3 id="ofb">OFB<a class="headerlink" href="#ofb" title="Permanent link">&para;</a></h3>
+<p>在此模式下，对初始向量IV进行多次加密，得到一组值<span class="arithmatex">\(Z_i\)</span>：<span class="arithmatex">\(Z_0 = IV, Z_i = E_K(Z_{i - 1})\)</span>，<span class="arithmatex">\(Z_i\)</span>被当作one-time pads中的密钥使用，即<span class="arithmatex">\(C_i = Z_i \bigoplus M_i\)</span>，也就是密文是初始向量和这些单独块的连接:<span class="arithmatex">\(C = IV \cdot C_1 \cdot C_2 \cdots C_m\)</span></p>
+<p><img alt="" src="https://textbook.cs161.org/assets/images/crypto/symmetric/OFB_encryption.png" /></p>
+<p><strong>解密</strong>： <span class="arithmatex">\(M_i = C_i \bigoplus Z_i\)</span></p>
+<p><img alt="" src="https://textbook.cs161.org/assets/images/crypto/symmetric/OFB_decryption.png" /></p>
+<h2 id="_1">总述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>分组密码是为 <strong>保密性(confidentiality)</strong> 而设计的(IND-CPA)</p>
+<p>但如果攻击者篡改了密文，并不能保证检测到它</p>
+<p>还记得Mallory么: 一个想要篡改消息的主动操纵者</p>
+<p>即 <strong>可能会导致Lack of Integrity(完整性) and Authenticity(真实性)</strong></p>
 
 
 
@@ -2569,7 +2696,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2024</span>
   </span>
 
     
@@ -2579,7 +2706,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 8, 2024</span>
   </span>
 
     
@@ -2821,12 +2948,12 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
