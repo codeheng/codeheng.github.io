@@ -175,60 +175,6 @@ Node* connect(Node* root) {
 }
 ```
 
-### [104.二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
-
-递归 : 
-```cpp linenums="1"
-int maxDepth(TreeNode* root) {
-    if (!root) return 0;
-    int maxL = maxDepth(root->left), maxR = maxDepth(root->right);
-    return max(maxL, maxR) + 1;
-}
-```
-
-层序遍历进行迭代 : 
-```cpp linenums="1" hl_lines="8"
-int maxDepth(TreeNode* root) {
-    int depth = 0;
-    queue<TreeNode*> q;
-    if(!root) return 0;
-    q.push(root);
-    while(!q.empty()) {
-        int size = q.size();
-        depth ++;
-        while( size -- ) {
-            TreeNode* node = q.front(); q.pop();
-            if(node->left) q.push(node->left);
-            if(node->right) q.push(node->right);
-        }
-    }
-    return depth; 
-}
-```
-
-### [111.二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
-
-在上题基础上修改: 当左右孩子都空，即最低点的一层, 进行return
-```cpp linenums="1" hl_lines="13"
-int minDepth(TreeNode* root) {
-    int depth = 0;
-    queue<TreeNode*> q;
-    if(!root) return 0;
-    q.push(root);
-    while(!q.empty()) {
-        int size = q.size();
-        depth ++;
-        while(size --) {
-            TreeNode * node = q.front(); q.pop();
-            if(node->left) q.push(node->left);
-            if(node->right) q.push(node->right);
-            if(!node->left && !node->right) return depth;
-        }
-    }
-    return depth;
-}
-```
-
 ## [226.翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
 每个节点左右孩子进行交换即可
