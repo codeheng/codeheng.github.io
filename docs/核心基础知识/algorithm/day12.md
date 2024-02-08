@@ -140,14 +140,39 @@ vector<int> largestValues(TreeNode* root) {
 
 ### [116.填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
 
+递归
 ```cpp linenums="1"
-
+Node* connect(Node* root) {
+    if(!root) return nullptr;
+    if(root->left) root->left->next = root->right;
+    if(root->right && root->next) root->right->next = root->next->left;
+    connect(root->left), connect(root->right);
+    return root;
+}
 ```
+层序遍历: 记录本层的头部节点 --> [参考](https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#_116-%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88:~:text=%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86-,C%2B%2B%E4%BB%A3%E7%A0%81,-%EF%BC%9A)
+
 
 ### [117.填充每个节点的下一个右侧节点指针II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/)
 
-```cpp linenums="1"
+> 区别在于上题是完美二叉树, 此题并不是
 
+```cpp linenums="1"
+Node* connect(Node* root) {
+    queue<Node*> q;
+    if(root) q.push(root), q.push(nullptr);
+    while(q.size() > 1) {
+        auto cur = q.front(); q.pop();
+        if(!cur) { 
+            q.push(nullptr); 
+            continue;
+        }
+        cur->next = q.front();
+        if(cur->left) q.push(cur->left);
+        if(cur->right) q.push(cur->right);
+    }
+    return root;
+}
 ```
 
 ### [104.二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
