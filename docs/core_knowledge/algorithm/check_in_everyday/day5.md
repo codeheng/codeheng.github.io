@@ -13,8 +13,8 @@ comments: true
 - map(映射)：`<key, value>`的存储结构
 
 在C++中，set 和 map 分别提供三种数据结构: 
-![set](./assets/set.jpg)
-![map](./assets/map.jpg)
+![set](../assets/set.jpg)
+![map](../assets/map.jpg)
 总：**当要使用集合来解决哈希问题的时候，优先使用`unordered_set`**，因为它的查询和增删效率是最优的，如果需要集合是 **有序** 的，那么就用`set`，如果要求不仅 **有序还要有重复数据** 的话，那么就用`multiset`
 
 ## [242.有效的字母异位词](https://leetcode.cn/problems/valid-anagram/description/)

@@ -14,7 +14,9 @@ int getDepth(TreeNode* node) {
 bool isBalanced(TreeNode* root) {
     if(!root) return true;
     int l = getDepth(root->left), r = getDepth(root->right);
-    return abs(l - r) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+    return abs(l - r) <= 1 
+            && isBalanced(root->left) 
+            && isBalanced(root->right);
 }
 ```
 

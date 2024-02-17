@@ -7,7 +7,7 @@ comments: true
 > 两两交换其中相邻的节点，并返回交换后链表的头节点
 
 如图所示: 
-![example](./assets/交换节点.jpg)
+![example](../assets/交换节点.jpg)
 ```c++ linenums="1"
 ListNode* swapPairs(ListNode* head) {
     if (!head || !head->next) return head;
@@ -31,7 +31,7 @@ ListNode* swapPairs(ListNode* head) {
 ## [19.删除链表的倒数第N个节点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
 
 双指针，fast先移动n步，然后fast和low同时走，fast到结尾，删除slow指向即可
-![Example](./assets/倒数第n.png)
+![Example](../assets/倒数第n.png)
 ```c++ linenums="1"
 ListNode* removeNthFromEnd(ListNode* head, int n) {
     ListNode* fast = head, *slow = head;
@@ -48,7 +48,7 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
 
 - 定会相交的起始节点碰面（即$a + c + b = b + c + a$）
 
-![example](./assets/链表相交.jpg)
+![example](../assets/链表相交.jpg)
 
 ```c++ linenums="1"
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {

@@ -21,7 +21,7 @@ comments: true
 
 怎么打乱？$M$和$K$每个对应位之间进行XOR操作，如下所示:
 
-![example](./assets/Snipaste_2024-01-01_17-34-43.jpg)
+![example](../assets/Snipaste_2024-01-01_17-34-43.jpg)
 
 图中的$C$就是Alice要通过不security_etc信道发送给Bob的密文
 
@@ -46,7 +46,7 @@ Q: Bob收到密文$C$之后，如何得到原来的信息M？--> 只需$C$和$K$
 
 要证明 *one-time pad* 是IND-CPAsecurity_etc，即证Eve猜中正确信息的概率为$1/2$
 
-![证](./assets/证security_etc性.jpg)  
+![证](./assets/证安全性.jpg)  
 因为K随机选择，所以两种可能性都是等可能的。Eve没有得到新的信息，即绝对是security_etc的。
 
 但 *one-time pad* 有一个致命的缺陷，即共享密钥K不能再次被使用传递另外的消息M'。
