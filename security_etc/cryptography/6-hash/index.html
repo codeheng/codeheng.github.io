@@ -2673,7 +2673,7 @@
 <ol>
 <li>正确性：Hash函数是确定的，即对相同的输入进行散列总是产生相同的输出</li>
 <li>计算效率非常高</li>
-<li>security_etc性:<ol>
+<li>安全性:<ol>
 <li>单向性: 给出x很容易计算H(x)，然而给出输出y，不可能找到x，满足H(x) = y</li>
 <li>Collision-resistance：如果想找到<span class="arithmatex">\(x \neq x'\)</span>,但<span class="arithmatex">\(H(x) = H(x')\)</span>,不可能！<ul>
 <li>即不可能找到任意两个哈希值相同的输入</li>
@@ -2686,8 +2686,8 @@
 <h2 id="hash_1">Hash算法<a class="headerlink" href="#hash_1" title="Permanent link">&para;</a></h2>
 <p>密码散列随着时间的推移而发展</p>
 <p>最早的哈希函数之一<a href="https://en.wikipedia.org/wiki/MD5">MD5</a>在2004年被<a href="https://www.tsinghua.edu.cn/info/1167/93827.htm">王小云</a>破解(她的成就是找到了MD5迅速碰撞的方法) </p>
-<p>SHA1(security_etc哈希算法)在2017年被打破，也是被王小云破解(🧎‍♀膜拜️ &rarr; <a href="http://www.xinhuanet.com/politics/2019-12/27/c_1125394020.htm">详见</a> )</p>
-<p>如今，常用的哈希算法主要有两个“家族”，它们被认为是security_etc的</p>
+<p>SHA1(安全哈希算法)在2017年被打破，也是被王小云破解(🧎‍♀膜拜️ &rarr; <a href="http://www.xinhuanet.com/politics/2019-12/27/c_1125394020.htm">详见</a> )</p>
+<p>如今，常用的哈希算法主要有两个“家族”，它们被认为是安全的</p>
 <ul>
 <li>SHA2: 比如SHA-256、SHA-384和SHA-512，分别输出256,384,512bits</li>
 <li>SHA3：比如SHA3-256, SHA3-384, and SHA3-512</li>
@@ -2709,7 +2709,7 @@
 <ul>
 <li>没有密钥被用作输入，因此任何攻击者都可以计算任何值的哈希值</li>
 </ul>
-<p>哈希不提供完整性(除非可以security_etc地发布哈希)</p>
+<p>哈希不提供完整性(除非可以安全地发布哈希)</p>
 
 
 
@@ -2732,7 +2732,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 17, 2024</span>
   </span>
 
     

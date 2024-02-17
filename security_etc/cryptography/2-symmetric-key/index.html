@@ -2723,7 +2723,7 @@
 
 <h1 id="symmetric-key-encryption">对称加密(Symmetric-Key Encryption)<a class="headerlink" href="#symmetric-key-encryption" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1450 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1453 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
 <h2 id="1">1. 简介<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>首先所有的消息都是 <strong>位(bits)序列</strong> (e.g.<code>110111001101</code>)，包括文字，图像以及大多数其他形式的通信都会在加密前转为比特序列  &rarr;  非常有用的抽象</p>
@@ -2749,7 +2749,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 </ul>
 </li>
 <li>高效: 加密/解密算法应该很快，在标准计算机上应&gt; 1 Gbps </li>
-<li>security_etc: 保密性</li>
+<li>安全: 保密性</li>
 </ol>
 <h3 id="_1">再定义: 保密性<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>之前我们介绍的保密性是指敌人无法 <strong>读</strong> 我们的信息, 太不具体</p>
@@ -2785,7 +2785,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 <li>现在，Eve可以要求Alice对他选择的消息进行加密，Alice总会用密钥进行加密并返回，Eve可以重复数次。这一步允许Eve执行选择明文攻击，试图了解发送的消息</li>
 <li>完成之后，Eve将猜测在第二步中到底是<span class="arithmatex">\(M_0\)</span>还是<span class="arithmatex">\(M_1\)</span></li>
 </ol>
-<p>若Eve猜测哪个被发送的概率<span class="arithmatex">\(&gt;1/2\)</span>，则Eve赢得游戏，这意味着Eve已经了解了发送的消息的一些信息，此时的方案不是IND-CPAsecurity_etc的。反之则Alice赢，此时为IND-CPAsecurity_etc的</p>
+<p>若Eve猜测哪个被发送的概率<span class="arithmatex">\(&gt;1/2\)</span>，则Eve赢得游戏，这意味着Eve已经了解了发送的消息的一些信息，此时的方案不是IND-CPA安全的。反之则Alice赢，此时为IND-CPA安全的</p>
 <h4 id="_2">边界情况: 长度<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p><em>在几乎所有实际的密码系统中，通常允许密文泄漏明文的长度</em>，为什么？</p>
 <ul>
@@ -2800,7 +2800,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 <li>要隐藏长度的应用程序必须在加密之前选择将自己的消息填充到最大可能的长度</li>
 </ul>
 <h4 id="_3">边界情况: 运行时间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>有些方案理论上是脆弱的，但在任何现实环境中都是security_etc的。因为在计算上是不可行的</p>
+<p>有些方案理论上是脆弱的，但在任何现实环境中都是安全的。因为在计算上是不可行的</p>
 <ul>
 <li>比如: Eve尝试用暴力算法破解128bits的密钥，将花费<span class="arithmatex">\(2^{128}\)</span>的计算，若每次计算花费一毫秒，则需要<span class="arithmatex">\(10^{28}\)</span>年</li>
 </ul>
@@ -2821,7 +2821,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>在 <strong>数学上</strong> 可忽略性的定义: 基于算法的security_etc参数，攻击者的优势应该是指数级的小</p>
+<p>在 <strong>数学上</strong> 可忽略性的定义: 基于算法的安全参数，攻击者的优势应该是指数级的小</p>
 <ul>
 <li>对于k bits的密钥，可忽略的优势应该为<span class="arithmatex">\(O(1/2^k)\)</span></li>
 </ul>
@@ -2831,7 +2831,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 </ul>
 <p><abbr title="a key fact, point, or idea to be remembered, typically one emerging from a discussion or meeting.">Takeaway</abbr>： 目前，<span class="arithmatex">\(2^{80}\)</span>是一个合理的门槛，但也将随着时间的推移而改变!</p>
 </div>
-<p><strong>边缘情况：</strong> IND-CPAsecurity_etc方案可能泄漏长度；Eve仅限于多项式时间算法，并且必须具有不可忽略的优势才能获胜</p>
+<p><strong>边缘情况：</strong> IND-CPA安全方案可能泄漏长度；Eve仅限于多项式时间算法，并且必须具有不可忽略的优势才能获胜</p>
 
 
 
@@ -2854,7 +2854,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 17, 2024</span>
   </span>
 
     
