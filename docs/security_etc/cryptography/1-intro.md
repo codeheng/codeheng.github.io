@@ -19,21 +19,21 @@ comments: true
 总之: 密码学始于纸笔算法(凯撒密码)，然后转移到机器上(Enigma)，最后转移到了计算机上
 
 ## 2. 定义
-> 密码学中最基本的问题是确保在不security_etc的介质上通信的security_etc性
+> 密码学中最基本的问题是确保在不安全的介质上通信的安全性
 
 为了正式研究密码学，需要定义一个数学严谨的框架
 
 **什么是密码学？**
 
-- Older definition：在不security_etc信道上进行security_etc通信的研究
-- Newer definition: 在攻击者存在的情况下，对数据和计算的security_etc性提供严格的保证
+- Older definition：在不安全信道上进行安全通信的研究
+- Newer definition: 在攻击者存在的情况下，对数据和计算的安全性提供严格的保证
     * 不仅仅是保密性(confidentiality)，还有完整性(integrity)和真实性(authenticity)    
 ### 定义Alice, Bob, Eve, and Mallory
-- Alice and Bob: 主要角色,试图通过不security_etc的通信通道互相发送消息
+- Alice and Bob: 主要角色,试图通过不安全的通信通道互相发送消息
 - Eve: 一个窃听者(eavesdropper)，可以读取通过信道发送的任何数据
 - Mallory: 一个操纵者，可以读取和修改通过通道发送的任何数据
 
-**目标:** 设计一种方案，可以通过这种方式混淆Alice和Bob之间的消息，以至于Eve不知道交换内容，而Mallory无法在不被发现的情况下篡改交换的内容。即只使用不security_etc的信道来模拟理想的通信信道
+**目标:** 设计一种方案，可以通过这种方式混淆Alice和Bob之间的消息，以至于Eve不知道交换内容，而Mallory无法在不被发现的情况下篡改交换的内容。即只使用不安全的信道来模拟理想的通信信道
 
 ### 定义Keys(密钥)
 ^^任何密码系统的最基本构建模块是密钥^^。密钥是一个秘密值，帮助我们保护消息。许多密码算法和函数都需要一个密钥作为输入来锁定或解锁一些秘密值
@@ -53,7 +53,7 @@ comments: true
 PS: 保证完整性和真实性 --> 生成一个标签(tag)或签名(signature)
 
 ### 定义：Kerckhoff原则
-> 即使密码系统的任何细节已为人悉知，只要密钥(keys)未泄漏，它也应是security_etc的
+> 即使密码系统的任何细节已为人悉知，只要密钥(keys)未泄漏，它也应是安全的
 
 我们将假设攻击者知道加密和解密算法(甚至所有的信息)，除了 **密钥** 攻击者不知道
 

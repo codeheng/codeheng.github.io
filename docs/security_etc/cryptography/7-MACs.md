@@ -28,7 +28,7 @@ MACs 即消息身份验证码
 
 > MAC是一个消息的密钥校验和，并且伴随着消息一起被发送
 
-security_etcMAC具有这样的属性：**对消息的任何更改都会使校验和无效**
+安全MAC具有这样的属性：**对消息的任何更改都会使校验和无效**
 
 具体来说包含两个部分: 
 
@@ -42,13 +42,13 @@ security_etcMAC具有这样的属性：**对消息的任何更改都会使校验
 1. 正确性: 它是确定的
       - 但有些更复杂的MAC方案有一个额外的Verify(K, M, T)函数，它不需要确定性
 2. 效率：计算MAC应该是高效的
-3. security_etc性: EU-CPA(在选择的明文攻击下存在不可伪造)
+3. 安全性: EU-CPA(在选择的明文攻击下存在不可伪造)
 
 ### 定义完整性：EU-CPA
 
 > EU-CPA = Existentially Unforgeable under Chosen Plaintext Attack
 
-**security_etc的MAC是存在不可伪造的: 没有密钥，攻击者就无法在消息上创建有效的标记**
+**安全的MAC是存在不可伪造的: 没有密钥，攻击者就无法在消息上创建有效的标记**
 
 - 没有K, Mallory不能生成MAC(K, M')
 - Mallory不能找到任何M'≠M，使得MAC(K, M') = MAC(K, M)
@@ -59,19 +59,19 @@ Mallory可以向Alice发送消息并接收他们的tags，最终Mallory创建了
 
    - M'不能是Mallory之前请求的消息
    - 如果T'是M'的有效标签，那么Mallory获胜。否则就输了
-   - 如果对于所有多项式时间攻击者，方案是EU-CPAsecurity_etc的（获胜的概率为0或可以忽略不计）
+   - 如果对于所有多项式时间攻击者，方案是EU-CPA安全的（获胜的概率为0或可以忽略不计）
 
 ## MACs例子
 
 ### NMAC
 
-如何构建security_etc的MACs? --> 可以使用security_etc的密码哈希来建立一个security_etc的MAC吗?
+如何构建安全的MACs? --> 可以使用安全的密码哈希来建立一个安全的MAC吗?
 
 - 哈希输出是不可预测的，看起来是随机的，可以把key和消息一起哈希
     * KeyGen()：输出两个随机的n位密钥$K_1$和$K_2$，其中n是哈希输出的长度
     * NMAC$(K_1,K_2,M)$：输出$H(K_1 || H(K_2 || M))$
 
-如果两个密钥不同，则NMAC是EU-CPAsecurity_etc的。若如果底层哈希函数是security_etc的，则是security_etc的
+如果两个密钥不同，则NMAC是EU-CPA安全的。若如果底层哈希函数是安全的，则是安全的
 
 !!! Question
     1. 需要两把不同的key
@@ -104,13 +104,13 @@ $$
 - ipad(inner pad)是硬编码字节`0x36`，重复直到它的长度与K'相同
 - 只要opad和ipad不一样，就会得到两个不同的键[^1]
 
-[^1]: HMAC的security_etc证明只要求ipad和opad至少相差一位，但展现密码工程师的偏执，可选择让它们非常不同
+[^1]: HMAC的安全证明只要求ipad和opad至少相差一位，但展现密码工程师的偏执，可选择让它们非常不同
 
 HMAC是一个哈希函数，因此它也具有底层哈希的属性 ： 
 
 - 它是collision resistant
 - 已知HMAC(K, M)和K，攻击者无法了解M
-- 如果底层哈希是security_etc的，则HMAC不会显示M，但它仍然是确定的
+- 如果底层哈希是安全的，则HMAC不会显示M，但它仍然是确定的
 
 如果没有K，就不能验证标签T，意味攻击者无法在不知道K的情况下暴力破解消息M
 
@@ -123,9 +123,9 @@ Q: MACs能提供真实性(authenticity)吗？ --> 取决于 threat model（如�
 
 Q: MACs能提供保密性(confidentiality)吗？ 
 
-- MACs是确定性的  -->  没有IND-CPAsecurity_etc性
+- MACs是确定性的  -->  没有IND-CPA安全性
 - ==**通常没有保密性，因为可以泄露有关消息的信息**==
-    * HMAC不会泄露有关消息的信息，但它仍然是确定性的，故它不是IND-CPAsecurity_etc的 
+    * HMAC不会泄露有关消息的信息，但它仍然是确定性的，故它不是IND-CPA安全的 
 
 ## 认证加密(Authenticated Encryption)
 
@@ -152,7 +152,7 @@ Q: MACs能提供保密性(confidentiality)吗？
 比如: Alice发送 **Enc($K_1$,M)和MAC($K_2$,M)**
 
 - 完整性?  --> YES, 攻击者无法篡改MAC
-- 保密性?  --> No, MAC不是IND-CPAsecurity_etc
+- 保密性?  --> No, MAC不是IND-CPA安全
 
 Idea: 在密文而不是明文上来计算MAC即 **Enc($K_1$, M)和MAC($K_2$, Enc($K_1$, M))**
 
@@ -173,7 +173,7 @@ Q: 是先MAC再加密 还是先加密再MAC?
 
 哪一个更好一些？
 
-- 理论上如果正确使用，两者都是IND-CPA和EU-CPAsecurity_etc
+- 理论上如果正确使用，两者都是IND-CPA和EU-CPA安全
 - 但 ^^先MAC后加密^^ 有缺陷：只有在解密之后才能知道是否发生了篡改
     - 攻击者可以提供任意的篡改输入，不得不对其进行解密
     - 通过解密函数传递攻击者选择的输入可能导致side-channel leaks即[旁路攻击](https://zh.wikipedia.org/wiki/%E6%97%81%E8%B7%AF%E6%94%BB%E5%87%BB)
@@ -184,8 +184,8 @@ Q: 是先MAC再加密 还是先加密再MAC?
 
 - PS: 多次使用相同的密钥用于相同的用途不是密钥重用
     - 如：在相同的上下文中使用相同的密钥计算不同消息的HMAC
-- 重用密钥会导致底层算法相互干扰，影响security_etc保证
-    - 如：使用基于分组密码的MAC算法和分组密码链模式，则底层的分组密码可能不再security_etc
+- 重用密钥会导致底层算法相互干扰，影响安全保证
+    - 如：使用基于分组密码的MAC算法和分组密码链模式，则底层的分组密码可能不再安全
 
 最简单的解决方案:不要重复使用密钥!每次仅使用一个key
 
@@ -214,5 +214,5 @@ Q: 是先MAC再加密 还是先加密再MAC?
 
 !!! Question
 
-    1. 对称密钥加密方案需要随机性，那么如何security_etc地生成随机数?
-    2. 在讨论对称密钥方案时，假设Alice和Bob能够共享一个密钥。Alice和Bob如何在不security_etc的通道上共享对称密钥?
+    1. 对称密钥加密方案需要随机性，那么如何安全地生成随机数?
+    2. 在讨论对称密钥方案时，假设Alice和Bob能够共享一个密钥。Alice和Bob如何在不安全的通道上共享对称密钥?

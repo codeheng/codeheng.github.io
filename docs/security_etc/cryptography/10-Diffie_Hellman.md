@@ -4,7 +4,7 @@ comments: true
 
 # Diffie-Hellman算法
 
-[之前的疑问](7-MACs.md#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5)：Alice和Bob如何在不security_etc的通道上共享对称密钥？
+[之前的疑问](7-MACs.md#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5)：Alice和Bob如何在不安全的通道上共享对称密钥？
 
 ==^^Public key exchange (e.g. Diffie-Hellman)^^==，Diffie-Hellman算法解决了 **在双方不直接传递密钥的情况下完成密钥交换**，这个神奇的交换原理完全由数学来进行支撑
 
@@ -65,7 +65,7 @@ Alice和Bob首先分别确定公共参数$p$和$g$，$p$是个大素数，$g$是
 
 DHE的好处: 向前保密(Forward secrecy)
 
-- Eve记录了所有通过不security_etc信道发送的信息
+- Eve记录了所有通过不安全信道发送的信息
 - Alice和Bob使用DHE对密钥$K = g^{ab} \bmod p$达成一致
 - Alice和Bob使用K作为对称密钥
 - 做完之后，将会丢弃a、b和K
@@ -73,7 +73,7 @@ DHE的好处: 向前保密(Forward secrecy)
 
 ## Diffie-Hellman 问题
 
-Diffie-Hellman在面对 ^^MITM(Man-in-the-middle attack)^^ 时并不security_etc
+Diffie-Hellman在面对 ^^MITM(Man-in-the-middle attack)^^ 时并不安全
 
 DHE是一种主动协议：Alice和Bob需要 **同时在线** 才能交换密钥
 
@@ -96,5 +96,5 @@ Note：离散对数问题似乎很难，因为在模运算中对整数求幂“�
 
 - 重要思想：在曲线上重复添加一个点是另一个循环群
 - 基于椭圆曲线离散对数问题，模拟了离散对数问题
-- ECDH的好处：可用更小的密钥(3072位DHE和384位ECDHE一样security_etc)
+- ECDH的好处：可用更小的密钥(3072位DHE和384位ECDHE一样安全)
 

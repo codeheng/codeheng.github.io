@@ -13,7 +13,7 @@ comments: true
 - 自己的ID(或地址)：地址的编码使用了 **Secure Hash**
 - 前一个Block的地址
 
-PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全不一样。因还包括上一个Block的ID，故产生连锁反应，即一个Block变化，后续的Block全要变化，修改成本大大提升。因此越旧的Block，越security_etc不容易被篡改，而新的Block则会越不security_etc
+PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全不一样。因还包括上一个Block的ID，故产生连锁反应，即一个Block变化，后续的Block全要变化，修改成本大大提升。因此越旧的Block，越安全不容易被篡改，而新的Block则会越不安全
 
 但仅仅是难以篡改，**工作量证明的共识机制** 使得无法篡改
 

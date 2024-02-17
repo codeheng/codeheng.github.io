@@ -6,7 +6,7 @@ comments: true
 
 PRNGs = Pseudorandom Number Generators(伪随机数生成器)
 
-之前[留的疑问](7-MACs.md#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5): **对称密钥加密方案需要随机性，那么如何security_etc地生成随机数**?
+之前[留的疑问](7-MACs.md#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5): **对称密钥加密方案需要随机性，那么如何安全地生成随机数**?
 
 ### 随机性
 
@@ -16,7 +16,7 @@ PRNGs = Pseudorandom Number Generators(伪随机数生成器)
 - 随机的IV/Nonce
 - 通用唯一标识符...等等
 
-如果攻击者可以预测一个随机数，可能会灾难性地失败，那如何security_etc生成随机数？
+如果攻击者可以预测一个随机数，可能会灾难性地失败，那如何安全生成随机数？
 
 在密码学中，随机性意味着 **随机 + 不可预测**
 
@@ -75,8 +75,8 @@ High entropy = unpredictable outcomes = desirable in cryptography
 
 - 正确性：是确定的
 - 高效性： 产生伪随机比特是效率高的
-- security_etc性：与随机无法区分
-- 附加security_etc性：防回滚(Rollback resistance)
+- 安全性：与随机无法区分
+- 附加安全性：防回滚(Rollback resistance)
 
 ### Seeding 和 Reseeding
 
@@ -89,7 +89,7 @@ Reseeding用于增加更多的熵，因为它变得可用
 
 - 用0熵进行Reseeding不应该减少内部状态或输出
 
-### PRNG: security_etc
+### PRNG: 安全
 
 Q: 能设计一个真正随机的PRNG吗?
 
@@ -98,9 +98,9 @@ PRNG不可能是真正随机的
 - 给定初始种子，输出是确定的
 - 如果初始种子是s位长，那么只有$2^s$个可能的输出序列
 
-security_etc的PRNG在计算上从陌生人到攻击者来说是无法区分的
+安全的PRNG在计算上从陌生人到攻击者来说是无法区分的
 
-- 比如向攻击者展示一个真正的随机序列和一个从security_etcPRNG输出的序列，攻击者不应该能够在概率> ^^$1/2$ +可忽略不计的情况下(negligible)^^ 确定哪个是哪个
+- 比如向攻击者展示一个真正的随机序列和一个从安全PRNG输出的序列，攻击者不应该能够在概率> ^^$1/2$ +可忽略不计的情况下(negligible)^^ 确定哪个是哪个
 
 等价定义：攻击者无法预测PRNG的未来输出
 
@@ -110,7 +110,7 @@ security_etc的PRNG在计算上从陌生人到攻击者来说是无法区分的
 
 假设已经使用PRNG生成了100位，并且攻击者能够在生成第100位后立即了解到内部状态。如果PRNG是Rollback- Resistance的，那么攻击者就无法推断出任何关于之前生成的比特的信息
 
-**在security_etcPRNG中不需要Rollback-Resistance，但它是一个有用的属性**
+**在安全PRNG中不需要Rollback-Resistance，但它是一个有用的属性**
 
 比如考虑一个使用单个PRNG为对称加密方案生成密钥和IV(或nonce)的密码系统
 
@@ -120,7 +120,7 @@ security_etc的PRNG在计算上从陌生人到攻击者来说是无法区分的
 
 ## HMAC-DRBG
 
-PRNG有很多实现，但实践中最常用的是HMAC-DRBG，它利用HMAC的security_etc属性来构建PRNG
+PRNG有很多实现，但实践中最常用的是HMAC-DRBG，它利用HMAC的安全属性来构建PRNG
 
 **HMAC-DRBG保持两个值作为其内部状态的一部分: K 和 V**
 
@@ -132,7 +132,7 @@ PRNG有很多实现，但实践中最常用的是HMAC-DRBG，它利用HMAC的sec
 
 回想一下，对于不知道密钥的攻击者来说，HMAC的输出看起来是随机的
 
-只要内部状态(包括K)是保密的，攻击者无法从随机比特中区分HMAC输出，因此PRNG是security_etc的
+只要内部状态(包括K)是保密的，攻击者无法从随机比特中区分HMAC输出，因此PRNG是安全的
 
 **算法1：Generate(n)**：生成n位伪随机比特，没有额外的真正随机输入
 
@@ -175,7 +175,7 @@ Reseed(s):
       V = HMAC(K, V)
 ```
 
-security_etc性: 假设HMAC是security_etc的，那么HMAC-DRBG就是security_etc的、抗回滚的PRNG
+安全性: 假设HMAC是安全的，那么HMAC-DRBG就是安全的、抗回滚的PRNG
 
 - 如果你破坏了HMAC-DRBG，你要么破坏了HMAC，要么破坏了底层的哈希函数
 
@@ -190,7 +190,7 @@ security_etc性: 假设HMAC是security_etc的，那么HMAC-DRBG就是security_et
 UUIDs:
 
 - 128位唯一值
-- 要生成新的UUID，正确地Seedsecurity_etc的PRNG，并生成一个随机值
+- 要生成新的UUID，正确地Seed安全的PRNG，并生成一个随机值
 - 通常用十六进制书写:`00112233-4455-6677-8899-aabbccddeeff`
 
 ## 总结
@@ -202,7 +202,7 @@ PRNG:一种使用少量真正随机性来生成大量随机输出的算法
 - Seed(entropy):初始化内部状态
 - Reseed(entropy):向内部状态添加额外的熵
 - Generate(n):生成n位伪随机输出
-- security_etc性: 在计算上与真正的随机比特无法区分
+- 安全性: 在计算上与真正的随机比特无法区分
 
 CTR-DRBG: 在CTR模式下使用分组密码生成伪随机比特
 
