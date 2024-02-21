@@ -37,6 +37,8 @@ nav:
           - Day17 | Part7: core_knowledge/algorithm/check_in_everyday/day17.md
           - Day18 | Part8: core_knowledge/algorithm/check_in_everyday/day18.md
           - Day19 | Part9: core_knowledge/algorithm/check_in_everyday/day19.md
+        - 回溯算法:
+          - Day20 | Part1: core_knowledge/algorithm/check_in_everyday/day20.md
     - Linux: 
       - 基础: core_knowledge/linux/1-basic.md
 
@@ -68,6 +70,10 @@ nav:
     - MarkDown教程: mess/markdown.md
     - Vim教程: mess/Vim.md
     - VScode教程: mess/vscode.md
+
+  - 🔑Eng:
+    - eng/index.md
+
 
   - 📚读书笔记: 
     - writing_note/index.md
