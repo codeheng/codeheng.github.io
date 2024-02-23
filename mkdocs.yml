@@ -40,6 +40,7 @@ nav:
         - 回溯算法:
           - Day20 | Part1: core_knowledge/algorithm/check_in_everyday/day20.md
           - Day21 | Part2: core_knowledge/algorithm/check_in_everyday/day21.md
+          - Day22 | Part3: core_knowledge/algorithm/check_in_everyday/day22.md
     - Linux: 
       - 基础: core_knowledge/linux/1-basic.md
 
