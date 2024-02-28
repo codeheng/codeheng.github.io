@@ -10,3 +10,4 @@ comments: true
 - [x] [寒假运动打卡活动](https://mp.weixin.qq.com/s/vTPeyWZU3d45uLxy6YGxKA)完成,打卡了34天,总2004min(1.22~2.25中间隔了一天串亲戚没运动)
 - [x] [云上自习室活动](https://mp.weixin.qq.com/s/WzaoexF0yXm4eFAa46u5ag)获得三等奖(华电小熊没拿到...
 - [x] [系寒假读书打卡活动](https://mp.weixin.qq.com/s/_R6Ft4s8KZDbKaoA2Dx1zg)完成
+- [ ] 2.27早六点出六级成绩, 382分, 未过!!! **反思反思...**
