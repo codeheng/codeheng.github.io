@@ -11,3 +11,4 @@ comments: true
 - [x] [云上自习室活动](https://mp.weixin.qq.com/s/WzaoexF0yXm4eFAa46u5ag)获得三等奖(华电小熊没拿到...
 - [x] [系寒假读书打卡活动](https://mp.weixin.qq.com/s/_R6Ft4s8KZDbKaoA2Dx1zg)完成
 - [ ] 2.27早六点出六级成绩, 382分, 未过!!! **反思反思...**
+- [x] 2.27下午办了个[直隶铁馆](https://www.douyin.com/user/MS4wLjABAAAABwIKSsMabOZcvVLhrEd9SGgN6l-vzuzbz37LpdwhWOI?modal_id=7338383359640341812)健身卡(398)
