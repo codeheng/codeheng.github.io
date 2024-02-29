@@ -4,7 +4,7 @@ comments: true
 
 ## [122.买卖股票的最佳时机II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/)
 
-只有一只股票 & 只有买或卖 --> 把利润分为每天为单位的维度, 收集每天的正利润即可, [参考图](https://code-thinking-1253855093.file.myqcloud.com/pics/2020112917480858-20230310134659477.png)
+只有一只股票 & 只有买或卖 --> 把利润分为每天为单位的维度, 收集每天的正利润即可, [图示](https://code-thinking-1253855093.file.myqcloud.com/pics/2020112917480858-20230310134659477.png)
 
 - 局部最优：收集每天的正利润; 全局最优：求得最大利润
 
@@ -22,7 +22,7 @@ int maxProfit(vector<int>& prices) {
 
 跳几步无所谓, 关键是可跳的覆盖范围 --> 转化为跳跃覆盖范围究竟可不可以覆盖到终点
 
-- 每次移动取最大跳跃步数(得到最大的覆盖范围)，每移动一个单位，就更新最大覆盖范围 [参考](https://code-thinking-1253855093.file.myqcloud.com/pics/20230203105634.png)
+- 每次移动取最大跳跃步数(得到最大的覆盖范围)，每移动一个单位，就更新最大覆盖范围 [图示](https://code-thinking-1253855093.file.myqcloud.com/pics/20230203105634.png)
 
 ```cpp linenums="1" hl_lines="5"
 bool canJump(vector<int>& nums) {
