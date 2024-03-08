@@ -30,7 +30,9 @@ PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全�
     只要把整个文件的数据传入到那个特定的hash算法中，就会得到一串很长的字符串
     
     如果和官方发布的Checksum字符串不一样，那么就说明信息或文件内容被人更改或是信息残缺了。
-    因此，也被应用在[数字签名](https://www.google.com/search?q=%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D&oq=%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABgeMgYIAhAAGB4yBggDEAAYHjIGCAQQABgeMgYIBRAAGB4yBggGEAAYHjIGCAcQRRg90gEINTQ2M2oxajSoAgCwAgA&sourceid=chrome&ie=UTF-8#:~:text=%E5%8F%AA%E6%9C%89%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8F%91%E9%80%81%E8%80%85%E6%89%8D%E8%83%BD%E4%BA%A7%E7%94%9F%E7%9A%84%E5%88%AB%E4%BA%BA%E6%97%A0%E6%B3%95%E4%BC%AA%E9%80%A0%E7%9A%84%E4%B8%80%E6%AE%B5%E6%95%B0%E5%AD%97%E4%B8%B2%EF%BC%8C%E8%BF%99%E6%AE%B5%E6%95%B0%E5%AD%97%E4%B8%B2%E5%90%8C%E6%97%B6%E4%B9%9F%E6%98%AF%E5%AF%B9%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8F%91%E9%80%81%E8%80%85%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF%E7%9C%9F%E5%AE%9E%E6%80%A7%E7%9A%84%E4%B8%80%E4%B8%AA%E6%9C%89%E6%95%88%E8%AF%81%E6%98%8E)中
+    因此，也被应用在『数字签名』[^1] 中
+
+[^1]: Digital Signature(公钥数字签名)是一种功能类似写在纸上的普通签名、但是使用了公钥加密领域的技术，以用于鉴别数字信息的方法
 
 两个著名的Hash算法： [MD5](https://en.wikipedia.org/wiki/MD5)和[SHA-2](https://en.wikipedia.org/wiki/SHA-2)，而区块链用的是[SHA-256](https://en.wikipedia.org/wiki/SHA-2)
 
@@ -49,6 +51,8 @@ PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全�
 
 ^^对这六个字段进行hash计算，就可以得到本区块的hash值，即其ID或是地址^^
 
+- `SHA-256(SHA-256 (Block Header))`
+
 然而比特币对hash值是有要求的，要求是由Bits字段控制的，可以调整Nonce这个32位整型的值来找到符合条件的hash值。把这个事情叫做 **挖矿**
 
 - **后面的部分为交易数据：**
@@ -62,6 +66,14 @@ Q: Merkle Root如何计算？
 ^^Why？ 这样合并有什么好处？^^ --> 把交易数据分成了若干个组，如上面二叉树所表示的一样，可以不断地把树分成左边和右边的分支，因为它们都被计算过hash值，所以可以很快地校验其内容有无被修改过
 
 - 大量的交易数据分成小的，有利于整合和校验数据并可以提高网络的传输速度
+
+PS: 『以太坊』[^2]有三个不同的Merkle Root树
+
+- 一个用来做交易hash的Merkle Root
+- 一个是用来表示状态State的
+- 一个是用来做交易收据的, 记录一个智能合约中最终发生的交易信息
+
+[^2]: Ethereum是一个去中心化的开源的有智能合约功能的公共区块链平台
 
 ## 比特币的交易模型
 
@@ -84,3 +96,5 @@ Q: Merkle Root如何计算？
 若此时Alice想要转给Jack4个比特币，但她自己的两个交易中都不够，因为不能拆开之前的那两个比特币交易，那么她只能把交易2和交易3当成input，然后把自己和Bob当成output，Jack分得4个，自己分1个，这样的交易才平衡
 
 因此一笔交易可能会包含大量的Input和Output，并且可能需要通过多个input来凑，然后output这边还需要给自己找零（如上），这样在比特币交易中，你把钱给了我，我又给了张三，张三给了李四……就这样传递下去，形成了一个交易链。因为还没有花出去，所以就成了UTXO，而 **系统计算你有没有钱可以汇出去时，只需要查看一下你的UTXO就可以**
+
+![eg](https://developer.bitcoin.org/_images/en-transaction-propagation.svg)
