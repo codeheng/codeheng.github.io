@@ -2599,6 +2599,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pow" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作量证明(PoW)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      股权证明协议(PoS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      委托股权证明(DPoS)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3270,6 +3297,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pow" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作量证明(PoW)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      股权证明协议(PoS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      委托股权证明(DPoS)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3288,20 +3342,23 @@
   <h1>去中心化共识机制</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 597 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1734 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
 <h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>去中心化的共识机制也是要解决<a href="https://zh.wikipedia.org/wiki/%E6%8B%9C%E5%8D%A0%E5%BA%AD%E5%B0%86%E5%86%9B%E9%97%AE%E9%A2%98">拜占庭将军问题</a>——分布式对等网络通信容错问题</p>
+<p>去中心化的共识机制是要解决『拜占庭将军问题』<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <p><strong>区块链是比特币的底层技术</strong>，而 <ins>共识机制是去中心化的分布式账本中的规则核心</ins> ，决定了区块链的安全性、可扩展性和去中心化程度等许多重要特性，有助于验证和验证信息被添加到分类账簿，确保只有真实的事务记录在区块链上</p>
 <blockquote>
-<p>共识机制是指以去中心化的方式就网络的状态达成统一协议的过程</p>
+<p>共识机制(consensus)是指以去中心化的方式就网络的状态达成统一协议的过程</p>
 </blockquote>
 <p><strong>常见的共识机制：</strong></p>
 <ul>
-<li>PoW（工作量证明）</li>
-<li>PoS（权益证明）</li>
-<li>DPoS（委任权益证明）</li>
+<li>PoW（工作量证明）典型案例: bitcoin</li>
+<li>PoS（股权证明）, 典型案例: 以太坊</li>
+<li>DPoS（委任权益证明）, 典型案例: <a href="https://zh.wikipedia.org/wiki/EOS.IO">EOS</a></li>
+<li>PoC (容量证明) , 典型案例: <a href="https://zh.wikipedia.org/wiki/Filecoin">filecoin</a></li>
 <li>PBFT（实用拜占庭容错算法）</li>
+<li><a href="https://zh.wikipedia.org/wiki/Paxos%E7%AE%97%E6%B3%95">Paxos算法</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Raft">Raft算法</a></li>
 <li>POOL（验证池）等</li>
 </ul>
 <h2 id="_2">分布式一致性算法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -3313,6 +3370,72 @@
 <li>另一个是放宽对最终一致性确认的需求，约定好大家都确认并沿着已知最长的链进行拓宽</li>
 </ul>
 <p>若比特币系统在某一个时刻同时出现了两个都合法的区块，那么两个都承认。于是区块链上会出现两个合法的分支（<strong>称为分叉</strong>）。此时矿工可以选择任何一个分支继续，在某个分支的长度超过了另一个分支时，短的那个分支则马上作废</p>
+<p>拜占庭容错系统三个重要理论: </p>
+<ol>
+<li>
+<p>CAP——在网络发生阻断(Partition)时，只能选择数据的一致性(Consistency)或可用性(Availability)，无法两者兼得, 比如网络因阻断而分割为二, 在一边我10<span class="arithmatex">\(给A, 另一边我10\)</span>给B, 此时系统: </p>
+<ul>
+<li>要么是(1). 无可用性, 即这两笔交易至少会有一笔交易不会被接受</li>
+<li>要么是(2). 无一致性, 即一边看到的是A多了10<span class="arithmatex">\(而另一边则看到B多了10\)</span></li>
+</ul>
+</li>
+<li>
+<p>FLP 和 DLS</p>
+</li>
+</ol>
+<h2 id="pow">工作量证明(PoW)<a class="headerlink" href="#pow" title="Permanent link">&para;</a></h2>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 比特币的挖矿算法并不是比特币开创的，原型为<a href="https://en.wikipedia.org/wiki/Hashcash">Hashcash</a>,最开始是限制垃圾邮箱的; Hashcash一开始要求邮件发送方对邮件头（其中包括时间和收件人地址）计算一个160bit的SHA-1哈希值。其前面需要有5个零，也就是20bit的0。接收端会检查这个事; <ins>这对于需要大量发送垃圾邮件的人来说，是一个很大的成本</ins> ; 用这种消耗对手资源的手段来阻止一些恶意的攻击或是像垃圾邮件这样的对服务的滥用, 即 <strong>PoW(Proof-of-Work)</strong></p>
+<p><strong>PoW两种协议:</strong></p>
+<ol>
+<li>
+<p>Challenge-Response协议, 用于Client-Server; 若Client需要使用服务，则需要被Challenge去花费一些资源, 若证明自己的资源已被花费了，则通过认证，授权使用
+<img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/459px-Proof_of_Work_challenge_response.svg.png" /></p>
+</li>
+<li>
+<p>Solution-Verification协议，用于验证使用, Hashcash即是这种
+<img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Proof_of_Work_solution_verification_german.svg" /></p>
+</li>
+</ol>
+<p>通过挖矿——PoW这样的协议来大幅度地提高修改成本，使得有恶意的人要改一个地方，需要花很大很大的成本来修改。这几乎是一件不可能的事情; PoW还有另一个功能，即让这些不受控制的分布式P2P网络里的结点统一思想。又即 <strong>分布式一致性</strong></p>
+<p>总之:</p>
+<ul>
+<li>PoW提高对数据篡改的成本, 若想完全修改需要大量算力</li>
+<li>提高网络中不同声音的成本 (要做一个伪造账本的成本极大，而校验成本很小)</li>
+<li>解决分歧 (让整个去中心化系统的一致性，不再以人数多认可的为准，而是以算力多的)</li>
+<li>越来越中心化地记账 &amp; 越来越跑不动</li>
+</ul>
+<h2 id="pos">股权证明协议(PoS)<a class="headerlink" href="#pos" title="Permanent link">&para;</a></h2>
+<p>PoW中,要找到符合条件的Hash值，其耗费的电力和时间成本是越来越大。故为了每个Block更快的生成，出现了PoS; 在此机制下, 矿工不在叫矿工，而是叫Validator（校验者）, 他们将按照股权的比权来获得记账权; 在记账权不再像PoW谁的算力大谁就越有机会来记账，而是由谁的财富多，谁就越有可能来记账。<strong>即记账权按大家财富的比例来分配</strong></p>
+<ul>
+<li>在以太坊下，是根据拥有以太币的总量，来决定成为Validator的几率</li>
+</ul>
+<p>缺点: 在PoS这种不需要算力的机制下，就可以让记账人们在两个分支上同时进行，以争取实现利益的最大化（无论哪个分支最终胜出，我都可以有利）。这样一来，攻击者就可以利用这种情况来发起<a href="https://en.wikipedia.org/wiki/Proof_of_stake">Nothing-ot-Stake</a>攻击 , 于是提出了DPos</p>
+<h2 id="dpos">委托股权证明(DPoS)<a class="headerlink" href="#dpos" title="Permanent link">&para;</a></h2>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; DPoS优化方案在于：通过不同的策略，不定时地选中一小群节点，这一小群节点做新区块的创建、验证、签名和相互监督。<strong>即允许网络用户投票和选举将验证该网络上交易的代表</strong>, 这样就大幅度减少了区块创建和确认所需要消耗的时间和算力成本</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>分布式系统的CAP原则，在 <strong>一致性、可用性和分区容忍性</strong> 上只能三选二</p>
+<p>在区块链的P2P网络下也如此，在 <strong>去中心化、安全和高性能</strong> 中，只能选两个</p>
+</div>
+<ul>
+<li>
+<p>若想要一个既安全，性能也很高的系统，就得放弃去中心化的架构, 如DPoS这样的中心化系统，直接放弃区块链走传统的中心化架构</p>
+</li>
+<li>
+<p>若想要一个去中心化和安全的系统，主要去挖矿，那么放弃高性能。即比特币架构</p>
+</li>
+<li>
+<p>若想要一个去中心化和高性能的系统，即放弃安全。但没有安全，基本是不会有人用</p>
+</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>拜占庭将军问题(Byzantine Generals Problem)，是由Leslie Lamport在其同名论文中提出的分布式对等网络通信容错问题, 用来解释一致性问题的一个虚构模型。同时，它也是分布式领域中最复杂、最严格的容错模型&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -3335,7 +3458,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 8, 2024</span>
   </span>
 
     
