@@ -25,3 +25,4 @@ comments: true
 - [x] 24.3.3上午——**腿** <br>哑铃高脚杯深蹲(dumbbell goblet squat), 双腿伸屈(Machine Leg Extension), [夹腿器](https://p7.itc.cn/images01/20230308/7f975cc2d523416eb1f8b1893ab29e8b.gif)
 - [x] 24.3.5下午——**胸+二头** (胸推器4x12, 哑铃弯举/锤式弯举3x12) 
 - [x] 24.3.7下午——**背+腹肌** (高位下拉, 坐姿划船, 举腿)
+- [x] 24.3.9下午——**肩膀+三头(肩推, 侧平举, 面拉, cable rope pushdown(下拉缆绳) 4x12)**
