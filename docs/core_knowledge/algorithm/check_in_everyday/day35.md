@@ -60,8 +60,8 @@ int main() {
    
     ``` cpp linenums="1"
     for(int i = 0; i < weight.size(); i++)  // 遍历物品
-    for(int j = bagWeight; j >= weight[i]; j--)  // 遍历背包容量
-        dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
+        for(int j = bagWeight; j >= weight[i]; j--)  // 遍历背包容量
+            dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
     ```
 
 5. 例子同上 --> [如图](https://code-thinking-1253855093.file.myqcloud.com/pics/20210110103614769.png)
