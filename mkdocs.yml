@@ -62,25 +62,28 @@ nav:
 
   - 🔐安全:
     - security_etc/index.md
-    - 介绍: security_etc/intro.md
-    - 密码学:
-      - 概述: security_etc/cryptography/1-intro.md
-      - 对称加密: 
-        - 对称加密介绍: security_etc/cryptography/2-symmetric-key.md
-        - 一次性密码本: security_etc/cryptography/3-one_time_pad.md
-        - 分组密码: security_etc/cryptography/4-Block-Ciphers.md
-        - 分组密码的操作模式: security_etc/cryptography/5-BC_Opera.md
-        - MACs: security_etc/cryptography/7-MACs.md
-        - 流密码: security_etc/cryptography/9-stream.md
-      - 密码散列: security_etc/cryptography/6-hash.md
-      - 伪随机数生成器: security_etc/cryptography/8-PRNGs.md
-      - Diffie-Hellman: security_etc/cryptography/10-Diffie_Hellman.md
-      - 公钥密码: security_etc/cryptography/11-Public-key_Cryptography.md
+    - CS161:
+      - 介绍: security_etc/intro.md
+      - 密码学:
+        - 概述: security_etc/cryptography/1-intro.md
+        - 对称加密: 
+          - 对称加密介绍: security_etc/cryptography/2-symmetric-key.md
+          - 一次性密码本: security_etc/cryptography/3-one_time_pad.md
+          - 分组密码: security_etc/cryptography/4-Block-Ciphers.md
+          - 分组密码的操作模式: security_etc/cryptography/5-BC_Opera.md
+          - MACs: security_etc/cryptography/7-MACs.md
+          - 流密码: security_etc/cryptography/9-stream.md
+        - 密码散列: security_etc/cryptography/6-hash.md
+        - 伪随机数生成器: security_etc/cryptography/8-PRNGs.md
+        - Diffie-Hellman: security_etc/cryptography/10-Diffie_Hellman.md
+        - 公钥密码: security_etc/cryptography/11-Public-key_Cryptography.md
+        - 比特币: security_etc/cryptography/bitcoin.md
     - 区块链: 
       - 概述: security_etc/blockchain/1-blockchain.md
       - 区块链简介: security_etc/blockchain/2-intro.md
       - 区块链:加密和挖矿: security_etc/blockchain/3-chapter.md
       - 去中心化共识机制: security_etc/blockchain/4-chapter.md
+      - 智能合约: security_etc/blockchain/5-smart_contract.md
       
 
   - 🔍杂项:

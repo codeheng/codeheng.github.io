@@ -5,6 +5,10 @@ comments: true
 
 # Introduction
 
+!!! Abstract
+
+    来自[CS 161](https://fa23.cs161.org/), 对课件以及相关资料进行整理
+
 ## **什么是安全?**
 
 - 在攻击者存在的情况下强制执行期望的属性
