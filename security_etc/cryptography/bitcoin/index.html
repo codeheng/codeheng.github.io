@@ -2563,6 +2563,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      公共账本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3396,6 +3414,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      公共账本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3414,7 +3450,7 @@
   <h1>比特币</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 458 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1335 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <blockquote>
 <p>比特币:在不信任中央机构的情况下发送和接收money</p>
@@ -3434,7 +3470,7 @@
 <li>
 <p>没有任何一方信任其他任何一方，也没有中央权威机构(Central Authority)</p>
 <ul>
-<li>通常，中央机构(例如银行)跟踪余额并执行支出规则</li>
+<li>通常，中央机构(例如银行)跟踪余额并执行支出规则『传统的实际货币』</li>
 <li>若没有，必须使用加密技术来强制执行正确性!</li>
 </ul>
 </li>
@@ -3442,13 +3478,90 @@
 </div>
 <p><strong>身份管理</strong>: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;<strong>Idea:</strong> 使用证书(certificates)来验证真实世界的身份? 但是需要中间的CAs, <strong>反而，只需将每个人的身份定义为一个公钥</strong>, 这样就可以规避身份的问题(即完全忽略了真实世界的身份), 在公钥之间进行交易,而非"人"之间, E.g.四个人分别对应为<span class="arithmatex">\(PK_A,PK_B,PK_C,PK_D\)</span></p>
-<p><strong>交易(Transcations):</strong> <br>
-&nbsp; &nbsp; &nbsp; &nbsp; 现在，假设存在一个可信的公共分类账簿; <ins>1.所有人都可以访问(每个人都可以查看分类账簿); 2.仅追加(每个人都可以向分类账簿中添加数据); 3.不可变(没有人可以更改或删除现有数据)</ins></p>
+<p><strong>交易(Transcations):</strong> <br></p>
+<blockquote>
+<p>Transaction (TX) - 是指用户在区块链上交换加密货币的过程</p>
+</blockquote>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 现在，假设存在一个可信的公共分类账簿; <ins>1.所有人都可以访问(每个人都可以查看分类账簿); 2.仅追加(每个人都可以向分类账簿中添加数据); 3.不可变(没有人可以更改或删除现有数据)</ins></p>
 <p>Q: 如何以每个人都能看到的方式记录交易?</p>
 <ul>
 <li>IDEA: 在分类账簿上写上"<span class="arithmatex">\(PK_A\)</span> 付了 10coins 给<span class="arithmatex">\(PK_D\)</span>", 但是Mallory可以伪造交易</li>
-<li>Solution: 使用数字签名,在分类账簿上写上<span class="arithmatex">\(\{"PK_D付了10coins给PK_D"\}_{SK_{D^{-1}}}\)</span><ul>
+<li>Solution: 使用数字签名,在分类账簿上写上<span class="arithmatex">\(\{PK_D付了10coins给PK_D\}_{SK_{D^{-1}}}\)</span><ul>
 <li>问题: 如何检查Dave(<span class="arithmatex">\(PK_D\)</span>)花了多少货币?</li>
+</ul>
+</li>
+</ul>
+<p>每一方的余额在分类账簿上仅以 <ins>收到的总额减去花费的总额</ins> 的形式存在, 实时余额不直接列在分类账簿上, <strong>这需要花多久?</strong></p>
+<ul>
+<li>必须扫描整个分类账簿来确定某人的余额(太长了)</li>
+<li>随着越来越多的交易发生，分类账簿会无限增长</li>
+</ul>
+<p><strong>The Ledge V1:</strong> (假设<span class="arithmatex">\(PK_A, PK_B, PK_C, PK_D\)</span> 开始10 coins)</p>
+<ul>
+<li><span class="arithmatex">\(\{PK_A付了4coins给PK_C\}_{SK_{A^{-1}}}\)</span></li>
+<li><span class="arithmatex">\(\{PK_B付了6coins给PK_D\}_{SK_{B^{-1}}}\)</span></li>
+<li><span class="arithmatex">\(\{PK_B付了2coins给PK_A\}_{SK_{B^{-1}}}\)</span> <span class="arithmatex">\(PK_A\)</span>现在有多少coins? &rarr; <span class="arithmatex">\(10-4+2 = 8\)</span> </li>
+</ul>
+<p>构造: 每个交易都有inputs(来源，钱从哪里来)和outputs(目的地，货币流向谁)</p>
+<ul>
+<li>现在，每一方只需要跟踪他们收到钱的交易(它们是output)</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>使用来自TX2和TX4的货币,分别把3coin给<span class="arithmatex">\(PK_A\)</span>和4coins给<span class="arithmatex">\(PK_B\)</span></p>
+<ul>
+<li>TX2和TX4现在已经被“花费”(用作input)，所以不需要再跟踪它了</li>
+<li>Alice和Bob现在有额外的未花费交易</li>
+</ul>
+</div>
+<p><img alt="transactions" src="../assets/transactions.jpg" /></p>
+<p><strong>The Ledger V2:</strong>
+<img alt="ledger_v2" src="../assets/ledger_v2.jpg" /></p>
+<h2 id="_1">公共账本<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hash Chains: 一个链表，其中每个节点包含前一个节点的哈希值</li>
+</ul>
+<p>之前的方案需要一个公开的、可信的分类账簿</p>
+<ul>
+<li>只添加, 不可变 &amp; 对各方都可访问 &amp; 不能信任任何个人来维护账本</li>
+</ul>
+<blockquote>
+<p><strong>共识(Consensus)</strong>: 在不信任任何个人的情况下，作为一个群体就某件事达成一致的方式</p>
+</blockquote>
+<p><strong>Forking attacks</strong> (攻击者创建自己的链分支): 哈希链是否允许一组个人达成共识?</p>
+<ul>
+<li>No.若Mallory创建了一个她没有花费100,000个coins的替代历史，这仍是一个有效的哈希链</li>
+<li>需要一种方法来商定区块链的负责人  &rarr; PoW<ul>
+<li>区块链只接受哈希以n个0开头的区块</li>
+<li>找到有效的块需要尝试<span class="arithmatex">\(2^n\)</span>个哈希, 奖励是用来激励挖矿区块的</li>
+<li>最长的哈希链被接受为真正的区块链</li>
+<li>攻击者必须控制全球51%的计算能力才能创建自己的哈希链</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>一.权力集中化</strong></p>
+<p>在实践中往往不是去中心化的, 少数小团体对比特币系统有很大的控制权</p>
+<p>挖矿池(mining pools): 一组用户一起挖矿</p>
+<ul>
+<li>当一个用户获得挖矿奖励时，团队中的每个人都会一起分享奖励</li>
+<li>单独挖矿的用户必须足够幸运才能获得奖励</li>
+<li>挖矿池为用户提供稳定、较小的奖励 (几个大型挖矿池控制着比特币的大部分计算能力)</li>
+</ul>
+<p><strong>二. Bitcoin is pseudonymous</strong></p>
+<blockquote>
+<p>Pseudonymity: 多个操作可以链接到一个单一的身份，这不是你的真实身份，而是假名; <br>其实这个假名就是你的公钥, 交易可以链接到公钥上</p>
+</blockquote>
+<p>比特币交易不一定是匿名的(anonymous)</p>
+<ul>
+<li>Anonymity: 行为不能与你的真实身份联系在一起</li>
+</ul>
+<p><strong>三. 低效(运行时间和存储空间) &amp; 功耗大 &amp; 不可逆的</strong></p>
+<ul>
+<li>PoW需要大量的hash计算 &amp; 每个用户必须存储整个区块链</li>
+<li>比特币每秒只能处理几笔交易</li>
+<li>一旦比特币被发送出去，交易就无法撤销(除非发送者想把钱还给你)<ul>
+<li>如果你的比特币被盗了，就没有办法找回来了</li>
 </ul>
 </li>
 </ul>
@@ -3474,7 +3587,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2024</span>
   </span>
 
     
