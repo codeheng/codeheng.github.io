@@ -46,3 +46,46 @@ Diffie-Hellman密钥交换非常棒: 它让Alice和Bob通过一个不安全的�
     - Alice发送$C_1 = R, C_2 = M × B^r \bmod p$
 - *Dec(b, $C_1$, $C_2$*)
     - Bob计算$C_2 × C_1^{-b} = M × B^r × R^{-b} = M × g^{br} × g^{-br} = M \bmod p$
+      - Bob推出the (inverse) shared secret并且用密文与之相乘
+
+### 安全性
+
+Diffie-Hellman: 给出$g^a \bmod p$和$g^b \bmod p$很难恢复$g^{ab} \bmod p$
+
+- 而EIGamal 传送这些值在通过不安全的信道
+    - Bob的公钥$B$ & 密文$R, M \times B^r \bmod p$
+- Eve不能推出$g^{br}$, 故她并不可以恢复出M
+
+### 问题
+
+Q: EIGamal 加密是IND-CPA安全?
+
+- No, 对手可以发送$M_0 = 0, M_1 \neq 0$
+    - 需要额外的填充和其他修改以使其在语义上安全    
+- 可延展性：对手可以篡改消息
+    - 对手可以操纵$C_1' = C_1, C_2' = 2 \times C_2 = 2 \times M \times g^{br}$使其看上起$2 \times M$被加密
+
+## RSA加密
+
+### 定义
+
+*KeyGen()*: 
+
+- 随机选择两个大素数$p,q$
+    - 高效算法：选择随机数，然后使用测试来查看该数字是否为素数
+- 计算$N = pq$
+    - N长度通常是在2048bits和4096bits区间内
+- 选择$e$
+    - 要求: e与$(p-1)(q-1)$ 互质 & $2 < e < (p-1)(q-1)$
+- 计算$d = e^{-1} mod (p-1)(q-1)$
+    - 计算乘法逆的有效算法：扩展欧几里得算法
+- **公钥N和e, 私钥d**
+
+*Enc(e, N, M)*: 假设$M < N$, 输出$M^e \bmod N$
+
+*Dec(d, C)* : 输出$C^d \bmod N$
+
+!!! Note
+    对于正确性需要满足: $Dec(d, Enc(e, N, M)) = (M^e)^d = M \bmod N$
+
+### 正确性
