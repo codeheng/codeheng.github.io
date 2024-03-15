@@ -89,3 +89,62 @@ Q: EIGamal 加密是IND-CPA安全?
     对于正确性需要满足: $Dec(d, Enc(e, N, M)) = (M^e)^d = M \bmod N$
 
 ### 正确性
+
+**中国剩余定理(CRT)**: 要检查$x=y \bmod pq$成立?, 可以看$x=y \bmod p$和$x=y \bmod q$是否成立
+
+可以从key generation得知$N = pq$, $d = e^{-1} \bmod (p-1)(q-1)$, 因此$ed = 1 \bmod (p-1)(q-1)$, 即$ed-1$是$(p-1)(q-1)$的倍数
+
+- 正确性的目标: $M^{ed} = M \bmod N$, 使用N的定义即$M^{ed} = M \bmod pq$
+- 通过CRT, 可以看$M^{ed} = M \bmod p$和$M^{ed} = M \bmod q$是否成立
+
+由d和e在key generation的定义得知$ed - 1 = (p-1)(q-1)$, 由[费马小定理](https://baike.baidu.com/item/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/4776158)(FLT)得知: 对于任何的素数p, $a^{p-1} = 1 \bmod p$  --> 目标: $M^{ed} = M \bmod p$
+
+- 情况1: M是p的倍数 --> $M = 0 \bmod p$,则$M^{ed} = 0 \bmod p$, 因为乘了M(p的倍数)很多次
+- 情况2: M不是p的倍数
+
+$$
+\begin{aligned}
+    M^{ed} &= M^{ed - 1} M  \qquad (\bmod p) \\ 
+           &= M^{some\ multiple\ of\ p-1} M \qquad (\bmod p) \qquad (using\ definition\ of\ ed - 1) \\ 
+           &= M \qquad (\bmod p) \qquad \qquad \qquad \qquad \qquad (using\ FLT)
+\end{aligned}
+$$
+
+PS: 对于q也是如此,同理 (证:$M^{ed} = M \bmod q$)
+
+### 安全性
+
+RSA: 给定N和$C=M^e \bmod N$, 很难找到M; 
+
+- 如果能因式分解N，就能知道 p 和 q
+- 之后就可以计算 $d = e^{-1} \bmod (p - 1)(q - 1)$ 并使用 $C^d \bmod N$ 进行解密
+- **目前最好的解决方案是分解N，但不知道是否有更简单的方法**
+    - 若RSA问题与因式分解问题一样困难，那么只要因式分解很难，则该方案就是安全的
+    - 因式分解问题被认为是困难的。最著名的算法是指数时间的
+
+### 问题
+RSA加密是IND-CPA安全吗？--> no, 它是确定性的. 任何时候都没有使用随机性！
+
+- 发送使用不同公钥加密的相同消息也会泄露信息
+- [Side channel](https://csrc.nist.gov/glossary/term/side_channel_attack#:~:text=Definitions%3A,and%20electromagnetic%20and%20acoustic%20emissions.): 不好的实现也会泄露信息
+    - 解密消息所需的时间取决于消息和私钥
+    - 此攻击已成功用于破解 OpenSSL 中的 RSA 
+- 结果：需要一个概率填充方案
+
+## [OAEP](https://docs.google.com/presentation/d/1m_sq-fhcGo-jOrjRh25UXyU1UE0f7snaZfFajMoeQPI/edit#slide=id.g11468c29934_0_119)
+
+> 最优非对称加密填充(Optimal asymmetric encryption padding)：引入随机性的 RSA 变体
+
+- 与对称加密中使用的"padding"并不同，用于添加随机性而不是虚拟字节
+
+**Idea: RSA只能加密"看起来随机"的数字，所以用随机密钥加密消息**
+
+**公钥加密的问题**
+
+- 由于模运算符，我们只能加密小消息 & 数学很多，计算机计算速度很慢
+- 故非对称不适用于大消息
+
+> 混合加密：用对称加密在随机生成的密钥 K 下对数据进行加密，并用非对称加密对 K 进行加密
+> 
+> - 好处：可以使用对称加密快速加密大量数据，并且仍然拥有非对称加密的安全性
+> - 几乎所有密码系统都使用混合加密
