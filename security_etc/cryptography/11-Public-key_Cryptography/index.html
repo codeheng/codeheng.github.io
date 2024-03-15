@@ -2621,8 +2621,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oaep" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAEP
+    </span>
+  </a>
   
 </li>
       
@@ -3559,8 +3586,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oaep" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAEP
+    </span>
+  </a>
   
 </li>
       
@@ -3582,7 +3636,7 @@
   <h1>公钥密码</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 761 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 819 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
 <h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在公钥方案中，每个人有两个密钥: <ins>公钥(每个人都知道)和私钥(只有某个人才知道)</ins></p>
@@ -3687,6 +3741,67 @@
 <p>对于正确性需要满足: <span class="arithmatex">\(Dec(d, Enc(e, N, M)) = (M^e)^d = M \bmod N\)</span></p>
 </div>
 <h3 id="_6">正确性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><strong>中国剩余定理(CRT)</strong>: 要检查<span class="arithmatex">\(x=y \bmod pq\)</span>成立?, 可以看<span class="arithmatex">\(x=y \bmod p\)</span>和<span class="arithmatex">\(x=y \bmod q\)</span>是否成立</p>
+<p>可以从key generation得知<span class="arithmatex">\(N = pq\)</span>, <span class="arithmatex">\(d = e^{-1} \bmod (p-1)(q-1)\)</span>, 因此<span class="arithmatex">\(ed = 1 \bmod (p-1)(q-1)\)</span>, 即<span class="arithmatex">\(ed-1\)</span>是<span class="arithmatex">\((p-1)(q-1)\)</span>的倍数</p>
+<ul>
+<li>正确性的目标: <span class="arithmatex">\(M^{ed} = M \bmod N\)</span>, 使用N的定义即<span class="arithmatex">\(M^{ed} = M \bmod pq\)</span></li>
+<li>通过CRT, 可以看<span class="arithmatex">\(M^{ed} = M \bmod p\)</span>和<span class="arithmatex">\(M^{ed} = M \bmod q\)</span>是否成立</li>
+</ul>
+<p>由d和e在key generation的定义得知<span class="arithmatex">\(ed - 1 = (p-1)(q-1)\)</span>, 由<a href="https://baike.baidu.com/item/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/4776158">费马小定理</a>(FLT)得知: 对于任何的素数p, <span class="arithmatex">\(a^{p-1} = 1 \bmod p\)</span>  &rarr; 目标: <span class="arithmatex">\(M^{ed} = M \bmod p\)</span></p>
+<ul>
+<li>情况1: M是p的倍数 &rarr; <span class="arithmatex">\(M = 0 \bmod p\)</span>,则<span class="arithmatex">\(M^{ed} = 0 \bmod p\)</span>, 因为乘了M(p的倍数)很多次</li>
+<li>情况2: M不是p的倍数</li>
+</ul>
+<div class="arithmatex">\[
+\begin{aligned}
+    M^{ed} &amp;= M^{ed - 1} M  \qquad (\bmod p) \\ 
+           &amp;= M^{some\ multiple\ of\ p-1} M \qquad (\bmod p) \qquad (using\ definition\ of\ ed - 1) \\ 
+           &amp;= M \qquad (\bmod p) \qquad \qquad \qquad \qquad \qquad (using\ FLT)
+\end{aligned}
+\]</div>
+<p>PS: 对于q也是如此,同理 (证:<span class="arithmatex">\(M^{ed} = M \bmod q\)</span>)</p>
+<h3 id="_7">安全性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>RSA: 给定N和<span class="arithmatex">\(C=M^e \bmod N\)</span>, 很难找到M; </p>
+<ul>
+<li>如果能因式分解N，就能知道 p 和 q</li>
+<li>之后就可以计算 <span class="arithmatex">\(d = e^{-1} \bmod (p - 1)(q - 1)\)</span> 并使用 <span class="arithmatex">\(C^d \bmod N\)</span> 进行解密</li>
+<li><strong>目前最好的解决方案是分解N，但不知道是否有更简单的方法</strong><ul>
+<li>若RSA问题与因式分解问题一样困难，那么只要因式分解很难，则该方案就是安全的</li>
+<li>因式分解问题被认为是困难的。最著名的算法是指数时间的</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">问题<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>RSA加密是IND-CPA安全吗？&rarr; no, 它是确定性的. 任何时候都没有使用随机性！</p>
+<ul>
+<li>发送使用不同公钥加密的相同消息也会泄露信息</li>
+<li><a href="https://csrc.nist.gov/glossary/term/side_channel_attack#:~:text=Definitions%3A,and%20electromagnetic%20and%20acoustic%20emissions.">Side channel</a>: 不好的实现也会泄露信息<ul>
+<li>解密消息所需的时间取决于消息和私钥</li>
+<li>此攻击已成功用于破解 OpenSSL 中的 RSA </li>
+</ul>
+</li>
+<li>结果：需要一个概率填充方案</li>
+</ul>
+<h2 id="oaep"><a href="https://docs.google.com/presentation/d/1m_sq-fhcGo-jOrjRh25UXyU1UE0f7snaZfFajMoeQPI/edit#slide=id.g11468c29934_0_119">OAEP</a><a class="headerlink" href="#oaep" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>最优非对称加密填充(Optimal asymmetric encryption padding)：引入随机性的 RSA 变体</p>
+</blockquote>
+<ul>
+<li>与对称加密中使用的"padding"并不同，用于添加随机性而不是虚拟字节</li>
+</ul>
+<p><strong>Idea: RSA只能加密"看起来随机"的数字，所以用随机密钥加密消息</strong></p>
+<p><strong>公钥加密的问题</strong></p>
+<ul>
+<li>由于模运算符，我们只能加密小消息 &amp; 数学很多，计算机计算速度很慢</li>
+<li>故非对称不适用于大消息</li>
+</ul>
+<blockquote>
+<p>混合加密：用对称加密在随机生成的密钥 K 下对数据进行加密，并用非对称加密对 K 进行加密</p>
+<ul>
+<li>好处：可以使用对称加密快速加密大量数据，并且仍然拥有非对称加密的安全性</li>
+<li>几乎所有密码系统都使用混合加密</li>
+</ul>
+</blockquote>
 
 
 
@@ -3709,7 +3824,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 15, 2024</span>
   </span>
 
     
