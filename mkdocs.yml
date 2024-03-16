@@ -78,6 +78,7 @@ nav:
         - Diffie-Hellman: security_etc/cryptography/10-Diffie_Hellman.md
         - 公钥密码: security_etc/cryptography/11-Public-key_Cryptography.md
         - 数字签名: security_etc/cryptography/12-digital_signatures.md
+        - 证书: security_etc/cryptography/13-certificates.md
         - 比特币: security_etc/cryptography/bitcoin.md
     - 区块链: 
       - 概述: security_etc/blockchain/1-blockchain.md
