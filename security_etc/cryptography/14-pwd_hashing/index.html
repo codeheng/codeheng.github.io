@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="http://codeheng.github.io/security_etc/cryptography/12-digital_signatures/">
+        <link rel="canonical" href="http://codeheng.github.io/security_etc/cryptography/14-pwd_hashing/">
       
       
-        <link rel="prev" href="../11-Public-key_Cryptography/">
-      
-      
-        <link rel="next" href="../13-certificates/">
       
       
       <link rel="icon" href="../../../assets/logo.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>数字签名 - Yiheng的笔记本</title>
+        <title>14 pwd hashing - Yiheng的笔记本</title>
       
     
     
@@ -87,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数字签名
+              14 pwd hashing
             
           </span>
         </div>
@@ -267,12 +258,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -2031,8 +2020,6 @@
       
   
   
-    
-  
   
   
     
@@ -2049,17 +2036,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
@@ -2075,13 +2059,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             🔐安全
@@ -2094,10 +2078,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2111,11 +2093,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2129,7 +2111,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             CS161
@@ -2161,10 +2143,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2192,11 +2172,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
@@ -2210,7 +2190,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_2">
             <span class="md-nav__icon md-icon"></span>
             密码学
@@ -2512,28 +2492,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    数字签名
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../12-digital_signatures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2542,44 +2504,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of Content
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rsa" class="md-nav__link">
-    <span class="md-ellipsis">
-      RSA签名
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3436,32 +3360,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of Content
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rsa" class="md-nav__link">
-    <span class="md-ellipsis">
-      RSA签名
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3475,58 +3373,12 @@
                   
 
 
-  <h1>数字签名</h1>
+  <h1>14 pwd hashing</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 583 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 13 个字 </p>
 </div>
-<h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>非对称加密技术很好，因为不需要去共享密钥; <strong>数字签名是提供数据完整性/真实性的非对称方式</strong></p>
-<p><ins>PS: 先假设 Alice 和 Bob 可以在不受 Mallory 干扰的情况下传送公钥</ins></p>
-<p><strong>公钥签名:</strong> 只有私钥的所有者才能用私钥对消息进行签名, 而每个人都可以用公钥验证签名</p>
-<p>包含三个部分: </p>
-<ul>
-<li><em><span class="arithmatex">\(KeyGen() \rightarrow  PK,SK\)</span></em> : 生成公钥/私钥对,其中PK是验证(公钥)密钥,SK是签名(秘密)密钥</li>
-<li><em><span class="arithmatex">\(Sign(SK, M) \rightarrow sig\)</span></em> : 使用签名密钥SK, 对消息 M 进行签名以产生签名sig</li>
-<li><em><span class="arithmatex">\(Verify(PK, M, sig) \rightarrow {0, 1}\)</span></em> : 使用PK验证消息 M 上的签名sig;若有效输出1,否则输出0</li>
-</ul>
-<p>属性:</p>
-<ul>
-<li>正确性：对于任何消息生成的签名，验证都应该成功<ul>
-<li>对于所有<span class="arithmatex">\(PK,SK \leftarrow KeyGen()\)</span>和<span class="arithmatex">\(M\)</span>，验证<span class="arithmatex">\((PK, M, Sign(SK, M)) = 1\)</span></li>
-<li>效率：签名/验证应该很快</li>
-<li>安全性：<a href="../7-MACs/#eu-cpa">EU-CPA</a>，与 MAC 相同</li>
-</ul>
-</li>
-</ul>
-<p>在实践中, 如果想要签名一个消息M, 首先需要对M进行hash, 接着签名H(M)</p>
-<ul>
-<li>为什么数字签名使用hash? &rarr; 允许签署任意长的消息</li>
-<li>数字签名为 M 提供完整性和真实性<ul>
-<li>数字签名作为私钥持有者签署H(M)的证明，因此就知道M是私钥持有者所认可的</li>
-</ul>
-</li>
-</ul>
-<h2 id="rsa">RSA签名<a class="headerlink" href="#rsa" title="Permanent link">&para;</a></h2>
-<p>关于<a href="../11-Public-key_Cryptography/#rsa">RSA加密</a>: <span class="arithmatex">\(M^{ed} \equiv M \bmod N\)</span>, 先使用e或先使用d没有什么特别的</p>
-<ul>
-<li>如果使用 d 加密，那么任何人都可以使用 e 解密<ul>
-<li>给定 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(x^d \bmod N\)</span>，由于离散对数问题无法恢复d，因此 d 是安全的</li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>关于<span class="arithmatex">\(A \equiv B \bmod N\)</span>，表示 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 在模 <span class="arithmatex">\(N\)</span> 下是等价的</p>
-<p>具体地说，<span class="arithmatex">\(A \equiv B \bmod N\)</span> 意味着 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 相除的余数相同，或者说它们对 <span class="arithmatex">\(N\)</span> 取模后得到相同的结果。数学上可以表示为 <span class="arithmatex">\(N\)</span> 整除 <span class="arithmatex">\((A - B)\)</span>，即 <span class="arithmatex">\((A - B)\)</span> 是 <span class="arithmatex">\(N\)</span> 的倍数。</p>
-</div>
-<p>定义: (与RSA加密相同，但使用私钥对哈希进行加密)</p>
-<ul>
-<li><em>KeyGen()</em>: 与RSA加密相同; 公钥是N和e, 而私钥为d</li>
-<li><em>Sign(d, M):</em>  计算<span class="arithmatex">\(H(M)^d \bmod N\)</span></li>
-<li><em>Verify(e, N, M, sig)</em> : 验证<span class="arithmatex">\(H(M) \equiv sig^e \bmod N\)</span></li>
-</ul>
-<p>另外还有<a href="https://docs.google.com/presentation/d/1m_sq-fhcGo-jOrjRh25UXyU1UE0f7snaZfFajMoeQPI/edit#slide=id.g11468c29934_0_270">DSA</a>: A signature scheme based on Diffie-Hellman</p>
+<p><strong>密码哈希：如何安全地存储密码？</strong></p>
 
 
 

@@ -301,6 +301,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/security_etc/cryptography/13-certificates/</loc>
+         <lastmod>2024-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://codeheng.github.io/security_etc/cryptography/14-pwd_hashing/</loc>
+         <lastmod>2024-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/security_etc/cryptography/2-symmetric-key/</loc>
          <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>

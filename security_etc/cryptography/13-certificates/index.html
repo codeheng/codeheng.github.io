@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://codeheng.github.io/security_etc/cryptography/12-digital_signatures/">
+        <link rel="canonical" href="http://codeheng.github.io/security_etc/cryptography/13-certificates/">
       
       
-        <link rel="prev" href="../11-Public-key_Cryptography/">
+        <link rel="prev" href="../12-digital_signatures/">
       
       
-        <link rel="next" href="../13-certificates/">
+        <link rel="next" href="../bitcoin/">
       
       
       <link rel="icon" href="../../../assets/logo.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>数字签名 - Yiheng的笔记本</title>
+        <title>证书 - Yiheng的笔记本</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数字签名
+              证书
             
           </span>
         </div>
@@ -2512,6 +2512,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital_signatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字签名
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2526,7 +2547,7 @@
           
   
   <span class="md-ellipsis">
-    数字签名
+    证书
   </span>
   
 
@@ -2537,7 +2558,7 @@
         
   
   <span class="md-ellipsis">
-    数字签名
+    证书
   </span>
   
 
@@ -2561,16 +2582,40 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      定义
+      前言
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rsa" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      RSA签名
+      介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      证书颁发机构(CA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      密码哈希
     </span>
   </a>
   
@@ -2580,27 +2625,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../13-certificates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    证书
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3445,16 +3469,40 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      定义
+      前言
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rsa" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      RSA签名
+      介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      证书颁发机构(CA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      密码哈希
     </span>
   </a>
   
@@ -3475,58 +3523,181 @@
                   
 
 
-  <h1>数字签名</h1>
+  <h1>证书</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 583 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1594 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
-<h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>非对称加密技术很好，因为不需要去共享密钥; <strong>数字签名是提供数据完整性/真实性的非对称方式</strong></p>
-<p><ins>PS: 先假设 Alice 和 Bob 可以在不受 Mallory 干扰的情况下传送公钥</ins></p>
-<p><strong>公钥签名:</strong> 只有私钥的所有者才能用私钥对消息进行签名, 而每个人都可以用公钥验证签名</p>
-<p>包含三个部分: </p>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>证书：如何安全地分发公钥？</strong></p>
+<p>公钥密码非常棒！ 可以安全地通信，无需共享秘密</p>
 <ul>
-<li><em><span class="arithmatex">\(KeyGen() \rightarrow  PK,SK\)</span></em> : 生成公钥/私钥对,其中PK是验证(公钥)密钥,SK是签名(秘密)密钥</li>
-<li><em><span class="arithmatex">\(Sign(SK, M) \rightarrow sig\)</span></em> : 使用签名密钥SK, 对消息 M 进行签名以产生签名sig</li>
-<li><em><span class="arithmatex">\(Verify(PK, M, sig) \rightarrow {0, 1}\)</span></em> : 使用PK验证消息 M 上的签名sig;若有效输出1,否则输出0</li>
+<li>公钥加密：每个人都用公钥加密，但只有私钥的所有者才能解密</li>
+<li>数字签名：只有私钥的所有者才能签名，但每个人都可以用公钥进行验证</li>
 </ul>
-<p>属性:</p>
+<p>Q: 还有什么问题吗？ 在于分发公钥</p>
 <ul>
-<li>正确性：对于任何消息生成的签名，验证都应该成功<ul>
-<li>对于所有<span class="arithmatex">\(PK,SK \leftarrow KeyGen()\)</span>和<span class="arithmatex">\(M\)</span>，验证<span class="arithmatex">\((PK, M, Sign(SK, M)) = 1\)</span></li>
-<li>效率：签名/验证应该很快</li>
-<li>安全性：<a href="../7-MACs/#eu-cpa">EU-CPA</a>，与 MAC 相同</li>
+<li>单独的公钥加密并不能抵御中间人攻击, 如下场景: <ul>
+<li>Alice想给Bob发送消息</li>
+<li>Alice向Bob询问他的公钥</li>
+<li>Bob将他的公钥发送给Alice</li>
+<li>Alice 使用 Bob 的公钥加密她的消息并将其发送给 Bob</li>
+</ul>
+</li>
+<li>Mallory会如何做?<ul>
+<li>将 Bob 的公钥替换为 Mallory 的公钥</li>
+<li>现在Alice已经用Mallory的公钥加密了消息，Mallory此时就可以读取！
+<img alt="Q" src="../assets/question.jpg" /></li>
 </ul>
 </li>
 </ul>
-<p>在实践中, 如果想要签名一个消息M, 首先需要对M进行hash, 接着签名H(M)</p>
+<p>想法: 对 Bob 的公钥进行签名以防止篡改, 但问题</p>
 <ul>
-<li>为什么数字签名使用hash? &rarr; 允许签署任意长的消息</li>
-<li>数字签名为 M 提供完整性和真实性<ul>
-<li>数字签名作为私钥持有者签署H(M)的证明，因此就知道M是私钥持有者所认可的</li>
+<li>如果Bob签署了他的公钥，则需要他的公钥来验证签名</li>
+<li>但Bob的公钥正是首先要验证的！</li>
+<li>出现了循环问题：Alice永远不能相信她收到的任何公钥</li>
 </ul>
-</li>
-</ul>
-<h2 id="rsa">RSA签名<a class="headerlink" href="#rsa" title="Permanent link">&para;</a></h2>
-<p>关于<a href="../11-Public-key_Cryptography/#rsa">RSA加密</a>: <span class="arithmatex">\(M^{ed} \equiv M \bmod N\)</span>, 先使用e或先使用d没有什么特别的</p>
+<p><strong>如果你什么都不相信，你就无法获得信任</strong>。 你需要一个信任的root！</p>
 <ul>
-<li>如果使用 d 加密，那么任何人都可以使用 e 解密<ul>
-<li>给定 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(x^d \bmod N\)</span>，由于离散对数问题无法恢复d，因此 d 是安全的</li>
+<li><ins>trust anchor：我们绝对信任的人</ins>; 从我们的trust anchor开始，然后可以开始信任他人</li>
 </ul>
-</li>
+<p><strong>Trust-on-first-use</strong>：第一次通信时，信任所使用的公钥，并在将来发生变化时警告用户</p>
+<ul>
+<li>被用于 SSH 和其他几个协议</li>
+<li>想法：攻击并不频繁，因此假设第一次通信时没有受到攻击(也被称为"Leap of Faith")</li>
 </ul>
+<h2 id="_2">介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>证书：某人公钥的签名认可(A signed endorsement of someone's public key) </p>
+<ul>
+<li>证书至少包含两件事：人员的 <strong>身份和密钥</strong></li>
+</ul>
+</blockquote>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>关于<span class="arithmatex">\(A \equiv B \bmod N\)</span>，表示 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 在模 <span class="arithmatex">\(N\)</span> 下是等价的</p>
-<p>具体地说，<span class="arithmatex">\(A \equiv B \bmod N\)</span> 意味着 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 相除的余数相同，或者说它们对 <span class="arithmatex">\(N\)</span> 取模后得到相同的结果。数学上可以表示为 <span class="arithmatex">\(N\)</span> 整除 <span class="arithmatex">\((A - B)\)</span>，即 <span class="arithmatex">\((A - B)\)</span> 是 <span class="arithmatex">\(N\)</span> 的倍数。</p>
+<p class="admonition-title">符号缩写</p>
+<p>公钥 PK 下的加密：<span class="arithmatex">\(\{Message\}_{PK}\)</span> <br>
+使用私钥SK签名：<span class="arithmatex">\(\{Message\}_{SK^{-1}}\)</span></p>
+<p>PS: <strong>签名消息必须包含消息和签名；不能单独发送签名</strong></p>
 </div>
-<p>定义: (与RSA加密相同，但使用私钥对哈希进行加密)</p>
+<p>场景：Alice想要Bob的公钥. Alice信任EvanBot(<span class="arithmatex">\(PK_E, SK_E\)</span>)</p>
 <ul>
-<li><em>KeyGen()</em>: 与RSA加密相同; 公钥是N和e, 而私钥为d</li>
-<li><em>Sign(d, M):</em>  计算<span class="arithmatex">\(H(M)^d \bmod N\)</span></li>
-<li><em>Verify(e, N, M, sig)</em> : 验证<span class="arithmatex">\(H(M) \equiv sig^e \bmod N\)</span></li>
+<li>EvanBot 是我们的trust anchor</li>
+<li>如果我们信任<span class="arithmatex">\(PK_E\)</span>，则我们信任的证书为<span class="arithmatex">\(\{Bob's\ public\ key\ is\ PK_B\}_{SK_E^{-1}}\)</span></li>
 </ul>
-<p>另外还有<a href="https://docs.google.com/presentation/d/1m_sq-fhcGo-jOrjRh25UXyU1UE0f7snaZfFajMoeQPI/edit#slide=id.g11468c29934_0_270">DSA</a>: A signature scheme based on Diffie-Hellman</p>
+<p><strong>The Trusted Directory(TD)</strong></p>
+<ul>
+<li>想法：创建一个中央,可信目录(TD), 可以从中获取任何人的公钥<ul>
+<li>TD 有一个公钥/私钥对<span class="arithmatex">\(PK_{TD}, SK_{TD}\)</span></li>
+<li>该目录发布<span class="arithmatex">\(PK_{TD}\)</span>，以便每个人都知道它（集成到计算机、手机、操作系统等里面）</li>
+<li>当你请求 Bob 的公钥时，目录会发送 Bob 公钥的证书<ul>
+<li><span class="arithmatex">\(\{Bob's\ public\ key\ is\ PK_B\}_{SK_{TD^{-1}}}\)</span></li>
+</ul>
+</li>
+<li>如果你信任该目录，那么现在你就信任该目录中的每个公钥</li>
+</ul>
+</li>
+<li>我们必须相信什么？<ul>
+<li>我们已正确收到TD的密钥</li>
+<li>TD不会在未验证所有者身份的情况下签署密钥</li>
+</ul>
+</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">假设</p>
+<p>Michael Drake(MD,President of UC)负责TD</p>
+<ul>
+<li>我们想要Nick Weaver的公钥：询问 MD <br></li>
+<li>我们想要David Wagner的公钥：询问 MD <br></li>
+<li>想要Raluca Ada Popa的公钥：询问 MD <br></li>
+<li>而MD 有更好的事情要做（比如确保他的私钥不被盗）</li>
+</ul>
+</div>
+<p>问题：</p>
+<ul>
+<li>可扩展性 (一个目录没有足够的计算能力来服务整个世界)</li>
+<li>单点故障<ul>
+<li>若目录失败，加密将停止工作</li>
+<li>若目录被泄露，就无法信任任何人</li>
+<li>若目录被破坏，则很难恢复</li>
+</ul>
+</li>
+</ul>
+<h3 id="ca">证书颁发机构(CA)<a class="headerlink" href="#ca" title="Permanent link">&para;</a></h3>
+<p><strong>解决可扩展性：分层信任</strong></p>
+<ul>
+<li>信任的根源可以将信任和签名权委托给其他权威机构<ul>
+<li><span class="arithmatex">\(\{Carol\ Christ的公钥是PK_{CC}，我相信她能够签署 UCB\}_{SK_{MD^{-1}}}\)</span></li>
+<li><span class="arithmatex">\(\{Dave\ Wagner的公钥是PK_{DW}，我相信他会为CS部门签名\}SK_{CC^{-1}}\)</span></li>
+<li><span class="arithmatex">\(\{Nick\ Weaver的公钥是PK_{NW}, 但我不相信他能代表其他人签名\}_{SK_{DW^{-1}}}\)</span></li>
+</ul>
+</li>
+<li>MD 仍然是信任root（根证书颁发机构，或root CA）</li>
+<li>CC和DW接收委托信任（中间CA）</li>
+<li>NW的身份值得信赖</li>
+</ul>
+<p><strong>解决可扩展性：多个信任锚</strong></p>
+<ul>
+<li>大多数设备隐式信任大约 150 个root CA</li>
+<li>公钥被硬编码到操作系统和设备中</li>
+<li>每个委托步骤都可以限制证书的有效性范围</li>
+<li>创建证书是一项离线任务：证书提前创建一次，然后根据请求提供给用户</li>
+</ul>
+<p>Q: 如果证书颁发机构搞砸并颁发了错误的证书，会发生什么情况？</p>
+<ul>
+<li>e.g. <span class="arithmatex">\(\{Bob的公钥是PK_M\}_{SK_{CA^{-1}}}\)</span></li>
+<li>e.g.证书颁发机构意外颁发了一个证书，表明普通互联网用户的公钥属于 Microsoft</li>
+</ul>
+<p><strong>方法1：每个证书都有一个到期日期</strong></p>
+<ul>
+<li>证书过期后，向证书颁发机构申请新证书; 不良证书一旦过期最终将失效</li>
+<li>好处: 减轻损害, 最终，不良证书将变得无害</li>
+<li>缺点:<ul>
+<li>增加管理负担：每个人都必须经常更新证书</li>
+<li>如果有人忘记更新证书，他们的网站可能会停止工作</li>
+</ul>
+</li>
+<li>tradeoff：证书应该多久更新一次？<ul>
+<li>频繁更新：更安全，但可用性较差</li>
+<li>不频繁更新：安全性较低，可用性更高</li>
+</ul>
+</li>
+<li>e.g. LetsEncrypt（证书颁发机构）选择非常频繁的续订<ul>
+<li>事实证明，频繁更新更有用</li>
+<li>它强制自动更新，而不是每 3 年一次就会被遗忘的任务！</li>
+</ul>
+</li>
+</ul>
+<p><strong>方法2：定期发布无效证书列表</strong></p>
+<p><ins>用户必须定期下载证书撤销列表 (CRL)</ins></p>
+<p>Q: 我们如何验证该列表？</p>
+<ul>
+<li>证书颁发机构签署名单！<ul>
+<li><span class="arithmatex">\(\{序列号为0xdeadbeef的证书现已吊销\}SK_{CA^{-1}}\)</span></li>
+</ul>
+</li>
+<li>缺点: <ul>
+<li>列表可能会变得很大<ul>
+<li>通过较短的有效期来缓解（一旦过期就不必列出它们）</li>
+</ul>
+</li>
+<li>在用户下载列表之前，他们不会知道哪些证书被吊销</li>
+</ul>
+</li>
+</ul>
+<p>Q: 如果证书颁发机构不可用，会发生什么情况？</p>
+<ul>
+<li>自动防故障默认设置：假设所有证书都无效？ 现在则不能相信任何人<ul>
+<li>可能的攻击：攻击者强制 CA 不可用（拒绝服务攻击DoS）</li>
+</ul>
+</li>
+<li>使用旧列表：如果旧列表缺少新撤销的证书，则可能存在危险</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>证书协议可能会变得非常复杂</p>
+<p>e.g：<a href="https://en.wikipedia.org/wiki/X.509">X.509</a>非常复杂（236页标准），因为它尝试做所有事情</p>
+</div>
+<h2 id="_3">密码哈希<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 
 
 
