@@ -87,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2561,6 +2566,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    密码哈希
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2570,6 +2586,43 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Content
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3406,6 +3459,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Content
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3422,9 +3501,115 @@
   <h1>密码哈希</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 13 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1176 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>密码哈希：如何安全地存储密码？</strong></p>
+<blockquote>
+<p>密码：用户输入的用于证明其身份的秘密字符串</p>
+</blockquote>
+<ul>
+<li>当创建服务帐户时：创建密码</li>
+<li>当稍后想要登录该服务时：再次输入相同的密码</li>
+</ul>
+<p><strong>该服务如何检查密码是否正确？</strong></p>
+<ul>
+<li>Bad Idea1：存储列出每个用户密码的文件<ul>
+<li>Q: 如果攻击者侵入服务怎么办？ 现在攻击者知道每个人的密码！</li>
+</ul>
+</li>
+<li>Bad Idea2：在存储每个用户的密码之前对其进行加密<ul>
+<li>Q：攻击者可以窃取密码文件和密钥并解密每个人的密码！</li>
+</ul>
+</li>
+</ul>
+<p><strong>需要一种方法来验证密码，而不存储任何允许某人恢复原始密码的信息</strong></p>
+<ul>
+<li>对于每个用户，存储其密码的哈希值</li>
+<li>验证流程: <ul>
+<li>对用户提交的密码进行哈希处理</li>
+<li>检查它是否与文件中的密码哈希匹配</li>
+</ul>
+</li>
+<li>用到了哈希中的哪些属性？<ul>
+<li>确定性：要验证密码，每次都必须哈希为相同的值</li>
+<li>单向：我们不希望攻击者将哈希值反转为原始密码</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">攻击<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>如果两个不同的用户决定使用<code>password123</code>作为密码怎么办？</p>
+</div>
+<p>哈希值是确定性的：它们具有相同的密码哈希值;故攻击者可以看到哪些用户使用相同的密码</p>
+<p><strong>暴力攻击:</strong></p>
+<ul>
+<li>大多数人使用不安全的通用密码</li>
+<li>攻击者可以预先计算常见密码的哈希值：如<code>H("password123"),H("password1234"),H("1234567890")</code>等等...</li>
+<li>字典攻击：对整个常用密码字典进行哈希处理</li>
+</ul>
+<p>彩虹表(Rainbow tables)：一种计算哈希值的算法，使暴力攻击变得更容易</p>
+<p><strong>解决方案1：为每个用户添加唯一的随机salt</strong> &rarr; Salted Hashes</p>
+<ul>
+<li>Salt：一个随机的公共值，旨在使暴力攻击变得更加困难<ul>
+<li>对于每个用户, 存储: <code>username, salt, H(password || salt)</code></li>
+<li>要验证用户：在密码文件中查找其salt，计算<code>H(password || salt)</code>,并检查它是否与文件中的哈希值匹配</li>
+<li>salt应该比较长且随机</li>
+<li>salt不是秘密（可以将它想象成随机数或 IVs）</li>
+</ul>
+</li>
+<li>暴力攻击现在更加困难<ul>
+<li>假设数据库中有 M 个可能的密码和 N 个用户</li>
+<li>Unsalted数据库：对所有可能的密码进行哈希处理，然后查找所有用户的哈希值 &rarr;  <span class="arithmatex">\(O(M + N)\)</span></li>
+<li>salted数据库：对每个用户的盐的所有密码进行哈希 &rarr; <span class="arithmatex">\(O(MN)\)</span></li>
+</ul>
+</li>
+</ul>
+<p><strong>解决方案2: 使用较慢的哈希值</strong></p>
+<ul>
+<li>加密哈希通常设计得很快<ul>
+<li>SHA 旨在尽快生成 1GB 文档的校验和</li>
+</ul>
+</li>
+<li>密码哈希通常设计得很慢<ul>
+<li>合法用户只需提交几次密码尝试。用户不会注意到服务器检查密码需要0.0001s还是0.1s</li>
+<li>攻击者需要计算数百万个哈希值,用慢速哈希可以使攻击者的速度降低1000倍或更多！</li>
+</ul>
+</li>
+</ul>
+<p>Note：并不会改变攻击的渐近难度,添加了一个大的常数因子,就可以对攻击者产生巨大的实际影响</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><strong>Password-based key derivation function 2 (PBKDF2)</strong>: 慢速哈希函数</p>
+<ul>
+<li>设置：输出随机位的底层函数（e.g HMAC-SHA256）</li>
+<li>设置：所需的输出长度(n)</li>
+<li>设置：迭代计数（较高 = 散列较慢，较低 = 散列较快）</li>
+<li>输入：密码 和 salt</li>
+<li>输出：从密码和salt生成比较长的,随机的n位字符串</li>
+<li>实现：基本上计算HMAC 10,000次</li>
+</ul>
+<p><strong>好处(假设用户密码强度高)</strong></p>
+<ul>
+<li>从用户密码中产生出任意长的字符串</li>
+<li>输出可以直接作为对称密钥, 还可用于播种 PRNG 或生成公钥/私钥对</li>
+<li>算法很慢，但不使用大量内存（Scrypt 和 Argon2 等替代方案使用更多内存）</li>
+</ul>
+</div>
+<p>离线攻击(Offline attack)：攻击者自己执行所有计算</p>
+<ul>
+<li>e.g：Mallory 窃取密码文件，然后自己计算哈希值以检查匹配项。</li>
+<li>攻击者可以尝试大量密码（例如并行使用许多 GPU）</li>
+<li><ins>防御措施：salt密码、使用慢速哈希</ins></li>
+<li>如果攻击者可以进行离线攻击，则需要一个非常强的密码（如7个或更多随机单词）</li>
+</ul>
+<p>在线攻击(Online attack)：攻击者与服务交互</p>
+<ul>
+<li>e.g. Mallory尝试通过尝试不同的密码来登录网站, Mallory正在强制服务器计算哈希值</li>
+<li>攻击者通常每秒只能尝试几次，没有并行性</li>
+<li><ins>防御：添加超时或速率限制尝试次数，以防止攻击者尝试过多次数</ins></li>
+</ul>
 
 
 
@@ -3447,7 +3632,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 17, 2024</span>
   </span>
 
     
