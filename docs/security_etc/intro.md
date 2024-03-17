@@ -9,12 +9,14 @@ comments: true
 
     来自[CS 161](https://fa23.cs161.org/), 对课件以及相关资料进行整理
 
-## **什么是安全?**
+    课程主要包含: **Memory Safety, Cryptography, Web Security, Network Security**
+
+## 什么是安全?
 
 - 在攻击者存在的情况下强制执行期望的属性
     - 数据保密性、用户隐私、数据和计算完整性、真实性、可用性...
 
-## **安全原则**
+## 安全原则
 
 - 了解你的威胁模型
 - 考虑人为的因素
