@@ -91,9 +91,10 @@ nav:
 
   - 🔍杂项:
     - mess/index.md
-    - MarkDown教程: mess/markdown.md
-    - Vim教程: mess/Vim.md
-    - VScode教程: mess/vscode.md
+    - MarkDown: mess/markdown.md
+    - Vim: mess/Vim.md
+    - VScode: mess/vscode.md
+    - Docker: mess/docker.md
 
   - 🔑Eng:
     - eng/index.md
@@ -115,6 +116,8 @@ nav:
     - Zone 2: workout/zone2.md
     - 减肥: workout/fat.md
     - 血压: workout/blood_pressure.md
+    - 饮食:
+      - 蛋白质: workout/food/protein.md
     - 健身记录: workout/records.md
 
 theme: 
