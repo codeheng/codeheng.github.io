@@ -30,17 +30,25 @@ comments: true
 
 第二周:
 
-   - [x] 24.3.5Day5下午——**胸+二头** ([胸推器](https://upload-images.jianshu.io/upload_images/13638231-bc5e2618b9f9065c?imageMogr2/auto-orient/strip|imageView2/2/w/406/format/webp)4x12, [哑铃/杠铃弯举](https://upload-images.jianshu.io/upload_images/13638231-58ebf9c419617cac?imageMogr2/auto-orient/strip|imageView2/2/w/300/format/webp)/锤式弯举3x12) 
+   - [x] 24.3.5Day5下午——**胸+二头** ([胸推器](https://upload-images.jianshu.io/upload_images/13638231-bc5e2618b9f9065c?imageMogr2/auto-orient/strip|imageView2/2/w/406/format/webp)4 x 12, [哑铃/杠铃弯举](https://upload-images.jianshu.io/upload_images/13638231-58ebf9c419617cac?imageMogr2/auto-orient/strip|imageView2/2/w/300/format/webp)/锤式弯举3 x 12) 
    - [x] 24.3.7Day6下午——**背+腹肌** ([高位下拉](https://upload-images.jianshu.io/upload_images/13638231-55054675585412cc?imageMogr2/auto-orient/strip|imageView2/2/w/400/format/webp), [坐姿划船](https://upload-images.jianshu.io/upload_images/13638231-db3dbb10103a3b2d?imageMogr2/auto-orient/strip|imageView2/2/w/351/format/webp), [举腿](https://upload-images.jianshu.io/upload_images/13638231-e74a4a5e62d61971?imageMogr2/auto-orient/strip|imageView2/2/w/400/format/webp))
-   - [x] 24.3.9Day7下午——**肩膀+三头** ([器械肩推](https://upload-images.jianshu.io/upload_images/13638231-febe638ff8b16d99?imageMogr2/auto-orient/strip|imageView2/2/w/360/format/webp), 侧平举, 面拉, cable rope pushdown(下拉缆绳) 4x12)
-   - [x] 24.3.10Day8下午——**腿臀**,主要腿为主(哑铃高脚杯深蹲,双腿伸屈,夹腿器 4x12) 
+   - [x] 24.3.9Day7下午——**肩膀+三头** ([器械肩推](https://upload-images.jianshu.io/upload_images/13638231-febe638ff8b16d99?imageMogr2/auto-orient/strip|imageView2/2/w/360/format/webp), 侧平举, 面拉, cable rope pushdown(下拉缆绳) 4 x 12)
+   - [x] 24.3.10Day8下午——**腿臀**,主要腿为主(哑铃高脚杯深蹲,双腿伸屈,夹腿器 4 x 12) 
 
 第三周: 
 
    - [x] 24.3.12Day9下午——**背+二头** (高位下拉, 二头弯举4 x 12), 今天练胸的人不多,就换了别的练,而且有的人占着器材玩手机就很烦...前天练的腿,今天还是很酸爽hhh, 今天也练虚了,很nice!!
    - [x] 24.3.14Day10下午——**胸+腹肌** (上斜/平胸卧推, 推胸4x12 + 举腿) 
-   - [x] 24.3.16Day11下午——**肩膀+三头**<br>(肩推,侧平举$2.5kg \times 12$两组,$5kg \times 12$两组,面拉4 x 12 + 下拉绳索 4 x 12)
+   - [x] 24.3.16Day11上午——**肩膀+三头**<br>(肩推,侧平举$2.5kg \times 12$两组,$5kg \times 12$两组,面拉4 x 12 + 下拉绳索 4 x 12)
    - [x] 24.3.17Day12下午——**腿**(高脚杯深蹲5kg哑铃『4 x 12』, 双腿伸屈,夹腿器20kg 『4 x 12』)
 
 第四周： 
+
+   - [x] 24.3.19Day13下午——**胸+二头** (推胸,夹胸4 x 12, 二头弯举 4 x 12炸裂 --> 慢速感受肌肉)
+   - [x] 24.3.21Day14下午——**背+腹肌** (高位下拉,辅助引体,坐姿划船 4 x 12; 举腿3 x 8)
+   - [x] 24.3.23Day15上午——**肩膀+三头** (肩推,侧平举,面拉 + 下拉绳索,伸缩屈伸 4 x 12) 
+   - [x] 24.3.24Day16下午——**腿** (高脚深蹲5kg+10kg,均2组 x 12, 双腿屈伸, 夹腿器后腿蹬器械  4 x 12); 本来晚上没睡好不想去呢，做梦导致就睡了五个多小时，但中午补了补觉，一觉睡了快两个小时了!最终还是去了,练了差不多50min左右很酸爽!坚持坚持
+
+第五周：
    
+   - [ ] 24.3.26

@@ -87,6 +87,8 @@ nav:
       - 区块链:加密和挖矿: security_etc/blockchain/3-chapter.md
       - 去中心化共识机制: security_etc/blockchain/4-chapter.md
       - 智能合约: security_etc/blockchain/5-smart_contract.md
+    - 电动汽车与能源互联网:
+      - 虚拟电厂: security_etc/EvAndEI/vpp.md
       
 
   - 🔍杂项:
