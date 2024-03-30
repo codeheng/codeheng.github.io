@@ -88,9 +88,13 @@ nav:
       - 去中心化共识机制: security_etc/blockchain/4-chapter.md
       - 智能合约: security_etc/blockchain/5-smart_contract.md
     - 电动汽车与能源互联网:
+      - 概述: security_etc/EvAndEI/intro.md
       - 需求响应: security_etc/EvAndEI/dr.md
       - 虚拟电厂: security_etc/EvAndEI/vpp.md
-      
+    - 论文:
+      - security_etc/paper/index.md
+      - 知识:
+        - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
 
   - 🔍杂项:
     - mess/index.md
