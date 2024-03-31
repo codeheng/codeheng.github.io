@@ -8,6 +8,8 @@ comments: true
 
 ### 联系我
 
+(若联系麻烦请备注，thanks~)
+
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-weixin: **WeChat**： yhkcaco  --> [点击扫码](https://github.com/codeheng/codeheng.github.io/blob/main/docs/home/assets/wechat.jpg?raw=true)
