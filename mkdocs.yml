@@ -102,6 +102,7 @@ nav:
     - Vim: mess/Vim.md
     - VScode: mess/vscode.md
     - Docker: mess/docker.md
+    - LaTex: mess/latex.md
 
   - 🔑Eng:
     - eng/index.md
