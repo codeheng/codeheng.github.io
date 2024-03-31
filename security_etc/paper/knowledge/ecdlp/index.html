@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.16">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -3137,6 +3137,8 @@
       
         
       
+        
+      
     
     
       
@@ -3253,6 +3255,27 @@
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mess/latex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTex
   </span>
   
 
@@ -3924,7 +3947,7 @@
   <h1>椭圆曲线离散对数问题</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1498 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1567 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
@@ -4004,6 +4027,10 @@ y_3 &amp;= m(x_1 - x_3) - y_1 \\
 <li>给定e（私钥）和G，计算P容易</li>
 <li>但给定G和P，求e非常难（实际上P很大，穷举出不可能）</li>
 </ul>
+<div class="admonition quote">
+<p class="admonition-title">来自师兄论文</p>
+<p>ECDLP: 对于给定椭圆曲线<span class="arithmatex">\(E\)</span>，在<span class="arithmatex">\(E\)</span>上取阶为大素数<span class="arithmatex">\(q\)</span>的加法群<span class="arithmatex">\(G\)</span>,<span class="arithmatex">\(P\)</span>为群<span class="arithmatex">\(G\)</span>的一个生成元。给定<span class="arithmatex">\(P,aP \in G\)</span>,在概率多项式时间内，ECDLP的目标是计算出<span class="arithmatex">\(a \in Z^*_q\)</span></p>
+</div>
 <p><strong>椭圆曲线和DLP是很重要的，因为它们构成了ECC的基元</strong>。对于有限循环群(n)的阶、生成点(G)和有限域(p)的阶有足够大的值时，椭圆曲线离散对数问题可以用于具有安全和隐私意识的系统。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
