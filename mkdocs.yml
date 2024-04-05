@@ -128,6 +128,7 @@ nav:
     - 饮食:
       - 蛋白质: workout/food/protein.md
     - 健身记录: workout/records.md
+    - 健身动作: workout/fitness_moves.md
 
 theme: 
   name: material
