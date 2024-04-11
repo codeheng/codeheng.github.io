@@ -6,8 +6,14 @@ comments: true
 
 ## 背 + 腹肌
 
+![back](https://pica.zhimg.com/70/v2-45bdc72779e94173fadf5b1309595fc5_1440w.avis?source=172ae18b&biz_tag=Post)
+
 ### 背(back)
 ![back](./assets/fitness_moves.jpg)
+
+背阔肌的主要功能是使肩部伸展、内收、内旋 --> [滑轮/高位下拉](https://vdn.vzuu.com/SD/76e9d7f8-2373-11eb-99b8-9e5e67a95bc5.mp4?disable_local_cache=1&bu=078babd7&c=avc.0.0&f=mp4&expiration=1712740097&auth_key=1712740097-0-0-e92b03b3bbcde24b249140da082b7f8f&v=ali&pu=078babd7)
+
+### 腹肌
 
 ## 肩膀 + 三头
 
