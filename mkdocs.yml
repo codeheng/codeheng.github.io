@@ -95,6 +95,7 @@ nav:
       - security_etc/paper/index.md
       - 知识:
         - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
+        - V2G和V2V: security_etc/paper/knowledge/v2g_v2v.md
 
   - 🔍杂项:
     - mess/index.md
