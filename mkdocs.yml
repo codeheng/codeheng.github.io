@@ -131,7 +131,7 @@ nav:
     - 健身记录: workout/records.md
     - 健身动作: workout/fitness_moves.md
   - Slide: 
-    - slide/cloud/index.html
+    - slide/dist/index.html
 
 theme: 
   name: material
