@@ -391,6 +391,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/security_etc/paper/knowledge/cl_pkc/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/security_etc/paper/knowledge/ecdlp/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
