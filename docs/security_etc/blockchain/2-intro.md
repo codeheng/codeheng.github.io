@@ -36,6 +36,8 @@ PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全�
 
 两个著名的Hash算法： [MD5](https://en.wikipedia.org/wiki/MD5)和[SHA-2](https://en.wikipedia.org/wiki/SHA-2)，而区块链用的是[SHA-256](https://en.wikipedia.org/wiki/SHA-2)
 
+- 通过SHA-256虽然不能加密，但能知道某个数据是否被篡改了
+
 ## 比特币的哈希算法
 
 **区块链的协议格式：**

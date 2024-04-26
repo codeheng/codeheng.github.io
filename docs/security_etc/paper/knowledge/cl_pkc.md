@@ -20,6 +20,8 @@ comments: true
 ^^84年,Shamir[^2] 提出了基于身份的密码系统^^, 避免了基于 PKI 的传统公钥密码系统中对证书的使用和验证过程。**用户的公钥是公开、可以唯一确定用户身份的信息即ID**，故不需要查找公钥，即无需公钥证书的存在。
 [^2]: Shamir A. Identity-Based cryptosystems and signature schemes. In: Blakely GR, Chaum D, eds. Advances in Cryptology-Crypto’84. LNCS 196. Heidelberg: Springer-Verlag, 1985. 47−53.
 
+> 基于身份的密码体系，比如[国密SM9算法](https://mengbin.top/2023-10-18-sm/#:~:text=T%20X.1035%E3%80%82-,SM9,-SM9%20%E5%9B%BD%E5%AF%86)，基于椭圆曲线密码学，即双线性映射
+
 - 但存在私钥托管的问题
     - 由 **可信第三方PKG(private key generation)** 利用它掌握的系统唯一主密钥产生
     - 又称为 **KGC** (key generation center 密钥生成中心)
@@ -60,25 +62,11 @@ CL-PKC正是解决上述私钥的问题，由Al-Riyami和Paterson[^3] 于2003年
       - 输出：消息 M 
 
 
-早期的无证书加密方案都是基于 **双线性映射**
+早期的无证书加密方案都是基于 **[双线性映射](./bilinear_pairing.md)**
 
 - 计算代价相对于模指数运算要高出很多
 
-> 双线性对是一种二元映射，它作为密码学算法的构造工具，在各区块链平台中广泛应用，比如 **零知识证明、聚合签名** 等技术方案大多基于双线性对构造得来
-
-!!! Note "双线性"
-      什么是线性？ 即$f(x + y) = f(x) + f(y)$ (函数的输入相加等于分别计算函数再相加)
-
-      那双线性？**让函数接收两个输入，而且对于每一个输入，都保持上面的线性特征**, 如下所示：
-
-$$
-\begin{aligned}
-      f(x + y, z) &= f(x, z) + f(y, z) \\
-      f(x, y + z) &= f(x, y) + f(y, z)
-\end{aligned}
-$$
-
-进一步即$f(u + x, y + z) = f(u, y) + f(u, z) + f(x, y) + f(x, z)$
+如今更倾向于，比如：**零知识证明、多方计算、同态加密**
 
 
 ## 无证书签名
