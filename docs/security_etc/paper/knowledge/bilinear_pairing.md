@@ -19,7 +19,7 @@ $$
 
 !!! Note "双线性映射完整定义（Bilinear Map）"
 
-      设$q$为素数，$G_1,G_2$是基于椭圆曲线上的阶为素数q的加法循环群，$G_T$是阶为$q$的乘法循环群，如果函数$e: G_1 \times G_2 \rightarrow G_T$ 是一个双线性映射，则具有如下性质：
+      设$q$为素数，$G_1,G_2$是基于椭圆曲线上的阶为素数q的加法循环群，$G_T$是阶为$q$的乘法循环群，如果函数$e: G_1 \times G_2 \to G_T$ 是一个双线性映射，则具有如下性质：
 
       1. 双线性：$\forall P \in G_1,Q \in G_2$且$a,b \in Z^*_q$，$\exists e(aP, bQ) = e(P, Q)^{ab}$
       2. 非退化性：$\exists P,Q \in G_1$, 满足$e(P,Q) \neq 1$
