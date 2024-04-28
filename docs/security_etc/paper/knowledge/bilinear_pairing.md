@@ -1,6 +1,9 @@
 ---
 comments: true
 ---
+
+## 介绍
+
 > 双线性对是一种二元映射，它作为密码学算法的构造工具，在各区块链平台中广泛应用，比如 **零知识证明、聚合签名** 等技术方案大多基于双线性对构造得来
 
 !!! Note "双线性"
@@ -24,3 +27,11 @@ $$
       1. 双线性：$\forall P \in G_1,Q \in G_2$且$a,b \in Z^*_q$，$\exists e(aP, bQ) = e(P, Q)^{ab}$
       2. 非退化性：$\exists P,Q \in G_1$, 满足$e(P,Q) \neq 1$
       3. 可计算性: $\forall P,Q \in G_1$, $e(P, Q)$是多项式时间可计算的
+
+## 摘自[CMU](https://people.csail.mit.edu/alinush/6.857-spring-2015/papers/bilinear-maps.pdf)
+
+> Bilinear maps are the tool of *pairing-based* crypto (双线性映射是基于配对的加密工具)
+
+### 定义
+
+设

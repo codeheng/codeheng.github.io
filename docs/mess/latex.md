@@ -10,7 +10,7 @@ comments: true
 
 在VScode里安装[Latex workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)插件
 
-- 自动换行：Alt + z
+- 自动换行：Alt + Z
 - Latex 和 PDF 的双向定位：
     - 从pdf定位到LaTex：`ctrl + 鼠标左键`
     - 从LaTex定位到pdf：`ctrl + alt + j`
