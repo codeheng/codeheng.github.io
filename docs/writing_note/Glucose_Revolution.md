@@ -71,7 +71,7 @@ comments: true
 
 说起血糖，之前还是在outlive这本书中注意到的（中文书名为超越百岁，豆瓣评分9.2也是24.1月刚出版）
 里面提到: "Assuming that you're not someone who engages in ultrarisky behaviors like BASE jumping, motorcycle racing,or texting and driving,the odds are overwhelming that you will die as a result of one of the chronic diseases of aging that I call the Four Horsemen: heart disease, cancer, neurodegenerative disease, or type 2 diabetes and related metabolic dysfunction."
-『假设你不是从事定点跳伞、摩托车比赛或发短信和开车等极端危险行为的人，那么你死于我称之为“四骑士”的慢性衰老疾病之一的几率是巨大的:  即**心血管疾病、癌症、神经退行性疾病或2型糖尿病相关的代谢功能障碍**』
+『假设你不是从事定点跳伞、摩托车比赛或发短信和开车等极端危险行为的人，那么你死于我称之为“四骑士”的慢性衰老疾病之一的几率是巨大的:  即 **心血管疾病、癌症、神经退行性疾病或2型糖尿病相关的代谢功能障碍** 』
 
 二型糖尿病作为四大骑士之一，重要性不言而喻！
 
