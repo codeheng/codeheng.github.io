@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="http://codeheng.github.io/security_etc/paper/knowledge/v2g_v2v/">
+        <link rel="canonical" href="http://codeheng.github.io/security_etc/paper/knowledge/v2g/">
       
       
         <link rel="prev" href="../ecdlp/">
@@ -3096,6 +3096,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="V2G(Vehicle to Gird)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本介绍
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2g" class="md-nav__link">
+    <span class="md-ellipsis">
+      V2G安全隐私问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4112,6 +4136,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="V2G(Vehicle to Gird)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本介绍
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2g" class="md-nav__link">
+    <span class="md-ellipsis">
+      V2G安全隐私问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4141,10 +4189,61 @@
   <h1>V2G和V2V</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 8 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 710 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
 </div>
 <h2 id="v2gvehicle-to-gird">V2G(Vehicle to Gird)<a class="headerlink" href="#v2gvehicle-to-gird" title="Permanent link">&para;</a></h2>
+<h3 id="_1">基本介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">来自论文</p>
+<p>刘晓飞,张千帆,崔淑梅.电动汽车V2G技术综述[J].电工技术学报,2012,27(02):121-127.DOI:10.19595/j.cnki.1000-6753.tces.2012.02.018.</p>
+</div>
+<p>随着可再生能源（如太阳能、风能等）接入电力系统，但由于其不连续性导致发电的波动，需要其他能源（如电池能量存储系统）进行补偿，V2G针对上述问题提出的，<strong>其核心思想就是利用大量电动汽车的储能源作为电网和可再生能源的缓冲</strong></p>
+<ul>
+<li>当电网负荷过高时，由电动汽车储能源向电网馈电</li>
+<li>当电网负荷低时，用来存储电网过剩的发电量，避免造成浪费</li>
+</ul>
+<p>电动汽车用户可以在电价低时，从电网买电；电网电价高时向电网售电，从而获得一定的收益</p>
+<p>电动汽车(不同于电网中其他的电负荷)：具有高度的移动性和不可预测性</p>
+<p><strong>从经济上，V2G的效益是引人注目的(好处)</strong> ： </p>
+<ol>
+<li>利用电动车电池作为电网的缓冲，为电网 <strong>提供辅助服务</strong>，如调峰、无功补偿等</li>
+<li>能为车主提供额外的收入，抵消购买电动汽车的部分花费，有利于清洁汽车的普及</li>
+<li>可以增加电网稳定性和可靠性，降低电力系统运营成本</li>
+</ol>
+<p><strong>V2G的实现方法(根据应用分为四类) :</strong></p>
+<ul>
+<li>集中式、自治式、基于微网的V2G、基于更换电池组的V2G</li>
+</ul>
+<h3 id="v2g">V2G安全隐私问题<a class="headerlink" href="#v2g" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">来自论文</p>
+<p>张雄,张海春,刘政林.V2G网络的安全和隐私问题研究[J].汽车实用技术,2021,46(23):12-15.DOI:10.16638/j.cnki.1671-7988.2021.023.004.</p>
+</div>
+<p>V2G系统中存在的安全和隐私方面的挑战将极大地影响下一代汽车接入电网技术的实际应用<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<div class="admonition note">
+<p class="admonition-title">相关研究</p>
+<p>Saxena等人<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>提出了一种新的网络安全和隐私保护架构来支持V2G网络</p>
+<p>Eizaet<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>等人通过结合 <strong>无证书公钥加密和限制性部分盲签名技术</strong>，提出了一种安全且隐私敏感的代理移动 IPv6协议，既保证了电动汽车的位置隐私，又保持了电动汽车与充电服务之间的会话连续性</p>
+<p>Abdallah 等人<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>提出了一种针对V2G连接的隐私保护认证方案，<strong>利用哈希函数和位异或操作</strong>，设计了一个健壮的密钥协商协议，在V2G环境中实现了相互认证</p>
+</div>
 <h2 id="v2vvehicle-to-vehicle">V2V(Vehicle to Vehicle)<a class="headerlink" href="#v2vvehicle-to-vehicle" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>N.Saxena,S.Grijalva,V.Chukwuka,et al.Network Security and Privacy Challenges in Smart Vehicle-to-Grid[J].IEEE Wireless Communications,2017,24(4): 88-98.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>N.Saxena,S.Grijalva,V.Chukwuka,et al.Network Security and Privacy Challenges in Smart Vehicle-to-Grid[J].IEEE Wireless Communications,2017,24(4): 88-98&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>M. H. Eiza, Q.Shi, A.Marnerides, et al.Secure and privacy-aware proxy mobile IPv6 protocol for vehicle-to-grid networks[C].IEEE International Conference on Communications (ICC),2016:1-6.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Abdallah A,Shen X.Lightweight Authentication and Privacy- Preserving Scheme for V2G Connections[J].IEEE Transactions on Vehicular Technology,2016:1-1.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -4167,7 +4266,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 3, 2024</span>
   </span>
 
     
@@ -4177,7 +4276,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 3, 2024</span>
   </span>
 
     
