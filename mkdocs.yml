@@ -95,7 +95,7 @@ nav:
       - security_etc/paper/index.md
       - 知识:
         - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
-        - V2G和V2V: security_etc/paper/knowledge/v2g.md
+        - V2G: security_etc/paper/knowledge/v2g.md
         - 无证书公钥密码: security_etc/paper/knowledge/cl_pkc.md
         - 双线性映射: security_etc/paper/knowledge/bilinear_pairing.md
 
