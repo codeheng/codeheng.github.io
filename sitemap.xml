@@ -336,6 +336,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/security_etc/course/blockchain/bitcoin/04_protocol/</loc>
+         <lastmod>2024-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/security_etc/cryptography/1-intro/</loc>
          <lastmod>2024-05-05</lastmod>
          <changefreq>daily</changefreq>
