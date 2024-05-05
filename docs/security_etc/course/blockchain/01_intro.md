@@ -8,7 +8,7 @@ comments: true
 ## 课程大纲：比特币
 
 - [密码学基础](./bitcoin/02_cryto.md)
-- 比特币的数据结构
+- [比特币的数据结构](./bitcoin/03_data_structure.md)
 - 共识协议和系统实现
 - 挖矿算法和难度调整
 - 比特币脚本

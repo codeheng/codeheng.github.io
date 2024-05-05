@@ -94,6 +94,7 @@ nav:
       - 比特币BTC: 
         - 02密码学原理: security_etc/course/blockchain/bitcoin/02_cryto.md
         - 03数据结构: security_etc/course/blockchain/bitcoin/03_data_structure.md
+        - 04协议: security_etc/course/blockchain/bitcoin/04_protocol.md
 
     - 电动汽车与能源互联网:
       - 概述: security_etc/EvAndEI/intro.md
