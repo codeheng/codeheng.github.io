@@ -81,23 +81,33 @@ nav:
         - 证书: security_etc/cryptography/13-certificates.md
         - 密码哈希: security_etc/cryptography/14-pwd_hashing.md
         - 比特币: security_etc/cryptography/bitcoin.md
+
     - 区块链: 
       - 概述: security_etc/blockchain/1-blockchain.md
       - 区块链简介: security_etc/blockchain/2-intro.md
       - 区块链:加密和挖矿: security_etc/blockchain/3-chapter.md
       - 去中心化共识机制: security_etc/blockchain/4-chapter.md
       - 智能合约: security_etc/blockchain/5-smart_contract.md
+
+    - 《区块链技术与应用》:
+      - 简介: security_etc/course/blockchain/01_intro.md
+      - 比特币BTC: 
+        - 密码学原理: security_etc/course/blockchain/bitcoin/02_cryto.md
+
     - 电动汽车与能源互联网:
       - 概述: security_etc/EvAndEI/intro.md
       - 需求响应: security_etc/EvAndEI/dr.md
       - 虚拟电厂: security_etc/EvAndEI/vpp.md
-    - 论文:
+
+    - 科研:
       - security_etc/paper/index.md
-      - 知识:
+      - 论文知识:
         - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
         - V2G: security_etc/paper/knowledge/v2g.md
         - 无证书公钥密码: security_etc/paper/knowledge/cl_pkc.md
         - 双线性映射: security_etc/paper/knowledge/bilinear_pairing.md
+      - 工具:
+        - Miracl密码库: security_etc/paper/tool/miracl.md
 
   - 🔍杂项:
     - mess/index.md
