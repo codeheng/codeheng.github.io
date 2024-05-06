@@ -34,8 +34,8 @@ $H()$是对前一个区块的全部内容进行hash，包含前一个hash值
 
 root hash存在block header中，但header没有具体交易内容，block body中存放交易的列表
 
-- 全节点：包含真正交易数据的节点
-- 轻节点：只包含hash header的节点 （只要root hash）
+- 全节点(full node)：包含真正交易数据的节点
+- 轻节点(light node)：只包含hash header的节点 （只有root hash）
 
 Merkle tree可以提供 **Merkle proof** (如下图)
 
@@ -51,4 +51,4 @@ Merkle tree可以提供 **Merkle proof** (如下图)
 
 若proof of no membership，则需要遍历全部区块，时间复杂度$O(n)$
 
-- 如果所有的区块是按照hash值排序的话，可用$O(log n)的时间来验证某个交易是否在merkle tree中，又称Sorted Merkle Tree
+- 如果所有的区块是按照hash值排序的话，可用$O(log n)$的时间来验证某个交易是否在merkle tree中，又称Sorted Merkle Tree
