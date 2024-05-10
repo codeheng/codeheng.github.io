@@ -43,3 +43,10 @@ comments: true
 10. relative to 与...有关
 
     - and that its prevalence in a particular society is **relative to** how that society values it. 
+
+## 积累
+
+
+obscure v. 掩盖 adj. 模糊的
+
+

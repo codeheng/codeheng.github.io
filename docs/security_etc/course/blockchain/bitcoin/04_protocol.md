@@ -75,17 +75,18 @@ sybil attack(女巫攻击)：某个超级计算机产生的账户个数超过了
 
 - **coinbase transaction是发行新BTC的唯一方法**，其余仅仅是转账
 - 初始block reward为50BTC，21万区块以后，区块奖励减半25BTC....以此类推
-    - 24.5.6一搜: 1BTC = 459178.78CNY = 63649.30USD
+    - 24.5月一搜: 1BTC = 459178.78CNY = 63649.30USD
     - 即发布区块可得到40多万人民币(夸张恐怖...)，故争先恐后抢记帐权
+    - 目前Block reward(初块奖励)为6.25 BTC（24.5月），每四年减半一次
 
 **BTC达到共识即获取账本的内容**，只有获得记帐权的节点才能向里面写东西
 
 - 争夺记帐权的过程即挖矿mining (算力决定)
-- 争夺记帐权的节点称为旷工miner
+- 争夺记帐权的节点称为矿工miner
 
 Q: 此方法如何就避免了女巫攻击？
 
 - 因为即便你创建更多账户，hash rate并没有增加，每秒尝试的nonce并不会增加
 
-> Hash rate is a measure of the computational power of a blockchain network, group, or individual.
+> **Hash rate** is a measure of the computational power of a blockchain network, group, or individual.
 > Hash rate is determined by how many guesses are made per second.
