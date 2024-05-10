@@ -49,7 +49,7 @@ BTC中的全节点需要维护一个数据结构——**UTXO(Unspent Transaction
 
 ### BTC的总量
 
-初块奖励（Block Reward）是系统中产生BTC的唯一途径，而每四年(即21万块区块)会减半，则构成了Geometric series即$21 \times 50 + 21 + 25 + 21 + 12.5... = 21 \times 50 \times( 1 + 1/2 + 1/4...) = 21 \times 100 = 2100$
+出块奖励（Block Reward）是系统中产生BTC的唯一途径，而每四年(即21万块区块)会减半，则构成了Geometric series即$21 \times 50 + 21 + 25 + 21 + 12.5... = 21 \times 50 \times( 1 + 1/2 + 1/4...) = 21 \times 100 = 2100$
 
 **故系统中BTC所有总量为2100万** 
 

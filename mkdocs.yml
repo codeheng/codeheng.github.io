@@ -97,6 +97,7 @@ nav:
         - 04协议: security_etc/course/blockchain/bitcoin/04_protocol.md
         - 05实现: security_etc/course/blockchain/bitcoin/05_BTC实现.md
         - 06网络: security_etc/course/blockchain/bitcoin/06_BTC_internet.md
+        - 07挖矿难度: security_etc/course/blockchain/bitcoin/07_BTC_挖矿难度.md
 
     - 电动汽车与能源互联网:
       - 概述: security_etc/EvAndEI/intro.md
