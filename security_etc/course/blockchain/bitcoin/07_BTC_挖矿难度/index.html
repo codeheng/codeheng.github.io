@@ -4665,7 +4665,7 @@
   <h1>07挖矿难度</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 963 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1067 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <p>Q: BTC系统中如何调整挖矿的难度</p>
 <ul>
@@ -4674,7 +4674,7 @@
 </ul>
 <p>比特币每2016个区块，会做一次难度调整，约14天</p>
 <ul>
-<li>新targe 当前target * 实际2016个区块出块时间 / 理论2016个区块出块时间(2周)</li>
+<li>新target = 当前target * 实际2016个区块出块时间 / 理论2016个区块出块时间(2周)</li>
 </ul>
 <h2 id="_1">挖矿<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>全节点：</strong></p>
@@ -4726,17 +4726,27 @@
 </ol>
 <p><strong>若矿工来自非同一机构(五湖四海)，收益如何分配？</strong></p>
 <ul>
-<li>Idea1：平均分配，所有人平分出块奖励</li>
+<li>Idea1：平均分配，所有人平分出块奖励（按照工作量大小，如何衡量工作量？）</li>
 <li>Idea2：降低挖矿难度（可行方案）<ul>
-<li>假设原本挖矿难度要求，计算所得126位的哈希值前70位都必须为0，现在只需前60位为0，这样挖矿会更容易挖到</li>
-<li>这个哈希是不会被区块链所承认的，我们将其称为一个share(almost valid share)</li>
-<li>矿工每挖到一个share，将其提交给矿主，矿主对其进行记录，作为矿工工作量的证明</li>
+<li>假设挖矿难度需126位的hash前70位=0，现在只需前60位=0，这样会更容易挖到</li>
+<li>但这个哈希是不会被区块链所承认的，将其称为一个share(almost valid share)</li>
+<li>矿工每挖到一个share，将其提交给矿主，<strong>矿主对其进行记录，作为矿工工作量的证明</strong></li>
 <li>等到某个矿工真正挖到符合要求的的区块后，根据所有矿工提交的share数量进行分配</li>
-<li>因每个矿工尝试的nonce越多，挖到矿的可能性越大，所能得到的share也会越多，故作为工作量证明方案可行</li>
 </ul>
 </li>
 </ul>
-<p><a href="https://btc.com/stats/pool?pool_mode=all">矿池份额统计</a></p>
+<p><strong>为何可行?</strong>: 因每个矿工尝试的nonce越多，挖到矿的可能性越大，所能得到的share也会越多，故可作为工作量的衡量</p>
+<ul>
+<li><a href="https://buybitcoinworldwide.com/mining/pools/">Largest Mining Pools</a></li>
+<li><a href="https://btc.com/stats/pool?pool_mode=all">矿池份额统计</a></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">若51%算力矿池可以发动哪些攻击?</p>
+<ol>
+<li>forking attack(分叉攻击) </li>
+<li>Boycott封锁交易： 假如攻击者不喜欢账户A，不想让A的交易上区块链，在监听到有其他人将A的交易发布到区块链上时，立刻发动分叉攻击，使A所在链无法成为"最长合法链"。便实现了对A账户的封锁</li>
+</ol>
+</div>
 <p><strong>矿池出现的优劣：</strong></p>
 <ul>
 <li>优点：解决了矿工收入不稳定的问题，减轻了矿工的负担</li>
@@ -4764,7 +4774,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 11, 2024</span>
   </span>
 
     
