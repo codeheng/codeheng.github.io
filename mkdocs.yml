@@ -59,6 +59,10 @@ nav:
           - Day36 | Part5: core_knowledge/algorithm/check_in_everyday/day36.md
     - Linux: 
       - 基础: core_knowledge/linux/1-basic.md
+    - Lab:
+      - CSAPP:
+        - core_knowledge/lab/csapp/index.md
+        - DataLab: core_knowledge/lab/csapp/01datalab.md
 
   - 🔐安全:
     - security_etc/index.md

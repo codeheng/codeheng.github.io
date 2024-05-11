@@ -71,3 +71,12 @@ CL-PKC正是解决上述私钥的问题，由Al-Riyami和Paterson[^3] 于2003年
 
 ## 无证书签名
 
+
+
+## 签密(signcryption)
+
+签密把公钥加密和数字签名有机结合在一起,可在一个合理的逻辑步骤内同时完成对消息的加密和签名。在文献[^4]文对 传统的“先签名后加密”的方式进行优化，并提出签密
+
+[^4]: ZHENG Y L. Digital signcryption or how to achieve cost （signature & encryption） ≪ cost （signature） +cost （encryption）［C］//Proceedings of the 17th Annual International Cryptology Conference on Advances in Cryptology. New York，USA：ACM Press，1997：165-179
+
+> In cryptography, **signcryption** is a public-key primitive that simultaneously performs the functions of both digital signature and encryption
