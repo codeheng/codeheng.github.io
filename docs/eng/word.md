@@ -47,6 +47,10 @@ comments: true
 ## 积累
 
 
-obscure v. 掩盖 adj. 模糊的
-
-
+1. obscure v. 掩盖 adj. 模糊的
+2. rate n.速率，费用 v. 评价，被认为 --> **be rated as**
+3. **deterioration** = worsening v. 恶化
+4. warehouse n. 仓库； cottage n. 小屋
+5. be flooded = be submerged  被淹没
+6. laborious  adj. requiring considerable effort and time（费力的） = challenging
+7. **in that 因为，由于**
