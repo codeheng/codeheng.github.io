@@ -4,7 +4,7 @@ comments: true
 
 ## CET6
 
-### 23.12-2
+### 23.12
 
 1. refrain from 克制，避免
       - She has **refrain from** using social media.
@@ -44,6 +44,23 @@ comments: true
 
     - and that its prevalence in a particular society is **relative to** how that society values it. 
 
+----
+
+1. long-cherished adj. 长期珍藏的
+      - The ever-growing commercial value of **long-cherished** artistic works. 
+2. democratise v. 民主化
+3. haste  v.n. 匆忙
+4. inadequacy  n. 不足，不胜任，缺乏信心 = incompetent
+5. authentic adj. 真正的，真实的
+      - It may render us **vulnerable and inauthentic.**
+6. rosy adj. = likely to be good or successful 美好的；乐观的
+7. catchy posts  吸引人的文章
+8. grind  n. 令人疲劳（或厌倦）的工作；苦差事
+      - Social media can certainly be an escape from the daily grind
+9. yearn for 渴望
+      - As humans, we **yearn for** social connection   
+10. **exaggerate（夸大）** their life's **accomplishments(成就)**
+
 ## 积累
 
 
@@ -54,3 +71,4 @@ comments: true
 5. be flooded = be submerged  被淹没
 6. laborious  adj. requiring considerable effort and time（费力的） = challenging
 7. **in that 因为，由于**
+8. **aggravate v. 恶化，加剧**
