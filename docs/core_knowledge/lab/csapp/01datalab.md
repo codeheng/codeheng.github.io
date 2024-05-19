@@ -31,6 +31,8 @@ $$
     }
     ```
 
+PS: 可利用`./dlc -e bits.c`查看operators
+
 ## 2. tmin
 
 > return minimum two's complement integer（最小二进制补码整数）
