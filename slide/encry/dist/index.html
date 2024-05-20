@@ -75,7 +75,7 @@
                     <p class="font-serif my-1">
                         　华北电力大学计算机系　
                     </p>
-                    <img class="inline-img h-24" src=".\static\img\08a4ff88e92d4103a078bf9bbfc3af73.jpg" style="display: inline-block;"/>
+                    <img class="inline-img h-24" src=".\static\img\8d6aebade6044c96a84925e77dbc8a3d.jpg" style="display: inline-block;"/>
                 </a>
             </div>
             
@@ -84,14 +84,27 @@
 </p></div></div></div></section><section><div><h2 id="overview" class="text-xl mt-2 pb-2 font-sans">Overview</h2>
 <p class="font-serif my-1"><strong>本次汇报主要分为以下几个部分:</strong></p>
 <ol>
-<li class="ml-8">研究背景</li>
-<li class="ml-8">相关研究<ul class="list-disc font-serif">
-<li class="ml-8">量子密码现状 </li>
-<li class="ml-8">抗量子相关技术</li>
-<li class="ml-8">隐私保护方案</li>
+<li class="ml-8"><strong>研究背景</strong><ul class="list-disc font-serif">
+<li class="ml-8">传统密码 VS. 量子密码 </li>
 </ul>
 </li>
-<li class="ml-8">总结展望</li>
+<li class="ml-8"><strong>相关研究</strong><ul class="list-disc font-serif">
+<li class="ml-8"><em>量子密码现状</em><ul class="list-disc font-serif">
+<li class="ml-8">量子计算机 &amp; 量子密码 </li>
+</ul>
+</li>
+<li class="ml-8"><em>抗量子相关技术</em><ul class="list-disc font-serif">
+<li class="ml-8">量子计算</li>
+<li class="ml-8">量子密钥分发QKD </li>
+</ul>
+</li>
+<li class="ml-8"><em>隐私保护方案</em><ul class="list-disc font-serif">
+<li class="ml-8">格密码 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ml-8"><strong>总结展望</strong></li>
 </ol></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">一. 研究背景</h1></div></div></div></section><section><div><h2 id="vs" class="text-xl mt-2 pb-2 font-sans">传统密码 VS 量子加密</h2>
 <p class="font-serif my-1"><red>传统密码：基于密钥（key）<red/></red></p>
 <ul class="list-disc font-serif">
@@ -117,7 +130,7 @@
 <li class="ml-8">19年《Nature》上发表了Google最新一代量子处理器Sycamore$^{[2]}$<ul class="list-disc font-serif">
 <li class="ml-8">包含53个量子比特(qubit)</li>
 <li class="ml-8">并与经典计算机相比：<ul class="list-disc font-serif">
-<li class="ml-8">Sycamore完成同样的任务只需200s，</li>
+<li class="ml-8">Sycamore完成同样的任务只需200s</li>
 <li class="ml-8">而Google使用超级计算机Summit需要1万年</li>
 </ul>
 </li>
@@ -129,12 +142,12 @@
 <ul class="list-disc font-serif">
 <li class="ml-8">5月6日，受邀接入长三角枢纽芜湖集群算力公共服务平台<ul class="list-disc font-serif">
 <li class="ml-8">实现了<u>通算、智算、超算、量算</u>“四算合一”</li>
-<li class="ml-8">搭载72位自主超导量子芯片“悟空芯”，共有198个qubit</li>
+<li class="ml-8">搭载72位自主超导量子芯片“悟空芯”，共有<a href="http://www7.zzu.edu.cn/nscczz/info/1155/2552.htm">198个qubit</a></li>
 </ul>
 </li>
 </ul>
 <p class="font-serif my-1">与传统相比，存储强、运算快，是未来计算技术发展的新方向$^{[3]}$</p></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">量子密码</h2>
-<p class="font-serif my-1">有了量子计算机：</p>
+<p class="font-serif my-1"><strong>有了量子计算机：</strong></p>
 <ul class="list-disc font-serif">
 <li class="ml-8">94年，Shor$^{[4]}$提出了著名的量子整数分解算法，该算法使用量子计算机可以在多项式时间内找到大整数的因子<ul class="list-disc font-serif">
 <li class="ml-8">Shor算法可轻松攻破基于整数分解、离散对数的多种公钥密码</li>
@@ -160,49 +173,60 @@
 </li>
 </ul>
 <p class="font-serif my-1">此处$|0\rangle=\binom{1}{0}, \quad|1\rangle=\binom{0}{1} .$ （采用狄拉克标记右括向量表示）</p>
-<p class="font-serif my-1"><img class="center" margin="0 auto" src=".\static\img\3342ba32555c41879e39c73977222179.jpg" width="600px"/></p></div></section><section><div><h2 id="qkd" class="text-xl mt-2 pb-2 font-sans">抗量子攻击——QKD</h2>
+<p class="font-serif my-1"><img class="center" margin="0 auto" src=".\static\img\b656af22d41746759a7377868728c62e.jpg" width="600px"/></p></div></section><section><div><h2 id="qkd" class="text-xl mt-2 pb-2 font-sans">抗量子攻击——QKD</h2>
 <p class="font-serif my-1">量子密钥分发（quantum key distribution，QKD）是利用量子力学特性实现密码协议的安全通信方法。</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">通信双方能够产生并一个随机的、安全的密钥，来加密和解密消息</li>
 </ul>
-<p class="font-serif my-1"><img alt="" src=".\static\img\35fd0effee2448d7b961cef182a11ae4.jpg"/></p>
+<p class="font-serif my-1"><img alt="" src=".\static\img\5d726e98b2a342ffbf1a149e77192037.jpg"/></p>
 <ul class="list-disc font-serif">
 <li class="ml-8">基于两种共扼基的量子密钥分配方案：e.g. <strong>BB84协议</strong></li>
 </ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
-<p class="font-serif my-1">基于格的密码学由于其高效简单、高度可并行化，并可提供强有力的可证明安全保证而备受关注$^{[8]}$。</p>
+<p class="font-serif my-1">高效简单、高度并行化，可提供强有力的可证明安全保证备受关注$^{[8]}$</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">目前没有多项式时间的算法解决格上困难问题，包括量子计算机<ul class="list-disc font-serif">
 <li class="ml-8">格密码被认为是抗量子的</li>
 </ul>
 </li>
-<li class="ml-8">直到09年，Gentry首次给出了基于格的全同态加密方案的构造$^{[9]}$<ul class="list-disc font-serif">
+<li class="ml-8">直到09年，Gentry首次给出了基于格的<u>全同态加密</u>方案的构造$^{[9]}$<ul class="list-disc font-serif">
 <li class="ml-8">促成格密码研究的第一次热潮</li>
 </ul>
 </li>
 </ul><div class="fragment" data-fragment-index="1"><blockquote>
-<p class="font-serif my-1">全同态加密（FHE）是一种加密方案，可以在加密状态下进行任意多次的加法和乘法运算，并且可以得到与明文数据相同的结果</p>
+<p class="font-serif my-1">全同态加密（FHE）：可以在加密状态下进行任意多次的加法和乘法运算，并且可以得到与明文数据相同的结果</p>
 </blockquote>
 <p class="font-serif my-1"><strong>格(lattice)是一种数学结构</strong>，定义为一组在n为欧式空间$R^n$上的一组线性无关的非0向量（称为格基）的整系数线性组合</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">表示为$\Lambda=a_{1} x_{1}+a_{2} x_{2}+\cdots+a_{i} x_{i}+\cdots+a_{n} x_{n}$</li>
-</ul></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
-<p class="font-serif my-1">其中$a_1,a_2,…,a_n$是任意的整数，$x_1,x_2,…x_n$是实向量空间中一组线性无关的向量。</p>
-<p class="font-serif my-1">在格密码学中，对于一个维数足够高的格，通过一组随机选取的格，找到一组线性无关的短格基向量是困难的。</p>
+</ul>
+<p class="font-serif my-1">$a_1,…,a_n$是任意整数，$x_1,…x_n$是实向量空间中一组线性无关的向量</p></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
+<p class="font-serif my-1">在格密码学中，对于一个维数足够高的格，通过一组随机选取的格，找到一组线性无关的短格基向量是困难的</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">此困难性问题有助于构造格上的密码技术</li>
-</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">格密码作为一类经典的抗量子密码，公认是后量子密码算法标准最有力的竞争者</p>
+</ul>
+<p class="font-serif my-1">格密码作为一类经典的抗量子密码，公认是后量子密码算法标准最有力的竞争者</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">如：<u>基于格的零知识证明、格加密、格签名以及格密钥交换</u></li>
-</ul>
-<p class="font-serif my-1">在格密码体制的设计方面，格密码在安全性方面有着很大的潜力，但在效率和实用性方面，它与目前传统的较实用的密码方案还有很大的差距，格密码的研究历程还有很长的路要走</p></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">三. 总结与展望</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">总结与展望</h2>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>格密码具有较好的扩展性</strong>，可利用格理论为设计基础，设计加密、签名、伪随机发生器、密钥交换协议、基于身份的加密、全同态密码等</p>
+<p class="font-serif my-1">在格密码体制的设计方面，格密码在安全性方面有着很大的潜力，但在效率和实用性方面，它与目前传统的较实用的密码方案还有很大的差距，格密码的研究历程还有很长的路要走</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">除此方案，还有 <strong><u>基于Hash使用Merkle树生成数字签名，基于多变量</u></strong> 等等的密码体制</li>
+</ul></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
+<p class="font-serif my-1"><img alt="" src=".\static\img\4e60abf41981437dae140f49a3570948.jpg"/></p>
+<p class="font-serif my-1">基于联盟区块链和环上容错学习的智能电表抗量子攻击隐私保护方案</p><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><img class="center" margin="0 auto" src=".\static\img\089f8fbfd0ce444c9891fc5f7cad2db4.jpg" width="600px"/></p>
+<p class="font-serif my-1"><img alt="" src=".\static\img\037bb9fc005f49d19d4091fdc83a5d89.jpg"/></p></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
+<p class="font-serif my-1"><img alt="" src=".\static\img\fb8ef0f823cc4c009ed7514542fc0fac.jpg"/></p>
+<p class="font-serif my-1"><img alt="" src=".\static\img\8fe01d70a70d477c9f597464cccdf966.jpg"/></p></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">基于格的密码学</h2>
+<p class="font-serif my-1"><img class="left" margin="0 auto" src=".\static\img\0e09fce6990548d48ef58ca22e45809a.jpg" width="800px"/></p>
+<p class="font-serif my-1"><img class="left" margin="0 auto" src=".\static\img\2207ea3992eb4a5099a2c3ccdbdbba04.jpg" width="800px"/></p></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">三. 总结与展望</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">总结与展望</h2>
 <p class="font-serif my-1">抗量子计算的隐私保护方案是当前密码学研究领域的一个重要课题。随着量子计算机的发展和量子算法的崛起，传统的加密算法面临着被量子计算攻击破解的风险。</p>
 <ul class="list-disc font-serif">
-<li class="ml-8">抗量子密码算法：如基于格的密码学、多线性映射密码学和代码密码学等。<ul class="list-disc font-serif">
+<li class="ml-8">抗量子密码算法：如基于格的密码学、多线性映射密码学等。<ul class="list-disc font-serif">
 <li class="ml-8">这些算法的目标是在量子计算机攻击下保持安全性，同时保持高效性和可扩展性</li>
 </ul>
 </li>
 </ul>
-<p class="font-serif my-1"><strong>基于量子力学机制，量子密码学有着先天的优势</strong>。从理论上来讲，量子密码学有着无条件安全性的特点，</p>
+<p class="font-serif my-1"><strong>基于量子力学机制，量子密码学有着先天的优势</strong>。从理论上来讲，量子密码学有着无条件安全性的特点</p>
 <ul class="list-disc font-serif">
 <li class="ml-8">但实际应用时，由于设备缺陷、噪声影响等因素，仍存在安全问题</li>
 <li class="ml-8">此外在效率、易用性、健壮性等方面也存在诸多问题有待解决</li>
@@ -210,7 +234,7 @@
 <ul class="list-disc font-serif">
 <li class="ml-8">[1] Brassard C, Bennett C H. Quantum cryptography: Public key distribution and coin tossing[C] //Proc of Int Conf on Computers, Systems and Signal Processing. Piscataway, NJ: IEEE, 1984: 175-179</li>
 <li class="ml-8">[2]   Arute F, Arya K, Babbush R, et al. Quantum supremacy using a programmable superconducting processor. Nature, 2019, 574(7779): 505-510</li>
-<li class="ml-8">[3]   郭国平. 量子计算技术的产业变革与生态建构. 人民论坛，2023，（16）</li>
+<li class="ml-8">[3]   郭国平. 量子计算技术的产业变革与生态建构.人民论坛,2023(16)</li>
 <li class="ml-8">[4] Shor P W. Algorithms for quantum computation: Discrete logarithms and factoring[C] //Proc of the 35th Annual Symp on Foundations of Computer Science. Piscataway, NJ: IEEE, 1994: 124-134</li>
 </ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">参考文献</h2>
 <ul class="list-disc font-serif">
