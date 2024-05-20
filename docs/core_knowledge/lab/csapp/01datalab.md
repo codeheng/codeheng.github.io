@@ -49,6 +49,25 @@ PS: 可利用`./dlc -e bits.c`查看operators
 
 ## 3. isTmax
 
+> returns 1 if x is the maximum, two's complement number, and 0 otherwise 
+>
+> (若是补码最大即01..1则返回1，否则0)
+
+01..1 加 1取反为01..1，即本身。此时01..1与其异或为0(因为两个数相等)
+
+- 故让x与其x加1取反进行异或，若为0则返回1，否则返回0
+- **但有反例**：若x为1..1(即-1)加1后变为0
+      * 此时两者进行异或为0，但不符合条件，故需要返回0
+
+??? success "实现"
+
+    ```c
+    int isTmax(int x) {
+        return !( ~(x + 1) ^ x) & !!( (x + 1) ^ 0x0);//!!可将非0变为1
+    }
+    ```
+
+
 ## 4. allOddBits
 
 ## 5. negate
