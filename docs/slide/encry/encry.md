@@ -103,7 +103,9 @@ Microsoft和Google量子研究组的研究人员Matthias Troyer和John Martinis�
 
 > Quantum computing is a type of computation whose operations can harness the phenomena of **quantum mechanics(量子力学)**, such as **superposition(叠加)**, **entanglement(纠缠)**, etc
 
-- **传统bit**: 0 or 1. （可看出qubit的特例——a = 0或b = 0）
+--
+
+- **传统bit**: 0 or 1. （可看出qubit的特例——$a = 0$或$b = 0$）
 - **量子bit (qubit)**: A vector $ a|0\rangle + b|1\rangle,|a|^{2}+|b|^{2}=1 $
       * 量子比特的值可以是0、1或 0和1的量子叠加 
 
