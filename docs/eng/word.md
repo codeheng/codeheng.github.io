@@ -61,6 +61,27 @@ comments: true
       - As humans, we **yearn for** social connection   
 10. **exaggerate（夸大）** their life's **accomplishments(成就)**
 
+
+### 20.3
+
+1. cynical hostility 愤世嫉俗的敌意
+      - cynical adj. 只顾自己不顾他人的；见利忘义的
+2. confrontational adj. 对抗性的，挑起冲突的
+      - e.g. It may lead to confrontational thought patterns.
+3. tamper n. 脾气  v. 使缓和
+      - e.g. It may cause people to lose their **temper** frequently. 
+4. stir up 扬起，挑起;  agitation n. 焦虑不安，忧虑
+      - e.g. It may **stir up agitation** among those in long lines. 
+5. public interest  公共利益
+6. accident  n. 事故 ； identify v. 识别，确认
+      - It was identified during a lab experiment accident. 
+7. bacterium n. 细菌； reproduce v. 繁殖
+      - It is a **bacterium** that **reproduces** at a high rate.
+8. molecular composition 分子组成
+9. Manufacturer n. 生产商，制造商 
+10. assess v.评价，评定; access n. 通道；通路  v.进入；使用
+      - Assessing its possible negative impact on the environment.   
+
 ## 积累
 
 
