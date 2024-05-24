@@ -74,13 +74,20 @@ comments: true
       - e.g. It may **stir up agitation** among those in long lines. 
 5. public interest  公共利益
 6. accident  n. 事故 ； identify v. 识别，确认
+      - by accident = by chance  
       - It was identified during a lab experiment accident. 
 7. bacterium n. 细菌； reproduce v. 繁殖
       - It is a **bacterium** that **reproduces** at a high rate.
 8. molecular composition 分子组成
-9. Manufacturer n. 生产商，制造商 
+9.  Manufacturer n. 生产商，制造商 
 10. assess v.评价，评定; access n. 通道；通路  v.进入；使用
       - Assessing its possible negative impact on the environment.   
+
+---
+
+1. spur v.鞭策；激励；刺激
+2. degradation n. 堕落，潦倒；恶化（过程）
+
 
 ## 积累
 
@@ -93,3 +100,7 @@ comments: true
 6. laborious  adj. requiring considerable effort and time（费力的） = challenging
 7. **in that 因为，由于**
 8. **aggravate v. 恶化，加剧**
+9. controversy n. 争论， 争议
+      - Controversy continues to surround the true value of the dollar bill.
+10. guarded adj. 谨慎的，有保留的； composition n. 组成
+      - The **exact（精确的）** **composition** of the paper and ink is a closely **guarded**(= well-protected) government secret.  
