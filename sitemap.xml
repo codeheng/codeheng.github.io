@@ -201,6 +201,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/core_knowledge/language/c%2B%2B/cs106l/1-intro/</loc>
+         <lastmod>2024-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/core_knowledge/linux/1-basic/</loc>
          <lastmod>2024-05-24</lastmod>
          <changefreq>daily</changefreq>
