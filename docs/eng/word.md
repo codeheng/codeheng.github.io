@@ -75,18 +75,26 @@ comments: true
 5. public interest  公共利益
 6. accident  n. 事故 ； identify v. 识别，确认
       - by accident = by chance  
-      - It was identified during a lab experiment accident. 
+      - It was **identified** during a lab experiment **accident**. 
 7. bacterium n. 细菌； reproduce v. 繁殖
       - It is a **bacterium** that **reproduces** at a high rate.
 8. molecular composition 分子组成
 9.  Manufacturer n. 生产商，制造商 
 10. assess v.评价，评定; access n. 通道；通路  v.进入；使用
-      - Assessing its possible negative impact on the environment.   
+      - **Assessing** its possible negative impact on the environment.   
 
 ---
 
 1. spur v.鞭策；激励；刺激
 2. degradation n. 堕落，潦倒；恶化（过程）
+3. contrive v. 设法做到，巧妙地策划
+4. slash v.n.砍 v.大幅度削减；大大降低 n. 伤口，斜杠
+      - xxx, which aims to **^^slash^^** greenhouse gas emissions.
+5. neutral adj. 中立的，无倾向性的 n. 中立者；中立国
+6. resort n. 度假胜地; **~ to do sth. 求助，采取**
+7. discount n. 折扣 v. 对..打折
+      - Heavily **discounted** rush tickets help attract many young students to attend classical concerts.
+8. intimidate v. 恐吓，威胁
 
 
 ## 积累
@@ -101,6 +109,13 @@ comments: true
 7. **in that 因为，由于**
 8. **aggravate v. 恶化，加剧**
 9. controversy n. 争论， 争议
-      - Controversy continues to surround the true value of the dollar bill.
+      - **Controversy** continues to surround the true value of the dollar bill.
 10. guarded adj. 谨慎的，有保留的； composition n. 组成
       - The **exact（精确的）** **composition** of the paper and ink is a closely **guarded**(= well-protected) government secret.  
+
+---
+
+1. incident n. 事件; incidence n. 发生率
+      - Psychiatrist（精神科医生） have a higher **incidence** of **suicide(自杀)** in their profession for related reasons. 
+2. accurately adv. 正确无误地
+3. texture n. 质地，结构 

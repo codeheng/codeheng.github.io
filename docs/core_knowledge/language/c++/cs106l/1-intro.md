@@ -16,14 +16,7 @@ C++历史（C++的演变）：
 
 - 1983年C++被[Bjarne Stroustrup](https://www.stroustrup.com/)设计
 
-**设计哲学:**
-
-- 仅添加能解决实际问题的功能
-- 程序员应该可以自由选择自己的风格
-- 如果程序员想要的话，允许他们完全控制
-- Compartmentalization（划分） is key
-- 除非万不得已，否则不要牺牲性能
-- 在编译时尽可能加强安全性
+**[C++设计哲学](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-philosophy):**
 
 ## 2. 类型和结构体
 
