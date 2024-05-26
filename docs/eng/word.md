@@ -119,3 +119,4 @@ comments: true
       - Psychiatrist（精神科医生） have a higher **incidence** of **suicide(自杀)** in their profession for related reasons. 
 2. accurately adv. 正确无误地
 3. texture n. 质地，结构 
+4. furious adj. 极度愤怒的
