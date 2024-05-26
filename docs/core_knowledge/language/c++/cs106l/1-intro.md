@@ -178,5 +178,37 @@ std::cout << num << std::endl; // 打印10
 
 ### 左值和右值
 
+**l-value** : 在等号的左边或右边
+
+- e.g. `int y = x; x = 344;` x可以是l-value
+
+**r-value**：仅仅在等号的右边 (r-values are temporary)
+
+- e.g. `int y = 21;` 21可以是r-value
 
 ### const
+
+> 对象的限定符，声明它们不能被修改
+
+!!! example "例子"
+
+    ```c++
+    vector<int> vec{1, 2, 3}; //a normal vector
+    const vector<int> const_vec{1, 2, 3}; //a const vector
+    vector<int> &ref_vec{ vec }; //a reference to 'vec'
+    const vector<int> &const_ref { vec }; // a const reference 
+
+    vec.push_back(4); // ok
+    const_vec.push_back(4); // error
+    ref_vec.push_back(5); // ok 
+    const_ref.push_back(5); // error
+    ```
+
+不能对const变量的声明非const引用， 如下：
+```c++
+const vector<int> const_vec{1, 2, 3}; //a const vector
+vector<int> &bad_ref{ const_vec }; // error
+const vector<int>& const_ref_vec { const_vec }; // good!
+```
+
+## 4. Streams
