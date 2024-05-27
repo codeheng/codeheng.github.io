@@ -61,6 +61,32 @@ comments: true
       - As humans, we **yearn for** social connection   
 10. **exaggerate（夸大）** their life's **accomplishments(成就)**
 
+### 22.6
+
+1. elite n. 精英  adj.精英的
+2. charge n.v 指责指控，费用 v.收费
+      * Such **charges** ignore the fact ...
+      * 大概率作者观点和上述观点相反
+3. **substantially  adv. = very** 
+      * It has contributed **substantially** to the nation's overall development.
+4.  deduction n. 演绎推理，扣除额
+      * ending **deduction** for student loan interest
+5. strip v. 除去，剥去（一层）
+      * These **provisions(条款，规定)** were ultimately **stripped from** the bill.
+6. rigor = rigour n. 艰辛,严酷；严谨  --> rigorous adj.
+7. **diversify v. 多样化** --> a diversified student population 多元化的学生群体
+8. endowment n. 捐款，自主；天赋，才能； drain v. 耗尽，排光，喝光
+      *  the new tax on **endowments** drains(耗尽) financial aid funds 
+9. appeal to 呼吁；**appeal n.v. 上诉，呼吁，有吸引力**
+10. subjective adj. 主观的
+      *  It is something **subjective** based on what one perceives to be right
+
+---
+
+1. bound adj. 一定会 v. 跳跃着跑 n. 蹦跳
+      * be bound by sth 受（法律、义务或情况）约束（必须做某事）
+      * We **are not bound by** the decision
+2. 
 
 ### 20.3
 
