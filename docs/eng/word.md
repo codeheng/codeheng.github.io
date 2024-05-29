@@ -95,18 +95,42 @@ comments: true
       * It will **depreciate** humans' role in music **composition**
 5. deplete v. 大量减少，耗尽
       * It will **deplete** young musicians, creative inspiration.
-6. precious adj. 真贵的； impart v. 传授，给予
+6. precious adj. 珍贵的； impart v. 传授，给予
       * Why do many people think music is too precious to impart to AI technology?
       * (为什么很多人认为音乐太珍贵了，不能传授给人工智能?)
 7. specific adj. 具体的，特有的； n = a characteristic quality or trait.
-      *  It is human specific. (它是人类特有的)
+      *  **It is human specific. (它是人类特有的)**
 8. keep abreast of 与...并驾齐驱，了解...的最新情况
       * It will help them to **keep abreast of** the latest scientific developments
 9. intricate adj. 错综复杂的; analogy n.类比
-      *  What does the example of the biologist who shared an intricate analogy show?  
+      *  What does the example of the biologist who shared an **intricate analogy** show?  
       * （生物学家分享一个复杂的类比的例子说明了什么?）
 10. illustration n. 图解，示例； phenomena n. 现象
-      （）  
+      * It is helpful to use **illustrations** in explaining scientific **phenomena**
+
+---
+
+1. implication n. 可能的影响（或作用、结果）；暗指
+2. ideal adj. 理想的；jumping-off point 起点，出发点
+3. quality n. 质量 --> It's not of great **quality**（质量不咋地）
+4. emulate v. 仿真，模仿；努力赶上，同...竞争
+5. integral  adj. 必需的，作为组成部分的，完整的
+      * Music has been an **integral** part of the story of humans for ages
+6. shy away from 回避； bleak adj. 不乐观的，荒凉的，无望的
+      * Instead of **shying away from** the idea of this **bleak future**, xxx
+7. erroneous adj. 错误的
+8. well-informed  adj. 见多识广的，知识渊博的
+9. It is a necessary **means** to improve their understanding of scientific issues
+      * **means n. 方法; 手段;**
+10. absurd adj. 荒谬的
+
+--- 
+
+1. discourse n. 演讲，话语  v. 讲述，论述
+2. baffling adj. 令人困惑的；**baffle v.使困惑，难住**
+3. **imperative adj. 极其重要的，迫切的**
+4. eliminate jargon 消除专业术语
+
 
 ### 20.3
 
