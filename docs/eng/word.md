@@ -86,7 +86,27 @@ comments: true
 1. bound adj. 一定会 v. 跳跃着跑 n. 蹦跳
       * be bound by sth 受（法律、义务或情况）约束（必须做某事）
       * We **are not bound by** the decision
-2. 
+2. wit n. 智慧; **term n. 术语  --> scientific term.**
+      * Musicians are often at their **wits**, end in their creative effort.
+      * (音乐家们往往在他们的智慧中结束了他们的创造性努力)
+3. melody and chord  旋律和和弦
+      * AI technology is **indispensable(不可或缺的)** to creating **melodies and chord**
+4. depreciate v. 降低，轻视，（使）贬值; composition 成分；（音乐、艺术、诗歌的）作品
+      * It will **depreciate** humans' role in music **composition**
+5. deplete v. 大量减少，耗尽
+      * It will **deplete** young musicians, creative inspiration.
+6. precious adj. 真贵的； impart v. 传授，给予
+      * Why do many people think music is too precious to impart to AI technology?
+      * (为什么很多人认为音乐太珍贵了，不能传授给人工智能?)
+7. specific adj. 具体的，特有的； n = a characteristic quality or trait.
+      *  It is human specific. (它是人类特有的)
+8. keep abreast of 与...并驾齐驱，了解...的最新情况
+      * It will help them to **keep abreast of** the latest scientific developments
+9. intricate adj. 错综复杂的; analogy n.类比
+      *  What does the example of the biologist who shared an intricate analogy show?  
+      * （生物学家分享一个复杂的类比的例子说明了什么?）
+10. illustration n. 图解，示例； phenomena n. 现象
+      （）  
 
 ### 20.3
 
@@ -145,4 +165,5 @@ comments: true
       - Psychiatrist（精神科医生） have a higher **incidence** of **suicide(自杀)** in their profession for related reasons. 
 2. accurately adv. 正确无误地
 3. texture n. 质地，结构 
-4. furious adj. 极度愤怒的
+4. furious adj. 极度愤怒的 
+5. **accuse v. 指责，控告 ~ sb (of sth)**
