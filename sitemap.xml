@@ -256,6 +256,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/life/2024/24_may/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/mess/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
