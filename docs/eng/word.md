@@ -130,9 +130,21 @@ comments: true
 2. baffling adj. 令人困惑的；**baffle v.使困惑，难住**
 3. **imperative adj. 极其重要的，迫切的**
 4. eliminate jargon 消除专业术语
+5. wreak v. 造成（巨大的破坏或伤害）；havoc n. 灾难 --> wreak havoc on..造成严重破坏
+      * Climate change has **wrought havoc on** the lives of tens of thousands of people
+6. timber n. 树木，木材
+7. diplomacy n. 外交；外交技巧; 手段，策略 -->  international diplomacy国际外交
+8. amiable adj.亲切的，和蔼可亲的 --> amiably adv. 
+9. compassion n. 同情
+10. signify v. 说明，预示，意味
+
+---
+
+1. recurrent adj. 周期性的
+2. **prone to... 易于遭受，有做(坏事)的倾向**
 
 
-### 20.3
+### 20
 
 1. cynical hostility 愤世嫉俗的敌意
       - cynical adj. 只顾自己不顾他人的；见利忘义的
@@ -165,6 +177,14 @@ comments: true
 7. discount n. 折扣 v. 对..打折
       - Heavily **discounted** rush tickets help attract many young students to attend classical concerts.
 8. intimidate v. 恐吓，威胁
+9. hectic = very busy 忙碌的
+      * They derive much pleasure from living a very **hectic** life.  
+10. combat v. 防止，减轻，n.v.战斗
+
+---
+
+1. live with 接受，容忍（困境或令人不快的情形）
+      * It is something everybody has to **live with**
 
 
 ## 积累
@@ -191,3 +211,7 @@ comments: true
 3. texture n. 质地，结构 
 4. furious adj. 极度愤怒的 
 5. **accuse v. 指责，控告 ~ sb (of sth)**
+6. **shed light on.. 阐述，说明** to provide information about something or to make something easier to understand
+7. penetrate v. 穿入，刺入
+8. sophisticated = complicated adj. 复杂的
+9. sentiment = emotion n. 情感
