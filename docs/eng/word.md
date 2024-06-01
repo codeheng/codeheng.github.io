@@ -185,7 +185,7 @@ comments: true
 
 1. live with 接受，容忍（困境或令人不快的情形）
       * It is something everybody has to **live with**
-
+2. ironic adj.反语的，讽刺的
 
 ## 积累
 
