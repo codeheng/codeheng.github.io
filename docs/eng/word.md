@@ -32,7 +32,7 @@ comments: true
       - People's attitude towards competition is actually culture-bound   
 4. indulge v. 纵容，沉溺
       - **Indulge** in cultural pursuits while keeping their base impulses **at bay** 
-5. rational adj. 合理的，理性的
+5. rational adj. 合理的，理性的; **irrationally adv. 不合理地**
       - It is ^^free from(免于)^^ the **rational** ^^intervention(干预)^^ of humans 
 6. appreciate v. 欣赏，重视
       - It is the pre-rational world **rarely appreciated** nowadays 
@@ -186,9 +186,30 @@ comments: true
 1. live with 接受，容忍（困境或令人不快的情形）
       * It is something everybody has to **live with**
 2. ironic adj.反语的，讽刺的
+      * What does the author say sounds ironic?(作者说的什么听起来很讽刺？)
+3. prey n. 猎物 --> prey on 捕食，掠夺；predator n. 捕食性动物, 掠夺者
+4. overpopulation n. 人口过剩
+5. subsistence n. 勉强维持生活
+6. Coordinate v. 使协调，使相互配合
+      * Coordinated efforts of hunters and environmentalists 
+      * （猎人和环保主义者的共同努力）
+7. stake v.以...打赌 n. （在公司、计划等中的）重大利益
+8. inference  n. 推断，推论
+9. intrigue v.激起...的兴趣 n. 阴谋
+10. exotic  adj.奇异的，异国风味的
+      * They are **intrigued** by the **exotic** romance in Danielle Steel's novels
+
+---
+
+1. industriousness n. 勤奋
+2. irresistible  adj. 不可抵抗的
+3. self-imposed  adj. 自我规定的，自愿负担的
+      * impose v. 使...负担，把...强加给 
+      * What does Maryanne Taylor think of **self-imposed sleeplessness**(自我失眠)?
+4. **insensitive adj. 漠不关心的** = not realizing or caring how other people feel, and therefore likely to hurt or offend them 
+      * sensitive adj. 体贴的，善解人意的；敏感的
 
 ## 积累
-
 
 1. obscure v. 掩盖 adj. 模糊的
 2. rate n.速率，费用 v. 评价，被认为 --> **be rated as**
@@ -215,3 +236,11 @@ comments: true
 7. penetrate v. 穿入，刺入
 8. sophisticated = complicated adj. 复杂的
 9. sentiment = emotion n. 情感
+10. **I'm overwhelmed** with the wide range of different slimming products each year
+      * （每年我都对各种各样的减肥产品感到**不知所措**）
+      * overwhelm v. 淹没；压倒，击败；难以禁受
+
+---
+
+1. character n. 人物，角色，性格，品质
+2. **aid = help (同义替换!!!)**
