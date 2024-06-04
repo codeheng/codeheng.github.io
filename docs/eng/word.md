@@ -21,6 +21,7 @@ comments: true
       - so she can continue to **leverage** her enormous fame while keeping the trolls(恶意挑衅的帖子) **at bay**(陷入困境) 
 8. cruel adj. 残忍的； It goes without saying that.. (显而易见，毫无疑问)
 9. detrimental adj. 有害的
+10. prevalence n. 流行，盛行
 
 ----
 
@@ -39,7 +40,7 @@ comments: true
 7. inherently adv. 内在地，固有地
       - All species inherently depend on others for survival. 
 8. imposition n. (新法律或规则)颁布，实施
-9. doctrine n. 教义，主义； metaphor  n. 隐喻，象征； prevalence n. 流行，盛行
+9. doctrine n. 教义，主义； metaphor  n. 隐喻，象征； 
 10. relative to 与...有关
 
     - and that its prevalence in a particular society is **relative to** how that society values it. 
@@ -195,7 +196,7 @@ comments: true
       * （猎人和环保主义者的共同努力）
 7. stake v.以...打赌 n. （在公司、计划等中的）重大利益
 8. inference  n. 推断，推论
-9. intrigue v.激起...的兴趣 n. 阴谋
+9. **intrigue v.激起...的兴趣 n. 阴谋**
 10. exotic  adj.奇异的，异国风味的
       * They are **intrigued** by the **exotic** romance in Danielle Steel's novels
 
@@ -208,6 +209,17 @@ comments: true
       * What does Maryanne Taylor think of **self-imposed sleeplessness**(自我失眠)?
 4. **insensitive adj. 漠不关心的** = not realizing or caring how other people feel, and therefore likely to hurt or offend them 
       * sensitive adj. 体贴的，善解人意的；敏感的
+5. tap v.轻敲，开发，利用，挖掘 = exploit = explore 
+      * More resources should be **tapped** for feeding the world's population.
+      * untapped resource 未开发的资源
+6. promising adj.有前景的，有希望的
+      * Organic farming is at least as **promising** as conventional farming.
+7. soil n. 泥土，土壤；v. 弄脏； fertility = the state of fertile(肥沃的，富饶的)
+      * Deterioration in soil fertility（土壤肥力恶化）
+8. disturb v. 打扰，搅乱，to make sb worry --> disturbing adj. 令人不安的
+9. **hinder = hamper v. 阻止；阻碍**
+10. erode v. 削弱；损害； 侵蚀；腐蚀
+      * we are **eroding** the very foundations of our economies.  
 
 ## 积累
 
@@ -237,7 +249,7 @@ comments: true
 8. sophisticated = complicated adj. 复杂的
 9. sentiment = emotion n. 情感
 10. **I'm overwhelmed** with the wide range of different slimming products each year
-      * （每年我都对各种各样的减肥产品感到**不知所措**）
+      * （每年我都对各种各样的减肥产品感到 **不知所措** ）
       * overwhelm v. 淹没；压倒，击败；难以禁受
 
 ---
