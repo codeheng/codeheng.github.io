@@ -221,6 +221,28 @@ comments: true
 10. erode v. 削弱；损害； 侵蚀；腐蚀
       * we are **eroding** the very foundations of our economies.  
 
+---
+
+1. lobby  n.v. 游说 n. 大厅，门厅
+      * Industry **lobbying** makes it hard to get healthy foods.
+2. constructive adj. 建设性的，积极的
+      *  They have not come up with anything more **constructive**      
+3. polarize v.（使）两极化，截然对立 --> polarised adj. 
+      * When the **polarised** debate is abandoned
+4. severe adj.严重的，严厉的 --> severity n.
+      * When the private sector realises the **severity** of the crisis
+5. **susceptibility ~ to sth**. 易受影响（或伤害等）的特性
+      * Obesity raises susceptibility to cancer(肥胖会增加患癌症的几率)
+6. divert v. 转移，转向
+      * the quest for solutions **gets diverted** by ideological arguments around responsibility and choice 
+7. pronounced adj. 明显的，显著的； pronounce v. 正式宣布
+      * too..to 太...而不能
+      * The relationship between poor health and inequality is too **pronounced** for governments to be 
+passive about large-scale intervention 
+8. potency n. 影响力，效力
+      * As the structural nature of public health problems becomes harder to ignore, the complaint about overprotective government loses **potency**
+
+
 ## 积累
 
 1. obscure v. 掩盖 adj. 模糊的
