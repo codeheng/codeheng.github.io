@@ -145,7 +145,7 @@ comments: true
 2. **prone to... 易于遭受，有做(坏事)的倾向**
 
 
-### 20
+### 20-7&9
 
 1. cynical hostility 愤世嫉俗的敌意
       - cynical adj. 只顾自己不顾他人的；见利忘义的
@@ -241,8 +241,24 @@ comments: true
 passive about large-scale intervention 
 8. potency n. 影响力，效力
       * As the structural nature of public health problems becomes harder to ignore, the complaint about overprotective government loses **potency**
+9. **exceptionally = very 非常**；只有在特殊情况下；例外地
+      * It is **exceptionally** rich in marine life
+      * marine adj.海生的，海产的 
+10. reserve v.预订，预约，保留；n. 保护区
+      * coast n. 海岸；v.滑行，（做事）不出力
+      * Complete the series of marine **reserves** around its **coast**
 
+---
 
+1. adverse adj.不利的，反面的
+      * It will **adversely** affect Australia's fishing industry
+2. haven n. 保护区，避难所
+      * the Coral Sea is a unique **haven** of biodiversity **off** the northeastem coast of Australia. 
+      * off 表示"在...附近"或"沿着...的海岸"
+3. testify v. （尤指出庭）作证，证实，证明
+4. contention n. 争吵，争论; （尤指争论时的）看法，观点
+5. 
+          
 ## 积累
 
 1. obscure v. 掩盖 adj. 模糊的
