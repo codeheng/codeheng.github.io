@@ -294,3 +294,24 @@ passive about large-scale intervention
 
 1. character n. 人物，角色，性格，品质
 2. **aid = help (同义替换!!!)**
+3. [flat](https://www.google.com/search?q=flat&oq=flat&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQLhixAxiABDIKCAIQABixAxiABDINCAMQLhiDARixAxiABDIKCAQQLhixAxiABDIHCAUQABiABDINCAYQABiDARixAxiABDIKCAcQLhixAxiABDIQCAgQLhivARjHARixAxiABDIHCAkQABiPAtIBCDExMjBqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=%C2%B7%20Learn%20more-,flat1,-/flat/) adj. 平的，平坦的 = even n. 一套房间，公寓，平地；adv.平直地，直截了当地 
+      * flatly adv. 断然，斩钉截铁地；枯燥地；无趣地s 
+4. meticulous adj. 小心的 = very careful and precise
+5. ordeal n. 磨难，折磨
+6. thrifty  adj. 节俭的，节约的
+7. eventful adj. 多事故的 --> **uneventful adj. 平凡的**
+8. permeate v.渗透，弥漫，扩散
+9. provocative  adj. 挑衅的，激起争端的
+10. absurd adj. 荒谬的，愚蠢的 n. 荒唐，荒诞
+
+---
+
+1. embark on 着手，开始 = to start to do something new or difficult
+2. envisage v. 设想，展望，想象
+3. postpone n. 延期，延迟
+4. contagious adj. 接触传染的
+      * His enthusiasm was **contagious** (= spread quickly to other people) . 他的热情富有感染力 
+5. lofty adj.巍峨的，高耸的；高尚的
+6. **deter 阻止，制止** ^^~ sb (from sth/from doing sth)^^
+7. versatile adj. 多才多艺的，多功能的
+8. 
