@@ -4,7 +4,7 @@ comments: true
 
 ## CET6
 
-### 23.12
+### 23.12-1
 
 1. refrain from 克制，避免
       - She has **refrain from** using social media.
@@ -61,6 +61,10 @@ comments: true
 9. yearn for 渴望
       - As humans, we **yearn for** social connection   
 10. **exaggerate（夸大）** their life's **accomplishments(成就)**
+
+---
+
+1.  
 
 ### 22.6
 
