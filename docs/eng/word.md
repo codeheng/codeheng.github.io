@@ -214,7 +214,7 @@ comments: true
 1. live with 接受，容忍（困境或令人不快的情形）
       * It is something everybody has to **live with**
 2. ironic adj.反语的，讽刺的
-      * What does the author say sounds ironic?(作者说的什么听起来很讽刺？)
+      * What does the author say sounds **ironic**?(作者说的什么听起来很讽刺？)
 3. prey n. 猎物 --> prey on 捕食，掠夺；predator n. 捕食性动物, 掠夺者
 4. overpopulation n. 人口过剩
 5. subsistence n. 勉强维持生活
@@ -264,8 +264,7 @@ comments: true
       * the quest for solutions **gets diverted** by ideological arguments around responsibility and choice 
 7. pronounced adj. 明显的，显著的； pronounce v. 正式宣布
       * too..to 太...而不能
-      * The relationship between poor health and inequality is too **pronounced** for governments to be 
-passive about large-scale intervention 
+      * The relationship between poor health and inequality is too **pronounced** for governments to be passive about large-scale intervention 
 8. potency n. 影响力，效力
       * As the structural nature of public health problems becomes harder to ignore, the complaint about overprotective government loses **potency**
 9. **exceptionally = very 非常**；只有在特殊情况下；例外地
@@ -284,7 +283,6 @@ passive about large-scale intervention
       * off 表示"在...附近"或"沿着...的海岸"
 3. testify v. （尤指出庭）作证，证实，证明
 4. contention n. 争吵，争论; （尤指争论时的）看法，观点
-5. 
           
 ## 积累
 
