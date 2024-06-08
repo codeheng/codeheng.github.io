@@ -92,3 +92,21 @@ PS: **增加时间、地点、人物** 让句子更丰富
 **图表类:**
 
 - It goes without saying that the chart reflects xxx (图表内容)
+
+**名言类：**
+
+Just as saying goes, xxx（重述引言）. Simple as the remark may sound, it intends to tell us that xxx（解释含义）
+
+**文字类：**
+
+!!! example "例子"
+
+    === "2017-6"
+
+        ![](./cet6/17-6.jpg)
+
+    === "示例"
+
+        **It goes without saying that** higher education **has captured a great deal of attention from the general public**. Opinions vary greatly when it comes to whether one should choose science or humanities at college. If I were you, I would like to take science as my major.
+
+### 第二段
