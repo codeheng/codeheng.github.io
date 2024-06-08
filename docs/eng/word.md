@@ -9,7 +9,7 @@ comments: true
 1. refrain from 克制，避免
       - She has **refrain from** using social media.
 2. subtle adj.巧妙的，难以琢磨的
-      - Most people find it **subtle** and complicated to give up using the internet.
+      - Most people find it **subtle** and complicated to  give up using the internet.
 3. ditch v.丢弃，抛弃
       - Most people can hardly **ditch** the web while avoiding hate and comparisons. 
 4. plot (v. 密谋，构思，绘制) a *route(路线)* to a friend's house
@@ -64,7 +64,30 @@ comments: true
 
 ---
 
-1.  
+1. relentless adj. 不停的，持续强烈的；严格的，不放弃的
+2. propagation n. （观点、理论等的）传播
+      * One of the great successes of the Republican Party in recent decades is the **relentless propagation** of a simple formula for economic growth: tax cuts.
+3. unerring adj. 无过失的，不犯错误的
+      * The **unerring** judgment of market forces 
+4. haves and have-nots = very wealthy and very poor
+      * People have been **disheartened** by the widening gap **between the haves and have-nots**. 
+5. tug of war = a struggle between two people or groups to win control or possession of something
+      * People have witnessed **a tug of war** between Republicans and Democrats over tax cuts. 
+6. compensation 薪水 = paycheck
+      * A check for salary or wages made out to an employee 
+7. premium n.保险费，附加费；adj.高昂的，优质的
+8. economy n. 经济 ^^An economy is an area of the production, distribution and trade, as well as consumption of goods and services^^
+9. stark adj. (区别)明显的，鲜明的
+      * The differences were even **starker** in the neuroscience journals
+10. [strike](https://www.merriam-webster.com/dictionary/strike) v.撞击... n. 罢工
+      * **Strike a balance** between male and female editors
+
+----
+
+1. deliberate adj.故意的；小心翼翼的，不慌不忙的
+2. aggravate v. 使恶化，使加重；激怒，惹恼
+3. speculative adj. 猜测的，推断的
+4. ascertain v. 查明，弄清
 
 ### 22.6
 
