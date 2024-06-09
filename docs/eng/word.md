@@ -4,7 +4,40 @@ comments: true
 
 ## CET6
 
-### 23.12-1
+## 23.12-1
+
+1. relentless adj. 不停的，持续强烈的；严格的，不放弃的
+2. propagation n. （观点、理论等的）传播
+      * One of the great successes of the Republican Party in recent decades is the **relentless propagation** of a simple formula for economic growth: tax cuts.
+3. unerring adj. 无过失的，不犯错误的
+      * The **unerring** judgment of market forces 
+4. haves and have-nots = very wealthy and very poor
+      * People have been **disheartened** by the widening gap **between the haves and have-nots**. 
+5. tug of war = a struggle between two people or groups to win control or possession of something
+      * People have witnessed **a tug of war** between Republicans and Democrats over tax cuts. 
+6. compensation 薪水 = paycheck
+      * A check for salary or wages made out to an employee 
+7. premium n.保险费，附加费；adj.高昂的，优质的
+8. economy n. 经济 ^^An economy is an area of the production, distribution and trade, as well as consumption of goods and services^^
+9. stark adj. (区别)明显的，鲜明的
+      * The differences were even **starker** in the neuroscience journals
+10. [strike](https://www.merriam-webster.com/dictionary/strike) v.撞击... n. 罢工
+      * **Strike a balance** between male and female editors
+
+----
+
+1. deliberate adj.故意的；小心翼翼的，不慌不忙的
+2. aggravate v. 使恶化，使加重；激怒，惹恼
+3. speculative adj. 猜测的，推断的
+4. ascertain v. 查明，弄清
+5. limelight n. 公众注意的中心
+      * To avoid being in the limelight = I didn't love being a celebrity.
+6.  **Being unaware of** the stress they are under = Many people who suffer from stress **fail to recognize it.**
+7. digest v. 消化，理解，领悟 --> digestive system 消化系统
+8. prescribe (sb) sth (for sth). 给...开(药)
+      * **Prescribe** some medication（药物） for him 
+
+### 23.6-2
 
 1. refrain from 克制，避免
       - She has **refrain from** using social media.
@@ -62,32 +95,6 @@ comments: true
       - As humans, we **yearn for** social connection   
 10. **exaggerate（夸大）** their life's **accomplishments(成就)**
 
----
-
-1. relentless adj. 不停的，持续强烈的；严格的，不放弃的
-2. propagation n. （观点、理论等的）传播
-      * One of the great successes of the Republican Party in recent decades is the **relentless propagation** of a simple formula for economic growth: tax cuts.
-3. unerring adj. 无过失的，不犯错误的
-      * The **unerring** judgment of market forces 
-4. haves and have-nots = very wealthy and very poor
-      * People have been **disheartened** by the widening gap **between the haves and have-nots**. 
-5. tug of war = a struggle between two people or groups to win control or possession of something
-      * People have witnessed **a tug of war** between Republicans and Democrats over tax cuts. 
-6. compensation 薪水 = paycheck
-      * A check for salary or wages made out to an employee 
-7. premium n.保险费，附加费；adj.高昂的，优质的
-8. economy n. 经济 ^^An economy is an area of the production, distribution and trade, as well as consumption of goods and services^^
-9. stark adj. (区别)明显的，鲜明的
-      * The differences were even **starker** in the neuroscience journals
-10. [strike](https://www.merriam-webster.com/dictionary/strike) v.撞击... n. 罢工
-      * **Strike a balance** between male and female editors
-
-----
-
-1. deliberate adj.故意的；小心翼翼的，不慌不忙的
-2. aggravate v. 使恶化，使加重；激怒，惹恼
-3. speculative adj. 猜测的，推断的
-4. ascertain v. 查明，弄清
 
 ### 22.6
 
