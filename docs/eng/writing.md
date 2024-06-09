@@ -13,7 +13,7 @@ comments: true
 **一. 描述类( ...是很重要，...很必要 )**
 
 - xxx plays an extremely important role.
-- xxx is of most importance. 
+- xxx is of utmost importance. 
 - Nothing is more important than xxx
 
 !!! Tips "important 替换"

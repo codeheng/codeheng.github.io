@@ -4,7 +4,7 @@ comments: true
 
 ## CET6
 
-## 23.12-1
+### 23.12-1
 
 1. relentless adj. 不停的，持续强烈的；严格的，不放弃的
 2. propagation n. （观点、理论等的）传播
@@ -34,8 +34,18 @@ comments: true
       * To avoid being in the limelight = I didn't love being a celebrity.
 6.  **Being unaware of** the stress they are under = Many people who suffer from stress **fail to recognize it.**
 7. digest v. 消化，理解，领悟 --> digestive system 消化系统
+      * indication  n. 迹象，象征
+      * There is no **indication** of any digestive issues. 
 8. prescribe (sb) sth (for sth). 给...开(药)
       * **Prescribe** some medication（药物） for him 
+9. delegate n. 代表 v. ~ sth to sb 把（工作、权力等）委托（给下级）
+      * I recommend you think about **delegating** some responsibilities **to** someone else. 
+10. ups and downs 起起伏伏 = a succession of both good and bad experiences.
+
+---
+
+1. stunned adj. 震惊的； stun v. 给（某人）以深刻印象，使震惊，使昏迷
+2. sin n. 罪过，罪行 --> sinful adj.有罪的
 
 ### 23.6-2
 
@@ -345,5 +355,4 @@ comments: true
       * His enthusiasm was **contagious** (= spread quickly to other people) . 他的热情富有感染力 
 5. lofty adj.巍峨的，高耸的；高尚的
 6. **deter 阻止，制止** ^^~ sb (from sth/from doing sth)^^
-7. versatile adj. 多才多艺的，多功能的
-8. 
+7. versatile adj. 多才多艺的，多功能的 
