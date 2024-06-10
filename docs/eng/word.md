@@ -46,6 +46,11 @@ comments: true
 
 1. stunned adj. 震惊的； stun v. 给（某人）以深刻印象，使震惊，使昏迷
 2. sin n. 罪过，罪行 --> sinful adj.有罪的
+3. mandate n.v. 授权，（政府的）任期 v. 强制执行
+      * When being creative becomes a biological **mandate**
+4. adjacent adj. 邻近的 --> adjacent generations 
+5. crack down 严厉打击
+6. 
 
 ### 23.6-2
 
@@ -337,7 +342,7 @@ comments: true
 1. character n. 人物，角色，性格，品质
 2. **aid = help (同义替换!!!)**
 3. [flat](https://www.google.com/search?q=flat&oq=flat&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQLhixAxiABDIKCAIQABixAxiABDINCAMQLhiDARixAxiABDIKCAQQLhixAxiABDIHCAUQABiABDINCAYQABiDARixAxiABDIKCAcQLhixAxiABDIQCAgQLhivARjHARixAxiABDIHCAkQABiPAtIBCDExMjBqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=%C2%B7%20Learn%20more-,flat1,-/flat/) adj. 平的，平坦的 = even n. 一套房间，公寓，平地；adv.平直地，直截了当地 
-      * flatly adv. 断然，斩钉截铁地；枯燥地；无趣地s 
+      * flatly adv. 断然，斩钉截铁地；枯燥地；无趣地 
 4. meticulous adj. 小心的 = very careful and precise
 5. ordeal n. 磨难，折磨
 6. thrifty  adj. 节俭的，节约的

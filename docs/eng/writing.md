@@ -108,5 +108,27 @@ Just as saying goes, xxx（重述引言）. Simple as the remark may sound, it i
     === "示例"
 
         **It goes without saying that** higher education **has captured a great deal of attention from the general public**. Opinions vary greatly when it comes to whether one should choose science or humanities at college. If I were you, I would like to take science as my major.
+    
+    === "2016-12"
+        For this part, you are allowed 30 minutes to write a short essay on **innovation**. Your essay should include the importance of innovation and measures to be taken to encourage innovation.
+
+    === "示例"
+        **It goes without saying that** innovation **plays a key role in developing national economy**. **The past several years have witnessed** a sharp increase in the number of scientists who are making new breakthroughs in their fields. **This will definitely exert a huge impact on our society**.
 
 ### 第二段
+
+> 引出 --> 之后万能背景
+
+**举例：**
+
+- There are mainly two factors contributing to this social phenomenon.
+- Personally, among all the factors that account for this trend, the following are worth mentioning.
+- When it comes to the significance of this phenomenon, I feel it necessary to discuss the matter further. (万能)
+
+
+**一. 经济类：**
+
+- **经济发展**： Owing to the steady and rapid economic development of our country, people's living standard is simultaneously improving at a fast rate. 
+- **社会压力**：With the quickening pace of urban life and ever-increasing pressure, people in growing numbers are suffering from either the physical or mental problems.
+- **就业困难**： As Chinese universities keep expanding their scale of students' enrollment and competition is becoming fierce, it is increasingly difficult for college undergraduates to find a decent jobs.
+- **积极向上**：Traditional way of thinking has changed dramatically, and people are exhibiting greater open-mindedness and a burning desire to determine their own destiny.
