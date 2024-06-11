@@ -52,7 +52,7 @@ comments: true
 5. crack down 严厉打击
 6. 
 
-### 23.6-2
+### 23.12-2
 
 1. refrain from 克制，避免
       - She has **refrain from** using social media.

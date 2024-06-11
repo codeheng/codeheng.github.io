@@ -132,3 +132,37 @@ Just as saying goes, xxx（重述引言）. Simple as the remark may sound, it i
 - **社会压力**：With the quickening pace of urban life and ever-increasing pressure, people in growing numbers are suffering from either the physical or mental problems.
 - **就业困难**： As Chinese universities keep expanding their scale of students' enrollment and competition is becoming fierce, it is increasingly difficult for college undergraduates to find a decent jobs.
 - **积极向上**：Traditional way of thinking has changed dramatically, and people are exhibiting greater open-mindedness and a burning desire to determine their own destiny.
+
+
+**二. 人口类：**
+
+- **人口膨胀**：China has vast population and its substantial growth rate. However, fast increasing population has potentially negative results, such as ^^intense competition.^^
+
+**三. 技术类：**
+
+- **技术普及：** The xxx(e.g.Internet) has penetrated every aspect of daily life, greatly affecting our ways of xxx(e.g.communication)
+- **技术好处：** It is fair to assert that it is science and technology that should given most of the credit in fabricating our modern life.
+- **技术坏处：** The youngsters are more likely to be overly dependent on technology, even getting addicted to it.
+
+**四. 教育类：**
+
+- **好处：** Higher education plays a key role in aiding students' growth and development, so that they can get the opportunity to increase their knowledge and learn to independent.
+- **坏处：** School nowadays tend to pay special attention to the students' academic scores rather than their xxx(e.g. morality)
+
+**五. 娱乐类：**
+
+- xxx(e.g. Travelling) can enlarge our experience, relax our mind and widen our circle of friends.
+
+**六. 环境类：**
+
+- we are suffering greatly from the environmental destruction. Environmental protection is caring about ourselves and ensuring environmental sustainability for future generation.
+
+**七. 精神类：**
+
+- **精神品质：** Simple put, the spirit of xxx(e.g. collaboration) makes a person, an organization, and even a country, distinctively unique. Only those who are of qualitative uniqueness have opportunities to succeed. 
+- **人生哲理：** It is well-known that we exist in a dynamic world with various difficulties. We can do nothing but face them. ^^Attitude（态度）^^ is the key point to take the first step.
+
+
+## 第三段-结尾
+
+Given the factors I have just outlined, _____(总结). Time is right for us to take actions, and it needs the joint efforts of the whole community. We should do our utmost to promote/curb this social phenomenon. Only in this way can our society become a better place for us to live in.
