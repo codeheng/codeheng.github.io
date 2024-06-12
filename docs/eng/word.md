@@ -157,6 +157,14 @@ comments: true
       * There would be sufficient **corridors** for spiders to move along 
 7. overstate v. 夸大
 8. consent n.v. 同意，许可
+9. mate v. (with sth)交配; n. 伙伴，朋友
+10. witches n. 女巫；wickedness n.罪恶 = the quality of being evil or morally wrong.
+
+----
+
+1. fare n. 车费，船费；v. = If you say that someone or something **fares** well or badly, you are referring to the degree of success they achieve in a particular situation or activity
+2. conservationist n. 环境保护主义者 --> conservation n.(对环境的)保护,节约
+
 
 ### 22.7
 
