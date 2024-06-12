@@ -50,13 +50,12 @@ comments: true
       * When being creative becomes a biological **mandate**
 4. adjacent adj. 邻近的 --> adjacent generations 
 5. crack down 严厉打击
-6. 
 
 ### 23.12-2
 
 1. refrain from 克制，避免
       - She has **refrain from** using social media.
-2. subtle adj.巧妙的，难以琢磨的
+2. subtle adj.巧妙的，不明显的，机智的，难以琢磨的
       - Most people find it **subtle** and complicated to  give up using the internet.
 3. ditch v.丢弃，抛弃
       - Most people can hardly **ditch** the web while avoiding hate and comparisons. 
@@ -110,6 +109,18 @@ comments: true
       - As humans, we **yearn for** social connection   
 10. **exaggerate（夸大）** their life's **accomplishments(成就)**
 
+--- 
+
+1. novel adj. 新颖的，与众不同的 = usual 
+2. [van](https://upload.wikimedia.org/wikipedia/commons/thumzb/1/1a/2018_Ford_Transit_Custom_300_Base_2.0_facelift.jpg/440px-2018_Ford_Transit_Custom_300_Base_2.0_facelift.jpg) n. 面包车，客货车
+3. appointment n. 约会，预约；任命，委任；职务
+4. curtail v. 限制，缩减
+5. in a bid to = in an attempt
+      * bid v. 努力争取，出价 --> ~ for sth / ~ on sth;
+6. get by 勉强过活 If you can get by with what you have, you can manage to live or do things in a satisfactory way
+      * Most people can hardly get by without the internet due to growing digitization 
+7. illusory adj. 虚幻的，虚假的
+8. dedicated adj. 献身的，一心一意的 --> dedicate v. 把..奉献给..,致力于
 
 ### 22.6
 

@@ -88,10 +88,12 @@ PS: **增加时间、地点、人物** 让句子更丰富
 **图片类：**
 
 - The picture displays a very special scene: xxx. Simple as it is, what the picture conveys to us is thought-provoking: xxx
+- *As is vividly / ironically depicted in the cartoon, doing / done sth. XXX is doing.. (, while B is doing / done ..). The symbolic meaning behind the picture is rather explicit: the virtue/awareness/issue of XXX deserves our due attention.*
 
 **图表类:**
 
 - It goes without saying that the chart reflects xxx (图表内容)
+- *As is illustrated in the statistics(among sb about sth.), the number/percentage of sth/those who xx is xx/increased/decreased from 数字1 to 数字2 in the xx years between 年份1 and 年份2, and the number/percentage of sth/those who xx is xx/increased/decreased from 数字1 to 数字2. From my perspective, the above figures reveal a currently pervailing tendency among contemporary society.* 
 
 **名言类：**
 
@@ -121,7 +123,7 @@ Just as saying goes, xxx（重述引言）. Simple as the remark may sound, it i
 
 **举例：**
 
-- There are mainly two factors contributing to this social phenomenon.
+- There are mainly several factors contributing to this social phenomenon.
 - Personally, among all the factors that account for this trend, the following are worth mentioning.
 - When it comes to the significance of this phenomenon, I feel it necessary to discuss the matter further. (万能)
 
@@ -163,6 +165,16 @@ Just as saying goes, xxx（重述引言）. Simple as the remark may sound, it i
 - **人生哲理：** It is well-known that we exist in a dynamic world with various difficulties. We can do nothing but face them. ^^Attitude（态度）^^ is the key point to take the first step.
 
 
-## 第三段-结尾
+### 第三段-结尾
 
 Given the factors I have just outlined, _____(总结). Time is right for us to take actions, and it needs the joint efforts of the whole community. We should do our utmost to promote/curb this social phenomenon. Only in this way can our society become a better place for us to live in.
+
+
+### 整体框架
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; As the xxx(e.g. economy and technology) improve by leaps and bounds, there is notion that xxx ^^(题目中的话e.g.people should try to reach agreement through friendly discussion and reasonable argument when faced with differing opinions)^^ in our daily life（可加上地点时间人物，也可不加）Obviously, it is definitely rather important for us to do this.
+
+&nbsp; &nbsp; &nbsp; &nbsp; To examine the significance of xx(this phenomenon), there are several factors that, in my mind, might contribute to this tendency. **First and foremost**, ①xx can help individuals continuously improve skills and knowledge level, enabling us to adapt to the ever-changing world. ② it is truth widely acknowledged that all other factors being equal, xx could be the decisive difference between academic/professional/social success or not. **In addition**,① since young people always play a vanguard role in the promoting social progress, and xxx exerts remarkable influence on the development of their characters, it will inevitably shape multiple aspects of China in the foreseeable future. ② we are living in a world with common interest, and since xxx exerts remarkable influence on our shared community, its impact will inevitably extend to each and every single one of us. Consequently, ①I tend to agree that only if we xx with the greatest zeal can we explore our academic interests and make our life colorful ② the lack of xxx wil hinder us from making substantial progress and eventually cost us dearly.
+
+&nbsp; &nbsp; &nbsp; &nbsp; Talking into account what has been discussed above, we can come to the conclusion that xxx is an essential skill in today's fast-paced modern society. By doing this, we can continue to grow in our life no matter how many difficulties and drawbacks we will face.（The more rapidly concrete efforts are made, the more effectively this virtue/awareness will benefit us in the upcoming future.）
