@@ -122,7 +122,43 @@ comments: true
 7. illusory adj. 虚幻的，虚假的
 8. dedicated adj. 献身的，一心一意的 --> dedicate v. 把..奉献给..,致力于
 
-### 22.6
+### 23.12-3
+
+1. confine n. 限制
+2. comprehensible  adj. 可理解的
+      * Even articles freely available are usually written in academic language **incomprehensible** to the average reader. 
+3. tenure n. （尤指大学教师的）终身职位，长期聘用
+      * The top consideration is win tenure.
+4. prominent adj. 重要的，突出的 --> prominent journals 著名期刊
+5. They can **thrive on** the papers published. （他们可以通过发表论文而蓬勃发展） 
+      * thrive on = The meaning of THRIVE ON **is to do well in a particular kind of situation**
+6. plaguing adj. = to cause worry, pain, or difficulty to someone or something over a period of time  --> plague v. 困扰，折磨
+      *  By enabling them to understand crises **plaguing** society
+7. discrepancy n. 差异
+      *  By enabling them to effectively address social **discrepancies**. 
+8. forge v. 形成，伪造，制作，稳步前进； tie n. 联系
+      * By helping them to **forge ties** with government agencies.  
+9. ethics n. 行为准则，伦理道德学
+      *  To satisfy ethics committees’ mandatory requirements of researchers. (满足伦理委员会的强制性的研究需要) 
+10. conceive v. 设想，想象，怀孕 --> misconceive v. 误会，误解
+      * They have been generally misconceived.（他们普遍被误解）
+
+---
+
+1. spinning webs 织网（蜘蛛的行为） 
+      * spin  v. (使)快速旋转，吐（丝）；作（茧）；结（网）
+2. Aggression n. 好斗情绪，侵犯，挑衅
+3. wildlife n. 野生动物
+4. splendour/splendor  n. 壮丽；雄伟；豪华；华丽
+      * There would be more people appreciating spiders’ **splendour**.
+5. pesticide n. 农药，杀虫剂
+      * An increasing number of **spiders(蜘蛛)** are being killed by deadly **pesticides** 
+6. corridor 走廊
+      * There would be sufficient **corridors** for spiders to move along 
+7. overstate v. 夸大
+8. consent n.v. 同意，许可
+
+### 22.7
 
 1. elite n. 精英  adj.精英的
 2. charge n.v 指责指控，费用 v.收费
@@ -237,7 +273,7 @@ comments: true
 6. resort n. 度假胜地; **~ to do sth. 求助，采取**
 7. discount n. 折扣 v. 对..打折
       - Heavily **discounted** rush tickets help attract many young students to attend classical concerts.
-8. intimidate v. 恐吓，威胁
+8. intimidate v. 恐吓，威胁 --> intimidated adj. 害怕的
 9. hectic = very busy 忙碌的
       * They derive much pleasure from living a very **hectic** life.  
 10. combat v. 防止，减轻，n.v.战斗
