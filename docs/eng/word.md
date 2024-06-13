@@ -132,6 +132,7 @@ comments: true
 4. prominent adj. 重要的，突出的 --> prominent journals 著名期刊
 5. They can **thrive on** the papers published. （他们可以通过发表论文而蓬勃发展） 
       * thrive on = The meaning of THRIVE ON **is to do well in a particular kind of situation**
+      * thrive v.  兴旺发达；繁荣；蓬勃发展；旺盛；茁壮成长
 6. plaguing adj. = to cause worry, pain, or difficulty to someone or something over a period of time  --> plague v. 困扰，折磨
       *  By enabling them to understand crises **plaguing** society
 7. discrepancy n. 差异
@@ -139,7 +140,7 @@ comments: true
 8. forge v. 形成，伪造，制作，稳步前进； tie n. 联系
       * By helping them to **forge ties** with government agencies.  
 9. ethics n. 行为准则，伦理道德学
-      *  To satisfy ethics committees’ mandatory requirements of researchers. (满足伦理委员会的强制性的研究需要) 
+      *  To satisfy ethics committees' mandatory requirements of researchers. (满足伦理委员会的强制性的研究需要) 
 10. conceive v. 设想，想象，怀孕 --> misconceive v. 误会，误解
       * They have been generally misconceived.（他们普遍被误解）
 
@@ -150,7 +151,7 @@ comments: true
 2. Aggression n. 好斗情绪，侵犯，挑衅
 3. wildlife n. 野生动物
 4. splendour/splendor  n. 壮丽；雄伟；豪华；华丽
-      * There would be more people appreciating spiders’ **splendour**.
+      * There would be more people appreciating spiders' **splendour**.
 5. pesticide n. 农药，杀虫剂
       * An increasing number of **spiders(蜘蛛)** are being killed by deadly **pesticides** 
 6. corridor 走廊
@@ -164,6 +165,7 @@ comments: true
 
 1. fare n. 车费，船费；v. = If you say that someone or something **fares** well or badly, you are referring to the degree of success they achieve in a particular situation or activity
 2. conservationist n. 环境保护主义者 --> conservation n.(对环境的)保护,节约
+3. terrific adj.极好的 =  excellent; wonderful
 
 
 ### 22.7
