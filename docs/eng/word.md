@@ -250,6 +250,19 @@ comments: true
 1. recurrent adj. 周期性的
 2. **prone to... 易于遭受，有做(坏事)的倾向**
 
+### 21-12-1
+
+1. indignation n. 愤怒 = outrage
+2. imitate v. 模仿
+3. prestigious adj. 有声望的
+4. screen v. 审查，检查 n. 屏幕
+5. tip v. 倾倒，轻触 n. 尖端，小费
+      * By **tipping** the delicate balance. （通过打破微妙的平衡）
+6. stipulate v. 规定，明确要求
+      * **Stipulating** a set of rules for asking specific questions 
+7. intuitive adj. 直觉的，易懂的
+      * This strategy makes intuitive sense（这种策略具有直观意义）
+8. articulate v. 明确表达，清楚说明 adj. 善于表达的
 
 ### 20-7&9
 
