@@ -5,7 +5,7 @@ comments: true
 
 ## 运动 & 睡眠
 
-- [ ]
+- [x] 6.20[荧光跑活动](https://mp.weixin.qq.com/s/W8T8CRpj7S-xnDkVrOMP3g)五次打卡完成
 
 ## 学习
 
