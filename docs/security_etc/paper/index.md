@@ -10,7 +10,7 @@ comments: true
     记录读的方向论文 & 论文里面涉及的技术知识 --> 隐私保护，加密，电力交易为主
 
 
-## 方向
+## 背景方向
 
 1.  V2G
 2.  V2V
@@ -24,3 +24,4 @@ comments: true
     - 共识算法：~~PoW、PoS~~、**PoR**、PoA、PBFT
 - 群签名
 - Paillier同态加密
+- 双线性映射
