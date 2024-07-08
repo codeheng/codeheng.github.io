@@ -123,6 +123,7 @@ nav:
         - 量子加密: security_etc/paper/knowledge/quantum_crypto.md
       - 工具:
         - Miracl密码库: security_etc/paper/tool/miracl.md
+        - PCB库: security_etc/paper/tool/pcb.md
 
   - 🔍杂项:
     - mess/index.md
