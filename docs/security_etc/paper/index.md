@@ -18,22 +18,30 @@ comments: true
 
 ## 背景方向
 
-1.  V2G
-2.  V2V
-3.  [车路云](https://www.tsinghua.edu.cn/info/1182/109825.htm)(导师群里分享——"场景描述清楚，容易创新") PS: [视频介绍](https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&vd_source=41a19477b1cd284eb33c00c0aae3f725)， [白皮书](https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf)
-4. 能源互联网EI 
+- V2G & V2V
+    - 充放电隐私
+- [车路云](https://www.tsinghua.edu.cn/info/1182/109825.htm)(导师群里分享——"场景描述清楚，容易创新") PS: [视频介绍](https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&vd_source=41a19477b1cd284eb33c00c0aae3f725)， [白皮书](https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf)
+- 能源互联网EI
+    - P2P能源交易  
+- **车联网（电动汽车）**: 
+      -  
 
 
 
-## 所需知识
+## 可能所需知识
 
-- 区块链 --> 联盟链
+- **区块链** + SG --> 联盟链
     - 共识算法：~~PoW、PoS~~、**PoR**、PoA、PBFT
+    - DR
+    - EVs
+    - 
 - 群签名
 - Paillier同态加密
 - 双线性映射
 - 异构签密: 单一操作中同时实现数字签名和加密
     * 允许双方在不改变各自现有安全基础设施的前提下实现安全通信
+
+
 
 !!! Quote "来自——[郭福春.致我公钥密码研究生的一封信](https://documents.uow.edu.au/~fuchun/jow/001-revisited.pdf)"
     目前从事科研，不代表毕业了你这辈子就一定要跟科研打交道。这一段时间的认真学习，让你学到的是思考的方法(自己发现问题、解决问题)和态度习惯(枯燥但能坚持下来的态度)

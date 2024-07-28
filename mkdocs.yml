@@ -115,6 +115,7 @@ nav:
 
     - 科研:
       - security_etc/paper/index.md
+      - 师门论文: security_etc/paper/paper.md
       - 论文知识:
         - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
         - V2G: security_etc/paper/knowledge/v2g.md
