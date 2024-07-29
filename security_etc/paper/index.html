@@ -4917,7 +4917,7 @@
 
 <h1 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 486 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 543 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
@@ -4938,11 +4938,11 @@
 </li>
 <li><a href="https://www.tsinghua.edu.cn/info/1182/109825.htm">车路云</a>(导师群里分享——"场景描述清楚，容易创新") PS: <a href="https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=41a19477b1cd284eb33c00c0aae3f725">视频介绍</a>， <a href="https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf">白皮书</a></li>
 <li>能源互联网EI<ul>
-<li>P2P能源交易  </li>
+<li>P2P能源交易</li>
 </ul>
 </li>
 <li><strong>车联网（电动汽车）</strong>: <ul>
-<li></li>
+<li>charging 、bidding、auction</li>
 </ul>
 </li>
 </ul>
@@ -4955,9 +4955,13 @@
 <li>SC(智能合约)</li>
 </ul>
 </li>
-<li>群签名</li>
+<li><del>群签名和环签名</del>(管理成员，开销大) &rarr; 基于ID(存在密钥托管) &rarr; <strong>无证书(CL-PKC)</strong><ul>
+<li>聚合签名 &rarr; <strong>无证书聚合签名</strong>(CLAS) &rarr; 无配对无证书聚合签名(PCAS)</li>
+</ul>
+</li>
 <li>Paillier同态加密</li>
-<li>双线性映射</li>
+<li><del>双线性映射</del>（计算开销大） &rarr; pairing-free</li>
+<li><strong>ECC</strong></li>
 <li>异构签密: 单一操作中同时实现数字签名和加密<ul>
 <li>允许双方在不改变各自现有安全基础设施的前提下实现安全通信</li>
 </ul>
