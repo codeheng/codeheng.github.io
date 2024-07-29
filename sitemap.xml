@@ -486,6 +486,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/security_etc/paper/paper_records/</loc>
+         <lastmod>2024-07-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/security_etc/paper/knowledge/bilinear_pairing/</loc>
          <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
