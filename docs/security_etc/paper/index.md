@@ -22,11 +22,9 @@ comments: true
     - 充放电隐私
 - [车路云](https://www.tsinghua.edu.cn/info/1182/109825.htm)(导师群里分享——"场景描述清楚，容易创新") PS: [视频介绍](https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&vd_source=41a19477b1cd284eb33c00c0aae3f725)， [白皮书](https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf)
 - 能源互联网EI
-    - P2P能源交易  
+    - P2P能源交易
 - **车联网（电动汽车）**: 
-      -  
-
-
+      -  charging 、bidding、auction
 
 ## 可能所需知识
 
@@ -35,9 +33,11 @@ comments: true
     - DR
     - EVs
     - SC(智能合约)
-- 群签名
+- ~~群签名和环签名~~(管理成员，开销大) --> 基于ID(存在密钥托管) --> **无证书(CL-PKC)**
+    - 聚合签名 --> **无证书聚合签名**(CLAS) --> 无配对无证书聚合签名(PCAS)
 - Paillier同态加密
-- 双线性映射
+- ~~双线性映射~~（计算开销大） --> pairing-free
+- **ECC**
 - 异构签密: 单一操作中同时实现数字签名和加密
     * 允许双方在不改变各自现有安全基础设施的前提下实现安全通信
 - The pseudonym mechanism(假名) + ZKP
