@@ -34,12 +34,14 @@ comments: true
     - 共识算法：~~PoW、PoS~~、**PoR**、PoA、PBFT
     - DR
     - EVs
-    - 
+    - SC(智能合约)
 - 群签名
 - Paillier同态加密
 - 双线性映射
 - 异构签密: 单一操作中同时实现数字签名和加密
     * 允许双方在不改变各自现有安全基础设施的前提下实现安全通信
+- The pseudonym mechanism(假名) + ZKP
+- ~~差分隐私(DP)~~
 
 
 
@@ -54,3 +56,9 @@ comments: true
 - 三大密码学顶会: [CRYPTO美密](https://www.iacr.org/meetings/crypto/)、[EUROCRYPT欧密会](https://www.iacr.org/meetings/eurocrypt/)、[ASIACRYPT亚密会](https://asiacrypt.iacr.org/)
 - 四大安全类会议：[Security & Privacy](https://onlinelibrary.wiley.com/journal/24756725)、[USENIX Security](https://www.usenix.org/conferences)、[CCS](https://dl.acm.org/conference/ccs)、NDSS(Network and Distributed System Security)
 
+导师推荐期刊如下：
+
+- [IEEE Transactions on Power Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59)
+- [Computer & Industrial Engineering](https://www.sciencedirect.com/journal/computers-and-industrial-engineering)
+- [IEEE TRANSACTIONS ON POWER DELIVERY](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=61)
+- [IEEE Transactions on Smart Grid](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411)
