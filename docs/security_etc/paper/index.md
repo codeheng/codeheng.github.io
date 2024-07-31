@@ -37,7 +37,7 @@ comments: true
     - 聚合签名 --> **无证书聚合签名**(CLAS) --> 无配对无证书聚合签名(PCAS)
 - Paillier同态加密
 - ~~双线性映射~~（计算开销大） --> pairing-free
-- **ECC**
+- **ECC** --> ECDLP
 - 异构签密: 单一操作中同时实现数字签名和加密
     * 允许双方在不改变各自现有安全基础设施的前提下实现安全通信
 - The pseudonym mechanism(假名) + ZKP
