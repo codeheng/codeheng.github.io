@@ -24,7 +24,7 @@ comments: true
 - 能源互联网EI
     - P2P能源交易: energy transaction matching（能源交易匹配）
         - 将买方和卖方的交易需求进行匹配的过程
-- **车联网（电动汽车）**
+- **车联网EV** --> internet of vehicles(VANET)
       -  charging 、bidding、auction
 
 ## 可能所需知识
@@ -36,6 +36,7 @@ comments: true
     - SC(智能合约)
 - ~~群签名和环签名~~(管理成员，开销大) --> 基于ID(存在密钥托管) --> **无证书(CL-PKC)**
     - 聚合签名 --> **无证书聚合签名**(CLAS) --> 无配对无证书聚合签名(PCAS)
+          - Pairing-free certificateless aggregate signature 
 - Paillier同态加密
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
