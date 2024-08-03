@@ -37,11 +37,12 @@ comments: true
 - ~~群签名和环签名~~(管理成员，开销大) --> 基于ID(存在密钥托管) --> **无证书(CL-PKC)**
     - 聚合签名 --> **无证书聚合签名**(CLAS) --> 无配对无证书聚合签名(PCAS)
           - Pairing-free certificateless aggregate signature 
+    - Conditional Privacy-Preserving Certificateless Signature(CPP-CLS)
 - Paillier同态加密
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
-- 异构签密: 单一操作中同时实现数字签名和加密
-    * 允许双方在不改变各自现有安全基础设施的前提下实现安全通信
+-  Signcryption签密：将公钥密码学中加密和签名结合，在一个逻辑步骤内实现加密和签名
+   -  异构签密:  允许双方在不改变各自现有安全基础设施的前提下实现安全通信
 - The pseudonym mechanism(假名) + ZKP
 - ~~差分隐私(DP)~~
 
@@ -64,3 +65,5 @@ comments: true
 - [Computer & Industrial Engineering](https://www.sciencedirect.com/journal/computers-and-industrial-engineering)
 - [IEEE TRANSACTIONS ON POWER DELIVERY](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=61)
 - [IEEE Transactions on Smart Grid](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411)
+
+$\mathcal{A}$

@@ -21,3 +21,5 @@ comments: true
 
 
 -----
+
+2008——"ECPP: Efficient **Conditional Privacy Preservation Protocol** for Secure Vehicular Communications"

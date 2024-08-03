@@ -123,6 +123,7 @@ nav:
         - 无证书公钥密码: security_etc/paper/knowledge/cl_pkc.md
         - 双线性映射: security_etc/paper/knowledge/bilinear_pairing.md
         - 量子加密: security_etc/paper/knowledge/quantum_crypto.md
+        - 可证明安全: security_etc/paper/knowledge/provably_secure.md
       - 工具:
         - Miracl密码库: security_etc/paper/tool/miracl.md
         - PCB库: security_etc/paper/tool/pcb.md
