@@ -19,7 +19,7 @@ comments: true
     
     - **假设条件 --> 证明技术  --> 证明结论**
 
-安全性证明——**规约Reduction**
+安全性证明——**归约Reduction**
 
 !!! example "例子"
 
@@ -28,3 +28,7 @@ comments: true
     - **证逆否**：ElGamal算法不是IND-CPA安全的 => DDH可被攻破
 
     **密码学中表述**: 若存在一个PPT(Probabilistic Polynomial Time)敌手在CPA模型下攻破了ElGamal算法的Indistinguishability，即敌手能解决DDH问题
+
+> Cite - Introduction to Security Reduction:
+> 
+> In computational complexity theory, a reduction transforms one problem into another problem, while in public-key cryptography, **a security reduction reduces breaking a proposed scheme into solving a mathematical hard problem.**

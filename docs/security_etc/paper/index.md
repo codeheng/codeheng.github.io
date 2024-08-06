@@ -65,5 +65,3 @@ comments: true
 - [Computer & Industrial Engineering](https://www.sciencedirect.com/journal/computers-and-industrial-engineering)
 - [IEEE TRANSACTIONS ON POWER DELIVERY](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=61)
 - [IEEE Transactions on Smart Grid](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411)
-
-$\mathcal{A}$
