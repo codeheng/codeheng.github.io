@@ -24,8 +24,9 @@ comments: true
 - 能源互联网EI
     - P2P能源交易: energy transaction matching（能源交易匹配）
         - 将买方和卖方的交易需求进行匹配的过程
-- **车联网EV** --> internet of vehicles(VANET)
+- **车联网** --> internet of vehicles(VANET)
       -  charging 、bidding、auction
+- Intelligent vehicle(IV)、electric vehicle(EV)
 
 ## 可能所需知识
 
@@ -44,8 +45,7 @@ comments: true
 -  Signcryption签密：将公钥密码学中加密和签名结合，在一个逻辑步骤内实现加密和签名
    -  异构签密:  允许双方在不改变各自现有安全基础设施的前提下实现安全通信
 - The pseudonym mechanism(假名) + ZKP
-- ~~差分隐私(DP)~~
-
+- ~~差分隐私(DP)、联邦学习(federated learning)~~
 
 
 !!! Quote "来自——[郭福春.致我公钥密码研究生的一封信](https://documents.uow.edu.au/~fuchun/jow/001-revisited.pdf)"
