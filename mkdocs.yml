@@ -8,7 +8,7 @@ nav:
     - index.md
     - ❤️ 关于我: home/about.md  
 
-  - 📖核心基础知识:
+  - 📖基础知识:
     - core_knowledge/index.md
     - 算法:
       - LeetCode刷题:
@@ -115,7 +115,7 @@ nav:
 
     - 科研:
       - security_etc/paper/index.md
-      - 师门论文: security_etc/paper/paper.md
+      - 师门论文: security_etc/paper/master_homegate_paper.md
       - 论文记录: security_etc/paper/paper_records.md
       - 技术知识:
         - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
@@ -157,7 +157,7 @@ nav:
       - 4月: life/2024/24_april.md
       - 5月: life/2024/24_may.md
       - 6月: life/2024/24_june.md
-      - 7月: life/2024/24_july.md
+      - 下半年: life/2024/24_last_half_years.md
   
   - 💪Workout:
     - workout/index.md
