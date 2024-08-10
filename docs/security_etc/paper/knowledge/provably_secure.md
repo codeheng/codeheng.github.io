@@ -40,7 +40,6 @@ comments: true
 > 
 > &nbsp; &nbsp; &nbsp; &nbsp; In computational complexity theory, a reduction transforms one problem into another problem, while in public-key cryptography, **a security reduction reduces breaking a proposed scheme into solving a mathematical hard problem.**
 
-
 !!! example "例子"
 
     DDH(Decisional Diffie–Hellman)是困难的 => ElGamal算法是IND-CPA安全的
@@ -49,7 +48,7 @@ comments: true
 
     **密码学中表述**: 若存在一个PPT(Probabilistic Polynomial Time)敌手在CPA模型下攻破了ElGamal算法的Indistinguishability，即敌手能解决DDH问题
 
-
+密码学中，方案的证明主要采用Security Reduction
 
 ## 模型(Model)
 
@@ -60,8 +59,14 @@ comments: true
     * We say it is secure if no PPT adversary can break it.
         * PPT: Probabilistic Polynomial Time 
 - **安全模型(Security Model)**——来自密码学理论
-    * ^^在攻击前知道什么，目标是什么？^^ 
+    * ^^敌人的在攻击前知道什么，目标是什么？^^ 
     * 把攻击一个方案转为求解一个计算问题
-    * 表达形式：
+    * *表达形式：*
         - 游戏$\mathsf{Game}$方式：challenger($\mathcal{C}$)和adversary($\mathcal{A}$)交互
         - 概率Probability方式：$P[\text{知道的内容}:\text{攻击的目标}]$
+
+安全模型定义(算法层面)：
+
+- 密钥算法: $\mathrm{KenGen(1^k)} \to (pk, sk)$
+- 签名算法：$\mathrm{Sign}(sk, m) \to S_m$
+- 验证算法：$\mathrm{Verify}(pk, m, S_m) \to T/F$

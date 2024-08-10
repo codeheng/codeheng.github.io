@@ -127,7 +127,7 @@ nav:
       - 工具:
         - Miracl密码库: security_etc/paper/tool/miracl.md
         - PCB库: security_etc/paper/tool/pcb.md
-
+        - 密码学符号: security_etc/paper/tool/symbol.md
   - 🔍杂项:
     - mess/index.md
     - MarkDown: mess/markdown.md
