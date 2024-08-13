@@ -42,10 +42,19 @@ comments: true
 - Paillier同态加密
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
--  Signcryption签密：将公钥密码学中加密和签名结合，在一个逻辑步骤内实现加密和签名
-   -  异构签密:  允许双方在不改变各自现有安全基础设施的前提下实现安全通信
+- 从single到Multiple: 
+    - 多个相同对象
+        * Multi-Signatures：为了提高存储和通讯效率 --> aggregate signature
+        * Signatures with Batch Verification: 为了减少签名验证时间
+        * certificateless signatures: 通过捆绑基于ID签名和传统数字签名
+    - 多个不同对象：
+        * Signcryption(签密)：将加密和签名结合，在一个逻辑步骤内进行实现
+        * 异构签密:  允许双方在不改变各自现有安全基础设施的前提下实现安全通信
 - The pseudonym mechanism(假名) + ZKP
 - ~~差分隐私(DP)、联邦学习(federated learning)~~
+- online/offline Computing
+    * offline: 某部分输入未知时，完成 **大部分** 计算
+    * online：在输入全弄清后，只需 **轻量** 计算
 
 
 !!! Quote "来自——[郭福春.致我公钥密码研究生的一封信](https://documents.uow.edu.au/~fuchun/jow/001-revisited.pdf)"

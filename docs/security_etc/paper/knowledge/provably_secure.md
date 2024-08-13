@@ -50,6 +50,8 @@ comments: true
 
 密码学中，方案的证明主要采用Security Reduction
 
+**tight reduction（紧归约）**：若敌人能够以实际T以及概率(优势)$\varepsilon$攻克方案，则我们也能以接近T的时间以及接近$\varepsilon$的概率(优势)解决计算难题
+
 ## 模型(Model)
 
 > 即用数学概念和数学语言严谨刻画某一个对象。通过模型，可以把研究对象转为严谨数学题
@@ -70,3 +72,20 @@ comments: true
 - 密钥算法: $\mathrm{KenGen(1^k)} \to (pk, sk)$
 - 签名算法：$\mathrm{Sign}(sk, m) \to S_m$
 - 验证算法：$\mathrm{Verify}(pk, m, S_m) \to T/F$
+
+### ROM
+
+> Random Oracle Model证明模型
+
+- 敌人和哈希函数相关的计算被限制了
+- 敌人不能自己私下通过哈希函数计算得到$H(x)$
+- 若敌人想知道必须想证明者询问，并由我们决定并返回$y = H(x)$的值给敌人（y随机）
+- 不仅要知道敌人攻击用到的哪些x，而且也能利用"由我们决定的y"完成安全归约证明
+
+> 通过ROM完成安全归约证明时，我们不仅知道敌人询问的x，而且也能自己设定$y = H(x)$(即由我们决定y的值)
+
+还有诸如GGM(generic group model)、AGM(algebraic group model)、CRS(common-reference string model)等模型
+
+!!! warning
+    能在这些证明模型下完成安全证明的密码方案比缺乏安全证明的密码方案更靠谱
+
