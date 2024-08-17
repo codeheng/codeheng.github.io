@@ -28,8 +28,8 @@ comments: true
 
 !!! Note
 
-    - 加密保证消息的机密性
-    - 签名保证消息的完整性、身份的不可伪造性和操作的不可否认性
+    - 加密(encryption)保证消息的机密性
+    - 数字签名([digital signature](https://hackmd.io/@PIncentivus/r1xkfbGO3))保证消息的完整性、身份的不可伪造性和操作的不可否认性
     - **数字签密可同时实现两者** （计算和通信效率更高）
 
 - **区块链** + SG --> 联盟链
@@ -44,6 +44,7 @@ comments: true
 - Paillier同态加密
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
+    - ECDSA --> **Schnorr signature**
 - 从single到Multiple: 
     - 多个相同对象
         * Multi-Signatures：为了提高存储和通讯效率 --> aggregate signature
