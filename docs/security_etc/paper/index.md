@@ -23,6 +23,7 @@ comments: true
 - **车联网** --> internet of vehicles(VANET)
       -  charging 、bidding、auction
 - Intelligent vehicle(IV)、electric vehicle(EV)
+- **smart grid**: privacy protection、identity authentication、secure data aggregation、grid billing 
 
 ## 可能所需知识
 
@@ -42,6 +43,7 @@ comments: true
           - Pairing-free certificateless aggregate signature 
     - Conditional Privacy-Preserving Certificateless Signature(CPP-CLS)
 - Paillier同态加密
+- Anonymization(匿名化)： 
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
     - ECDSA --> **Schnorr signature**
@@ -72,7 +74,7 @@ comments: true
 - 四大安全类会议：[Security & Privacy](https://onlinelibrary.wiley.com/journal/24756725)、[USENIX Security](https://www.usenix.org/conferences)、[CCS](https://dl.acm.org/conference/ccs)、NDSS(Network and Distributed System Security)
 
 导师推荐期刊如下：
-
+    
 - [IEEE Transactions on Power Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59)
 - [Computer & Industrial Engineering](https://www.sciencedirect.com/journal/computers-and-industrial-engineering)
 - [IEEE TRANSACTIONS ON POWER DELIVERY](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=61)
