@@ -596,6 +596,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://codeheng.github.io/writing_note/book_records/</loc>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/writing_note/why_we_sleep/</loc>
          <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
