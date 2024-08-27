@@ -24,6 +24,9 @@ comments: true
 - Intelligent vehicle(IV)、electric vehicle(EV)
 - **smart grid**: privacy protection、identity authentication、secure data aggregation、grid billing 
 
+车联网(IoV) : 
+
+
 ## 可能所需知识
 
 !!! Note
