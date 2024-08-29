@@ -24,7 +24,15 @@ comments: true
 - Intelligent vehicle(IV)、electric vehicle(EV)
 - **smart grid**: privacy protection、identity authentication、secure data aggregation、grid billing 
 
+> 基于xxx和 xxx的xx研究 （三个创新点）
+
 车联网(IoV) : 
+
+- V2V communication安全
+- 匿名身份认证方案
+- 充放电隐私 + fog computing 
+- 区块链网络中改进xxx
+- V2V matching 
 
 
 ## 可能所需知识
