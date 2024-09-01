@@ -28,11 +28,9 @@ comments: true
 
 车联网(IoV) : 
 
-- V2V communication安全
-- 匿名身份认证方案
-- 充放电隐私 + fog computing 
-- 区块链网络中改进xxx
-- V2V matching 
+- V2V communication安全: 基于区块链的安全V2V通信方案
+- 匿名身份认证方案: 具有匿名身份隐私保护的V2V matching方案
+- 区块链网络中改进xxx: 基于雾计算的轻量级数据聚合隐私保护方案
 
 
 ## 可能所需知识
