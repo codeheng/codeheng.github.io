@@ -31,6 +31,7 @@ comments: true
 - V2V communication安全: 基于区块链的安全V2V通信方案
 - 匿名身份认证方案: 具有匿名身份隐私保护的V2V matching方案
 - 区块链网络中改进xxx: 基于雾计算的轻量级数据聚合隐私保护方案
+- 用户身份认证(User authentication): 
 
 
 ## 可能所需知识
