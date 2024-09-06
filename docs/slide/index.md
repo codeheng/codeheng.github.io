@@ -9,4 +9,4 @@ comments: true
 
 ## [量子加密](./encry/dist/index.html)
 
-## [开题汇报PPT](./encry/dist/index.html)
+## [开题汇报PPT](./show/index.html)
