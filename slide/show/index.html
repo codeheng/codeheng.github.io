@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Source+Serif+Pro%7CLato%7CInconsolata" rel="stylesheet"
+        type="text/css">
+    <title> v1 </title>
+    <!-- browser favicon -->
+    <link rel="shortcut icon" href="./static/img/favicon.png">
+    <style>
+        .font-sans {
+            font-family: 'Lato', 'SimHei', 'STHeiti', 'SimHei', 'Serif';
+        }
+
+        .font-serif {
+            font-family: 'Source Serif Pro', 'Songti SC', 'SimSun', 'Serif', serif;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="https://jyywiki.cn/static/katex/katex.min.css">
+    <script defer src="https://jyywiki.cn/static/katex/katex.min.js"></script> -->
+    <link rel="stylesheet" href="./static/katex/katex.min.css">
+    <script defer src="./static/katex/katex.min.js"></script>
+    <!-- <script defer src="https://jyywiki.cn/static/katex/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script> -->
+    <script defer src="./static/katex/auto-render.min.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // &#8226; auto-render specific keys, e.g.:
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true }
+                ],
+                // &#8226; rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="./static/reveal/reveal.css">
+    <link rel="stylesheet" href="./static/reveal/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="./static/jyy/jyy.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <div class="reveal">
+        <div class="slides">
+            <section><section><div class="center middle"><div style="width:100%"><div><h1 id="iov" class="text-2xl mt-2 font-sans">IoV中安全通信以及电力交易的隐私保护方法研究</h1><p class="font-serif my-1">
+    <include src="Slides_Author">
+        <div class="py-16">
+            <p class="font-serif my-1">
+                <a href="https://codeheng.github.io/home/about/" class=" text-amber-900">
+                    黄一恒
+                </a>
+            </p>
+        </div>
+        <div class="row">
+            <p class="font-serif my-1"/>
+            
+            <div class="author-affiliation">
+                <a href="https://cs.ncepu.edu.cn/" class=" text-amber-900">
+                    <p class="font-serif my-1">
+                        　华北电力大学计算机系　
+                    </p>
+                    <img class="inline-img h-24" src=".\static\img\7d42390078424c2c976d9f1ed10e9694.jpg" style="display: inline-block;"/>
+                </a>
+            </div>
+            
+        </div>
+    </include>
+</p></div></div></div></section><section><div><h2 id="overview" class="text-xl mt-2 pb-2 font-sans">Overview</h2>
+<p class="font-serif my-1"><strong>本次汇报主要分为以下部分:</strong></p>
+<ol>
+<li class="ml-8">研究背景以及意义<ul class="list-disc font-serif">
+<li class="ml-8">背景：问题/现状</li>
+<li class="ml-8">意义</li>
+</ul>
+</li>
+<li class="ml-8">相关研究 <ul class="list-disc font-serif">
+<li class="ml-8">拟研究相关课题内容(Internet of Vehicle, IoV)<ul class="list-disc font-serif">
+<li class="ml-8"><u>V2V communication / transaction / matching</u> </li>
+</ul>
+</li>
+<li class="ml-8">拟研究采取方案<ul class="list-disc font-serif">
+<li class="ml-8">PCAS、blockchain.... </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ml-8">参考文献</li>
+</ol></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">一. 研究背景</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">研究背景/意义</h2>
+<p class="font-serif my-1">温室气体排放增加 &amp; 能源需求增加</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">能源问题严峻 + 环境污染严重</li>
+</ul>
+<blockquote>
+<p class="font-serif my-1">能源转型是历史的发展趋势，加快新能源发展是必然选择，新能源在一次能源份额中的占比将持续高速增长，预计到2050将占比55%左右<a href="#/3/1">$^{[1]}$</a></p>
+</blockquote><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">EVs环保清洁，价格低等优点受到重视，逐渐成为燃料汽车的替代品</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">既可作为贮备电力能源设备</li>
+<li class="ml-8">也是实现双碳目标的关键途径</li>
+</ul>
+<blockquote>
+<p class="font-serif my-1">发展以 <strong>电动汽车(EVs)</strong> 为代表的新能源汽车是国家的重要战略布局，是应对温室效应和能源危机问题的重大举措<a href="#/3/1">$^{[2]}$</a></p>
+</blockquote></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">研究背景/意义</h2>
+<p class="font-serif my-1">与此同时，我国“十四五”交通领域规划<a href="#/3/1">$^{[3]}$</a>指出: </p>
+<ol>
+<li class="ml-8">推动智能汽车、智慧道路和车路协同技术融合发展</li>
+<li class="ml-8">大力发展智慧交通，减少能源消耗也是落实双碳目标的有效举措</li>
+<li class="ml-8">发展车路云一体化的智慧交通已成为越来越多国家的共识<a href="#/3/1">$^{[4]}$</a></li>
+</ol><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>IoV = Internet of Vehicle</strong></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">利用互联网和无线通信，可实现V2V和V2I实时通信和数据共享</li>
+</ul></div><div class="fragment" data-fragment-index="2"><div style="display: flex;">
+      <img class="left" margin="0 auto" src=".\static\img\d4caf53569074cb69fd5c091be3551f1.png" width="350px"/>
+      <div>
+            <p class="font-serif my-1"> 在此构成的网络中，<u>规模大、节点多</u>且存在无线通信的脆弱性和开放性, 故易受到 <b>窃听、篡改等泄露隐私</b> 的攻击 (e.g. 出行轨迹、工作地点等泄露)</p>
+            <p style="display:flex; align-items: center;" class="font-serif my-1"><mark>V2V communication隐私安全问题</mark></p>
+            <p class="font-serif my-1">（PS: 图片来自 <a href="#/3/1">文献6）</a></p>
+      </div>
+</div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">研究背景/意义</h2>
+<p class="font-serif my-1">EVs 数量⬆️，CS(Charge Station) 无法满足需求</p>
+<ul class="list-disc font-serif">
+<li class="ml-8"><strong>V2V可提供一种灵活的充电模式</strong> （新型电力交易场景）<ul class="list-disc font-serif">
+<li class="ml-8">可通过装有 <u>双向充放电系统</u> 的EVs向急需用电的EVs提供电能</li>
+<li class="ml-8">与Vehicle to Grid形成互补<a href="#/3/1">$^{[5]}$</a></li>
+</ul>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">但V2V电力交易过程，安全性非常重要</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">交易过程要保证EVs双方的隐私</li>
+<li class="ml-8">若泄露则会破坏交易的公平性</li>
+</ul>
+<blockquote>
+<p class="font-serif my-1">如何更好的进行V2V交易？保证交易双方身份隐私？ <br/></p>
+<p class="font-serif my-1">如何高效验证用户的身份？</p>
+<p class="font-serif my-1">如何进行V2V交易过程的高效匹配(transaction)及Payment？</p>
+</blockquote></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">二. 相关研究</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">隐私保护方法</h2>
+<p class="font-serif my-1">基于PKI<a href="#/3/2">$^{[7]}$</a>的方案，但存在证书管理的问题</p>
+<p class="font-serif my-1">为解决此问题，提出了基于身份(ID)的密码学方案<a href="#/3/2">$^{[8]}$</a>，私钥由private key generator产生，但带来了密钥托管的问题</p>
+<p class="font-serif my-1">AI-Riyami<a href="#/3/2">$^{[9]}$</a>提出了无证书密码体系,私钥分两部分：<u>1. 用户自己生成 2. KGC(Key Generation Center)生成</u></p>
+<p class="font-serif my-1"><a href="#/3/2">文献10</a>根据bilinear pair构造了无证书签名(CLS)方案，但开销太大</p><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>而ECC可以更短的密钥提供相同的安全且开销小</strong></p>
+<p class="font-serif my-1">大量研究人员基于ECDLP设计了CLS方案</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">e.g：Zhang等人<a href="#/3/3">$^{[11]}$</a>在无证书公钥中提出了聚合签名</li>
+</ul>
+<p class="font-serif my-1">CLAS方案应能抵抗type I adversary和type II adversary</p>
+<ul class="list-disc font-serif">
+      <li style="font-size:28px" class="ml-8">I: 能随意替换公钥，但不持有用户部分私钥</li>
+      <li style="font-size:28px" class="ml-8">II: 模拟恶意的KGC，拥有用户部分私钥，但不替换公钥</li>
+</ul></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<p class="font-serif my-1">是促进碰撞避免、车速检测、位置跟踪和车辆移动的信息共享技术<a href="#/3/3">$^{[12]}$</a></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">也可确保车辆安全并减少交通堵塞</li>
+</ul>
+<blockquote>
+<p class="font-serif my-1">Gong.Z——PCAS<a href="#/3/2">$^{[6]}$</a>，分析了Liu<a href="#/3/3">$^{[13]}$</a>CLAS方案不安全，不可以抵抗伪造攻击。进行改进，提出了PCAS，用于车辆认证</p>
+</blockquote>
+<ul class="list-disc font-serif">
+<li class="ml-8">使用ECC，而非bilinear pairing 和 map-to-point hash function</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">在文献13方案中<strong>Single Signature Verification</strong>阶段:</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">$w_iP - u_i(Y_{1i} + h_{3i}X_i) = h_{4i}(R_i + h_{1i}P_{Pub})$? 验证接受否<ul class="list-disc font-serif">
+<li class="ml-8">$w_i = (u_i (y_{1i} + h_{3i}x_i) + h_{4i}d_i)$ 不安全!可进行伪造签名</li>
+</ul>
+</li>
+</ul></div><div class="fragment" data-fragment-index="2"><p class="font-serif my-1">此方案中: $w_i = [h_{3i}(d_{i,j} + \alpha_{i,j}x_i) + y_{1i}h_{4i}] \bmod q$</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">check: $w_iP - h_{4i} Y_{1i} = h_{3i}(D_{i, j} + h_{1i, j} P_{pub})$ ?</li>
+</ul></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<p class="font-serif my-1"><strong>优点</strong>：1.使用假名，实现了具有条件的隐私保护，允许TA追踪真实身份以撤销<br/>   2. Batch Verification：允许RSU同时验证多个签名<br/>   3.在ROM下证明了EUF-CMA</p>
+<p class="font-serif my-1"><strong>缺点</strong>：1. 需要TA来管理和撤销假名，信任管理问题？<br/>         2. <u>基于ECDLP困难性，并不能抗量子攻击</u> (格的密码学？)</p><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>解决办法：</strong></p>
+<ol>
+<li class="ml-8"><strong>blockchain</strong>: 去中心化的特性，创建一个分布式的假名管理系统<ul class="list-disc font-serif">
+<li class="ml-8">假名生成和撤销通过Smart Contract自动执行</li>
+</ul>
+</li>
+<li class="ml-8"><strong>MPC</strong>：多个参与者可以共同管理假名 （无需一方掌握完整信息）</li>
+</ol></div><div class="fragment" data-fragment-index="2"><blockquote>
+<p class="font-serif my-1"><a style="font-size:25px"> "A Secure and Efficient Pairing-Free Certificateless Aggregate Signcryption Scheme for V2G Networks"</a> (PCASC方案用于V2G)</p>
+</blockquote></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<blockquote>
+<p class="font-serif my-1">可公开验证无对运算的无证书聚合签密方案<a href="#/3/3">$^{[14]}$</a>——CLASC方案</p>
+</blockquote>
+<p style="font-size:28px" class="font-serif my-1"> 聚合签密能够将来自不同签密者对不同消息产生的签密密文合并成单个密文</p>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">减少了密文总长度和验证成本</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><img src=".\static\img\2c426d67bc9a439e840cdede5151def3.png" width="1500px"/></p></div><div class="fragment" data-fragment-index="2"><p class="font-serif my-1"><strong>优点</strong>：1. 签密能更好满足IoV信息传递的保密性、认证性等安全需求 <br/> 
+2. 可信第三方验证 $SP = \sum_{i=1}^{n} U_i + \sum_{i=1}^{n} h_i(P_{ID_i} + R_{ID_i} + P_{pub} h_{ID_i})$ 成立否？无需任何用户私有信息</p></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<p class="font-serif my-1">3.在ROM下，分别证明了敌手 $\mathcal{A_1}$ 和 $\mathcal{A_2}$ 攻击下的保密性和不可伪造性</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">将其归约至多项式时间内求解DH和离散对数问题</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>缺点</strong>：1. 依赖于KGC若信任较强，可能会单点故障 <br/> 2. 在IoV情景下，并没保证匿名性 <br/> 3. 若个别无效签名存在可能导致聚合失败(不容错) <br/> 4. 不具备抗量子</p></div><div class="fragment" data-fragment-index="2"><p class="font-serif my-1"><strong>解决办法</strong> ：</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">BlockChain</li>
+<li class="ml-8">针对匿名性：假名、ZKP<ul class="list-disc font-serif">
+<li class="ml-8">两者结合（BlockChain + ZKP）<a href="#/3/3">$^{[15]}$</a> </li>
+</ul>
+</li>
+<li class="ml-8">容错算法<a href="#/3/3">$^{[16]}$</a><ul class="list-disc font-serif">
+<li class="ml-8">Multidimensional Data Aggregation with Fault Tolerance<a href="#/3/4">$^{[17]}$</a></li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<blockquote>
+<p class="font-serif my-1">A Secure Blockchain Enabled V2V Communication System Using Smart Contracts<a href="#/3/4">$^{[18]}$</a>—提出BVCS方案，采用SC自动验证用户及其车辆
+</p>
+</blockquote>
+<p style="font-size:27px" class="font-serif my-1">车辆可以与他人共享经过验证和可信的数据，而无需考虑V2V通信中的安全问题</p>
+
+<p class="font-serif my-1">V2V通信可以采取多种无线方法建立车辆间通信</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">e.g. <u> <strong>C-V2X</strong>, DSRC, WLAN，蓝牙... </u></li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>BVCS:</strong> 通过共享正确的信息来实现车辆之间的安全通信, 用户和车辆的身份验证是一个自动化过程，通过SC完成</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">BVCS可帮助获得基于身份验证的信息共享机制</li>
+</ul>
+<p class="font-serif my-1"><strong>four stages:</strong> initial,registration,authentication,communication</p>
+<ul class="list-disc font-serif">
+<li class="ml-8"><a style="font-size:27px">旨在提升车辆、数据安全和用户隐私，提供一个去中心化和可信的通信环境</a></li>
+</ul></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<p class="font-serif my-1"><img class="center" src=".\static\img\9fca9d28b06049019489bdf8779da96a.png" width="80%"/></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">TL: 负责控制区块链应用程序、部署SC和车辆注册的区块链节点</li>
+<li class="ml-8">GL: 配备C-V2X支持的连接控制单元（CCU）的车辆</li>
+</ul><div class="fragment" data-fragment-index="1"><p style="font-size:28px" class="font-serif my-1">
+<b>四个实体：</b>1. user在购买汽车提供凭证 2. vehicle配备防篡改装置，用于安全存储通信数据 3. blockchain node收集用户凭证、验证数据并存储在区块链上的授权节点 4. sc由区块链节点部署，自动认证用户和车辆
+</p></div></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<ol>
+<li class="ml-8">initial Stage: <ul class="list-disc font-serif">
+<li class="ml-8">user向授权blockchain Node提供凭证 -&gt; node验证user数据并将vehicle详细信息存入Data pool -&gt; user可通过应用程序验证存储的数据 -&gt; user确认后，数据将永久存入链中</li>
+</ul>
+</li>
+<li class="ml-8">Registration：<ul class="list-disc font-serif">
+<li class="ml-8">使用 <u>SHA-512和用户的链账户地址</u>为vehicle和user生成 <strong>UI(unique id)</strong>，UI被保存到链中，以便验证车辆和用户</li>
+</ul>
+</li>
+<li class="ml-8">Authentication：<ul class="list-disc font-serif">
+<li class="ml-8">SC自动验证user和vehicle, 只有经过认证的车辆才允许相互交互</li>
+<li class="ml-8">部署两个算法: User Authentication(2-SAS)，Vehicle Authentication and Unauthorized access detection</li>
+</ul>
+</li>
+<li class="ml-8">communication: <ul class="list-disc font-serif">
+<li class="ml-8"><a style="font-size:26px">经认证的车辆建立安全通信, 传输的数据都使用SC进行验证，并永久存在链上</a></li>
+</ul>
+</li>
+</ol></div></section><section><div><h2 id="v2v-communication" class="text-xl mt-2 pb-2 font-sans">V2V communication</h2>
+<p class="font-serif my-1"><strong>优点</strong>：</p>
+<ol>
+<li class="ml-8">利用BlockChain增加数据安全性和用户隐私</li>
+<li class="ml-8"><red><strong>设计并实现了SC，自动化用户和车辆的身份验证</strong></red>，认证后才能通信</li>
+<li class="ml-8">BVCS系统包含<u>用户认证、车辆验证、未授权访问检测和安全通信</u>等多个部分，相对比较完整。</li>
+</ol><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><strong>缺点:</strong></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">共识算法能优化？</li>
+<li class="ml-8">能否可以在用户和车辆身份验证阶段加入ZKP？</li>
+<li class="ml-8">若车辆未注册，则并没应对/处罚措施</li>
+<li class="ml-8">UI,SK(secret key),RT(random token)均自动生成，身份验证后提供给用户，用户必须记住UT(user token)才能获得UI,SK,RT<ul class="list-disc font-serif">
+<li class="ml-8">若忘记就不可能获得key来访问vehicle </li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="v2v-transaction-matching" class="text-xl mt-2 pb-2 font-sans">V2V transaction / matching</h2>
+<blockquote>
+<p class="font-serif my-1"><a href="#/3/4">文献19</a> ——提出了基于IoV和consortium blockchain的且有隐私保护的V2V transaction方案</p>
+</blockquote>
+<p class="font-serif my-1">针对V2V隐私泄露问题 &amp; EVs缺乏彼此信任</p>
+<p class="font-serif my-1"><u>大多数方案：要么为每个用户使用单个伪身份，要么生成许多伪身份</u></p>
+<ul class="list-disc font-serif">
+<li class="ml-8"><strong>长短期伪身份算法保护EVs隐私</strong></li>
+</ul>
+<p class="font-serif my-1">CLASC实现V2V communication</p>
+<p class="font-serif my-1">联盟链用于V2V transaction</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">Smart Contracts 匹配交易并计算Reputation  </li>
+<li class="ml-8">POR共识改善效率,激励交易</li>
+</ul></div></section><section><div><h2 id="v2v-transaction-matching" class="text-xl mt-2 pb-2 font-sans">V2V transaction / matching</h2>
+<p class="font-serif my-1"><strong>可能不足：</strong> </p>
+<ol>
+<li class="ml-8">并没有考虑V2V matching algorithm for EVs<ul class="list-disc font-serif">
+<li class="ml-8"><strong>可用Game Theory<a href="#/3/4">$^{[20]}$</a>或AI-based 算法优化</strong></li>
+</ul>
+</li>
+<li class="ml-8">存储和计算开销是否可以优化？<ul class="list-disc font-serif">
+<li class="ml-8">用 <strong><u>fog computing</u></strong> 来减少开销<a href="#/3/4">$^{[21]}$</a> （<red>考虑将其整合入系统中</red>)</li>
+<li class="ml-8">能大大减轻了电动汽车的负担，增强了系统的可扩展性和性能，更适合在车联网中大规模部署</li>
+</ul>
+</li>
+</ol><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><img src=".\static\img\cdbfbbd3db0a41c3a62bedd0b696b4e8.png" width="90%"/></p></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">三. 相关文献</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">参考文献</h2>
+<p class="font-serif my-1"><a href="#/1/1">[1]</a> Energy Institute. Statistical review of world energy 2023[R/OL].(2023-06-25)[2023-08-01].https://www.energyinst.org/statistical-review. <br/>
+<a href="#/1/1">[2]</a> 苏利阳.我国新能源汽车发展政策实施评估及启示[J].环境保护,2021,49(22):41-47.DOI:10.14026/j.cnki.0253-9705.2021.22.011. <br/>
+<a href="#/1/2">[3]</a> 交通运输部.“十四五”交通领域科技创新规划[R].北京:交通运输部, 2022 <br/>
+<a href="#/1/2">[4]</a> 左志强,刘正璇,王一晶.基于车路云一体化的混合交通系统优化控制综述[J].控制与决策,2023,38(03):577594.DOI:10.13195/j.kzyjc. <br/>
+<a href="#/1/3">[5]</a> Zhang Q, Su Y, Wu X, et al. Electricity trade strategy of regional electric vehicle coalitions based on blockchain[J]. Electric Power Systems Research, 2022, 204: 107667 <br/>
+<a href="#/1/2">[6]</a> Gong, Ziyan, Tianhan Gao, and Nan Guo. "PCAS: Cryptanalysis and improvement of pairing-free certificateless aggregate signature scheme with conditional privacy-preserving for VANETs." Ad Hoc Networks 144 (2023): 103134.</p></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">参考文献</h2>
+<p class="font-serif my-1"><a href="#/2/2">[6]</a> Gong, Z., Gao, T., &amp; Guo, N. (2023). PCAS: Cryptanalysis and improvement of pairing-free certificateless aggregate signature scheme with conditional privacy-preserving for VANETs. Ad Hoc Networks, 144, 103134. <br/>
+<a href="#/2/1">[7]</a>Raya, M., &amp; Hubaux, J. P. (2007). Securing vehicular ad hoc networks. Journal of computer security, 15(1), 39-68. <br/>
+<a href="#/2/1">[8]</a>Shen, L., Ma, J., Liu, X., Wei, F., &amp; Miao, M. (2016). A secure and efficient ID-based aggregate signature scheme for wireless sensor networks. IEEE Internet of Things Journal, 4(2), 546-554.<br/>
+<a href="#/2/1">[9]</a> Al-Riyami, S. S., &amp; Paterson, K. G. (2003, November). Certificateless public key cryptography. In International conference on the theory and application of cryptology and information security (pp. 452-473). Berlin, Heidelberg: Springer Berlin Heidelberg. <br/>
+<a href="#/2/1">[10]</a> Ali, I., &amp; Li, F. (2020). An efficient conditional privacy-preserving authentication scheme for Vehicle-To-Infrastructure communication in VANETs. Vehicular Communications, 22, 100228.</p></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">参考文献</h2>
+<p class="font-serif my-1"><a href="#/2/1">[11]</a> L. Zhang and F. Zhang, "A new certificateless aggregate signature scheme", Comput. Commun., vol. 32, no. 6, pp. 1079-1085, 2009. <br/>
+<a href="#/2/2">[12]</a> A. Demba and D. P. F. Moller, "Vehicle-to-vehicle communication technology", Proc. IEEE Int. Conf. Electro/Inf. Technol. (EIT), pp. 459-464, May 2018. <br/>
+<a href="#/2/2">[13]</a> Liu, J., Wang, L., &amp; Yu, Y. (2020). Improved security of a pairing-free certificateless aggregate signature in healthcare wireless medical sensor networks. IEEE Internet of Things Journal, 7(6), 5256-5266. <br/>
+<a href="#/2/4">[14]</a> 陈虹,周沫,侯宇婷,等.可公开验证无对运算的无证书聚合签密方案[J].计算机科学与探索,2022,16(11):2519-2530.<br/>
+<a href="#/2/5">[15]</a> 张杨,莫秀良.基于区块链和零知识证明的身份认证机制[J/OL].天津理工大学学报,1-7[2024-09-02].http://kns.cnki.net/kcms/detail/12.1374.n.20240328.1040.034.html. <br/>
+<a href="#/2/5">[16]</a> 任蕾,杜红珍,尤毅晨,等.可实现隐私保护的容错聚合签名方案[J].宝鸡文理学院学报(自然科学版),2024,44(02):12-19.DOI:10.13467/j.cnki.jbuns.2024.02.003. <br/></p></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">参考文献</h2>
+<p class="font-serif my-1"><a href="#/2/5">[17]</a> Zhang, S., Chang, J., &amp; Wang, B. (2023). A Multidimensional Data Aggregation Scheme of Smart Home in Microgrid With Fault Tolerance and Billing for Demand Response. IEEE Systems Journal. <br/>
+<a href="#/2/6">[18]</a> Das, D., Banerjee, S., Chatterjee, P., Ghosh, U., &amp; Biswas, U. (2022). A secure blockchain enabled v2v communication system using smart contracts. IEEE Transactions on Intelligent Transportation Systems, 24(4), 4651-4660. <br/>
+<a href="#/2/10">[19]</a> Zhang, S., Zheng, K., &amp; Wang, B. (2024). A V2V electricity transaction scheme with privacy protection based on the Internet of vehicles and consortium blockchain. International Journal of Electrical Power &amp; Energy Systems, 157, 109789.<br/>
+<text style="font-size:27px"><a href="#/2/11">[20]</a>Chen, Yuling, et al. "Energy trading scheme based on consortium blockchain and game theory." Computer Standards &amp; Interfaces 84 (2023): 103699.</text> <br/>
+<text style="font-size:27px"> <a href="#/2/11">[21]</a> Wang, B., Shi, Z., &amp; Zhang, S. (2024). A Charging and Discharging Data Privacy Protection Scheme for V2G Networks Based on Cloud–Fog-End. Applied Sciences, 14(10), 4096. </text></p></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">请老师同学指正批评！</h1></div></div></div></section></section>
+        </div>
+    </div>
+
+    <script src="./static/reveal/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+
+            width: 1024, height: 768,
+
+            slideNumber: 'c/t',
+            controlsTutorial: false,
+            progress: false,
+            hash: true,
+            center: false,
+            autoAnimateUnmatched: true,
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.3,
+            transitionSpeed: 'fast'
+        });
+    </script>
+</body>
+
+</html>
