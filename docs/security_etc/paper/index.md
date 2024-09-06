@@ -26,12 +26,15 @@ comments: true
 
 > 基于xxx和 xxx的xx研究 （三个创新点）
 
-车联网(IoV) : 
+车联网(IoV) & V2V : 
 
 - V2V communication安全: 基于区块链的安全V2V通信方案
 - 匿名身份认证方案: 具有匿名身份隐私保护的V2V matching方案
+      * 声誉评估(POR) 
+      * 智能合约SC、基于Game theory的双向拍卖机制
 - 区块链网络中改进xxx: 基于雾计算的轻量级数据聚合隐私保护方案
 - 用户身份认证(User authentication): 
+- 高效支付(Payment)
 
 
 ## 可能所需知识
