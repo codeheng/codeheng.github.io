@@ -26,15 +26,16 @@ comments: true
 
 > 基于xxx和 xxx的xx研究 （三个创新点）
 
-车联网(IoV) & V2V : 
+智能网联汽车(Intelligent Connected Vehicles,ICVs)/ & V2V : 
 
+- 电动汽车智能网联化 --> 智能网联(车联网)环境下电动汽车的
 - V2V communication安全: 基于区块链的安全V2V通信方案
 - 匿名身份认证方案: 具有匿名身份隐私保护的V2V matching方案
       * 声誉评估(POR) 
       * 智能合约SC、基于Game theory的双向拍卖机制
 - 区块链网络中改进xxx: 基于雾计算的轻量级数据聚合隐私保护方案
 - 用户身份认证(User authentication): 
-- 高效支付(Payment)
+- 高效支付(Payment) 
 
 
 ## 可能所需知识
@@ -72,7 +73,6 @@ comments: true
 - online/offline Computing
     * offline: 某部分输入未知时，完成 **大部分** 计算
     * online：在输入全弄清后，只需 **轻量** 计算
-
 
 !!! Quote "来自——[郭福春.致我公钥密码研究生的一封信](https://documents.uow.edu.au/~fuchun/jow/001-revisited.pdf)"
     目前从事科研，不代表毕业了你这辈子就一定要跟科研打交道。这一段时间的认真学习，让你学到的是思考的方法(自己发现问题、解决问题)和态度习惯(枯燥但能坚持下来的态度)
