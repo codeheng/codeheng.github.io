@@ -15,6 +15,7 @@ comments: true
 ## 背景方向
 - V2G & V2V
     - 充放电隐私(charge and discharge)
+    - 隐私保护数据发布(Privacy-preserving data publication)
 - [车路云](https://www.tsinghua.edu.cn/info/1182/109825.htm)(导师群里分享——"场景描述清楚，容易创新") PS: [视频介绍](https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&vd_source=41a19477b1cd284eb33c00c0aae3f725)， [白皮书](https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf)
 - 能源互联网EI
     - P2P能源交易: energy transaction matching（能源交易匹配）
@@ -66,7 +67,8 @@ IoEV中实现能源和电力最大合理化 （充放电管理——能量交易
     - 聚合签名 --> **无证书聚合签名**(CLAS) --> 无配对无证书聚合签名(PCAS)
           - Pairing-free certificateless aggregate signature 
     - Conditional Privacy-Preserving Certificateless Signature(CPP-CLS)
-- Paillier同态加密
+    - 盲签名(用于认证)：允许请求者获得隐藏消息内容的签名者的消息签名
+- Paillier同态加密（部分同态加密）：用于V2G网络数据聚合
 - Anonymization(匿名化)： 
 - ~~双线性映射~~（计算开销大） --> pairing-free
 - **ECC** --> ECDLP
