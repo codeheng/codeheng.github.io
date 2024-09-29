@@ -87,6 +87,7 @@ IoEV中实现能源和电力最大合理化 （充放电管理——能量交易
     - 多个不同对象：
         * Signcryption(签密)：将加密和签名结合，在一个逻辑步骤内进行实现
         * 异构签密:  允许双方在不改变各自现有安全基础设施的前提下实现安全通信
+    - Batch Verification  
 - The pseudonym mechanism(假名) + ZKP
 - ~~差分隐私(DP)、联邦学习(federated learning)~~
 - online/offline Computing
@@ -110,3 +111,4 @@ IoEV中实现能源和电力最大合理化 （充放电管理——能量交易
 - [Computer & Industrial Engineering](https://www.sciencedirect.com/journal/computers-and-industrial-engineering)
 - [IEEE TRANSACTIONS ON POWER DELIVERY](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=61)
 - [IEEE Transactions on Smart Grid](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411)
+
