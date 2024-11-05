@@ -17,13 +17,13 @@ comments: true
     - 充放电隐私(charge and discharge)
     - 隐私保护数据发布(Privacy-preserving data publication)
 - [车路云](https://www.tsinghua.edu.cn/info/1182/109825.htm)(导师群里分享——"场景描述清楚，容易创新") PS: [视频介绍](https://www.bilibili.com/video/BV1V1421y7n3/?spm_id_from=333.337.search-card.all.click&vd_source=41a19477b1cd284eb33c00c0aae3f725)， [白皮书](https://13115299.s21i.faiusr.com/61/1/ABUIABA9GAAgzKiYngYo_oOy7AY.pdf)
-- 能源互联网EI
+- ~~能源互联网EI~~
     - P2P能源交易: energy transaction matching（能源交易匹配）
         - 将买方和卖方的交易需求进行匹配的过程
 - **车联网** --> internet of vehicles(VANET)
       -  charging 、bidding、auction
-- Intelligent vehicle(IV)、electric vehicle(EV)
-- **smart grid**: privacy protection、identity authentication、secure data aggregation、grid billing 
+- ~~Intelligent vehicle(IV)~~、electric vehicle(EV)
+- ~~**smart grid**~~: privacy protection、identity authentication、secure data aggregation、grid billing 
 
 > 基于xxx和 xxx的xx研究 （三个创新点）
 
@@ -37,7 +37,7 @@ comments: true
 - 用户身份认证(User authentication): 
 - 高效支付(Payment) 
 
-**智能网联电动汽车能源交易隐私保护的研究**
+**智能网联电动汽车能源交易隐私保护的研究**  -->  车联网环境下V2V电力交易的隐私保护研究
 
 - 车辆连接IoEV进行身份认证 --> 安全认证方案（Schnorr）
     * 智能网联电动汽车下匿名认证方案方案
