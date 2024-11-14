@@ -10,7 +10,7 @@ comments: true
 - 收缩压: 心脏把血液经由左心室从主动脉打出来的那瞬间血管壁所承受的压力(血压的最大值)
 - 舒张压: 心脏在舒张让血液流回右心房时血管所承受的压力(血压的最小值)
 
-高血压是[动脉粥样硬化](https://www.mayoclinic.org/zh-hans/diseases-conditions/arteriosclerosis-atherosclerosis/symptoms-causes/syc-20350569)的三大危险因子之一，吸烟对血管的是化学性伤害，而高血压则是物理性的
+高血压是[动脉粥样硬化](https://www.mayoclinic.org/zh-hans/diseases-conditions/arteriosclerosis-atherosclerosis/symptoms-causes/syc-20350569)的三大危险因子之一，吸烟对血管是化学性伤害，而高血压则是物理性的
 
 正常范围如下:  -->  [参看中国标准](https://www.bjhd.gov.cn/ztzx/2022/zwxmt/msgz/202211/t20221116_4563515_m.shtml#:~:text=%E6%88%91%E5%9B%BD%E9%AB%98%E8%A1%80%E5%8E%8B%E8%AF%8A%E6%96%AD%E6%A0%87%E5%87%86,%E5%88%B0%E5%A6%82%E4%BB%8A%E7%9A%84130%2F80mmHg%E3%80%82)
 

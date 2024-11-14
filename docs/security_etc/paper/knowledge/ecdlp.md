@@ -24,9 +24,11 @@ comments: true
 
 **关于椭圆曲线**: 可写成$y^2 = x^3 + ax + b$的形式。已知曲线上的两点，第三点可以通过椭圆曲线与经过这两点的直线相交得到 （如下图）
 
+![](./assets/ecc.jpg)
+
 > 关于其 **标准定义** ([参考](https://mathworld.wolfram.com/EllipticCurve.html))：一条椭圆曲线是由一组被$y^2 = x^3 + ax + b$定义的且满足$4a^3 + 27b^2 \neq 0$的点集，后面限定条件是为了保证曲线不包含奇点
 
-![椭圆曲线](http://blog.hubwiz.com/2020/06/16/elliptic-curve-intro/shoot.gif)
+![椭圆曲线](./assets/ecdlp.gif)
 
 上图所示，A + B得C，再A + C得到D，再A+D得到E。若AB重合(即在某一点做切线)，则会交曲线于一点，做垂线交于曲线上可得到2A，然后A+2A按照上述过程，可得到3A,4A....此过程称为dot运算(椭圆曲线乘法) 
 
