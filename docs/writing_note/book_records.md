@@ -1,7 +1,6 @@
 ---
 comments: true
 ---
-
 ## [霍乱时期的爱情](https://m.douban.com/book/subject/10594787/)
 
 ——author：[马尔克斯](https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%A4%AB%E5%88%97%E5%B0%94%C2%B7%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF)即百年孤独的作者
