@@ -18,7 +18,6 @@ comments: true
 - 24-05-11——"A Charging and Discharging Data Privacy Protection Scheme for V2G Networks Based on Cloud–Fog-End" 
 
 
-
 **IEEE Systems Journal：**
 
 - 24-01-18——"A Secure and Efficient Pairing-Free Certificateless Aggregate Signcryption Scheme for V2G Networks" 
@@ -30,3 +29,8 @@ comments: true
 **International Journal of Electrical Power & Energy Systems** : 
 
 - 24-01-09——"A V2V electricity transaction scheme with privacy protection based on the Internet of vehicles and consortium blockchain" 
+
+**Electric Power Systems Research**
+
+- 24-10-15——"A privacy protection scheme to resist ring selection attack in peer-to-peer double auction V2V electricity transaction for charging stations"
+
