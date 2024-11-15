@@ -60,6 +60,7 @@ nav:
     - Linux: 
       - 基础: core_knowledge/linux/1-basic.md
     - C++:
+      - core_knowledge/language/c++/index.md
       - CS106L:
         - 基础: core_knowledge/language/c++/cs106l/1-intro.md
     - Lab:

@@ -4,7 +4,10 @@ comments: true
 
 # 关于我
 
-我叫黄一恒，来自山东菏泽，00年
+!!! success "座右铭"
+    I know that I know nothing. ——Plato
+
+来自山东，00年，INFJ  **（TO BE CONTINUED）**
 
 ### 联系我
 
