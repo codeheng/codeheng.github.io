@@ -245,6 +245,10 @@
          <lastmod>2024-11-16</lastmod>
     </url>
     <url>
+         <loc>http://codeheng.github.io/mess/tool/</loc>
+         <lastmod>2024-11-16</lastmod>
+    </url>
+    <url>
          <loc>http://codeheng.github.io/mess/vscode/</loc>
          <lastmod>2024-11-16</lastmod>
     </url>
@@ -421,11 +425,7 @@
          <lastmod>2024-11-16</lastmod>
     </url>
     <url>
-         <loc>http://codeheng.github.io/security_etc/paper/tool/miracl/</loc>
-         <lastmod>2024-11-16</lastmod>
-    </url>
-    <url>
-         <loc>http://codeheng.github.io/security_etc/paper/tool/pcb/</loc>
+         <loc>http://codeheng.github.io/security_etc/paper/tool/lib/</loc>
          <lastmod>2024-11-16</lastmod>
     </url>
     <url>

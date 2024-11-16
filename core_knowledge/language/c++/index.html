@@ -3805,8 +3805,6 @@
       
         
       
-        
-      
     
     
       
@@ -3824,7 +3822,7 @@
             
   
   <span class="md-ellipsis">
-    工具
+    实验
   </span>
   
 
@@ -3834,7 +3832,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6_5">
             <span class="md-nav__icon md-icon"></span>
-            工具
+            实验
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3845,32 +3843,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../security_etc/paper/tool/miracl/" class="md-nav__link">
+      <a href="../../../security_etc/paper/tool/lib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Miracl密码库
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../security_etc/paper/tool/pcb/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PCB库
+    库
   </span>
   
 
@@ -3947,6 +3924,8 @@
       
         
       
+        
+      
     
     
       
@@ -3986,6 +3965,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mess/tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -4972,12 +4972,50 @@
 
 <h1 id="_1">介绍</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 24 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间不到 1 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 222 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 1 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>C++不是做业务开发，适合做和OS贴近比较近的那层</p>
+<ul>
+<li>量化、安全、高性能、CDN、游戏服务、自动驾驶、基础架构、推荐算法、虚拟化、dpdk网络、存储、流媒体服务器、金融业务</li>
+<li>（垂直领域）</li>
+</ul>
+<p><strong>C/CPP 结合一门GC语言 e.g Go</strong></p>
 </div>
+<ol>
+<li>语言特性<ul>
+<li>数据结构和算法 &amp; 各种设计模式 </li>
+<li>库：STL、C++新特性 </li>
+<li>Linux工程：Makefile/Cmake、git/Svn、htop/top、netstat、tcpdump、iperf </li>
+</ul>
+</li>
+<li>网络<ul>
+<li>网络编程：socket、IO多路复用select/poll/epoll、多进/线程、(非)阻塞、同步异步<ul>
+<li>网络框架如何实现？</li>
+</ul>
+</li>
+<li>网络原理：ethernet、ip、udp/tcp、http<ul>
+<li>TCP协议栈如何实现呢？  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基础组件<ul>
+<li>内存池、线程池等等、原子操作、ringbuffer....</li>
+</ul>
+</li>
+<li>中间件<ul>
+<li>MySQL、Redis、Nginx、grpc、Message Queue(MQ)</li>
+</ul>
+</li>
+<li>框架(适配行业)<ul>
+<li>workflow(网络范式)、spdk(存储)、openresty(CDN)、dpdk(网络)、cuda(GPU)</li>
+</ul>
+</li>
+<li>DevOps云原生：docker &amp; K8S</li>
+<li>性能分析 &amp; 分布式</li>
+</ol>
 
 
 
