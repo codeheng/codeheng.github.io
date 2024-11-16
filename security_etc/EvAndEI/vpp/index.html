@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3501,16 +3510,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5006,16 +5013,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5066,31 +5071,31 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 979 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 3 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
-<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">介绍</h2>
 <blockquote>
 <p><strong>虚拟电厂(virtual power plant，VPP)</strong> :  是一种通过先进信息通信技术和软件系统，实现 <ins>分布式电源、储能系统、可控负荷、微网、电动汽车</ins> 等分布式能源资源的 <strong>聚合和协调协同优化</strong>，以作为一个特殊电厂参与电力市场和电网运行的电源协调管理系统。</p>
 </blockquote>
 <ul>
 <li>虚拟电厂具有与电厂类似的功能，但没有传统意义上的厂房，故称"虚拟电厂"</li>
 </ul>
-<p><img alt="示意图" src="https://stcn-main.oss-cn-shenzhen.aliyuncs.com/upload/wechat/20230825/20230825202034_64e89c921d6fa.png" /></p>
+<p><a class="glightbox" href="https://stcn-main.oss-cn-shenzhen.aliyuncs.com/upload/wechat/20230825/20230825202034_64e89c921d6fa.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="示意图" src="https://stcn-main.oss-cn-shenzhen.aliyuncs.com/upload/wechat/20230825/20230825202034_64e89c921d6fa.png" /></a></p>
 <p>Q: <strong>为何推出虚拟电厂?</strong>  &rarr; 电力供需两端的结构变化，使当下电力系统调峰能力备受挑战</p>
 <ul>
 <li>供给端: 新能源占比不断提升, <ins>风光发电随机性、间歇性和波动性的特点</ins> 对电力系统灵活调节能力提出更高要求</li>
 <li>需求侧: 产业结构持续调整, 用电侧日内负荷的最高值与峰谷差都在不断增大,电力系统调峰能力迎来挑战</li>
 </ul>
-<p><img alt="vpp" src="../assets/vpp.jpg" /></p>
+<p><a class="glightbox" href="../assets/vpp.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="vpp" src="../assets/vpp.jpg" /></a></p>
 <ul>
 <li><a href="https://www.bilibili.com/list/watchlater?oid=941728135&amp;bvid=BV1CW4y1a7Uz&amp;spm_id_from=333.1007.top_right_bar_window_view_later.content.click">视频参考</a></li>
 </ul>
 <p>中国将虚拟电厂中所涉及的主体及运转原理总结成: 
-<img alt="img" src="https://pnpadmin.huasou.cn/public/static/images/2022-05-25/628e2218a684b.png" /></p>
+<a class="glightbox" href="https://pnpadmin.huasou.cn/public/static/images/2022-05-25/628e2218a684b.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="https://pnpadmin.huasou.cn/public/static/images/2022-05-25/628e2218a684b.png" /></a></p>
 <p>虚拟电厂通过链接 <ins>聚合商、微电网，以及它们所辖的各类负荷、储能、微电网、电动汽车、分布式电源</ins> 等参与电力市场交易已获利，同时帮助电力市场平和调节。<strong>既可作为"正电厂"向系统供电或控制可调负荷调峰;又可作为"负电厂"加大负荷消纳,配合系统填谷</strong></p>
 <p>虚拟电厂能发展起来是以三类资源的发展为前提的: </p>
 <ul>
 <li><strong>一是可调（可中断）负荷，二是分布式能源，三是储能</strong></li>
 </ul>
-<h2 id="_2">摘自论文—<a href="https://www.researchgate.net/profile/Mingyang-Li-49/publication/286044094_Review_on_virtual_power_plants/links/5b8ce90a92851c1e1243f96b/Review-on-virtual-power-plants.pdf">虚拟发电厂研究综述</a>(刘吉臻)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">摘自论文—<a href="https://www.researchgate.net/profile/Mingyang-Li-49/publication/286044094_Review_on_virtual_power_plants/links/5b8ce90a92851c1e1243f96b/Review-on-virtual-power-plants.pdf">虚拟发电厂研究综述</a>(刘吉臻)</h2>
 <p><strong>狭义来说</strong> ：VPP是一组电源的聚合体（可以是火电机组，也可以是风电、太阳能发电等新能源机组，还可以是电力的储能装置），这些机组/装置不直接受电网运行调度中心的控制，而是听于VPP控制中心。<strong>通过该中心以一个整体的形式参与到电网的运行和调度中</strong></p>
 <p><strong>广义来说</strong>：VPP不仅限于发电侧各发电单元的聚合，还能与用电侧的可控负荷和DR(需求响应)结合起来，将发电和用电两端的一些个体或单元组成一个虚拟的整体参与到电网的运行于调度当中</p>
 <p>虚拟发电厂结构区别于传统电厂的典型特征在于地域分布上的分散性与运行调度上的协同性</p>
@@ -5104,7 +5109,7 @@
 <li>电力市场中的经营能力</li>
 </ul>
 <p>VPP的运行控制整体结构可以分为 <ins>集中控制、集中–分散控制和完全分散控制</ins> 三种</p>
-<h2 id="_3"><a href="https://www.bilibili.com/video/BV1NG411Z7bB/?spm_id_from=trigger_reload&amp;vd_source=41a19477b1cd284eb33c00c0aae3f725">虚拟电厂 &amp; 微电网</a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3"><a href="https://www.bilibili.com/video/BV1NG411Z7bB/?spm_id_from=trigger_reload&amp;vd_source=41a19477b1cd284eb33c00c0aae3f725">虚拟电厂 &amp; 微电网</a></h2>
 <blockquote>
 <p>微电网(Micro-Grid)又称微网，本质上是一个 <strong>微小发配用电网络</strong> ，由 <ins>分布式发电(DG)、储能装置、能量转换装置、相关负荷和监控、保护装置</ins> 汇集而成的小型发电系统，是一个能够实现自我控制、保护和管理的自治系统，既可以于外部电网并网运行，也可以孤立运行<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 </blockquote>
@@ -5395,7 +5400,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5407,5 +5412,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

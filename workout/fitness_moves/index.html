@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4879,16 +4888,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5079,16 +5086,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5214,9 +5219,9 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 882 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 7 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
-<p><img alt="" src="../assets/%E4%BA%BA%E4%BD%93%E8%82%8C%E8%82%89%E5%88%86%E5%B8%83.png" /></p>
-<h2 id="_1">胸<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><img alt="胸" src="../assets/%E8%83%B8%E8%82%8C.png" /></p>
+<p><a class="glightbox" href="../assets/%E4%BA%BA%E4%BD%93%E8%82%8C%E8%82%89%E5%88%86%E5%B8%83.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/%E4%BA%BA%E4%BD%93%E8%82%8C%E8%82%89%E5%88%86%E5%B8%83.png" /></a></p>
+<h2 id="_1">胸</h2>
+<p><a class="glightbox" href="../assets/%E8%83%B8%E8%82%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="胸" src="../assets/%E8%83%B8%E8%82%8C.png" /></a></p>
 <p>胸大肌最主要的而两个功能：肩前屈、水平内收</p>
 <div class="admonition note">
 <p class="admonition-title">动作</p>
@@ -5232,8 +5237,8 @@
 <p>上胸：<strong>上斜卧推</strong>、<strong>龙门架上斜夹胸</strong>(手臂要外展开)</p>
 <p>下胸复合型动作：双杠臂屈伸 （下胸垂直地面，握距打开，肘关节向两边走）</p>
 </div>
-<h2 id="_2">背<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><img alt="back" src="https://pica.zhimg.com/70/v2-45bdc72779e94173fadf5b1309595fc5_1440w.avis?source=172ae18b&amp;biz_tag=Post" /></p>
+<h2 id="_2">背</h2>
+<p><a class="glightbox" href="https://pica.zhimg.com/70/v2-45bdc72779e94173fadf5b1309595fc5_1440w.avis?source=172ae18b&amp;biz_tag=Post" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="back" src="https://pica.zhimg.com/70/v2-45bdc72779e94173fadf5b1309595fc5_1440w.avis?source=172ae18b&amp;biz_tag=Post" /></a></p>
 <p>背阔肌的主要功能是使肩部伸展、内收、内旋</p>
 <ul>
 <li>从上往下拉、从前向后拉、从斜下向斜上拉、从地面往起拉 </li>
@@ -5243,9 +5248,9 @@
 <p>引体向上、高位下拉、坐姿划船、直臂下压</p>
 <p>单臂哑铃俯身划船，对握高位斜拉</p>
 </div>
-<h2 id="_3">肩膀<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">肩膀</h2>
 <p>即主要针对三角肌</p>
-<p><img alt="三角肌参考图" src="../assets/%E4%B8%89%E8%A7%92%E8%82%8C.png" /> </p>
+<p><a class="glightbox" href="../assets/%E4%B8%89%E8%A7%92%E8%82%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="三角肌参考图" src="../assets/%E4%B8%89%E8%A7%92%E8%82%8C.png" /></a> </p>
 <p><strong>分为三部分：</strong></p>
 <ol>
 <li>
@@ -5275,9 +5280,9 @@
 <p>前束： 正手哑铃前平举 </p>
 <p>中束： 哑铃侧平举(哑铃飞鸟)</p>
 </div>
-<h2 id="_4">手臂<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">肱三头肌<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../assets/%E8%82%B1%E4%B8%89%E5%A4%B4%E8%82%8C.png" /></p>
+<h2 id="_4">手臂</h2>
+<h3 id="_5">肱三头肌</h3>
+<p><a class="glightbox" href="../assets/%E8%82%B1%E4%B8%89%E5%A4%B4%E8%82%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/%E8%82%B1%E4%B8%89%E5%A4%B4%E8%82%8C.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">动作</p>
 <p><strong>长头:</strong> 哑铃颈后臂屈伸、俯身哑铃臂屈伸 </p>
@@ -5286,8 +5291,8 @@
 <li>臂打开，肘向外，俯身，绳索向外划。不要肩内收和肩后伸，而是肩向外展</li>
 </ul>
 </div>
-<h3 id="_6">肱二头肌<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../assets/%E8%82%B1%E4%BA%8C%E5%A4%B4%E8%82%8C.jpg" /></p>
+<h3 id="_6">肱二头肌</h3>
+<p><a class="glightbox" href="../assets/%E8%82%B1%E4%BA%8C%E5%A4%B4%E8%82%8C.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/%E8%82%B1%E4%BA%8C%E5%A4%B4%E8%82%8C.jpg" /></a></p>
 <blockquote>
 <p>屈肘由肱二头肌、肱肌和肱桡肌共同完成</p>
 </blockquote>
@@ -5304,14 +5309,14 @@
 <p>绳索锤式弯举  &rarr; 肱肌</p>
 <p>龙门正直杆正握弯举  &rarr; 肱桡肌</p>
 </div>
-<h2 id="_7">腹肌<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../assets/%E8%85%B9%E8%82%8C.png" /></p>
+<h2 id="_7">腹肌</h2>
+<p><a class="glightbox" href="../assets/%E8%85%B9%E8%82%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/%E8%85%B9%E8%82%8C.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">动作</p>
 <p><strong>悬垂举腿YYDS！！！</strong></p>
 <p>卷腹</p>
 </div>
-<h2 id="_8">臀腿<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_8">臀腿</h2>
 <div class="admonition note">
 <p class="admonition-title">动作</p>
 <ul class="task-list">
@@ -5319,7 +5324,7 @@
 </ul>
 <p>深蹲以及后脚抬高蹲(保加利亚深蹲)、器械腿屈伸 + 髋外展和髋内收器械 + 臀桥</p>
 </div>
-<h2 id="_9">长远目标<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_9">长远目标</h2>
 <ol class="task-list">
 <li><strong>好身材、好情绪、好身体</strong></li>
 <li>
@@ -5337,7 +5342,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="_10">街健<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">街健</h3>
 <p><strong>多强化重视基础：</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 标准引体至少10个<ul class="task-list">
@@ -5654,7 +5659,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5666,5 +5671,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

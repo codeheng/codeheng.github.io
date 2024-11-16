@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4016,9 +4025,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -4027,7 +4034,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5176,9 +5183,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -5187,7 +5192,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5401,12 +5406,12 @@
                   
 
 
-<h1 id="markdown">Markdown<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h1>
+<h1 id="markdown">Markdown</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1803 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 103 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 7 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 7 分钟</p>
 </div>
 <p><a href="https://www.bilibili.com/video/BV1pu4y1j7kA/?spm_id_from=333.999.0.0">参考视频</a></p>
-<h2 id="1">1. 介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1">1. 介绍</h2>
 <p><a href="https://spec.commonmark.org/">Markdown CommonMark 标准文档</a>
 <strong>什么是Markdown？</strong></p>
 <ul>
@@ -5421,9 +5426,9 @@
 <li>所有的最终视觉上的效果都由HTML + CSS 决定的</li>
 </ul>
 </blockquote>
-<p><img alt="image-20231223190035181" src="../assets/image-20231223190035181.png" /></p>
-<h2 id="2">2. 语法概述<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<h3 id="_1">标题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../assets/image-20231223190035181.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image-20231223190035181" src="../assets/image-20231223190035181.png" /></a></p>
+<h2 id="2">2. 语法概述</h2>
+<h3 id="_1">标题</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>#</code> + 空格(开头)，后跟内容
@@ -5437,7 +5442,7 @@ Ps:  # 和标题间至少一个空格</p>
 </ul>
 </li>
 </ul>
-<h3 id="_2">段落<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">段落</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -5452,7 +5457,7 @@ Ps:  # 和标题间至少一个空格</p>
 <li>但是在代码块中，空格会被保留</li>
 <li>使用多个空格可以使用<code>&amp;nbsp; &amp;emsp;</code>等 HTML语法</li>
 </ul>
-<h3 id="_3">引言<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">引言</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>一个 <code>&gt;</code> 加一个空格后面跟内容</p>
@@ -5461,8 +5466,8 @@ Ps:  # 和标题间至少一个空格</p>
 <li>内部可任意嵌套并使用MD语法</li>
 <li>连续的<code>&gt;</code>属于同一引言， 使用Enter来进行退出</li>
 </ul>
-<h3 id="_4">列表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<h4 id="_5">无序列表<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_4">列表</h3>
+<h4 id="_5">无序列表</h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>- + *</code> 后加空格再跟内容</p>
@@ -5478,12 +5483,12 @@ Ps:  # 和标题间至少一个空格</p>
     + 第二层
 <span class="k">*</span><span class="w"> </span>第一层
 </code></pre></div>
-<h4 id="_6">有序列表<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h4 id="_6">有序列表</h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>数字加点(.) 后接空格 再接内容</p>
 </div>
-<h3 id="_7">分割线 &amp; 代码块<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">分割线 &amp; 代码块</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>使用<code>* - _</code> 中任意一个字符重复至少三次</p>
@@ -5497,7 +5502,7 @@ PS : 分割线上下最好都加空行</p>
 <li> ' 或~ 后面可以加语言名称，可进行高亮</li>
 </ul>
 </div>
-<h3 id="_8">行内标记<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_8">行内标记</h3>
 <p><div class="highlight"><pre><span></span><code><span class="ge">*斜体*</span>         <span class="ge">_也是斜体_</span>  
 <span class="gs">**粗体**</span>      <span class="gs">__也是粗体__</span>
 ***粗斜体***   ___也是粗斜体___
@@ -5506,7 +5511,7 @@ PS : 分割线上下最好都加空行</p>
 &lt;u&gt;下划线&lt;/u&gt;
 </code></pre></div>
 若要显示原本用于格式化 Markdown 文档的字符，在字符前面添加反斜杠字符 \ 。</p>
-<h3 id="_9">插入图片和链接<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">插入图片和链接</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>![图片描述](图片位置/URL)</code></p>
@@ -5526,8 +5531,8 @@ PS : 分割线上下最好都加空行</p>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div></p>
-<h2 id="3">3.  扩展语法<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<h3 id="_10">表格<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h2 id="3">3.  扩展语法</h2>
+<h3 id="_10">表格</h3>
 <p><div class="highlight"><pre><span></span><code>| Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here&#39;s this   |
@@ -5557,7 +5562,7 @@ PS : 分割线上下最好都加空行</p>
 </table>
 <p>在标题行中的连字符左侧，右侧或两侧添加冒号<code>:</code> 将列中的文本对齐到左，右或居中</p>
 <p>仅可处理简单的表格，<a href="https://www.tablesgenerator.com/">关于复杂的表格</a></p>
-<h3 id="_11">脚注<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_11">脚注</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>使用[^脚注名]插入脚注</p>
@@ -5568,7 +5573,7 @@ PS : 分割线上下最好都加空行</p>
 <li>最终的编号一般由在**文中出现的顺序**决定</li>
 </ul>
 <p>PS: <a href="#jump">详见PY&amp;MD</a></p>
-<h3 id="_12">任务列表<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_12">任务列表</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>使用<code>- [  ]</code> 插入未完成任务 ; 使用<code>- [x]</code>  插入未完成任务</p>
@@ -5585,13 +5590,13 @@ PS : 分割线上下最好都加空行</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> to do list</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> finished</li>
 </ul>
-<h3 id="_13">公式<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h3 id="_13">公式</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>一般使用一对$作为行内公式标记，一对$$作为块级公式标记</p>
 </div>
 <p>关于公式处理的一切都不在 markdown-&gt;<abbr title="Hyper Text Markup Language">HTML</abbr> 的过程中,如图所示:</p>
-<p><img alt="" src="../assets/Snipaste_2023-12-24_14-33-53.jpg" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-12-24_14-33-53.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-12-24_14-33-53.jpg" /></a></p>
 <ul>
 <li>
 <p><abbr title="Hyper Text Markup Language">HTML</abbr> 保留公式文本，交给<a href="https://www.mathjax.org/">MathJax</a>或<a href="https://katex.org/">KaTex</a>等 js库来处理</p>
@@ -5603,13 +5608,13 @@ PS : 分割线上下最好都加空行</p>
 </ul>
 <p>Ps: 关于流程图 / 时序图 / 甘特图.. 
 -&gt; 参考<a href="https://mermaid.js.org/intro/">mermaid.js</a></p>
-<h2 id="4markdown">4.markdown编辑器<a class="headerlink" href="#4markdown" title="Permanent link">&para;</a></h2>
+<h2 id="4markdown">4.markdown编辑器</h2>
 <ul>
 <li><a href="https://typora.io/">Typora</a> （收费$ 14.99）</li>
 <li><a href="https://code.visualstudio.com/">VsCode</a> + <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a> （推荐🌹）</li>
 <li><a href="https://obsidian.md/">Obsidian</a> （据说很强大，还没详细用过）</li>
 </ul>
-<h2 id="5-mkdocs">5. 关于mkdocs<a class="headerlink" href="#5-mkdocs" title="Permanent link">&para;</a></h2>
+<h2 id="5-mkdocs">5. 关于mkdocs</h2>
 <blockquote>
 <p>基于 python 的静态网站生成器，适合笔记本 / 文档类网站</p>
 </blockquote>
@@ -5626,7 +5631,7 @@ $<span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w">    
 $<span class="w"> </span>mkdocs<span class="w"> </span>build<span class="w">       </span><span class="c1"># 构建</span>
 $<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy<span class="w">   </span><span class="c1"># 部署</span>
 </code></pre></div></p>
-<h3 id="python-markdown"><a href="https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=abbr#abbreviations:~:text=CodeHilite-,Python%20Markdown,%C2%B6,-Material%20for%20MkDocs">Python Markdown</a><a class="headerlink" href="#python-markdown" title="Permanent link">&para;</a></h3>
+<h3 id="python-markdown"><a href="https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=abbr#abbreviations:~:text=CodeHilite-,Python%20Markdown,%C2%B6,-Material%20for%20MkDocs">Python Markdown</a></h3>
 <p>关于MD在mkdocs里面的一些特殊用法，即支持的Extensions</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5727,7 +5732,7 @@ Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> do
 </div>
 <div class="tabbed-block">
 <p><figure markdown>
-    <img alt="Image title" src="https://dummyimage.com/600x400/" width="300" />
+    <a class="glightbox" href="https://dummyimage.com/600x400/" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="https://dummyimage.com/600x400/" width="300" /></a>
     <figcaption>Image caption</figcaption>
 </figure></p>
 </div>
@@ -6236,7 +6241,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -6248,5 +6253,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

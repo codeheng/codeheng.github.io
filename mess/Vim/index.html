@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4037,9 +4046,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -4048,7 +4055,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5074,9 +5081,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -5085,7 +5090,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5197,7 +5202,7 @@
                   
 
 
-<h1 id="vim">Vim<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
+<h1 id="vim">Vim</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1284 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 3 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
@@ -5218,7 +5223,7 @@
 </li>
 </ul>
 <p>Vim 起源于<a href="https://en.wikipedia.org/wiki/Vi_(text_editor)">Vi编辑器</a>(1976), Vim之父——<a href="https://en.wikipedia.org/wiki/Bram_Moolenaar">Bram Moolenaar</a> .RIP.</p>
-<h2 id="vim_1">Vim哲学<a class="headerlink" href="#vim_1" title="Permanent link">&para;</a></h2>
+<h2 id="vim_1">Vim哲学</h2>
 <p>因为在编程时，大多数时间是在阅读和编辑，而非在写。故Vim <strong>有多种操作模式</strong></p>
 <p><strong><em>一定要分清当前是处于什么模式下!</em></strong></p>
 <ul>
@@ -5227,13 +5232,13 @@
 <li>替换(Replace):用于替换文本</li>
 <li>可视化(Visual): 用于选择文本块</li>
 <li>命令行(Command-line): 用于执行命令
-<img alt="Vim模式转换" src="../assets/1j5qd2rcvkpivob871wm.png" /></li>
+<a class="glightbox" href="../assets/1j5qd2rcvkpivob871wm.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Vim模式转换" src="../assets/1j5qd2rcvkpivob871wm.png" /></a></li>
 </ul>
 <div class="admonition quote">
 <p class="admonition-title">The end result is an editor that can match the speed at which you think.</p>
 </div>
-<h2 id="vim_2">Vim基础<a class="headerlink" href="#vim_2" title="Permanent link">&para;</a></h2>
-<h3 id="_1">插入<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="vim_2">Vim基础</h2>
+<h3 id="_1">插入</h3>
 <blockquote>
 <p>在 Insert 和 Normal 模式下切换！</p>
 </blockquote>
@@ -5248,10 +5253,10 @@
 <li>按<code>o</code>可在 <strong>当前行的下一行</strong> 插入</li>
 <li>按<code>O</code>可在 <strong>当前行的上一行</strong> 插入</li>
 </ul>
-<h3 id="_2">移动光标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">移动光标</h3>
 <p>均要在普通模式下进行输入</p>
 <p>hjkl (对应←↓↑→)  , 也可以在前面加上数字 4e.g. <code>4j</code> 向下移动4行
-    <img alt="hjkl" src="../assets/Snipaste_2023-12-27_16-18-08.jpg" />
+    <a class="glightbox" href="../assets/Snipaste_2023-12-27_16-18-08.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hjkl" src="../assets/Snipaste_2023-12-27_16-18-08.jpg" /></a>
 PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难用，很不习惯，克服！！）</p>
 <ul>
 <li><code>0</code> 移动到当前行的 <strong>行头</strong></li>
@@ -5268,7 +5273,7 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <li><code>E</code> 移动到空白处之前的单词末尾</li>
 <li><code>b</code> 到上一个单词的 <strong>开头</strong>(jump backwards to the start of a word)</li>
 <li><code>B</code> 到上一个单词的开头(可包括标点符号)
-<img alt="" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&amp;id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&amp;spaceId=33208e54-ac5f-445e-8656-169c9506eefb&amp;width=1810&amp;userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&amp;cache=v2" /></li>
+<a class="glightbox" href="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&amp;id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&amp;spaceId=33208e54-ac5f-445e-8656-169c9506eefb&amp;width=1810&amp;userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&amp;cache=v2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F992bd57b-ff1a-4d43-b864-ce4067688dee%2FUntitled.png?table=block&amp;id=c8a080ac-b9fc-4c3e-b780-2d89a653a1f6&amp;spaceId=33208e54-ac5f-445e-8656-169c9506eefb&amp;width=1810&amp;userId=52c1fc70-e6d8-4217-beb4-1f25dd46f875&amp;cache=v2" /></a></li>
 </ul>
 </li>
 <li><code>%</code> 匹配括号<code>(),{},[]</code>移动, PS: 需要先把光标先移到括号上</li>
@@ -5276,7 +5281,7 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <li>Screen: <code>H</code> (top of screen), <code>M</code> (middle of screen), <code>L</code> (bottom of screen)</li>
 <li>Scroll: <code>Ctrl-u</code>(up), <code>Ctrl-d</code> (down)</li>
 </ul>
-<h3 id="_3">删除&amp;复制&amp;粘贴&amp;撤销<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">删除&amp;复制&amp;粘贴&amp;撤销</h3>
 <ul>
 <li><code>x</code>  删除当前光标所在的一个字符</li>
 <li><code>dd</code> 删除当前行，并把删除的行存到剪贴板里<ul>
@@ -5296,7 +5301,7 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 </ul>
 </li>
 </ul>
-<h3 id="_4">打开/保存/退出/改变文件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">打开/保存/退出/改变文件</h3>
 <ul>
 <li><code>:e &lt;path/to/file&gt;</code> 打开一个文件</li>
 <li><code>:wq</code> → 存盘 + 退出 (:w 存盘, :q 退出)</li>
@@ -5304,7 +5309,7 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <li><code>:qa!</code> 强行退出所有的正在编辑的文件，就算别的文件有更改</li>
 <li><code>:bn</code> 和 <code>:bp</code> → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件</li>
 </ul>
-<h3 id="_5">查找和替换<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">查找和替换</h3>
 <p>普通模式下 <code>/pattern</code> 查找搜索 pattern 的字符串</p>
 <ul>
 <li>若多个匹配项，按<code>n</code>匹配到下一个,按<code>N</code>找上一个字符串</li>
@@ -5318,8 +5323,8 @@ PS: <strong>不推荐用箭头，而是熟练用hjkl</strong>（开始会很难�
 <li>也可以制定范围，比如3~6行 &rarr; <code>:3,6 s/hello/world/ig</code></li>
 </ul>
 <p>全部替换：<code>:%s/[src][dst]</code> , 默认不区分大小写</p>
-<h2 id="vim_3">Vim 进阶<a class="headerlink" href="#vim_3" title="Permanent link">&para;</a></h2>
-<h3 id="visual">Visual模式（块操作）<a class="headerlink" href="#visual" title="Permanent link">&para;</a></h3>
+<h2 id="vim_3">Vim 进阶</h2>
+<h3 id="visual">Visual模式（块操作）</h3>
 <p>按<code>v</code>可视化选择状态，左下角出现VISUAL，选中块后，可以对块进行d(删除)，y(复制)，x(剪切)</p>
 <p><code>shift + v</code> 可选择一行，进行操作</p>
 <p><code>ctrl + v</code> 可进行竖向选择, 比如批量注释代码:</p>
@@ -5605,7 +5610,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5617,5 +5622,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

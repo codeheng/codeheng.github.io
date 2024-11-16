@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4766,16 +4775,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5013,16 +5020,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5086,14 +5091,14 @@
 <p class="admonition-title">Abstract</p>
 <p>父亲甚至爷爷奶奶多年高血压,<a href="https://www.youtube.com/watch?v=qEFnaCOmu5E&amp;ab_channel=%E5%BC%B5%E4%BF%AE%E4%BF%AE%E7%9A%84%E4%B8%8D%E6%AD%A3%E5%B8%B8%E4%BA%BA%E7%94%9FShosho%27sAbnormalLife">视频</a>中博主说到他父亲: <strong>为何吃得健康且运动仍有高血压?</strong></p>
 </div>
-<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">介绍</h2>
 <ul>
 <li>收缩压: 心脏把血液经由左心室从主动脉打出来的那瞬间血管壁所承受的压力(血压的最大值)</li>
 <li>舒张压: 心脏在舒张让血液流回右心房时血管所承受的压力(血压的最小值)</li>
 </ul>
 <p>高血压是<a href="https://www.mayoclinic.org/zh-hans/diseases-conditions/arteriosclerosis-atherosclerosis/symptoms-causes/syc-20350569">动脉粥样硬化</a>的三大危险因子之一，吸烟对血管是化学性伤害，而高血压则是物理性的</p>
 <p>正常范围如下:  &rarr;  <a href="https://www.bjhd.gov.cn/ztzx/2022/zwxmt/msgz/202211/t20221116_4563515_m.shtml#:~:text=%E6%88%91%E5%9B%BD%E9%AB%98%E8%A1%80%E5%8E%8B%E8%AF%8A%E6%96%AD%E6%A0%87%E5%87%86,%E5%88%B0%E5%A6%82%E4%BB%8A%E7%9A%84130%2F80mmHg%E3%80%82">参看中国标准</a></p>
-<p><img alt="" src="../assets/blood_pressure.jpg" /></p>
+<p><a class="glightbox" href="../assets/blood_pressure.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/blood_pressure.jpg" /></a></p>
 <p><strong>若高压&gt;= 130 或者低压 &gt;= 80则处于第一型高血压范围</strong></p>
 <ul>
 <li>若存在高血压,则会一次性冲击到大脑、心脏、肾脏</li>
@@ -5102,14 +5107,14 @@
 <ul>
 <li>家庭中,每天起床和睡前,每静坐5min测一次,早晚各两次分别取平均</li>
 </ul>
-<h2 id="_2">高血压诱因<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">高血压诱因</h2>
 <ol>
 <li>睡眠呼吸终止症</li>
 <li>噪音/空气污染</li>
 <li>久坐不动</li>
 <li>不当处理自身的压力</li>
 </ol>
-<h2 id="_3">降血压方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">降血压方法</h2>
 <blockquote>
 <p>一定从改善生活习惯先入手!!!</p>
 </blockquote>
@@ -5123,7 +5128,7 @@
 <li>等长阻力训练,e.g. IRT(握力器)</li>
 <li>纯水断食(医疗监督下)</li>
 </ol>
-<h2 id="_4">自身血压记录<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">自身血压记录</h2>
 <table>
 <thead>
 <tr>
@@ -5425,7 +5430,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5437,5 +5442,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

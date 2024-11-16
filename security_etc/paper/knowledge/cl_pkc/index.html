@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3730,16 +3739,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5047,16 +5054,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5146,7 +5151,7 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1491 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
-<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">介绍</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>无证书公钥密码体制(certificateless public key cryptography，CL-PKC)</strong> 是在基于身份的公钥密码体制 (identity-based public key cryptography，ID-PKC)的基础上提出来的一种新型公钥密码体制<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
@@ -5180,7 +5185,7 @@
 <p class="admonition-title">补充</p>
 <p>无证书签密作为研究热点之一，它将 <strong>签名与加密</strong> 相结合，形成无证书签密方案以及无证书聚合签密方案，也有学者将 <strong><a href="https://zh.wikipedia.org/wiki/%E7%9B%B2%E7%AD%BE%E5%90%8D">盲签名技术</a></strong> 和CL-PKC相结合，提出了 <ins>无证书盲签名方案、无证书盲签密方案</ins> 等等</p>
 </div>
-<h2 id="ap">无证书加密定义（AP定义）<a class="headerlink" href="#ap" title="Permanent link">&para;</a></h2>
+<h2 id="ap">无证书加密定义（AP定义）</h2>
 <ol>
 <li>系统设置算法Setup: <span class="arithmatex">\((msk, params) \leftarrow 1^k\)</span></li>
 <li>提取部分私钥算法Extract-Partial-Private-Key：<span class="arithmatex">\(d_{ID} \leftarrow (params, msk, ID)\)</span><ul>
@@ -5211,7 +5216,7 @@
 <li>计算代价相对于模指数运算要高出很多</li>
 </ul>
 <p>如今更倾向于，比如：<strong>零知识证明、多方计算、同态加密</strong></p>
-<h3 id="_2">安全模型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">安全模型</h3>
 <p>无证书体制下 <strong>用户密钥的产生方式</strong> 决定了两类攻击者：</p>
 <ul>
 <li>Type I adversary: 是外部攻击者，可以选择替换任意合法的公钥，不持有用户部分私钥<ul>
@@ -5220,7 +5225,7 @@
 </li>
 <li>Type II adversary: 模拟恶意的KGC(拥有secret master key),即可以获得任何用户的部分私钥，但不可以替换用户公钥 </li>
 </ul>
-<h2 id="_3">无证书签名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">无证书签名</h2>
 <blockquote>
 <p>不需要像传统那样验证公钥的有效性  并且没有Based-ID密钥托管的问题</p>
 </blockquote>
@@ -5239,7 +5244,7 @@
 </ol>
 <p>PS : 安全模型同上——分为两类攻击者</p>
 <p>在普通无证书签名基础上，就可以研究特殊性质的无证书签名(如: 群/环签名、聚合签名、代理签名、不可否认签名等)</p>
-<h3 id="clas">无证书聚合签名(CLAS)<a class="headerlink" href="#clas" title="Permanent link">&para;</a></h3>
+<h3 id="clas">无证书聚合签名(CLAS)</h3>
 <blockquote>
 <p>聚合签名<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> : 把n个来自不同签名者对n个不同消息的签名，通过一种 <strong>有效算法</strong> 压缩成单个签名。持有聚合签名的验证人可通过 <strong>确定的验证算法</strong> 检验其有效性, 判定n个签名人对这n条消息的分别认可</p>
 <ul>
@@ -5267,7 +5272,7 @@
 </li>
 <li>Aggregate Verify: <span class="arithmatex">\(T/F \leftarrow (\Delta, \mathbb{U}, ID_i, pk_i, \sigma)\)</span></li>
 </ol>
-<h2 id="signcryption">签密(signcryption)<a class="headerlink" href="#signcryption" title="Permanent link">&para;</a></h2>
+<h2 id="signcryption">签密(signcryption)</h2>
 <blockquote>
 <p>签密把公钥加密和数字签名结合在一起</p>
 <p>In cryptography, <strong>signcryption</strong> is a public-key primitive that simultaneously performs the functions of both digital signature and encryption</p>
@@ -5571,7 +5576,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5583,5 +5588,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

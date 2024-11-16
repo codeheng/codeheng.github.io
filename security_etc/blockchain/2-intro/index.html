@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3016,16 +3025,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5015,16 +5022,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5084,11 +5089,11 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1318 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 4 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
-<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">概述</h2>
 <blockquote>
 <p><strong>区块链(BlockChain)</strong>: 有一个一个的Block，每个Block中包括着一组交易信息，然后，每一个Block都会有一个ID（或是一个地址），这些Block通过记录前一个Block的ID来形成一条链</p>
 </blockquote>
-<p><img alt="blockChain" src="../assets/blockChain.jpg" />
+<p><a class="glightbox" href="../assets/blockChain.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="blockChain" src="../assets/blockChain.jpg" /></a>
 其实就类似于单向链表，包含三个信息：</p>
 <ul>
 <li>真正的数据</li>
@@ -5097,7 +5102,7 @@
 </ul>
 <p>PS: 每个Block的ID都是由内容来定的，只要内容变了，ID则完全不一样。因还包括上一个Block的ID，故产生连锁反应，即一个Block变化，后续的Block全要变化，修改成本大大提升。因此越旧的Block，越安全不容易被篡改，而新的Block则会越不安全</p>
 <p>但仅仅是难以篡改，<strong>工作量证明的共识机制</strong> 使得无法篡改</p>
-<h2 id="_2">哈希算法简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">哈希算法简介</h2>
 <p><strong>Hash功能：</strong></p>
 <ol>
 <li>用来生成唯一标识一个数据块的ID，几乎不能重复</li>
@@ -5114,9 +5119,9 @@
 <ul>
 <li>通过SHA-256虽然不能加密，但能知道某个数据是否被篡改了</li>
 </ul>
-<h2 id="_3">比特币的哈希算法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">比特币的哈希算法</h2>
 <p><strong>区块链的协议格式：</strong>
-<img alt="blockheader" src="../assets/blockheader.jpg" /></p>
+<a class="glightbox" href="../assets/blockheader.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="blockheader" src="../assets/blockheader.jpg" /></a></p>
 <ul>
 <li><strong>区块数据协议头:</strong><ul>
 <li>Version：当前区块链协议的版本号(4字节)</li>
@@ -5142,7 +5147,7 @@
 </ul>
 <p>Q: Merkle Root如何计算？</p>
 <p><strong>因比特币的交易有三个字段：转出方 &amp; 转入方 &amp; 金额</strong>，则会对每个交易的这三个字段求hash，然后把交易的hash做两两合并，再求其hash，直到算出最后一个hash值，即是要求的值
-<img alt="merkle-root" src="../assets/merkle-root.jpg" />
+<a class="glightbox" href="../assets/merkle-root.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="merkle-root" src="../assets/merkle-root.jpg" /></a>
 <ins>Why？ 这样合并有什么好处？</ins> &rarr; 把交易数据分成了若干个组，如上面二叉树所表示的一样，可以不断地把树分成左边和右边的分支，因为它们都被计算过hash值，所以可以很快地校验其内容有无被修改过</p>
 <ul>
 <li>大量的交易数据分成小的，有利于整合和校验数据并可以提高网络的传输速度</li>
@@ -5153,7 +5158,7 @@
 <li>一个是用来表示状态State的</li>
 <li>一个是用来做交易收据的, 记录一个智能合约中最终发生的交易信息</li>
 </ul>
-<h2 id="_4">比特币的交易模型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">比特币的交易模型</h2>
 <p><strong>比特币区块里面的交易数据，其实也是一个链</strong>。两个术语:</p>
 <ul>
 <li>input: 即交易的支出方</li>
@@ -5169,7 +5174,7 @@
 </div>
 <p>若此时Alice想要转给Jack4个比特币，但她自己的两个交易中都不够，因为不能拆开之前的那两个比特币交易，那么她只能把交易2和交易3当成input，然后把自己和Bob当成output，Jack分得4个，自己分1个，这样的交易才平衡</p>
 <p>因此一笔交易可能会包含大量的Input和Output，并且可能需要通过多个input来凑，然后output这边还需要给自己找零（如上），这样在比特币交易中，你把钱给了我，我又给了张三，张三给了李四……就这样传递下去，形成了一个交易链。因为还没有花出去，所以就成了UTXO，而 <strong>系统计算你有没有钱可以汇出去时，只需要查看一下你的UTXO就可以</strong></p>
-<p><img alt="eg" src="https://developer.bitcoin.org/_images/en-transaction-propagation.svg" /></p>
+<p><a class="glightbox" href="https://developer.bitcoin.org/_images/en-transaction-propagation.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="eg" src="https://developer.bitcoin.org/_images/en-transaction-propagation.svg" /></a></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -5455,7 +5460,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5467,5 +5472,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3037,16 +3046,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5006,16 +5013,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5066,7 +5071,7 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1534 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 11 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 3 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
-<h2 id="_1">比特币的加密方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">比特币的加密方法</h2>
 <p><strong>密钥对：</strong>  一种非对称加密技术，加密和解密使用不同的密钥。<ins>把一个密钥公布出去的称为公钥，另一个自己保存好，称为私钥</ins>。现实中可以使用公钥加密，私钥解密，也可以反过来。</p>
 <ul>
 <li><strong>比特币使用ECDSA(椭圆曲线数字签名算法)</strong>——区块链算法的基石<ul>
@@ -5078,11 +5083,11 @@
 <p>一步步来看...</p>
 <p>假设Mike要发信息给我，她也有密钥对，公钥给了我，私钥自己保存。Mike先将自己想发送的信息做个SHA或MD5的Hash，得到一个Hash串，又称为 <strong>Digest</strong>，然后Mike用自己的私钥把Digest加密，得到一段Digest的密文，<strong>这个过程叫做数字签名(Signature)</strong>，再然后Mike把要发送的信息用我的公钥加密后，连同数字签名一同发给我。</p>
 <p>我收到之后，用我的私钥解密Mike发给我的密文，然后再用Mike的公钥解密其数字签名得到Digest。再然后，我用SHA或MD5对解开的密文做Hash。如果结果和Digest一致，则信息是Mike发给我的，即没有人更改</p>
-<p><img alt="数字签名" src="../assets/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.jpg" /></p>
+<p><a class="glightbox" href="../assets/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="数字签名" src="../assets/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.jpg" /></a></p>
 <p>但现在有个黑客偷偷地把Jack电脑上的Mike公钥换成自己的，然后截获Mike发出来的信息，用自己的密钥加密一段自己的信息，以及自己的数字签名。于是，对于Jack来说，因为他用了黑客的公钥，而不是Mike的，所以他就以为信息来自Mike，于是黑客可以 <strong>用自己的私钥伪装成Mike给Jack通信</strong>。于是黑客就可以在中间伪装成Jack或Mike来通信，这就是 <strong>中间人攻击(MITM)</strong></p>
 <p>怎么办？ &rarr; Mike看到有人在伪造他的公钥，他就和Jack找了个大家都相信的永不作恶的权威的可信机构来认证他的公钥。<ins>这个权威机构，用自己的私钥把Mike的公钥和其相关信息一起加密，生成一个证书。此时，Jack就可以放心地使用这个权威机构的证书了</ins>。Mike只需要在发布其信息的时候放上这个权威机构发的数字证书，然后Jack用这个权威机构的公钥解密这个证书，得到Mike的公钥，再用Mike的公钥来验证Mike的数字签名</p>
-<p><img alt="数字证书" src="../assets/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6.jpg" /></p>
-<h2 id="_2">比特币的加密<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="数字证书" src="../assets/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6.jpg" /></a></p>
+<h2 id="_2">比特币的加密</h2>
 <p>在比特币世界中，每一笔交易的From和To都是每个用户的公钥。即用用户的公钥来做交易的账户</p>
 <ul>
 <li>交易的发起方只能是支付方，支付方需要用自己的私钥来加密交易信息并制作相关的交易签名</li>
@@ -5093,13 +5098,13 @@
 <p><strong>为什么不需要那个证书机构呢？不怕中间人攻击吗？</strong></p>
 <p>答: 若黑客想伪造别人的交易，他需要换掉半数以上结点上的被攻击者的公钥，太不现实</p>
 </div>
-<p><img alt="交易" src="../assets/%E4%BA%A4%E6%98%93.jpg" /></p>
+<p><a class="glightbox" href="../assets/%E4%BA%A4%E6%98%93.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="交易" src="../assets/%E4%BA%A4%E6%98%93.jpg" /></a></p>
 <ul>
 <li><strong>发起交易：</strong> A用自己的私钥为交易信息和自己的地址生成了交易的签名，然后把交易信息、自己的地址、交易签名和自己的公钥放出去，这样方便别人来验证的确是A发起的。</li>
 <li><strong>验证交易：</strong> 使用A的公钥解密交易签名，得到交易的hash值。把交易信息和自己的地址做hash，看看是不是和签名解密后的hash值一致</li>
 </ul>
 <p>PS: 比特币的地址是由我们的公钥生成的，生成规则比较复杂</p>
-<h2 id="_3">比特币的挖坑<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">比特币的挖坑</h2>
 <p>在hash算法中要保证: <code>SHA-256( SHA-256( Block Header) ) &lt; Target</code></p>
 <p><ins>在区块头中，可以完全自由修改的只有一个字段，就是Nonce</ins></p>
 <p>目标：要找到某个数字，让整个hash值 &lt; Target</p>
@@ -5431,7 +5436,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5443,5 +5448,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

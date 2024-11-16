@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3709,16 +3718,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5065,16 +5072,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5182,7 +5187,7 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1865 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 5 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
-<h2 id="_1">基本介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">基本介绍</h2>
 <blockquote>
 <p><strong>Vehicle-to-grid (V2G)</strong> describes a system in which plug-in electric vehicles (PEVs) sell demand response services to the grid</p>
 </blockquote>
@@ -5207,7 +5212,7 @@
 <ul>
 <li>集中式、自治式、基于微网的V2G、基于更换电池组的V2G</li>
 </ul>
-<h2 id="v2g">V2G安全隐私问题<a class="headerlink" href="#v2g" title="Permanent link">&para;</a></h2>
+<h2 id="v2g">V2G安全隐私问题</h2>
 <div class="admonition quote">
 <p class="admonition-title">来自论文</p>
 <p>张雄,张海春,刘政林.V2G网络的安全和隐私问题研究[J].汽车实用技术,2021,46(23):12-15.DOI:10.16638/j.cnki.1671-7988.2021.023.004.</p>
@@ -5220,7 +5225,7 @@
 <p>Abdallah 等人<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>提出了一种针对V2G连接的隐私保护认证方案，<strong>利用哈希函数和位异或操作</strong>，设计了一个健壮的密钥协商协议，在V2G环境中实现了相互认证</p>
 </div>
 <p>电动汽车充放电网络架构：</p>
-<p><img alt="v2g" src="../assets/v2g_internet.jpg" /></p>
+<p><a class="glightbox" href="../assets/v2g_internet.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="v2g" src="../assets/v2g_internet.jpg" /></a></p>
 <ul>
 <li><strong>电网控制中心(Grid Control Center, GCC)</strong> 负责发布整个电网的实时电力需求和电价等相关信息，同时对电动汽车的实时状态、位置信息以及电池使用情况等进行监测，根据监控的数据和电网的自身相关需求制定出最优的控制策略等</li>
 <li><strong>可信中心(Central Authority, CA)</strong> 是一个完全可信的第三方机构，如电力监管部门，负责整个系统的安全基础，具有最高的安全级别。</li>
@@ -5228,32 +5233,32 @@
 <li><strong>充电桩(Charging Spot, CS)</strong> 负责电动汽车与汇聚单元之间的数据交换</li>
 <li><strong>电动汽车(Electric Vehicle, EV)</strong> 具有双向能源交易能力。可以作为能源生产者，在高峰时间给电池充电，还可以在非高峰时间充电，充当能源消耗者的角色</li>
 </ul>
-<h3 id="_2">隐私威胁<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">隐私威胁</h3>
 <ol>
 <li>身份隐私：比如用户的真实身份信息（姓名、住址、身份证号等等）</li>
 <li>位置隐私：若攻击者得知，则可通过跟踪监视用户的行为，而获知其他敏感信息</li>
 <li>电池状态隐私(电压、电池、使用状态)：若得知，可推断出用户的用电喜好和习惯，甚至身份和位置隐私</li>
 </ol>
-<h3 id="_3">安全威胁<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">安全威胁</h3>
 <ol>
 <li>
 <p><strong>窃听和重放攻击</strong>：攻击者在通信链路间以监听抓包等方式手段获取数据，可造成上述隐私数据泄露。同时攻击者可以拦截、注入或重新发送以前发送的消息，以便执行重放攻击，这可能导致电动车注册身份被盗用或伪造凭证以获取其他电动车用户获取充电服务 【如图所示】
-<img alt="" src="../assets/v2g_%E7%AA%83%E5%90%AC.jpg" /></p>
+<a class="glightbox" href="../assets/v2g_%E7%AA%83%E5%90%AC.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/v2g_%E7%AA%83%E5%90%AC.jpg" /></a></p>
 </li>
 <li>
 <p><strong>假冒攻击</strong>：若攻击者知道受害者电动汽车或汇聚器的身份或会话密钥，则可以执行假冒攻击，进行假冒车辆，使用伪造的身份生成消息的散列，代表受害车辆将完整的消息发送到各自的充电桩。也可假冒充电桩，向车辆发送伪造信息 
-<img alt="" src="../assets/v2g_%E5%81%87%E5%86%92.jpg" /></p>
+<a class="glightbox" href="../assets/v2g_%E5%81%87%E5%86%92.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/v2g_%E5%81%87%E5%86%92.jpg" /></a></p>
 </li>
 <li>
 <p><strong>中间人攻击</strong>：(对通信链路的间接攻击)若车辆或充电桩的私钥被泄露，或者源实体的身份和签名没有得到验证，攻击者可以生成共享密钥。作为攻击者可以假冒充电桩，窃取车辆提供的信息，然后使用这些信息从合法的充电桩访问系统
-<img alt="" src="../assets/v2g_%E4%B8%AD%E9%97%B4%E4%BA%BA.jpg" /></p>
+<a class="glightbox" href="../assets/v2g_%E4%B8%AD%E9%97%B4%E4%BA%BA.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/v2g_%E4%B8%AD%E9%97%B4%E4%BA%BA.jpg" /></a></p>
 </li>
 <li>
 <p><strong>基于流量的 DoS 攻击</strong>：攻击者向汇聚器发送大量的充电或放电请求，建立半开的连接，拒绝完成连接，最终耗尽汇聚器的网络资源，导致充电站无法为需要电力服务的合法车辆提供充放电服务，即充电站瘫痪
-<img alt="" src="../assets/v2g_dos.jpg" /></p>
+<a class="glightbox" href="../assets/v2g_dos.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/v2g_dos.jpg" /></a></p>
 </li>
 </ol>
-<h3 id="_4">安全目标<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">安全目标</h3>
 <ol>
 <li>隐私安全目标<ul>
 <li><strong>身份匿名</strong></li>
@@ -5267,13 +5272,13 @@
 </ul>
 </li>
 </ol>
-<h2 id="_5">安全及隐私防护策略<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="_6">匿名认证<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h2 id="_5">安全及隐私防护策略</h2>
+<h3 id="_6">匿名认证</h3>
 <p>该网络必须保持身份匿名性和不可跟踪性属性，<strong>只有认证服务器知道并验证车辆的实际身份</strong>，但通信服务器和充电设施等中间实体并不知道。<strong>匿名认证可以使用各种技术来实现，如环签名、盲签名方案和部分盲签名方案</strong></p>
 <ul>
 <li>匿名可以确保AG无法知道车辆的身份，而只是验证车辆是否属于一个经过授权的车辆组</li>
 </ul>
-<h3 id="_7">同态加密<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">同态加密</h3>
 <p>同态加密是 <strong>保护汇聚信息</strong> 的一种很好的解决方案</p>
 <ul>
 <li>将加密消息从车辆传输到汇聚单元来维护端到端的 <strong>信息机密性</strong></li>
@@ -5570,7 +5575,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5582,5 +5587,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

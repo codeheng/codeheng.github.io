@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2061,9 +2070,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -2072,7 +2079,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5085,9 +5092,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -5096,7 +5101,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5217,7 +5222,7 @@
                   
 
 
-<h1 id="linux">Linux基础<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+<h1 id="linux">Linux基础</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1609 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
@@ -5230,7 +5235,7 @@
 <li>内核稳定，社区维护: Android OS &amp; <a href="https://github.com/torvalds/linux">torvalds/linux</a></li>
 <li>free &amp; 轻量级 &amp; 稳定性 &amp; 兼容性</li>
 </ul>
-<h2 id="shell">Shell 简介<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
+<h2 id="shell">Shell 简介</h2>
 <p>黑黑的窗口？输入奇怪命令的地方？ &rarr; No! 这其实是 <strong>Terminal</strong></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
@@ -5269,17 +5274,17 @@
 <ul>
 <li>P.S.<a href="https://zhuanlan.zhihu.com/p/539692975">谈谈如何让自己看上去、闻上去都像一个CS人</a></li>
 </ul>
-<h2 id="shell_1">Shell 基础命令<a class="headerlink" href="#shell_1" title="Permanent link">&para;</a></h2>
+<h2 id="shell_1">Shell 基础命令</h2>
 <p>一定要关注自己在哪执行的命令  &rarr;  <code>pwd</code> 获取当前路径，而<code>~</code>代表当前用户的"home"目录</p>
 <p>而要关注当前的用户，是普通用户还是root? 有的信息和权限有关</p>
 <p>在*nix中没有分盘的概念，所有文件都挂载到唯一的根目录 <code>/</code> 下
-<img alt="linux-directory" src="../assets/linux_directory.jpg" />
+<a class="glightbox" href="../assets/linux_directory.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="linux-directory" src="../assets/linux_directory.jpg" /></a>
 <code>cd path</code> 切换路径</p>
 <ul>
 <li>path: 可以是相对路径，也可以是绝对路径</li>
 <li>path中<code>~</code> 代表home, <code>.</code>代表当前路径，<code>..</code>代表上一级路径，<code>-</code>上一次目录</li>
 </ul>
-<h3 id="_1">用户配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">用户配置</h3>
 <p>两种用户: root 和 普通用户</p>
 <ul>
 <li>root的命令提示符为<code>#</code>，而普通用户为<code>$</code></li>
@@ -5292,7 +5297,7 @@
 <p>怎么知道添加成功了？  &rarr; <code>cat /etc/passwd</code> 将显示添加的用户名</p>
 <p><code>userdel bob</code> 删除用户bob</p>
 <p><ins>Tips: Shell中，Ctrl + A 光标回到开头，Ctrl + E回到结尾</ins></p>
-<h3 id="_2">文件/目录操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">文件/目录操作</h3>
 <p><code>ls</code> 列出当前路径下的文件和目录</p>
 <ul>
 <li><code>-a</code>：列出所有文件和目录，包含隐蔽文件</li>
@@ -5304,7 +5309,7 @@
 <p><code>mv src dst</code> 移动文件或目录(也可重命名)</p>
 <p><code>rm files</code> 删除文件，<code>-r</code> 递归删除目录; <code>-f</code> 强制删除；谨慎.<a href="https://www.zhihu.com/question/456544289"><code>rm -rf ./*</code></a></p>
 <p><code>chmod</code> 改变目录或文件的权限,e.g. <code>chmod +x file</code> 给file加上可执行权限
-<img align="center" alt="chmod" src="../assets/chmod.jpg" /></p>
+<a class="glightbox" href="../assets/chmod.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="chmod" src="../assets/chmod.jpg" /></a></p>
 <p><strong>文件查找: <code>find 起始目录 查找条件 操作</code></strong>  e.g. <code>find /usr/include/ -name stdio.h</code></p>
 <ul>
 <li>根据名称和文件属性来查找<ul>
@@ -5323,7 +5328,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_3">文件查看及处理操作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">文件查看及处理操作</h3>
 <p><code>cat file</code> 查看file文件的内容</p>
 <ul>
 <li><code>-b</code> 对非空输出行编号</li>
@@ -5343,32 +5348,32 @@
 <li>pattern 表示要查找的字符串或正则表达式</li>
 <li>e.g. <code>grep hello file.txt</code> 在file.txt中查找字符串 "hello"，并打印对应的行</li>
 </ul>
-<h3 id="_4">其他一些命令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">其他一些命令</h3>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>Linux命令众多，仅仅记录常用的。若又有新的了解，随时补充!</p>
 </div>
 <p><code>|</code> : 管道，将一个程序或命令的输出作为另一个程序或命令的输入</p>
-<h4 id="_5">磁盘管理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="_5">磁盘管理</h4>
 <p><code>df -h</code> 显示文件系统的整体磁盘空间使用情况</p>
 <p><code>du [选项] [文件名]</code> 显示每个文件或目录的磁盘使用情况</p>
 <ul>
 <li><code>-s</code> 只显示总和； <code>-h</code> 以易读的方式显示</li>
 </ul>
-<h4 id="copy">远程copy<a class="headerlink" href="#copy" title="Permanent link">&para;</a></h4>
+<h4 id="copy">远程copy</h4>
 <p><strong><code>scp filename username@ip:path</code> scp远程复制文件</strong>，e.g. <code>scp file yh@192.168.10.129:~</code></p>
 <ul>
 <li>filename要复制的文件名称，若是目录加上<code>-r</code></li>
 <li>username目标主机名</li>
 <li>path: 要复制到的目标主机路径</li>
 </ul>
-<h4 id="_6">网络管理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h4 id="_6">网络管理</h4>
 <p><code>ifconfig</code> 查看和配置网络设备</p>
 <ul>
 <li>若报错，可能需要安装<code>sudo apt install net-tools</code></li>
 </ul>
 <p><code>route</code> 查看与设置路由</p>
-<h4 id="_7">进程管理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h4 id="_7">进程管理</h4>
 <p><code>ps aux | grep xxx</code> 查看系统中所以进程（一般都会加上grep，查看某些相关进程）
 <code>ps -ef | grep xxx</code> 查看父子进程直接的关系</p>
 <ul>
@@ -5661,7 +5666,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5673,5 +5678,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

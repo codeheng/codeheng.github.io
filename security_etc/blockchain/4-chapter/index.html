@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3058,16 +3067,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5024,16 +5031,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5102,7 +5107,7 @@
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1734 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
-<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">简介</h2>
 <p>去中心化的共识机制是要解决『拜占庭将军问题』<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <p><strong>区块链是比特币的底层技术</strong>，而 <ins>共识机制是去中心化的分布式账本中的规则核心</ins> ，决定了区块链的安全性、可扩展性和去中心化程度等许多重要特性，有助于验证和验证信息被添加到分类账簿，确保只有真实的事务记录在区块链上</p>
 <blockquote>
@@ -5119,7 +5124,7 @@
 <li><a href="https://zh.wikipedia.org/wiki/Raft">Raft算法</a></li>
 <li>POOL（验证池）等</li>
 </ul>
-<h2 id="_2">分布式一致性算法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">分布式一致性算法</h2>
 <p>拜占庭的将军们没有一个中心化的领导机构，如果他们需要攻击某个城市，所有将军需要对任何将军可能提出的攻击时间达成共识，但可能会有多个将军同时发出不同的攻击计划，并且将军中可能还有叛徒。那怎样达成共识呢？</p>
 <p><a href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a>证明当叛变者不超过<span class="arithmatex">\(1/3\)</span>时，存在有效的算法。不论叛变者如何折腾，将军们总能达成一致的结果。如果叛变者过多，则无法保证一定能达到一致性。之所以难解，在于任何时候系统中都可能存在多个提案，并且要完成最终的一致性确认过程十分困难，容易受干扰</p>
 <p><strong>比特币的区块链网络在设计时使用的 PoW（Proof of Work）算法思路</strong></p>
@@ -5141,17 +5146,17 @@
 <p>FLP 和 DLS</p>
 </li>
 </ol>
-<h2 id="pow">工作量证明(PoW)<a class="headerlink" href="#pow" title="Permanent link">&para;</a></h2>
+<h2 id="pow">工作量证明(PoW)</h2>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; 比特币的挖矿算法并不是比特币开创的，原型为<a href="https://en.wikipedia.org/wiki/Hashcash">Hashcash</a>,最开始是限制垃圾邮箱的; Hashcash一开始要求邮件发送方对邮件头（其中包括时间和收件人地址）计算一个160bit的SHA-1哈希值。其前面需要有5个零，也就是20bit的0。接收端会检查这个事; <ins>这对于需要大量发送垃圾邮件的人来说，是一个很大的成本</ins> ; 用这种消耗对手资源的手段来阻止一些恶意的攻击或是像垃圾邮件这样的对服务的滥用, 即 <strong>PoW(Proof-of-Work)</strong></p>
 <p><strong>PoW两种协议:</strong></p>
 <ol>
 <li>
 <p>Challenge-Response协议, 用于Client-Server; 若Client需要使用服务，则需要被Challenge去花费一些资源, 若证明自己的资源已被花费了，则通过认证，授权使用
-<img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/459px-Proof_of_Work_challenge_response.svg.png" /></p>
+<a class="glightbox" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/459px-Proof_of_Work_challenge_response.svg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/459px-Proof_of_Work_challenge_response.svg.png" /></a></p>
 </li>
 <li>
 <p>Solution-Verification协议，用于验证使用, Hashcash即是这种
-<img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Proof_of_Work_solution_verification_german.svg" /></p>
+<a class="glightbox" href="https://upload.wikimedia.org/wikipedia/commons/f/f1/Proof_of_Work_solution_verification_german.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="e.g" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Proof_of_Work_solution_verification_german.svg" /></a></p>
 </li>
 </ol>
 <p>通过挖矿——PoW这样的协议来大幅度地提高修改成本，使得有恶意的人要改一个地方，需要花很大很大的成本来修改。这几乎是一件不可能的事情; PoW还有另一个功能，即让这些不受控制的分布式P2P网络里的结点统一思想。又即 <strong>分布式一致性</strong></p>
@@ -5162,13 +5167,13 @@
 <li>解决分歧 (让整个去中心化系统的一致性，不再以人数多认可的为准，而是以算力多的)</li>
 <li>越来越中心化地记账 &amp; 越来越跑不动</li>
 </ul>
-<h2 id="pos">股权证明协议(PoS)<a class="headerlink" href="#pos" title="Permanent link">&para;</a></h2>
+<h2 id="pos">股权证明协议(PoS)</h2>
 <p>PoW中,要找到符合条件的Hash值，其耗费的电力和时间成本是越来越大。故为了每个Block更快的生成，出现了PoS; 在此机制下, 矿工不在叫矿工，而是叫Validator（校验者）, 他们将按照股权的比权来获得记账权; 在记账权不再像PoW谁的算力大谁就越有机会来记账，而是由谁的财富多，谁就越有可能来记账。<strong>即记账权按大家财富的比例来分配</strong></p>
 <ul>
 <li>在以太坊下，是根据拥有以太币的总量，来决定成为Validator的几率</li>
 </ul>
 <p>缺点: 在PoS这种不需要算力的机制下，就可以让记账人们在两个分支上同时进行，以争取实现利益的最大化（无论哪个分支最终胜出，我都可以有利）。这样一来，攻击者就可以利用这种情况来发起<a href="https://en.wikipedia.org/wiki/Proof_of_stake">Nothing-ot-Stake</a>攻击 , 于是提出了DPos</p>
-<h2 id="dpos">委托股权证明(DPoS)<a class="headerlink" href="#dpos" title="Permanent link">&para;</a></h2>
+<h2 id="dpos">委托股权证明(DPoS)</h2>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; DPoS优化方案在于：通过不同的策略，不定时地选中一小群节点，这一小群节点做新区块的创建、验证、签名和相互监督。<strong>即允许网络用户投票和选举将验证该网络上交易的代表</strong>, 这样就大幅度减少了区块创建和确认所需要消耗的时间和算力成本</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5468,7 +5473,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5480,5 +5485,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2633,9 +2642,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -2644,7 +2651,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5062,9 +5069,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -5073,7 +5078,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5167,11 +5172,11 @@
                   
 
 
-<h1 id="symmetric-key-encryption">对称加密(Symmetric-Key Encryption)<a class="headerlink" href="#symmetric-key-encryption" title="Permanent link">&para;</a></h1>
+<h1 id="symmetric-key-encryption">对称加密(Symmetric-Key Encryption)</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1453 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 1 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
-<h2 id="1">1. 简介<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1">1. 简介</h2>
 <p>首先所有的消息都是 <strong>位(bits)序列</strong> (e.g.<code>110111001101</code>)，包括文字，图像以及大多数其他形式的通信都会在加密前转为比特序列  &rarr;  非常有用的抽象</p>
 <blockquote>
 <p>加密方案的目的是提供保密性，而不是完整性或者身份认证</p>
@@ -5180,14 +5185,14 @@
 <ul>
 <li><ins>Thinking: Alice和Bob如何进行共享？</ins></li>
 </ul>
-<h2 id="2">2. 定义<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2">2. 定义</h2>
 <p>对称加密方案有三个算法:</p>
 <ul>
 <li>KeyGen() &rarr;  K: 产生密钥K</li>
 <li>Enc(K, M) &rarr; C: 使用密钥K加密明文M以生成密文C</li>
 <li>Dec(K, C) &rarr; M: 使用密钥K解密密文C得到明文(消息)M</li>
 </ul>
-<p><img alt="" src="../assets/Snipaste_2023-12-30_21-39-38.jpg" />
+<p><a class="glightbox" href="../assets/Snipaste_2023-12-30_21-39-38.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-12-30_21-39-38.jpg" /></a>
 Q: 我们想从对称加密方案中得到什么属性？</p>
 <ol>
 <li>正确性：解密密文应该得到最初加密的消息<ul>
@@ -5197,7 +5202,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 <li>高效: 加密/解密算法应该很快，在标准计算机上应&gt; 1 Gbps </li>
 <li>安全: 保密性</li>
 </ol>
-<h3 id="_1">再定义: 保密性<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">再定义: 保密性</h3>
 <p>之前我们介绍的保密性是指敌人无法 <strong>读</strong> 我们的信息, 太不具体</p>
 <ul>
 <li>如果攻击者可以读到我们信息的前半部分，但不能读到后半部分，这是机密吗?</li>
@@ -5215,7 +5220,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 </blockquote>
 <p>这种定义被称为选择明文攻击下的不可区分性即IND-CPA <br>
 密码学属性通常被定义为对手可以“赢”或“输”的“游戏”。</p>
-<h3 id="ind-cpa">定义: IND-CPA<a class="headerlink" href="#ind-cpa" title="Permanent link">&para;</a></h3>
+<h3 id="ind-cpa">定义: IND-CPA</h3>
 <p>CPA VS. IND-CPA :</p>
 <ul>
 <li>CPA (Chosen Plaintext Attack) : 选择明文攻击</li>
@@ -5232,7 +5237,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 <li>完成之后，Eve将猜测在第二步中到底是<span class="arithmatex">\(M_0\)</span>还是<span class="arithmatex">\(M_1\)</span></li>
 </ol>
 <p>若Eve猜测哪个被发送的概率<span class="arithmatex">\(&gt;1/2\)</span>，则Eve赢得游戏，这意味着Eve已经了解了发送的消息的一些信息，此时的方案不是IND-CPA安全的。反之则Alice赢，此时为IND-CPA安全的</p>
-<h4 id="_2">边界情况: 长度<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_2">边界情况: 长度</h4>
 <p><em>在几乎所有实际的密码系统中，通常允许密文泄漏明文的长度</em>，为什么？</p>
 <ul>
 <li>若隐藏长度，那么我们就需要每个密文的长度相同<ul>
@@ -5245,7 +5250,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 </li>
 <li>要隐藏长度的应用程序必须在加密之前选择将自己的消息填充到最大可能的长度</li>
 </ul>
-<h4 id="_3">边界情况: 运行时间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_3">边界情况: 运行时间</h4>
 <p>有些方案理论上是脆弱的，但在任何现实环境中都是安全的。因为在计算上是不可行的</p>
 <ul>
 <li>比如: Eve尝试用暴力算法破解128bits的密钥，将花费<span class="arithmatex">\(2^{128}\)</span>的计算，若每次计算花费一毫秒，则需要<span class="arithmatex">\(10^{28}\)</span>年</li>
@@ -5254,7 +5259,7 @@ Q: 我们想从对称加密方案中得到什么属性？</p>
 <ul>
 <li>一个常见的实际限制: Eve仅限于多项式运行时算法(而非指数时间算法)</li>
 </ul>
-<h4 id="_4">边界情况：可忽略不计的优势<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="_4">边界情况：可忽略不计的优势</h4>
 <blockquote>
 <p>Eve只有在拥有 <strong>不可忽视的优势</strong> 时才能获胜</p>
 </blockquote>
@@ -5552,7 +5557,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5564,5 +5569,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

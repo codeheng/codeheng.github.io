@@ -69,7 +69,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2807,9 +2816,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -2818,7 +2825,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5039,9 +5046,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of Content">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -5050,7 +5055,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of Content
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -5123,15 +5128,15 @@
                   
 
 
-<h1 id="diffie-hellman">Diffie-Hellman算法<a class="headerlink" href="#diffie-hellman" title="Permanent link">&para;</a></h1>
+<h1 id="diffie-hellman">Diffie-Hellman算法</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 997 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 3 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
 <p><a href="../7-MACs/#aead:~:text=%E5%AE%8C%E6%95%B4%E6%80%A7/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81-,Question,-%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5">之前的疑问</a>：Alice和Bob如何在不安全的通道上共享对称密钥？</p>
 <p><mark><ins>Public key exchange (e.g. Diffie-Hellman)</ins></mark>，Diffie-Hellman算法解决了 <strong>在双方不直接传递密钥的情况下完成密钥交换</strong>，这个神奇的交换原理完全由数学来进行支撑</p>
 <p><strong>Diffie-Hellman的目标通常是创建一个临时密钥</strong>，临时密钥用于一系列加密和解密，一旦不再需要它就会被丢弃。因此，Diffie-Hellman算法是一种有效的方法，可以让双方在面对窃听者时就随机值达成一致</p>
-<h2 id="secure-color-sharing">类比—Secure Color Sharing<a class="headerlink" href="#secure-color-sharing" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="" src="../assets/color_sharing.jpg" />
+<h2 id="secure-color-sharing">类比—Secure Color Sharing</h2>
+<p><a class="glightbox" href="../assets/color_sharing.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../assets/color_sharing.jpg" /></a>
 假设Alice和Bob想要共享一个秘密的油漆颜色(是什么颜色都可以，只要Alice和Bob知道就行)，但Eve可看到她们直接交换的任何油漆。</p>
 <ul>
 <li>Alice生成秘密的颜色<font color="#e69138">amber(黄褐色) A</font>, Bob生产秘密的颜色<font color="blue">blue B</font></li>
@@ -5143,7 +5148,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_1">离散对数问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">离散对数问题</h2>
 <p>上面的类比，有一个关键假设：分离油漆混合物是困难的，甚至不可能!</p>
 <ul>
 <li>这有数学上的解释吗? YES!</li>
@@ -5156,7 +5161,7 @@
 <ul>
 <li>最著名的算法是先计算a，然后计算<span class="arithmatex">\((g^b)^a \bmod p\)</span>，但需要解决离散对数问题</li>
 </ul>
-<h2 id="diffie-hellman_1">Diffie-Hellman 密钥交换<a class="headerlink" href="#diffie-hellman_1" title="Permanent link">&para;</a></h2>
+<h2 id="diffie-hellman_1">Diffie-Hellman 密钥交换</h2>
 <p>Alice和Bob首先分别确定公共参数<span class="arithmatex">\(p\)</span>和<span class="arithmatex">\(g\)</span>，<span class="arithmatex">\(p\)</span>是个大素数，<span class="arithmatex">\(g\)</span>是个在生成器，范围在<span class="arithmatex">\(1 &lt; g &lt; p - 1\)</span></p>
 <ul>
 <li>如今<span class="arithmatex">\(p\)</span>和<span class="arithmatex">\(g\)</span>是被硬编码或者被定义在标准中，所以不需要每次都被选中，它们不是秘密</li>
@@ -5167,9 +5172,9 @@
 <li>因<span class="arithmatex">\(g^{ba} = g^{ab} (\bmod p)\)</span>，Alice和Bob最终得到相同的结果S</li>
 </ul>
 <p><strong>最终Alice和Bob能使用S作为对称加密的共享密钥</strong>(实际中，会对S用hash，结果作为共享密钥)</p>
-<p><img alt="DH" src="../assets/DH.jpg" /></p>
+<p><a class="glightbox" href="../assets/DH.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DH" src="../assets/DH.jpg" /></a></p>
 <p>最惊奇的是，Alice和Bob的对话完全是公开的，在此期间，他们都知道了这个秘密值S，然而攻击者完全知道这个对话，也无法得知S。实际中已知解决此问题最快的算法花费<span class="arithmatex">\(2^{{\large cn^{1/3(log n)^{2/3}}}}\)</span>时间，如果p为n-bit的素数，若n = 2048算法则太慢，无法进行合理的攻击</p>
-<h2 id="diffie-hellman_2">Diffie-Hellman的短暂性<a class="headerlink" href="#diffie-hellman_2" title="Permanent link">&para;</a></h2>
+<h2 id="diffie-hellman_2">Diffie-Hellman的短暂性</h2>
 <blockquote>
 <p>Diffie-Hellman can be used ephemerally (called Diffie-Hellman ephemeral, or DHE)</p>
 </blockquote>
@@ -5186,7 +5191,7 @@
 <li>做完之后，将会丢弃a、b和K</li>
 <li>Eve无法解密记录的任何消息：没有保存a、b或K，记录只有<span class="arithmatex">\(g^a \bmod p\)</span>和<span class="arithmatex">\(g^b \bmod p\)</span></li>
 </ul>
-<h2 id="diffie-hellman_3">Diffie-Hellman 问题<a class="headerlink" href="#diffie-hellman_3" title="Permanent link">&para;</a></h2>
+<h2 id="diffie-hellman_3">Diffie-Hellman 问题</h2>
 <p>Diffie-Hellman在面对 <ins>MITM(Man-in-the-middle attack)</ins> 时并不安全</p>
 <p>DHE是一种主动协议：Alice和Bob需要 <strong>同时在线</strong> 才能交换密钥</p>
 <ul>
@@ -5194,8 +5199,8 @@
 <li>Q: 当Alice和Bob不共享密钥且不同时在线时，如何使用公钥加密来发送加密消息?</li>
 </ul>
 <p><strong>Diffie-Hellman不提供认证(authentication)</strong>，你与某人交换了密钥，但Diffie-Hellman不能保证你和谁交换了钥匙，可能是Mallory，如下图</p>
-<p><img alt="security" src="../assets/DH_security.jpg" /></p>
-<h2 id="ecdh">ECDH<a class="headerlink" href="#ecdh" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/DH_security.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="security" src="../assets/DH_security.jpg" /></a></p>
+<h2 id="ecdh">ECDH</h2>
 <blockquote>
 <p>Elliptic-Curve Diffie-Hellman: Diffie-Hellman的一种变体，它使用椭圆曲线代替模算法</p>
 </blockquote>
@@ -5483,7 +5488,7 @@ buttons.forEach(function(button) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "navigation.tabs", "navigation.instant", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
@@ -5495,5 +5500,7 @@ buttons.forEach(function(button) {
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
