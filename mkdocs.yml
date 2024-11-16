@@ -194,6 +194,7 @@ theme:
     - toc.follow # toc 跟随
     # - toc.integrate # 文档 toc 集成到总目录中
     - content.code.copy
+    - content.footnote.tooltips
   
   font: 
     text: Noto Serif SC
@@ -254,55 +255,78 @@ plugins:
       type: date #日期格式，有效值为date、datetime、iso_date、iso_datetime,timeago
       # fallback_to_build_date: true  #默认false，启用则回退到mkdocs build执行的时间
       enable_creation_date: true  #最后更新日期旁边显示与页面关联的文件的创建日期
+  - glightbox: # 添加图像缩放功能
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
 
 markdown_extensions:
 # Python Markdown
   - toc: #目录
       permalink: true # link for each title
       title: Table of Content 
+    
   - admonition #警告或标注
   - pymdownx.details #细节折叠
-  - pymdownx.superfences #超级围栏
-  - pymdownx.critic 
+  
+  - attr_list #属性列表（按钮-颜色图标）
+  - md_in_html # 允许添加HTML属性和CSS类到MD中
+  - pymdownx.superfences: # 允许任意嵌套代码和内容块
+      custom_fences: # 此配置启用对Mermaid.js图表的本机支持
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
   - abbr #缩写或名词
-  - attr_list #属性列表（按钮-颜色图标）
   - def_list #定义列表
   - footnotes #行内脚注
   - tables #表格
   - meta #元数据
-  - md_in_html #HTML 中的 Markdown
+  - toc:
+      toc_depth: 4
+
   - pymdownx.arithmatex: #数学公式
       generic: true
+
   - pymdownx.betterem: #粗体斜体
       smart_enable: all
+
+  - pymdownx.critic 
   - pymdownx.caret #插入角标符号(`^`)
-  - pymdownx.emoji:
+  - pymdownx.keys #键盘键和组合  
+  - pymdownx.mark #双等号(`==`)
+  - pymdownx.tilde # 删除线
+  - pymdownx.details
+  - pymdownx.smartsymbols #智能符号
+
+  - pymdownx.emoji: # 表情
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
 
+  - pymdownx.highlight #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
   - pymdownx.inlinehilite #行内高亮
-  - pymdownx.keys #键盘键和组合  
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: squidfunk
       repo: mkdocs-material
-  - pymdownx.mark #双等号(`==`)
-  - pymdownx.smartsymbols #智能符号
-  - pymdownx.tilde # 删除线
   - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
       auto_append:
         - includes/abbreviations.md
       base_path: ["docs"]
-  - pymdownx.superfences: # 此配置启用对Mermaid.js图表的本机支持
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.tabbed: #内容选项卡
       alternate_style: true 
   - pymdownx.tasklist: #任务列表
       custom_checkbox: true
-  - admonition
-  - pymdownx.details

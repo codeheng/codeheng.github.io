@@ -24,7 +24,10 @@ comments: true
 
 **关于椭圆曲线**: 可写成$y^2 = x^3 + ax + b$的形式。已知曲线上的两点，第三点可以通过椭圆曲线与经过这两点的直线相交得到 （如下图）
 
-![](./assets/ecc.jpg)
+<figure markdown="span">
+  ![EC](./assets/ecc.jpg){ width="300" }
+</figure>
+
 
 > 关于其 **标准定义** ([参考](https://mathworld.wolfram.com/EllipticCurve.html))：一条椭圆曲线是由一组被$y^2 = x^3 + ax + b$定义的且满足$4a^3 + 27b^2 \neq 0$的点集，后面限定条件是为了保证曲线不包含奇点
 
