@@ -125,12 +125,12 @@ nav:
         - 双线性映射: security_etc/paper/knowledge/bilinear_pairing.md
         - 量子加密: security_etc/paper/knowledge/quantum_crypto.md
         - 可证明安全: security_etc/paper/knowledge/provably_secure.md
-      - 工具:
-        - Miracl密码库: security_etc/paper/tool/miracl.md
-        - PCB库: security_etc/paper/tool/pcb.md
+      - 实验:
+        - 库: security_etc/paper/tool/lib.md
         - 密码学符号: security_etc/paper/tool/symbol.md
   - 🔍杂项:
     - mess/index.md
+    - 工具收集: mess/tool.md
     - MarkDown: mess/markdown.md
     - Vim: mess/Vim.md
     - VScode: mess/vscode.md

@@ -7,7 +7,7 @@ comments: true
 !!! Abstract
     记录大名鼎鼎的[CSAPP](https://csapp.cs.cmu.edu/3e/labs.html)的lab实验
 
-    虽然对目前自身可能有些困难！
+    ~~虽然对目前自身可能有些困难~~
 
 
 ## 实验环境

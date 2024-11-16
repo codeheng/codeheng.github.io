@@ -15,12 +15,12 @@ comments: true
     <center> ⭐ [终于等到你了, 来瞧瞧一恒君吧！](https://codeheng.github.io/) ⭐ </center>
 
 <center>
-**我在次已等候你**:
+**我在此已等候你**:
 <span id="momk"></span>
 <script language=javascript>
     function show_date_time(){
         window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date("11-01-2023 20:00:00");//建站日期
+        BirthDay=new Date("11-30-2023 20:00:00");//建站日期
         today=new Date();
         timeold=(today.getTime()-BirthDay.getTime());
         sectimeold=timeold/1000
