@@ -20,7 +20,7 @@ comments: true
 - [x] 微信读书7h48min(🤦‍♂️)，就读完了[控糖革命](https://m.douban.com/book/subject/36707112/)，在读[贪婪的多巴胺](https://m.douban.com/book/subject/35545272/)
 - [ ] 论文好多还没好好看，看的太少。仅空闲学了一些相关的知识『并记录了一下』  
 - [ ] 英语虽也时常学着，但没做到天天坚持！
-- [x] 前八周的课程总算顺利结束，完成了相应的结课论文，并利用reveal.js制作了[云计算ppt](../../slide/cloud/dist/index.html)第一次上台展示😆（但可惜忘录像了....(。•ˇ‸ˇ•。)
+- [x] 前八周的课程总算顺利结束，完成了相应的结课论文，并利用reveal.js制作了云计算ppt(详见attachment)第一次上台展示😆（但可惜忘录像了....(。•ˇ‸ˇ•。)
 - [x] 报名了系活动[E编程](https://mp.weixin.qq.com/s/2HZoQtNeVL05UgSz_5CeSQ)，坚持打卡！
 
 **社交娱乐：**

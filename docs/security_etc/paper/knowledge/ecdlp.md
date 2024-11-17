@@ -2,6 +2,8 @@
 comments: true
 ---
 
+# 椭圆曲线离散对数问题(ECDLP)
+
 !!! Quote
     来自师兄的[二区论文](https://www.sciencedirect.com/science/article/pii/S0142061524000103)中提到的
 

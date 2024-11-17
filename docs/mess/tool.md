@@ -15,7 +15,7 @@ comments: true
 
 ## 素材库
 
-- 表情: [emoji](https://www.emojiall.com/)
+- 表情: [emojiall](https://www.emojiall.com/)、[emojidb](https://emojidb.org/)
 - 图标：[icon](https://icones.netlify.app/)、[FLATICON](https://www.flaticon.com/)
 - 颜文字: [Facemood](https://facemood.grtimed.com/)  
 

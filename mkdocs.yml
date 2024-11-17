@@ -171,8 +171,9 @@ nav:
     - 健身记录: workout/records.md
     - 健身动作: workout/fitness_moves.md
 
-  - Slide: 
-    - 课件: slide/index.md
+  - 📂Attachment: 
+    - attachment/index.md
+    - Slide: attachment/ppt/slide.md
 
 theme: 
   name: material
