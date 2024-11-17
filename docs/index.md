@@ -8,11 +8,11 @@ comments: true
 ## 简介
 这里是小黄（Yiheng）的个人笔记本哦！📓
 
-在这里我想简要记录自己学过的一些知识, 或许也可能是自己的絮絮叨叨。
+在这里我想简要记录自己学过的一些知识, 或许也可能是自己的絮絮叨叨。 (〃∀〃)
 
 !!! danger ""
 
-    <center> ⭐ [终于等到你了, 来瞧瞧一恒君吧！](https://codeheng.github.io/) ⭐ </center>
+    <center> ❤️ [终于等到你了, 来瞧瞧一恒君吧！](https://codeheng.github.io/) ❤️ </center>
 
 <center>
 **我在此已等候你**:
@@ -60,9 +60,11 @@ comments: true
     
 ???+ warning "努力搬砖中...🚧"
 
-    <center>😎</center><br> 
+    <center>😎 ٩(๑•̀ω•́๑)۶ 😎</center>
+
+    <center>之前也用过[hexo](https://hexo.io/zh-cn/)以及[Notion](https://www.notion.com)一段时间</center>
     
-    <center>从[Notion](https://www.notion.com)慢慢整理搬运....</center>
+    <center>慢慢整理搬运....(~~我...一定争取，doge保命~~)</center>
 
 
 <center><img src="index.assets/image.jpg"/></center>

@@ -119,7 +119,7 @@ nav:
       - 师门论文: security_etc/paper/master_homegate_paper.md
       - 论文记录: security_etc/paper/paper_records.md
       - 技术知识:
-        - 椭圆曲线离散对数问题: security_etc/paper/knowledge/ecdlp.md
+        - ECDLP: security_etc/paper/knowledge/ecdlp.md
         - V2G: security_etc/paper/knowledge/v2g.md
         - 无证书公钥密码: security_etc/paper/knowledge/cl_pkc.md
         - 双线性映射: security_etc/paper/knowledge/bilinear_pairing.md
@@ -238,6 +238,7 @@ copyright: '本页面的全部内容在 <a href="https://creativecommons.org/lic
 extra_css:
   - stylesheets/extra.css
   - stylesheets/status.css
+  - stylesheets/card.css
 
 extra_javascript:
   - javascripts/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax

@@ -3,6 +3,12 @@ comments: true
 ---
 # Provably security
 
+
+> 任何加密方案在实际部署之前必须在理论上证明是安全的,
+> 
+> 可证明安全性已经成为密码协议的基本要求
+
+
 ## 安全性证明介绍
 
 > 安全性证明: 方案安全否？是能否用 ^^形式化的数学语言^^ 来证明
@@ -20,7 +26,7 @@ comments: true
 
     目标：说明该算法在一定安全假设下符合某安全模型的要求
 
-    -**假设条件 --> 证明技术  --> 证明结论**
+    - **假设条件 --> 证明技术  --> 证明结论**
     - if 条件A满足,B满足,C满足...，Then 方案在X安全模型下具有安全性
 
 ```py
@@ -44,7 +50,7 @@ comments: true
 
     DDH(Decisional Diffie–Hellman)是困难的 => ElGamal算法是IND-CPA安全的
 
-    -**证逆否**：ElGamal算法不是IND-CPA安全的 => DDs可被攻破
+    - **证逆否**：ElGamal算法不是IND-CPA安全的 => DDs可被攻破
 
     **密码学中表述**: 若存在一个PPT(Probabilistic Polynomial Time)敌手在CPA模型下攻破了ElGamal算法的Indistinguishability，即敌手能解决DDH问题
 
@@ -55,6 +61,8 @@ comments: true
 ## 模型(Model)
 
 > 即用数学概念和数学语言严谨刻画某一个对象。通过模型，可以把研究对象转为严谨数学题
+>
+> 有两种广泛使用的安全模型： **ROM(Random Oracle Model) 和 SM(Standard Model)**
 
 **计算模型(Computational Model)**——来自计算复杂度理论
 
@@ -90,8 +98,6 @@ comments: true
 
 ### ROM
 
-> Random Oracle Model证明模型
-
 - 敌人和哈希函数相关的计算被限制了
 - 敌人不能自己私下通过哈希函数计算得到$H(x)$
 - 若敌人想知道必须想证明者询问，并由我们决定并返回$y = H(x)$的值给敌人（y随机）
@@ -99,7 +105,20 @@ comments: true
 
 > 通过ROM完成安全归约证明时，我们不仅知道敌人询问的x，而且也能自己设定$y = H(x)$(即由我们决定y的值)
 
-还有诸如GGM(generic group model)、AGM(algebraic group model)、CRS(common-reference string model)等模型
+此外还有如GGM(generic group model)、AGM(algebraic group model)、CRS(common-reference string model)等模型
 
 !!! warning
     能在这些证明模型下完成安全证明的密码方案比缺乏安全证明的密码方案更靠谱
+
+    但在ROM中具有安全证明的加密方案在部署在现实环境中时可能不安全[^1]
+
+    [^1]: C.Ran, G.Oded and H.Shai, "The random oracle methodology revisited", J. ACM, vol. 51, no. 4, pp. 557-594, 2004.
+
+### SM
+
+标准模型中，对手直接计算hash function，更接近现实情况
+
+- 询问和攻击遵循security model
+- 指定时间内， 以定义的概率优势
+
+
