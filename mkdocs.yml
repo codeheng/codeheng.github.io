@@ -118,7 +118,7 @@ nav:
       - security_etc/paper/index.md
       - 师门论文: security_etc/paper/master_homegate_paper.md
       - 论文记录: security_etc/paper/paper_records.md
-      - 技术知识:
+      - 理论知识:
         - ECDLP: security_etc/paper/knowledge/ecdlp.md
         - V2G: security_etc/paper/knowledge/v2g.md
         - 无证书公钥密码: security_etc/paper/knowledge/cl_pkc.md

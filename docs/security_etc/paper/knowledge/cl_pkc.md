@@ -123,14 +123,48 @@ PS : 安全模型同上——分为两类攻击者
 6. Aggregate Verify: $T/F \leftarrow (\Delta, \mathbb{U}, ID_i, pk_i, \sigma)$
 
 
+??? Warning "另外（参考文献[^6]）"
+
+      [^6]: Deng, Lunzhi, et al. "Certificateless Aggregate Signature Scheme With Security Proofs in the Standard Model Suitable for Internet of Vehicles." IEEE Internet of Things Journal (2024).
+
+      将CLAS应用于Internet of Vehicles并在standard model进行安全性分析，而非ROM下 （利用双线性映射）
+
+      **System model模型图如下：**
+
+      ![](./assets/Iov_clas.jpg)
+
+**上述方案CLAS执行过程**：
+
+1. $Setup$: (VMC执行) 
+      - $\hat{e}: G_1 \times G_2 \to G_2$ $P,Q$为$G_1,G_2$的生成元，阶数均为$q$
+      - $x \in Z^*_q, msk = x, P_{pub} = xP$, 三个hash: $H_1 \sim H_3 : \{0, 1\}^* \to Z^*_q$
+      - $params = \{ G_1, G_2, q, \hat{e}, P, Q, P_{pub}, H_1 \sim H_3 \}$
+2. $Set_{PPK}(ID_i)$: PPK = Partial private key (VMC执行，并发给Vehicle)
+      - $t_i \in Z^*_q$ --> $T_i = t_iP$ --> $k_i = H_1(ID_i, T_i), d_i = t_i + k_ix \bmod q$ --> $D_i = (T_i, d_i)$
+3. $Set_{SV}(ID_i)$: SV = secret value(vehicle执行) --> $u_i \in Z^*_q$
+4. $Set_{FPK}(ID_i)$: FPK = full public key(Vehicle执行) --> $U_i = u_iP, PK_i = (T_i, U_i)$
+5. $Sig(m_i, d_i, u_i)$ : (Vehicle执行)
+      - $r_i \in Z^*_q$ --> $R_i = r_iQ$
+      - $h_i = H_2(m_i, R_i, ID_i, PK_i, P_{pub}, Q), l_i = H_3(m_i, R_i, ID_i, PK_i, P_{pub}, Q)$
+      - $s_i = r_i + h_1d_i + l_iu_i$  -->  $\sigma_i = (s_i, R_i)$ 
+6. $Agg((m_i, \sigma_i = (s_i, R_i), ID_i, PK_i)^n_{i=1})$ : RSU执行
+      - $\sigma = (s, R_1, ... , R_n)$
+7. Verify: (DC执行进行验证)
+      - $\hat{e}(sQ - \sum_{i=1}^{n}R_{i},P)= \hat{e}(\sum_{i=1}^n(h_i(T_i+k_iP_{\mathrm{pub}})+l_iU_i), Q)$ 
+
+??? Note "正确性证明"
+
+      $\begin{aligned}      &\hat{e}\left(sQ-\sum_{i=1}^{n}R_{i}, P\right) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(r_i+h_id_i+l_iu_i)Q-\sum_{i=1}^nr_iQ, P\Bigg) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(h_id_i+l_iu_i)P, Q\Bigg) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(h_i((T_i + k_iP_{pub})+l_iU_i), Q\Bigg)\end{aligned}$
+
+
 ## 签密(signcryption)
 
 > 签密把公钥加密和数字签名结合在一起
 
 > In cryptography, **signcryption** is a public-key primitive that simultaneously performs the functions of both digital signature and encryption
 
-在文献[^6]中对 传统的“先签名后加密”的方式进行优化，并提出 **签密**
+在文献[^7]中对 传统的“先签名后加密”的方式进行优化，并提出 **签密**
 
-[^6]: ZHENG Y L. Digital signcryption or how to achieve cost （signature & encryption） ≪ cost （signature） +cost （encryption）［C］//Proceedings of the 17th Annual International Cryptology Conference on Advances in Cryptology. New York，USA：ACM Press，1997：165-179
+[^7]: ZHENG Y L. Digital signcryption or how to achieve cost （signature & encryption） ≪ cost （signature） +cost （encryption）［C］//Proceedings of the 17th Annual International Cryptology Conference on Advances in Cryptology. New York，USA：ACM Press，1997：165-179
 
 于是就出现了基于 **无证书签密** 等相关研究
