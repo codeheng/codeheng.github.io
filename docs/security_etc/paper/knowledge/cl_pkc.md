@@ -136,7 +136,7 @@ PS : 安全模型同上——分为两类攻击者
 **上述方案CLAS执行过程**：
 
 1. $Setup$: (VMC执行) 
-      - $\hat{e}: G_1 \times G_2 \to G_2$ $P,Q$为$G_1,G_2$的生成元，阶数均为$q$
+      - $\hat{e}: G_1 \times G_2 \to G_2$ ; $P,Q$为$G_1,G_2$的生成元，阶数均为$q$
       - $x \in Z^*_q, msk = x, P_{pub} = xP$, 三个hash: $H_1 \sim H_3 : \{0, 1\}^* \to Z^*_q$
       - $params = \{ G_1, G_2, q, \hat{e}, P, Q, P_{pub}, H_1 \sim H_3 \}$
 2. $Set_{PPK}(ID_i)$: PPK = Partial private key (VMC执行，并发给Vehicle)
@@ -155,7 +155,6 @@ PS : 安全模型同上——分为两类攻击者
 ??? Note "正确性证明"
 
       $\begin{aligned}      &\hat{e}\left(sQ-\sum_{i=1}^{n}R_{i}, P\right) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(r_i+h_id_i+l_iu_i)Q-\sum_{i=1}^nr_iQ, P\Bigg) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(h_id_i+l_iu_i)P, Q\Bigg) \\            &=\hat{e}\Bigg(\sum_{i=1}^n(h_i((T_i + k_iP_{pub})+l_iU_i), Q\Bigg)\end{aligned}$
-
 
 ## 签密(signcryption)
 
