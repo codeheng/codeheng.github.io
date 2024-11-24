@@ -132,10 +132,11 @@ nav:
     - mess/index.md
     - 工具收集: mess/tool.md
     - MarkDown: mess/markdown.md
+    - LaTex: mess/latex.md
     - Vim: mess/Vim.md
     - VScode: mess/vscode.md
     - Docker: mess/docker.md
-    - LaTex: mess/latex.md
+    - Redis: mess/redis.md
 
   - 🔑Eng:
     - eng/index.md
