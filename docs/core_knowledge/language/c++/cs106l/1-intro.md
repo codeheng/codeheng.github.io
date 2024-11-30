@@ -14,16 +14,14 @@ C++历史（C++的演变）：
 
 ![](./assets/1_c++history.jpg)
 
-- 1983年C++被[Bjarne Stroustrup](https://www.stroustrup.com/)设计
-
-**[C++设计哲学](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-philosophy):**
+- 1983年C++被[Bjarne Stroustrup](https://www.stroustrup.com/)设计 （**[C++设计哲学](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-philosophy)**）
 
 ## 2. 类型和结构体
 
 !!! Note 
     STL(Standard Template Library): 包含大量强大和维护良好的通用功能
     
-    - e.g: maps, sets, vectors...
+    - e.g: `maps, sets, vectors...`
     - 使用`std::`进行访问，即STL的命名空间
 
 ### Type
@@ -58,7 +56,7 @@ C++历史（C++的演变）：
     auto d = "hello"; // char* (a C string)
     ```
 
-struct是一组命名的变量，每个变量都有自己的类型，允许程序员将不同的类型捆绑在一起!
+`struct`是一组命名的变量，每个变量都有自己的类型，允许程序员将不同的类型捆绑在一起!
 
 <span id = "jump1">示例 ：</span>
 
@@ -91,7 +89,7 @@ std::cout << p.first << p.second; //打印： 1st
 
 1. 直接初始化(Direct initialization)
       * `int numOne = 12; int numTwo(12.0); // ok` 
-2. 一致性(uniform)初始化『C++11』
+2. 一致性(uniform)初始化 **『C++11』** : 一种使用`{}`普遍且安全的初始化方法
       *  e.g. `int num{12.0}; // error` 此初始化关心类型！
       *  此初始化是安全的，可避免narrowing conversions
 
@@ -117,7 +115,7 @@ struct Student {
 Student s{"Bob", "AR", 21};
 ```
 
-3.Structured Binding 『C++17』
+3.Structured Binding **『C++17』**
 
 - 在编译时从固定大小的数据结构中初始化一些变量的方法
 - 访问函数返回的多个值的能力
@@ -212,3 +210,79 @@ const vector<int>& const_ref_vec { const_vec }; // good!
 ```
 
 ## 4. Streams
+
+> "Designing and implementing a general **{++input/output++}** facility for a programming language is notoriously difficult" ——Bjarne Stroustrup
+
+!!! Quote "Streams"
+
+    a general **input/output(IO)** ==abstraction== for C++
+    
+    - abstraction提供了统一的 **接口(interface)**, 在 **streams** 的接口是 **reading和writing数据**
+    - Streams允许以一种通用的方式处理外部数据
+
+### cout和cin
+
+- output streams: `std::cout` 是一个stream, 并且它是`std::ostream`的实例(instance) `std::cout << ` 
+- input streams: `std::cin` 是控制台输入流，并且是`std::istream`的实例 `std::cin >> `
+      
+`std::stringstream` : 一种将字符串视为流的方法
+
+!!! example 
+    
+    读取某字符串到stringstream中，再利用stringstream把字符串读出来
+
+    ```c++ linenums="1"
+    #include <iostream>
+    #include <sstream>      
+    int main() {
+        std::string s = "Bjarne Stroustrup C makes it easy to xxx";
+        // initialize stringstream with string constructor
+        std::stringstream ss(s); // 或定义之后使用 ss << s;
+        std::string a, b, c, d;
+        ss >> a >> b >> c >> d;
+        std::cout << a << " " << b << " said this: " << c << " " << d;
+        // 打印：Bjarne Stroustrup C makes
+    }
+    ``` 
+
+    但 `>>` 读直到下一个空格就会停止了，要想读取完整，需要使用`getline()`  
+
+    - `istream& getline(istream& is, string& str, char delim)`
+        * 读input stream(`is`)直到`delim`字符结束，并存入buffer(`str`)中
+        * 一般delim默认为`\n` 
+
+    上述6,7行进行修改为如下：
+
+    ```c++  
+    ss >> a >> b >> c;
+    std::getline(ss, d);
+    ```
+
+### output file stream
+
+`std::ofstream` : 写数据至文件  **（`is_open(), open(), close(), fail()`）**
+
+```c++ linenums="1"
+#include <fstream>
+int main() 
+    std::ofstream ofs("hello.txt"); 
+    if(ofs.is_open()) ofs << "hello cs106L" << '\n';
+    ofs.close();
+    ofs << "this will not get written";
+
+    ofs.open("hello.txt");
+    ofs << "open again, this will!"; // 会被写入文件
+    return 0;
+}
+```
+
+若上述8行改为`ofs.open("hello.txt", std::ios::app);` 即追加模式
+
+- 每次写操作之前将写指针置于文件末尾
+
+??? note "此时文件内容: "
+
+    ```
+    hello cs106L
+    open again, this will!
+    ```
