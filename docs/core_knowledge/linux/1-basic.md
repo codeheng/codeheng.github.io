@@ -11,7 +11,7 @@ comments: true
 Why Linux? 
 
 - 内核稳定，社区维护: Android OS & [torvalds/linux](https://github.com/torvalds/linux)
-- free & 轻量级 & 稳定性 & 兼容性
+- free开源 & 轻量级 & 稳定性 & 兼容性
 
 ## Shell 简介
 
@@ -47,13 +47,13 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 **总结来说**：Terminal获取输入，然后传递给Shell，等待Shell处理完后，将结果再传递回用户（显示在屏幕上），Shell 从 Terminal拿到输入，解析后交给OS执行，然后将结果返回给 Terminal
 
-^^命令行也是操作计算机的方式，理论上可以做任何事情^^。
-
-若没有显示器，只能通过命令行进行操作(e.g.SSH) 
+^^命令行也是操作计算机的方式，理论上可以做任何事情^^。 若没有显示器，只能通过命令行进行操作(e.g.SSH) 
 
 - P.S.[谈谈如何让自己看上去、闻上去都像一个CS人](https://zhuanlan.zhihu.com/p/539692975)
 
 ## Shell 基础命令
+
+- 查看[内核版本](https://www.kernel.org/)：`$ uname -a`; 查看发行版版本：`$ cat /etc/issue`
 
 一定要关注自己在哪执行的命令  -->  `pwd` 获取当前路径，而`~`代表当前用户的"home"目录
 
