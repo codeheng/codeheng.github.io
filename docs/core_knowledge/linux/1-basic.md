@@ -55,7 +55,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 - 查看[内核版本](https://www.kernel.org/)：`$ uname -a`; 查看发行版版本：`$ cat /etc/issue`
 
-一定要关注自己在哪执行的命令  -->  `pwd` 获取当前路径，而`~`代表当前用户的"home"目录
+一定要关注自己在哪执行的命令  -->  `pwd` 获取当前路径，而`~`代表当前用户的"home"(家)目录
 
 而要关注当前的用户，是普通用户还是root? 有的信息和权限有关
 
@@ -75,16 +75,28 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 - 切换到root用户：`su root` 
 - 更改root密码 `sudo passwd root`
 
-`whoami` 显示自身用户名称
-`who am i` 显示登录用户的用户名以及登陆时间
+`whoami` 显示自身用户名称；`who am i` 显示登录用户的用户名以及登陆时间
 
-`useradd bob` 添加用户bob(只能root或者sudo才可以执行)  --> 配密码`sudo passwd bob`
+- `cat /etc/passwd` 查询已存在的所有用户
+      * 某列展示为 `yh:x:1000:1000:ubuntu_64,,,:/home/yh:/bin/bash` :
+         + (用户名:密码:uid:gid:xxx:家目录:shell版本 )
+- 真正的密码可通过此命令查看：`cat /etc/shadow` （但是密文形式）
+
+
+`useradd bob` 添加新用户bob(只能root或者sudo才可以执行)  --> 配密码`sudo passwd bob`
+
+- 存在问题：没有家目录，并且用的sh而非bash（sh没有tab补全）
+- 解决：`useradd test -m -s /bin/bash`
 
 怎么知道添加成功了？  --> `cat /etc/passwd` 将显示添加的用户名
 
-`userdel bob` 删除用户bob
+`userdel bob` 删除用户bob （`-r` 选项会删除家目录）
 
-^^Tips: Shell中，Ctrl + A 光标回到开头，Ctrl + E回到结尾^^
+!!! Tips
+
+    Shell中，Ctrl + A 光标回到开头，Ctrl + E回到结尾
+
+    **要多运用`man`来进行查看相关命令的参考手册**
 
 ### 文件/目录操作
 
