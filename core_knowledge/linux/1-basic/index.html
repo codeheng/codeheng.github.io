@@ -5277,7 +5277,7 @@
 
 <h1 id="linux">Linux基础</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1741 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 6 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 1938 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
@@ -5285,8 +5285,8 @@
 </div>
 <p>Why Linux? </p>
 <ul>
-<li>内核稳定，社区维护: Android OS &amp; <a href="https://github.com/torvalds/linux">torvalds/linux</a></li>
-<li>free开源 &amp; 轻量级 &amp; 稳定性 &amp; 兼容性</li>
+<li>内核稳定，<a href="https://github.com/torvalds/linux">社区维护</a></li>
+<li>free(开源) &amp; 轻量级 &amp; 稳定性 &amp; 兼容性</li>
 </ul>
 <h2 id="shell">Shell 简介</h2>
 <p>黑黑的窗口？输入奇怪命令的地方？ &rarr; No! 这其实是 <strong>Terminal</strong></p>
@@ -5337,7 +5337,7 @@
 <code>cd path</code> 切换路径</p>
 <ul>
 <li>path: 可以是相对路径，也可以是绝对路径</li>
-<li>path中<code>~</code> 代表home, <code>.</code>代表当前路径，<code>..</code>代表上一级路径，<code>-</code>上一次目录</li>
+<li>path中<code>~</code> 代表home, <code>.</code>代表当前路径，<code>..</code>上一级路径，<code>-</code>上一次目录</li>
 </ul>
 <h3 id="_1">用户配置</h3>
 <p>两种用户: root 和 普通用户</p>
@@ -5363,7 +5363,7 @@
 <li>解决：<code>useradd test -m -s /bin/bash</code></li>
 </ul>
 <p>怎么知道添加成功了？  &rarr; <code>cat /etc/passwd</code> 将显示添加的用户名</p>
-<p><code>userdel bob</code> 删除用户bob （<code>-r</code> 选项会删除家目录）</p>
+<p><code>userdel bob</code> 删除用户bob （<code>-r</code> 选项会删除对应家目录）</p>
 <div class="admonition tips">
 <p class="admonition-title">Tips</p>
 <p>Shell中，Ctrl + A 光标回到开头，Ctrl + E回到结尾</p>
@@ -5375,17 +5375,39 @@
 <li><code>-a</code>：列出所有文件和目录，包含隐蔽文件</li>
 <li><code>-l</code>：列出详细信息(权限，大小，修改时间...)</li>
 </ul>
+<details class="note">
+<summary>ls -a内容说明</summary>
+<p><code>drwxr-xr-x 21 yh yh 4096 Dec  2 21:59 yh</code></p>
+<ul>
+<li>文件类型: <code>d</code>目录，<code>-</code>普通文件，<code>l</code>符号链接...</li>
+<li>wxr-xr-x ： 文件权限信息（读/写/执行）</li>
+<li>21: 硬链接数（此处表示该目录中有多个子目录或文件）</li>
+<li>yh: 文件所属用户</li>
+<li>yh: 文件所述用户组</li>
+<li>4096：文件大小(byte)</li>
+<li>Dec 2 21:59 最后修改时间</li>
+<li>yh: 此文件或目录名称</li>
+</ul>
+<p>硬链接和源文件是同一份文件，而软链接是独立的文件(类似于快捷方式)，存储着源文件的位置信息便于指向</p>
+</details>
 <p><code>touch file</code> 创建一个文件</p>
 <p><code>mkdir file</code> 创建一个目录</p>
 <p><code>cp src dst</code> 复制文件或目录，<code>-r</code> 递归复制目录</p>
 <p><code>mv src dst</code> 移动文件或目录(也可重命名)</p>
 <p><code>rm files</code> 删除文件，<code>-r</code> 递归删除目录; <code>-f</code> 强制删除；谨慎.<a href="https://www.zhihu.com/question/456544289"><code>rm -rf ./*</code></a></p>
-<p><code>chmod</code> 改变目录或文件的权限,e.g. <code>chmod +x file</code> 给file加上可执行权限
-<a class="glightbox" href="../assets/chmod.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="chmod" src="../assets/chmod.jpg" /></a></p>
+<p><code>chmod</code> 改变目录或文件的权限 &rarr; <code>chmod [u/g/o][+/-/=] [r/w/x]</code> </p>
+<ul>
+<li>e.g. <code>chmod +x file</code> 给file加上可执行权限</li>
+</ul>
+<p><a class="glightbox" href="../assets/chmod.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="chmod" src="../assets/chmod.jpg" /></a></p>
+<p>PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同理</p>
+<ul>
+<li><strong>（目录在磁盘中是链表形式，保存了孩子节点即目录里的文件）</strong></li>
+</ul>
 <p><strong>文件查找: <code>find 起始目录 查找条件 操作</code></strong>  e.g. <code>find /usr/include/ -name stdio.h</code></p>
 <ul>
 <li>根据名称和文件属性来查找<ul>
-<li><code>type x</code> 查找类型为x的文件，x可为b(块设备),c,d,p(管道),f,l,s(socket)</li>
+<li><code>type x</code> 查找类型为x的文件，x可为b(块设备)、c、d、p(管道)、f、l、s(socket)</li>
 <li><code>empty</code>  查找大小为 0 的目录或文件</li>
 <li><code>-name file</code> 查找文件名为file的所有文件，可用通配符<code>*、?、[]</code></li>
 </ul>
@@ -5486,7 +5508,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月3日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月4日</span>
   </span>
 
     
