@@ -10,8 +10,8 @@ comments: true
 
 Why Linux? 
 
-- 内核稳定，社区维护: Android OS & [torvalds/linux](https://github.com/torvalds/linux)
-- free开源 & 轻量级 & 稳定性 & 兼容性
+- 内核稳定，[社区维护](https://github.com/torvalds/linux)
+- free(开源) & 轻量级 & 稳定性 & 兼容性
 
 ## Shell 简介
 
@@ -64,7 +64,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 `cd path` 切换路径
 
 - path: 可以是相对路径，也可以是绝对路径
-- path中`~` 代表home, `.`代表当前路径，`..`代表上一级路径，`-`上一次目录
+- path中`~` 代表home, `.`代表当前路径，`..`上一级路径，`-`上一次目录
 
 
 ### 用户配置
@@ -90,7 +90,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 怎么知道添加成功了？  --> `cat /etc/passwd` 将显示添加的用户名
 
-`userdel bob` 删除用户bob （`-r` 选项会删除家目录）
+`userdel bob` 删除用户bob （`-r` 选项会删除对应家目录）
 
 !!! Tips
 
@@ -105,6 +105,21 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 - `-a`：列出所有文件和目录，包含隐蔽文件
 - `-l`：列出详细信息(权限，大小，修改时间...)
 
+??? Note "ls -a内容说明"
+    `drwxr-xr-x 21 yh yh 4096 Dec  2 21:59 yh`
+
+    - 文件类型: `d`目录，`-`普通文件，`l`符号链接...
+    - wxr-xr-x ： 文件权限信息（读/写/执行）
+    - 21: 硬链接数（此处表示该目录中有多个子目录或文件）
+    - yh: 文件所属用户
+    - yh: 文件所述用户组
+    - 4096：文件大小(byte)
+    - Dec 2 21:59 最后修改时间
+    - yh: 此文件或目录名称
+
+    硬链接和源文件是同一份文件，而软链接是独立的文件(类似于快捷方式)，存储着源文件的位置信息便于指向
+
+
 `touch file` 创建一个文件
 
 `mkdir file` 创建一个目录
@@ -115,13 +130,20 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 `rm files` 删除文件，`-r` 递归删除目录; `-f` 强制删除；谨慎.[`rm -rf ./*`](https://www.zhihu.com/question/456544289)
 
-`chmod` 改变目录或文件的权限,e.g. `chmod +x file` 给file加上可执行权限
+`chmod` 改变目录或文件的权限 --> `chmod [u/g/o][+/-/=] [r/w/x]` 
+
+- e.g. `chmod +x file` 给file加上可执行权限
+
 ![chmod](./assets/chmod.jpg){ align=center }
+
+PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同理
+
+- **（目录在磁盘中是链表形式，保存了孩子节点即目录里的文件）**
 
 **文件查找: `find 起始目录 查找条件 操作`**  e.g. `find /usr/include/ -name stdio.h`
 
 - 根据名称和文件属性来查找
-    - `type x` 查找类型为x的文件，x可为b(块设备),c,d,p(管道),f,l,s(socket)
+    - `type x` 查找类型为x的文件，x可为b(块设备)、c、d、p(管道)、f、l、s(socket)
     - `empty`  查找大小为 0 的目录或文件
     - `-name file` 查找文件名为file的所有文件，可用通配符`*、?、[]`
 - 按照时间查找

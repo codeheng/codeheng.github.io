@@ -101,6 +101,11 @@ comments: true
 (PS: ~~奖学金都12月竟然还没发！拖拖拖，学生真能拖~~)
 
 
+??? tips "如何专注——来自[Andrew huberman](https://www.youtube.com/watch?v=lIo9FcrljDk&ab_channel=AndrewHuberman)"
+
+    the questions I usually get are how can I focus better?  One of the best ways you can support your mechanisms for good mood, mental health, learning, focus, metabolism, etc, **is to take control of this light exposure behavior at night** and not get much or any bright light exposure in the middle of the night.
+
+
 - [x] 睡眠：平均7h28min，入睡23:44,清醒6:23，最晚00:00，最早6:23。貌似又好了些，但也并非理想的，因为中午一般会睡一个小时后，所以晚上就六个多小时，其实还是挺差的。尤其这几天醒来又变早了，甚至刚六点就醒了，再睡也睡不着了，并且睡前都是一阵子才睡着 （~~难不成有些焦虑啦~~）真难调整呢....这个月也就几天能做到熄灯睡，醒来7点了，睡了七个多小时，达到了理想状态，睡前确实要放松放松，不能太过于兴奋。
 - [x] 锻炼运动了19天，维持每周四次，还算不错吧
 
@@ -108,3 +113,6 @@ comments: true
 ### 十二月
 
 ![](https://m.media-amazon.com/images/I/31rXUluuPUL._AC_UF894,1000_QL80_.jpg)
+
+- [ ] 12.2晚上不知道怎么回事就嗓子疼，貌似是感冒了，本来这一天都挺好的，下午还去健身了也没事，晚上就有点嗓子疼了（怀疑是着凉了，毕竟穿的没有很多）第二天3号直接嗓子更难受了些，喝水喝了一天哈哈哈，感觉得七八杯好几升，晚上睡觉的时候还出汗，导致又热又闷的，也没睡太好，半夜两点多醒来去了趟厕所，又继续睡，结果六点不到又醒了，迷迷糊糊睡，但也没睡着，一晚上就睡了六个小时不到我天。4号硬扛了一上午，本来开始困了，刷到了个知乎[文章](陌生人晕倒了，帮他拨打120后，病人不支付120出车费，这个费用谁来承担？ - 重案组之虎的回答 - 知乎
+https://www.zhihu.com/question/547210837/answer/45026417424)，不知不觉看了一个小时左右，很是精彩，直接不困了，也有不少感慨。
