@@ -10,3 +10,6 @@ Why docker ?  --> 为了解决环境配置的问题
 
 !!! quote "[官网](https://www.docker.com/)"
     Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management. 
+
+
+启动Docker : `sudo systemctl enable/start docker`
