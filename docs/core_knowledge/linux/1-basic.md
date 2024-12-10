@@ -47,7 +47,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 **总结来说**：Terminal获取输入，然后传递给Shell，等待Shell处理完后，将结果再传递回用户（显示在屏幕上），Shell 从 Terminal拿到输入，解析后交给OS执行，然后将结果返回给 Terminal
 
-^^命令行也是操作计算机的方式，理论上可以做任何事情^^。 若没有显示器，只能通过命令行进行操作(e.g.SSH) 
+^^命令行也是操作计算机的方式,可做任何事情^^。 若没有显示器，只能通过命令行(e.g.SSH) 
 
 - P.S.[谈谈如何让自己看上去、闻上去都像一个CS人](https://zhuanlan.zhihu.com/p/539692975)
 
@@ -57,7 +57,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 
 一定要关注自己在哪执行的命令  -->  `pwd` 获取当前路径，而`~`代表当前用户的"home"(家)目录
 
-而要关注当前的用户，是普通用户还是root? 有的信息和权限有关
+- **要关注当前的用户，是普通用户还是root? 有的信息和权限相关**
 
 在*nix中没有分盘的概念，所有文件都挂载到唯一的根目录 `/` 下
 ![linux-directory](./assets/linux_directory.jpg)
@@ -105,7 +105,7 @@ Terminal：一个应用程序，提供了一个窗口和输入输出交互的功
 - `-a`：列出所有文件和目录，包含隐蔽文件
 - `-l`：列出详细信息(权限，大小，修改时间...)
 
-??? Note "ls -a内容说明"
+??? Note "ls -l内容说明"
     `drwxr-xr-x 21 yh yh 4096 Dec  2 21:59 yh`
 
     - 文件类型: `d`目录，`-`普通文件，`l`符号链接...
@@ -140,19 +140,22 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 
 - **（目录在磁盘中是链表形式，保存了孩子节点即目录里的文件）**
 
-**文件查找: `find 起始目录 查找条件 操作`**  e.g. `find /usr/include/ -name stdio.h`
+#### find
+
+**文件查找: `find 起始目录 查找条件 操作`**  e.g. `find /usr/include/ -name "stdio.h"`
 
 - 根据名称和文件属性来查找
-    - `-type x` 查找类型为x的文件，x可为b(块设备)、c、d、p(管道)、f(regular file)、l、s(socket)
+    - `-type x` 查找类型为x的文件
+        * x可为b(块设备)、c、d、p(管道)、f(regular file)、l、s(socket)
     - `-empty`  查找大小为 0 的目录或文件
     - `-name file` 查找文件名为file的所有文件，可用通配符`*、?、[]`
-    - `-size n[cwbkMG]`  n是要查找的文件大小（n前面可用`+/-`表示>或< ）
+    - `-size n[cwbkMG]`  n是要查找的文件大小（n前面可用`+/-`表示大于或小于）
 - 按照时间查找
     - `-amin n` ：查找n分钟以前 **被访问过** 的所有文件
         - （+表示n分钟之前，-表示n分钟之内，都不能省）
     - `-cmin n` 查找n分钟以前 **文件状态** 被修改过的所有文件
     - `-mmin n` 查找n分钟以前 **文件内容** 被修改过的所有文件
-          * 12h内是否有人修改相关内容：`find - mmin -720`
+          * e.g. **12h内是否有人修改相关内容：`find - mmin -720`**
 - 其他查找条件：`-user/-uid/-group/-gid/-perm` (参考man手册)
 - 也可以进行组合：`-a`(交集)、`-o`(并集)、`!`(补集)
 
@@ -177,6 +180,17 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 
 `wc file` 统计文件的行数(`-l`)、字数(`-w`)和字节数(`-c`)
 
+`tar` 打包和压缩
+
+- `tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo] [arg..]`
+- `c` 创建 `r` 追加 `x` 释放
+- `v` 显示过程 `f` 指定名字 `z` gzip算法压缩
+
+- e.g. 压缩：`$ tar zcvf file.tar file1 file2`
+    * 解压：`$ tar zxvf file.tar`
+
+#### grep
+
 `grep [options] pattern [files]` {++查找符合某正则表达式的文件内容++}（⭐️⭐️⭐️）
 
 - pattern 表示要查找的正则表达式（[参考](https://www.regular-expressions.info/)）
@@ -199,12 +213,13 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 
     Linux命令众多，仅仅记录常用的。若又有新的了解，随时补充!
 
+`alias` 给某命令起别名(临时的)
 
-`|` : 管道，将一个程序或命令的输出作为另一个程序或命令的输入
+- 设置`alias ls="rm -rf"` (~~故意坑人笑死~~)
 
 `>` 重定向：0(stdin)、1(stdout)、2(stderr)
 
-- `find . -name text &> file`  &代表把所有的重定向到file中
+- `find . -name "text" &> file`  &代表把所有的重定向到file中
 - `>>` 追加重定向
 - `<` 输入重定向（OJ评测原理）
 
@@ -216,13 +231,17 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 
 - `-s` 只显示总和； `-h` 以易读的方式显示；`-d` 表示深度
 
-#### 远程copy
+#### 远程copy(上传&下载)
 
-**`scp filename username@ip:path` scp远程复制文件**，e.g. `scp file yh@192.168.10.129:~`
+`scp filename username@ip:path` scp远程复制文件，e.g. `scp file yh@192.168.10.129:~`
 
-- filename要复制的文件名称，若是目录加上`-r`
+- filename本地要复制的文件名称，若是目录加上`-r`
 - username目标主机名
 - path: 要复制到的目标主机路径
+
+反过 来 `scp yh@192.168.10.129:/home/yh/scp_test .` 
+
+- 远程主机的文件，copy至当前主机目录下
 
 #### 网络管理
 
@@ -254,3 +273,33 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 
 - `netstat -anp | grep 进程号` （查看该进程网络信息）
 - `netstat –nlp | grep 端口号` （查看网络端口号占用情况）
+
+### 命令的组合
+
+顺序执行多个命令用`;` e.g.`mkdir dir; touch dir/file`
+
+`|` : 管道，将一个程序或命令的输出作为另一个程序或命令的输入
+
+- e.g. `sort file | uniq` 对file进行排序并去重
+
+`xargs` ：将标准输入转为命令行参数
+
+- 单独使用，输入`xargs`后摁↩等待用户输入，输入后按`ctrl+d`展示相应结果
+    * 另: `xargs ls -al`按↩︎，再输入dir，`ctrl+d`之后将展示dir1目录内容
+    * (等价`ls -al dir`)
+- **主要是与管道进行结合使用** 
+    * 如: 搜索某目录下若干个`.c`文件中的main的位置
+        + `find -name . "*.c" | xargs grep -nE "int.*main\(.*\)`  (`\`代表转义)
+        + find找到所有的.c文件，通过管道给xargs，然后每个.c文件通过grep进行查找mai
+
+!!! Note "命令替换" 
+
+    ```shell
+    cmd1 `cmd2` 等价 cmd1 $(cmd2)
+    # 先执行cmd2，再把其结果作为cmd1的参数
+    ```
+    (也可以用xargs加管道来实现)
+
+    例子: `$ date +%y%m%d | xargs mkdir` (会创建名为当前年月日的目录)
+
+    等价 `$ mkdir $(date +%y%m%d)`
