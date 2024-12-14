@@ -189,6 +189,8 @@ PS: 若dir1目录有file1，删除file1则需要dir1的写权限，新增也同�
 - e.g. 压缩：`$ tar zcvf file.tar file1 file2`
     * 解压：`$ tar zxvf file.tar`
 
+`vimdiff file1 file2` 对文件进行对比（合并代码会用到）
+
 #### grep
 
 `grep [options] pattern [files]` {++查找符合某正则表达式的文件内容++}（⭐️⭐️⭐️）

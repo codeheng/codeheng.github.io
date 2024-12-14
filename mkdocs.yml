@@ -63,6 +63,7 @@ nav:
       - core_knowledge/language/c++/index.md
       - CS106L:
         - 基础: core_knowledge/language/c++/cs106l/1-intro.md
+        - 容器: core_knowledge/language/c++/cs106l/2-container.md
     - Lab:
       - CSAPP:
         - core_knowledge/lab/csapp/index.md

@@ -118,9 +118,10 @@ Student s{"Bob", "AR", 21};
 3.Structured Binding **『C++17』**
 
 - 在编译时从固定大小的数据结构中初始化一些变量的方法
+    * `int a[2] = {1, 2}; auto [x, y] = a;` 即x = 1, y = 2
 - 访问函数返回的多个值的能力
 
-```c++ linenums="1"
+```c++ linenums="1" hl_lines="10"
 std::tuple<std::string, std::string, std::string> getClassInfo() {
     std::string className = "CS106L";
     std::string bindName = "Turing";
@@ -217,7 +218,7 @@ const vector<int>& const_ref_vec { const_vec }; // good!
 
     a general **input/output(IO)** ==abstraction== for C++
     
-    - abstraction提供了统一的 **接口(interface)**, 在 **streams** 的接口是 **reading和writing数据**
+    - abstraction提供了统一的 **interface**, **streams** 的接口是 **reading和writing**
     - Streams允许以一种通用的方式处理外部数据
 
 ### cout和cin
