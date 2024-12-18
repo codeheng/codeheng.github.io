@@ -155,3 +155,14 @@ PS: `unordered_set` 即是`unordered_map`没有value，仅仅考虑key
 Q: 遍历时`for(const auto& elem : container)` 如何工作的？
 
 - container可为`deque/vector/map/set`等
+
+e.g. `for (auto elem : s) std::cout << elem;` (此处s为集合set)。等价如下形式：
+
+```c++ linenums="1"
+for(auto it = s.begin(); it != s.end(); ++it) {
+    auto elem = *it;
+    cout << elem;
+}
+```
+
+PS: `++it` avoids making an unnecessary copy. [参考](https://isocpp.org/wiki/faq/operator-overloading#increment-pre-post-speed)
