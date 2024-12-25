@@ -133,3 +133,5 @@ https://www.zhihu.com/question/547210837/answer/45026417424)，不知不觉看�
 - [ ] 12.20下午组会——继续介绍进度，可写！方案开始要着手编了
 
 &nbsp; &nbsp; &nbsp; &nbsp; 12.24和图书馆一[老师](https://kns.cnki.net/kcms2/author/detail?v=kz9ikNiCkdpHihuL4ewgZuaJcM0ttZ3QY-NNKW71Pz1JkXzh3ACrW62KFI2RL6iU4Y1WFz6JL2m-tk8a-SD-IkAZGfB_D_SzkHyWMmAIANyLNoeOJhiEunK9eXdmw-p5k4LqLYaLF-A=&uniplatform=NZKPT)简单聊了聊(可能看我经常在图书馆，眼熟了)，之前也见到师姐和她聊过，后面得知就是负责学校[电力科学与工程学报](http://dlkxygc.ncepu.edu.cn/CN/1672-0792/home.shtml)里面某安全专栏的负责人，而且这个栏目还是他提议的。老师之前是在电子系博士毕业的，她也说到读这个方向也是很痛苦，而且坦白讲我们师门发的并没太大的创新点，~~相当于给搞这个方向的师弟师妹留了个保毕业的后门~~，和老师聊天过程，能感受到老师真的很好。但同时感觉每天搞着这论文并没太大的意义，但又是必须，甚至就业方向和论文研究方向有些冲突性，论文仅仅是为了毕业而已！**即便再讨厌，也得弄呀，毕竟真得考论文才能毕业！**，但何时能把论文投中一切未知，能做的就是尽可能早日写出来
+
+- [x] 12.25——B站又抽中算法训练营了，真幸运！我天（上次打卡30多天中途太难放弃了，这次尽可能坚持！！）
