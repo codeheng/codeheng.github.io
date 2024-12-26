@@ -11,7 +11,7 @@ nav:
   - 📖知识:
     - core_knowledge/index.md
     - 算法:
-      - LeetCode刷题:
+      - LeetCode刷题打卡:
         - 数组: 
           - Day1 | Part1: core_knowledge/algorithm/check_in_everyday/day1.md
           - Day2 | Part2: core_knowledge/algorithm/check_in_everyday/day2.md
