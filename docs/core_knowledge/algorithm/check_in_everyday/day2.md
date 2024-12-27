@@ -165,7 +165,7 @@ comments: true
     ```java linenums="1"
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt(), a, b;
+        int n = s.nextInt();
         int[] arr = new int[n];
         int[] p = new int[n];
         int t = 0;
@@ -174,7 +174,8 @@ comments: true
             t += arr[i]; p[i] = t;
         }
         while (s.hasNextInt()) {
-            a = s.nextInt(); b = s.nextInt();
+            int a = s.nextInt(); 
+            int b = s.nextInt(); //把a,b定义在上面会TLE，很奇怪
             if (a == 0) System.out.println(p[b]);
             else System.out.println(p[b] - p[a - 1]);
         }
