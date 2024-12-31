@@ -11,18 +11,39 @@ comments: true
 - 遍历`nums1`和`nums2` 统计里面的元素`i+j`出现的次数，放入map
 - 再遍历`nums3`和`nums4`，对`-(k+l)`进行计数
 
-```c++ linenums="1"
-int fourSumCount(vector<int>& nums1, vector<int>& nums2, 
-                 vector<int>& nums3, vector<int>& nums4) {
-    int cnt = 0;
-    unordered_map<int, int> map;
-    for (int i : nums1) 
-        for (int j : nums2) map[i + j] ++;
-    for (int k : nums3) 
-        for (int l : nums4) cnt += map[-(k + l)];
-    return cnt;
-}
-```
+=== "Java"
+
+    ```java linenums="1"
+    class Solution {
+        public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
+            int cnt = 0;
+            Map<Integer,Integer> s = new HashMap<>();
+            for(int i : nums1)
+                for(int j : nums2) s.put(i + j, s.getOrDefault(i + j, 0) + 1);
+            for(int i : nums3)
+                for(int j : nums4) cnt += s.getOrDefault(-1 * (i + j), 0);
+            return cnt;
+        }
+    }
+    ```
+    
+    HashMap下的方法`getOrDefault` ： 返回map中key对应的value值，若不存在则返回第二个参数
+
+
+=== "C++"
+
+    ```c++ linenums="1"
+    int fourSumClinenums="1"ount(vector<int>& nums1, vector<int>& nums2, 
+                    vector<int>& nums3, vector<int>& nums4) {
+        int cnt = 0;
+        unordered_map<int, int> map;
+        for (int i : nums1) 
+            for (int j : nums2) map[i + j] ++;
+        for (int k : nums3) 
+            for (int l : nums4) cnt += map[-(k + l)];
+        return cnt;
+    }
+    ```
 
 ## [383.赎金信](https://leetcode.cn/problems/ransom-note/)
 
@@ -37,21 +58,40 @@ bool canConstruct(string ransomNote, string magazine) {
             }
         }
     }
-    if (ransomNote.length() == 0) 
-        return true;
+    if (ransomNote.length() == 0) return true;
     return false;
 }
 ```
 2. 利用数组哈希 --> $O(n)$
-```c++ linenums="1"
-bool canConstruct(string ransomNote, string magazine) {
-    int cnt[26] = {0};
-    for (auto c : magazine) cnt[c - 'a'] ++;
-    for (auto c : ransomNote)
-        if ( --cnt[c - 'a'] < 0) return false;
-    return true;
-}
-```
+
+=== "Java" 
+
+    ```java linenums="1"
+    class Solution {
+        public boolean canConstruct(String ransomNote, String magazine) {
+            int[] cnt = new int[26];
+            for(int i = 0; i < ransomNote.length(); i ++) 
+                cnt[ransomNote.charAt(i) - 'a'] ++;
+            for(int i = 0; i < magazine.length(); i ++) 
+                cnt[magazine.charAt(i) - 'a'] --;
+            for(int i = 0; i < cnt.length; i ++)
+                if(cnt[i] > 0) return false;
+            return true;
+        }
+    }
+    ```
+
+=== "C++"
+
+    ```c++ linenums="1"
+    bool canConstruct(string ransomNote, string magazine) {
+        int cnt[26] = {0};
+        for (auto c : magazine) cnt[c - 'a'] ++;
+        for (auto c : ransomNote)
+            if ( --cnt[c - 'a'] < 0) return false;
+        return true;
+    }
+    ```
 
 ## [15.三数之和](https://leetcode.cn/problems/3sum/)
 
