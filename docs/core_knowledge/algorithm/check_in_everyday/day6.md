@@ -27,7 +27,7 @@ comments: true
     }
     ```
     
-    HashMap下的方法`getOrDefault` ： 返回map中key对应的value值，若不存在则返回第二个参数
+    HashMap下的方法`getOrDefault` ： 返回map中key对应的value，若不存在返回第二个参数
 
 
 === "C++"
