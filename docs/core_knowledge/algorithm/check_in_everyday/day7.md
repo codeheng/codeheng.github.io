@@ -43,7 +43,6 @@ PS: **如果题目关键部分直接用库函数可以实现，那么尽量别�
 
 > 当需要固定规律一段一段去处理字符串的时候，想想在for循环上可实现否?
 
-
 === "Java"
 
     ```java linenums="1"
@@ -65,7 +64,6 @@ PS: **如果题目关键部分直接用库函数可以实现，那么尽量别�
         }
     }
     ```
-
 
 === "C++"
 
@@ -120,20 +118,22 @@ PS: **如果题目关键部分直接用库函数可以实现，那么尽量别�
 - 整体反转，再单词再反转，空格怎么办? --> 直接用不是空格的字符进行填充
 - [图片参考](https://assets.leetcode.com/users/images/b62b1a27-3688-41eb-b294-c26a5ba11d19_1634751350.7162225.png)
 
-```c++ linenums="1"
-string reverseWords(string s) {
-    reverse(s.begin(), s.end());
-    int l = 0, r = 0, i = 0;
-    while( i < s.size() ) {
-        while( i < s.size() && s[i] == ' ' ) i ++;
-        while( i < s.size() && s[i] != ' ' ) s[r ++] = s[i ++];
-        if (l < r) {
-            reverse(s.begin() + l, s.begin() + r);
-            s[r ++] = ' ';
-            l = r;
+=== "C++"
+
+    ```c++ linenums="1"
+    string reverseWords(string s) {
+        reverse(s.begin(), s.end());
+        int l = 0, r = 0, i = 0;
+        while( i < s.size() ) {
+            while( i < s.size() && s[i] == ' ' ) i ++;
+            while( i < s.size() && s[i] != ' ' ) s[r ++] = s[i ++];
+            if (l < r) {
+                reverse(s.begin() + l, s.begin() + r);
+                s[r ++] = ' ';
+                l = r;
+            }
         }
+        s.resize(r - 1);
+        return 0;
     }
-    s.resize(r - 1);
-    return 0;
-}
-```
+    ```
