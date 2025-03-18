@@ -409,5 +409,6 @@ i
 
 **第四周:**
 
-- [ ]
+- [x] 25.3.17Day43——操场 **推** (靠墙倒立维持 5次 x 15s，折刀俯卧撑 6 x 6，折刀高位交叉摸肩 2 x 6，弹力带面拉 4 x 10，双杠臂屈伸 4 x 8，悬垂举腿 4 x 8 + 悬垂左右侧举腿共8次 x 2)
+- [x] 25.3.18Day44——宿舍 **蹲** （左右2.5kg哑铃深蹲 4 x 20，左右2.5kg哑铃保加利亚深蹲 4 x 12，[促睾](https://www.bilibili.com/video/BV1tT4y1r7hn/?spm_id_from=333.1391.0.0)跟练 x 1，靠床臀推 4 x 20；[腹肌跟练](https://www.bilibili.com/list/watchlater?oid=113757527216788&bvid=BV1ex6iYAEfx&spm_id_from=333.1391.top_right_bar_window_view_later.content.click) x 1)
 
