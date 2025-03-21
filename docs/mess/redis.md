@@ -8,6 +8,8 @@ comments: true
 >
 > 属于非关系数据库(NoSQL = not only SQL)，即并非像Mysql(关系数据库)那样使用table存储
 >
+> - 不遵循SQL标准 & 不支持ACID & 性能远超SQL
+>
 > PS: [中文文档](https://redis.com.cn/)
 
 
@@ -44,8 +46,8 @@ PONG
 
 **优点：**
 
-- 性能极高：读写速率非常之快
-- 丰富的数据结构
+- 性能极高：读写速率非常之快 (读取的速度是11w次/s，写的速度是8.1w次/s)
+- 丰富的数据结构: ^^string，list，hash，set，zset^^
 - 原子性：所有操作均是原子性的，^^但Redis里面事务没有原子性^^
 - 丰富的特性：支持publish/subscribe『[观察者模式](https://refactoringguru.cn/design-patterns/observer)』、key过期
 
