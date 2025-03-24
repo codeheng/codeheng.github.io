@@ -410,6 +410,12 @@ i
 **第四周:**
 
 - [x] 25.3.17Day43——操场 **推** (靠墙倒立维持 5次 x 15s，折刀俯卧撑 6 x 6，折刀高位交叉摸肩 2 x 6，弹力带面拉 4 x 10，双杠臂屈伸 4 x 8，悬垂举腿 4 x 8 + 悬垂左右侧举腿共8次 x 2)
-- [x] 25.3.18Day44——宿舍 **蹲** （左右2.5kg哑铃深蹲 4 x 20，左右2.5kg哑铃保加利亚深蹲 4 x 12，[促睾](https://www.bilibili.com/video/BV1tT4y1r7hn/?spm_id_from=333.1391.0.0)跟练 x 1，靠床臀推 4 x 20；[腹肌跟练](https://www.bilibili.com/list/watchlater?oid=113757527216788&bvid=BV1ex6iYAEfx&spm_id_from=333.1391.top_right_bar_window_view_later.content.click) x 1)
+- [x] 25.3.18Day44——宿舍 **蹲** （左右2.5kg哑铃深蹲 4 x 20，左右2.5kg哑铃保加利亚深蹲 4 x 12，[促睾](https://www.bilibili.com/video/BV1tT4y1r7hn/?spm_id_from=333.1391.0.0)跟练 x 1，靠床臀推 4 x 20；[腹肌跟练](https://www.bilibili.com/list/watchlater?oid=113757527216788&bvid=BV1ex6iYAEfx&spm_id_from=333.1391.top_right_bar_window_view_later.content.click) x 1）
 - [x] 25.3.19Day45——操场 **推** （双杠臂屈伸 2 x 6 + 2 x 5，宽距俯卧撑 4 x 12，下斜俯卧撑 4 x 8，钻石俯卧撑 1 x 5，高位颈后下压臂屈伸 2 x 6 + 2 x 8，弹力带左右三头下压 4 x 8，上斜俯卧撑 1 x 15 + 1 x 10 + 1 x 8力竭；悬垂举腿 3 x 6 + 2 x 5；靠墙倒立尝试 x 5）
 - [x] 25.3.21Day46——操场 **拉** （标准引体 1 x 7 + 3 x 5，反手引体2 x 5 + 弹力带辅助 1 x 5，对握引体弹力带辅助 3 x 5；澳式引体正手宽距/窄距/反手窄距各4 x 8；悬垂举腿 2 x 6 + 3 x 5；靠墙倒立尝试 x 3；吃完饭回宿舍2.5kg哑铃反手/锤式/正手 4 x 12）
+- [x] 25.3.22Day47——操场 **核心** （单杠L维持10s x 4，悬垂举腿 4 x 5，抓杠维持30s x 2，靠墙倒立尝试 x 1，双杠左右腿交替L支撑10s x 2勉强 + 曲腿10s x 4，左右侧挤腹 3 x 5，宿舍Chris腹肌跟练 x 1）
+- [x] 25.3.24Day48——操场 **有氧** （36min最后一圈慢走共4.25公里，前面和同学慢跑心率还维持150最后，后面自己跑了几圈明显心率变快了，平均心率154，最高188）
+
+**第五周：**
+
+-  [ ] 
