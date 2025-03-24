@@ -56,7 +56,7 @@ PONG
 默认16个数据库，编号`0~15`, 可通过`select index` 进行切换(index  = 0...15) 默认就是0
 
 - `keys *, keys ?`  列出所有的key （若空，则展示`(empty list or set)`）
-- `set k val` :创建k-v  -->  `get k` 查看k对于的v
+- `set k val` : 创建k-v  -->  `get k` 查看k对于的v
 - `dbsize` : 当前数据库key的数量
 - `flushdb` 清空当前数据库； `flushall` 清空所有数据库
 - `move key index` 把key对应的从当前数据库移动到index对应的数据库中
@@ -67,7 +67,7 @@ PONG
 
 ### 五大数据类型
 
-String : 可存放任意类型的数据，属于二进制安全
+String : 可存放任意类型的数据，属于二进制安全 **(Redis中最基本的类型)**
 
 - `mset k1 val1 [k2 val2 ...]` : 可设置多个给定的key值
 - `mget k1 [k2 ...]` 获取多个给定key的value值
