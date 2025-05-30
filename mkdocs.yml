@@ -64,6 +64,10 @@ nav:
       - CS106L:
         - 基础: core_knowledge/language/c++/cs106l/1-intro.md
         - 容器: core_knowledge/language/c++/cs106l/2-container.md
+    - Java:
+      - Docker: core_knowledge/language/java/docker.md
+      - Redis: core_knowledge/language/java/redis.md
+      - Maven: core_knowledge/language/java/maven.md 
     - Lab:
       - CSAPP:
         - core_knowledge/lab/csapp/index.md
@@ -136,8 +140,7 @@ nav:
     - LaTex: mess/latex.md
     - Vim: mess/Vim.md
     - VScode: mess/vscode.md
-    - Docker: mess/docker.md
-    - Redis: mess/redis.md
+
 
   - 🔑Eng:
     - eng/index.md
