@@ -15,7 +15,7 @@ comments: true
     <center> ❤️ [终于等到你了, 来瞧瞧一恒君吧！](https://codeheng.github.io/) ❤️ </center>
 
 <center>
-**我在此已等候你**:
+<b>我在此已等候你:</b>
 <span id="momk"></span>
 <script language=javascript>
     function show_date_time(){
