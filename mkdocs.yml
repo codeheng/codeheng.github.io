@@ -68,6 +68,7 @@ nav:
       - Docker: core_knowledge/language/java/docker.md
       - Redis: core_knowledge/language/java/redis.md
       - Maven: core_knowledge/language/java/maven.md 
+      - SpringBoot: core_knowledge/language/java/springboot.md
     - Lab:
       - CSAPP:
         - core_knowledge/lab/csapp/index.md
