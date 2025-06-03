@@ -109,3 +109,46 @@ Web服务器（Tomcat）对 ^^HTTP协议的请求数据^^ 进行解析，并进�
 
     - 但实际上已经包含在了启动类声明注解`@SpringBootApplication`中，默认扫描的范围是启动类所在包及其子包
 
+
+**DI** : IOC容器要为应用程序去提供运行时所依赖的资源，^^资源指的就是对象^^
+
+- `@Autowired`注解(自动装配)：默认是按照类型进行自动装配的（去IOC容器中找某个类型的对象，然后完成注入）
+    * 属性注入、构造函数注入、setter注入 （一般均会采用第一种，简洁高效）
+
+```java
+@RestController
+public class UserController {
+
+    //方式一: 属性注入
+    @Autowired
+    private UserService userService;
+
+    //方式二: 构造器注入
+    private final UserService userService;
+    @Autowired //如果当前类中只存在一个构造函数, @Autowired可以省略
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    //方式三: setter注入
+    private UserService userService;
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+}
+```
+
+!!! Question
+    
+    存在多个相同类型的bean对象，怎么办？
+
+    1. 使用`@Primary`注解，来确定默认的实现
+    2. 在`@Qualifier`的value属性中，指定注入的bean的名称，必须配合@Autowired使用
+        - e.g.  `@Qualifier("userServiceImpl")` 
+    3. 利用`@Resource`，通过name属性指定要注入的bean的名称
+
+??? Question "面试题—— `@Autowird` 与 `@Resource`的区别"
+    
+    - @Autowired 是Spring框架提供的注解，而@Resource是JDK提供的注解
+    - @Autowired 默认是按照类型注入，而@Resource是按照名称注入

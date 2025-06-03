@@ -66,6 +66,7 @@ nav:
         - 容器: core_knowledge/language/c++/cs106l/2-container.md
     - Java:
       - Docker: core_knowledge/language/java/docker.md
+      - MySQL: core_knowledge/language/java/mysql.md
       - Redis: core_knowledge/language/java/redis.md
       - Maven: core_knowledge/language/java/maven.md 
       - SpringBoot: core_knowledge/language/java/springboot.md
