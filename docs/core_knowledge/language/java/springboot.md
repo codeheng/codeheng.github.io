@@ -67,7 +67,6 @@ Web服务器（Tomcat）对 ^^HTTP协议的请求数据^^ 进行解析，并进�
     PS: ^^前后端分离项目，一般直接在请求处理类上加@RestController注解^^
 
 
-
 ### 分层
 
 > 单一职责原则：一个类或一个方法，就只做一件事情，只管一块功能
@@ -150,5 +149,25 @@ public class UserController {
 
 ??? Question "面试题—— `@Autowird` 与 `@Resource`的区别"
     
-    - @Autowired 是Spring框架提供的注解，而@Resource是JDK提供的注解
-    - @Autowired 默认是按照类型注入，而@Resource是按照名称注入
+    - `@Autowired` 是Spring框架提供的注解，而`@Resource`是JDK提供的注解
+    - `@Autowired` 默认是按照类型注入，而`@Resource`是按照名称注入
+
+**REST风格**：Representational State Transfer表述性状态转换，一种软件架构风格
+
+!!! Note "传统VS基于REST"
+
+
+    **传统:**
+
+    - `http://localhost:8080/user/getById?id=1` --> GET：查询id为1的用户
+    - `http://localhost:8080/user/saveUser`     --> POST：新增用户
+    - `http://localhost:8080/user/updateUser`   --> POST：修改用户
+    - `http://localhost:8080/user/deleteUser?id=1` --> GET：删除id为1的用户
+
+    **基于REST：**
+        
+    - `http://localhost:8080/users/1`  --> GET：查询id为1的用户
+    - `http://localhost:8080/users`    --> POST：新增用户
+    - `http://localhost:8080/users`    --> PUT：修改用户
+    - `http://localhost:8080/users/1`  --> DELETE：删除id为1的用户
+
