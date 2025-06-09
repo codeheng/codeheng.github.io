@@ -31,6 +31,7 @@ comments: true
 - 物理上如何表示记录? 怎么从表中读取数据? 怎么把数据写入具体的物理存储器上?
     * **存储引擎负责的事情**  --> `MyISAM/ InnoDB/Memory...`
     * `SHOW ENGINES;` 查看当前服务器程序支持的存储引擎
+            + 表的默认存储引擎为`InnoDB` 
 
 ## SQL语句
 

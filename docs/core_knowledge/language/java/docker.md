@@ -13,3 +13,6 @@ Why docker ?  --> 为了解决环境配置的问题
 
 
 启动Docker : `sudo systemctl enable/start docker`
+
+
+查看镜像：`docker images`
