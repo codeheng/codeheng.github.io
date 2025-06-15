@@ -22,7 +22,7 @@ comments: true
 
 ## 介绍
 
-Redis可用于 ^^数据库、缓存和消息中间件^^ ，基于内存并支持持久化
+Redis可用于 ^^缓存、计数器、排行榜、社交网络、消息队列和分布式锁^^ ，基于内存并支持持久化
 
 [安装](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/)，如下操作验证成功否
 
@@ -59,8 +59,9 @@ PONG
 
 !!! Note "常见命令"
 
+    - `setnx k v` 若k不存在，才成功添加k-v，若则不执行
     - `keys *, keys ?`  列出所有的key （若空，则展示`(empty list or set)`）
-    - `set k val` : 创建k-v  -->  `get k` 查看k对于的v
+    - `set k val` : 创建/修改k-v  -->  `get k` 查看k对于的v
     - `dbsize` : 当前数据库key的数量
     - `flushdb` 清空当前数据库； `flushall` 清空所有数据库
     - `move key index` 把key对应的从当前数据库移动到index对应的数据库中
@@ -69,18 +70,20 @@ PONG
     - `expire key seconds` 设置key的过期时间
     - `type key` 查看key的类型
 
+    PS: 根据[官网](https://redis.io/docs/latest/commands/)检索查询即可 或 通过 `help [command]` 来进行查看
+
 ### 五大基本数据类型
 
 !!! quote "介绍"
 
     ![](./assets/redis基本数据类型.jpg)
 
-**String** : 可存放任意类型的数据，属于二进制安全 **(Redis中最基本的类型)**
+**String** : Redis中最基本的类型，字符串类型的值value可以是字符串（简单的字符串、复杂的字符串（如JSON、XML））、数字（整数、浮点数），甚至是二进制（图片、音频、视频），但值最大不能超过512MB
 
-- String结构是将对象序列化为JSON字符串后存储，要修改对象的某个属性值的时候不方便
+- 典型应用场景：^^缓存、计数、共享Session、限速^^
 
 !!! Note "基本命令"
-
+    
     - `mset k1 val1 [k2 val2 ...]` : 可设置多个给定的key值
     - `mget k1 [k2 ...]` 获取多个给定key的value值
     - `getrange key start end` 返回key对应value从start到end结束的字串 
@@ -89,18 +92,26 @@ PONG
     - `setrange key offset val` 用val覆盖key对应原本value从offset开始字符串的值
     - `incr key` 或 `incrby key increment` 对key对应的val进行增加，但val必须为数字
 
-!!! Question "如何区分不同类型的Key？"
+!!! Question "没有Table，如何区分不同类型的Key？"
 
-    e.g 需存储用户、商品信息到Redis，有一个用户的id是1，有一个商品的id恰好也是1
+    e.g 存储用户、商品信息到Redis，一个用户的id是1，一个商品的id恰好也是1
     
     如果此时使用id作为key，那么就回冲突，该怎么办？
 
     - **给key添加前缀加以区分**  --> `项目名:业务名:类型:id`
 
+若Value是一个Java对象，例如`User`，则可以将对象序列化为JSON字符串后存储
 
-**Hash**：其中value是一个无序字典，类似于Java中的HashMap
+| **KEY**         | **VALUE**                                 |
+| --------------- | ----------------------------------------- |
+| project:user:1    | {"id":1, "name": "Jack", "age": 21}       |
+| project:product:1 | {"id":1, "name": "小米11", "price": 4999} |
 
-- 可以将对象中的每个字段独立存储，可以针对单个字段做CRUD
+
+**Hash**：类似于Java中的HashMap, value为一个无序字典 (应用场景：^^缓存用户信息、缓存对象^^)
+
+- String将对象序列化为JSON字符串后存储，但当需要修改对象某个字段时很不方便
+- 而Hash可以将对象中的每个字段独立存储，可以针对单个字段做CRUD
 
 ![](./assets/redis-hash结构.jpg)
 
@@ -109,13 +120,13 @@ PONG
     ```shell
     > hset myhash field1 "Hello" (添加或者修改hash类型key的field的值)
     (integer) 1
-    > HSET myhash field2 "Hi" field3 "World"
+    > hset myhash field2 "Hi" field3 "World"
     (integer) 2
-    > HGET myhash field2 (获取一个hash类型key的field的值)
+    > hset myhash field2 (获取一个hash类型key的field的值)
     "Hi"
-    > HGET myhash field3
+    > hget myhash field3
     "World"
-    > HGETALL myhash (获取一个hash类型的key中的所有的field和value)
+    > hgetall myhash (获取一个hash类型的key中的所有的field和value)
     1) "field1"
     2) "Hello"
     3) "field2"
@@ -123,10 +134,12 @@ PONG
     5) "field3"
     6) "World"
     > hkeys mybash (获取一个hash类型的key中的所有的field)
-    1) "field1"
-    2) "field2"
-    3) "field3" 
+    7) "field1"
+    8) "field2"
+    9) "field3" 
     ```
+
+    - `hincrby k val incr` 让一个hash类型k的字段值val自增并指定步长incr
 
 
 **List**：列表(双向链表)，类似于Java中的LinkedList，最多可存$2^32 - 1$个元素，常用来存储一个有序数据，如：^^朋友圈点赞列表，评论列表等^^
@@ -145,7 +158,8 @@ PONG
 
 **Set**：通过hash来实现，与Java中的HashSet类似，可以看做是一个value为`null`的HashMap
 
-- 无序、元素不可重复、查找快、支持交集、并集、差集等
+- 无序；元素不可重复；查找快；支持交集、并集、差集等
+- 应用场景：^^标签tag、共同关注^^
 
 !!! Note "常见命令"
 
@@ -161,10 +175,11 @@ PONG
     - `sdiff key1 key2` 差集
 
 
-**SortedSet**: 可排序的set集合，与Java中的TreeSet有些类似，但底层数据结构却差别很大
+**SortedSet**: 可排序的set集合，与Java中的TreeSet类似，但底层数据结构却差别很大
 
 - SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序
     * 底层的实现是跳表（SkipList）+ hash
+- 应用场景：^^用户点赞统计、用户排序^^
 
 !!! Note "常见命令"
 
@@ -211,5 +226,154 @@ PONG
 
 ### Redis的Java客户端
 
-- Jedis和Lettuce : 主要提供Redis命令对应的API；SpringDataRedis对其进行了抽象和封装
+- Jedis和Lettuce: 主要提供Redis命令对应的API；SpringDataRedis对其进行了抽象和封装
 - Redisson：在Redis基础上实现了分布式的可伸缩的java数据结构 e.g. `Map, Queue`； 支持跨进程同步机制：`Lock、Semaphore`
+
+
+??? Example "Jedis示例"
+
+    - `pom.xml`中导入依赖`jedis`  --> `import redis.clients.jedis.Jedis;`
+    
+    ```java linenums="1"
+    public class RedisTest {
+        private Jedis jedis;
+        @BeforeEach
+        void setup() {
+            jedis = new Jedis("127.0.0.1", 5379);
+            //jedis.auth("");  若设置密码了需要加上
+            jedis.select(0); // 选择库
+        }
+        @Test
+        void testString() {
+            jedis.set("name", "yh");
+            String name = jedis.get("name");
+            System.out.println("name = " + name);
+        }
+        @AfterEach
+        void tearDown() {
+            if(jedis != null) jedis.close();
+        }
+    }    
+    ```
+
+Jedis本身是线程不安全的  --> **Jedis连接池代替Jedis的直连方式**
+
+```java linenums="1"
+public class JedisConnectionFactory {
+    private static JedisPool jedisPool;
+    static {
+        // 配置连接池
+        JedisPoolConfig poolConfig = new JedisPoolConfig();
+        poolConfig.setMaxTotal(8);
+        poolConfig.setMaxIdle(8);
+        poolConfig.setMinIdle(0);
+        poolConfig.setMaxWaitMillis(1000);
+        // 创建连接池对象，参数：连接池配置、服务端ip、服务端端口、超时时间、密码
+        jedisPool = new JedisPool(poolConfig, "127.0.0.1", 5379, 1000);
+    }
+    public static Jedis getJedis(){
+        return jedisPool.getResource();
+    }
+}
+```
+
+
+> SpringData是Spring中数据操作的模块，包含对各种数据库的集成，其中对Redis的集成模块就叫做[SpringDataRedis](https://spring.io/projects/spring-data-redis/)
+
+SpringDataRedis中提供了RedisTemplate工具类，封装了各种对Redis的操作
+
+- 将不同数据类型的操作API封装到了不同的类型中
+- 引入`spring-boot-starter-data-redis`依赖  --> 在application.yml配置Redis信息  --> 注入RedisTemplate
+
+??? example "示例"
+
+    **配置文件**：
+
+    ```yml
+    spring:
+    redis:
+        host: 127.0.0.1
+        port: 5379
+        # password: 123 本redis中并未设置密码
+        lettuce:
+        pool:
+            max-active: 8  #最大连接
+            max-idle: 8   #最大空闲连接
+            min-idle: 0   #最小空闲连接
+            max-wait: 100ms #连接等待时间
+    ```
+
+    **测试代码**：
+
+    ```java
+    @SpringBootTest
+    class RedisDemoApplicationTests {
+        @Autowired
+        private RedisTemplate<String, Object> redisTemplate;
+
+        @Test
+        void testString() {
+            redisTemplate.opsForValue().set("name", "黄");// 写入一条String数据
+            Object name = redisTemplate.opsForValue().get("name");// 获取数据
+            System.out.println("name = " + name);
+        }
+    }
+    ```
+
+**缺点**：可读性差；内存占用较大
+
+
+SpringDataRedis提供了RedisTemplate的子类：`StringRedisTemplate`
+
+- 它的key和value的序列化方式默认就是String方式
+
+??? example "示例"
+
+    ```java
+    @SpringBootTest
+    class RedisStringTests {
+        @Autowired
+        private StringRedisTemplate stringRedisTemplate;
+
+        @Test
+        void testString() {
+            // 写入一条String数据
+            stringRedisTemplate.opsForValue().set("verify:phone:13600527634", "124143");
+            // 获取string数据
+            Object name = stringRedisTemplate.opsForValue().get("name");
+            System.out.println("name = " + name);
+        }
+
+        private static final ObjectMapper mapper = new ObjectMapper();
+
+        @Test
+        void testSaveUser() throws JsonProcessingException {
+            // 创建对象
+            User user = new User("虎哥", 21);
+            // 手动序列化
+            String json = mapper.writeValueAsString(user);
+            // 写入数据
+            stringRedisTemplate.opsForValue().set("user:200", json);
+            // 获取数据
+            String jsonUser = stringRedisTemplate.opsForValue().get("user:200");
+            // 手动反序列化
+            User user1 = mapper.readValue(jsonUser, User.class);
+            System.out.println("user1 = " + user1);
+        }
+    }
+    ```
+
+## 面试题
+
+??? Question "Redis为何如此快？"
+
+    1. 完全基于内存操作
+    2. 使用单线程，避免了线程切换和竞态产生的消耗
+    3. 基于非阻塞的IO多路复用机制
+    4. 通过C语言实现，基于几种基础数据结构，redis做了大量的优化，性能极高
+
+??? Question "IO多路复用是什么?"
+
+    [参考回答](https://www.zhihu.com/question/28594409/answer/52835876)
+
+    > IO 多路复用技术是一种允许单个线程管理多个网络连接的技术，它使得服务器能够高效地处理大量的并发连接而不需要为每个连接创建一个独立的线程或进程
