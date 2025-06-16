@@ -80,7 +80,6 @@ PS: ^^关于表结构的查看、修改、删除操作，工作中一般都是�
 
 - (e.g. [Navicat](https://www.navicat.com/en/)或[SQLyog](https://webyog.com/product/sqlyog/))
 
-
 ### DML
 
 **Insert**:
@@ -122,6 +121,7 @@ LIMIT
 **构造条件查询的运算符**：
 
 - 比较：`<,<=,>,>=,=,<>或!=, between...and..., in(...), like 占位符, is null`
+    * 占位符：`_` 匹配单个字符；`%` 匹配任意个字符
 - 逻辑：`and或&&, or或||, not或!`
 
 **聚合函数**：会将一列数据作为整体，纵向计算，返回结果 （纵向查询）
@@ -145,10 +145,54 @@ LIMIT
 
 - e.g. `limit 0,5` 从索引0开始，向后取5条记录
 
+### DCL
+
+**管理用户**: 
+
+- 查询用户：`select * from mysql.user;`
+    * MySQL中通过 ^^用户名@主机名^^，来唯一标识一个用户
+- 创建用户: `CREATE USER '用户名'@'主机名' IDENTIFIED BY '密码';`
+
+**函数**：字符串函数、数值函数、日期函数、流程函数
+
+**约束**：`not null, unique, primary key, default, check, foreign key`
+
+## 事务
+
+!!! Quote 
+
+    事务是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求
+    
+    - **即这些操作要么同时成功，要么同时失败**
+
+
+开始事务：
+
+1. `SELECT @@autocommit;`  默认是1，若set为0，则执行的DML语句都不会提交，需要手动commit
+2. `start transaction` 或 `begin;`
+
+提交事务commit；回滚事务rollback
+
+
+**四大特性：ACID**
+
+- 原子性（Atomicity）：事务是不可分割的最小操作单元，要么全部成功，要么全部失败
+- 一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态
+- 隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行
+- 持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的
+
+**并发事务问题**：脏读、不可重复读、幻读  --> 引入事务隔离级别
+
+![](./assets/事务隔离级别.jpg)
+
+隔离级别越高，数据越安全，性能越低
+
+- 查看事务隔离级别：`SELECT @@TRANSACTION_ISOLATION;`
+
+
 ## JDBC
 
 > 即使用Java语言操作关系型数据库的一套API——Java DataBase Connectivity(JDBC)最为底层、最为基础
->
 
 - 企业项目开发中，一般都会使用基于JDBC的封装的高级框架，如：Mybatis、MybatisPlus
 
@@ -170,7 +214,7 @@ Mybatis解决JDBC的缺点：
 - 数据库连接四要素(驱动、链接、用户名、密码)，都配置在springboot默认的配置文件`application.properties`或`application.yml`中
     * `application.yml`配置，更加简洁明了、以数据为中心 
 - 查询结果的解析及封装，由mybatis自动完成映射封装
-- 在mybatis中使用了数据库连接池技术，从而避免了频繁的创建连接、销毁连接而带来的资源浪费
+- 在mybatis中使用了数据库连接池技术，避免了频繁的创建连接、销毁连接带来的资源浪费
     * 数据库连接池即是个容器，负责分配、管理数据库连接 
         + 常见的数据库连接池：C3P0 、DBCP 、Druid 、Hikari (springboot默认)
         + 现在使用更多的是：Hikari、Druid （性能更优越）
