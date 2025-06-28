@@ -224,4 +224,8 @@ Mybatis解决JDBC的缺点：
 - 注解方式，主要是来完成简单的增删改查。若需要实现复杂的SQL功能，一般使用XML来配置映射语句，即将SQL语句写在XML配置文件中
     * XML映射文件的名称与Mapper接口名称一致，并且将XML映射文件和Mapper接口放置在相同包下（同包同名）
     * XML映射文件的namespace属性为Mapper接口全限定名一致
-    * XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致
+    * XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一o
+
+
+## 面试题
+
