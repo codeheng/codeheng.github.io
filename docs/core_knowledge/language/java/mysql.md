@@ -206,7 +206,7 @@ LIMIT
 
 > 持久层框架，用于简化JDBC的开发 [官网](https://mybatis.org/mybatis-3/)
 
-- SpringBoot工程，导入mybatis的起步依赖、mysql的驱动包、lombok
+- SpringBoot工程，导入Mybatis的起步依赖、mysql的驱动包、lombok
 - 需要在`application.properties`配置mybatis：url、类名、用户名和密码
 
 Mybatis解决JDBC的缺点：
@@ -224,7 +224,41 @@ Mybatis解决JDBC的缺点：
 - 注解方式，主要是来完成简单的增删改查。若需要实现复杂的SQL功能，一般使用XML来配置映射语句，即将SQL语句写在XML配置文件中
     * XML映射文件的名称与Mapper接口名称一致，并且将XML映射文件和Mapper接口放置在相同包下（同包同名）
     * XML映射文件的namespace属性为Mapper接口全限定名一致
-    * XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一o
+    * XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致
+
+
+## 索引index
+
+> 索引（index）是帮助MySQL高效获取数据的数据结构，在存储引擎层实现
+>
+> - 降低IO成本，提高数据检索效率 (PS: 索引也占空间)
+
+**索引结构**：[B+Tree](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)、Hash、R-Tree(空间索引)、Full-Text(全文索引)
+
+??? Question "为什么InnoDB存储引擎选择使用B+tree索引结构？"
+
+    1. B+ 树是一种多路平衡搜索树，具有“矮胖”的特点。相对于二叉树，层级更少，搜索效率高
+    2. 对于B-tree，无论是叶子节点还是非叶子节点，都会保存数据，这样导致一页中存储的键值减少，指针跟着减少，要同样保存大量数据，只能增加树的高度，导致性能降低
+    3. 相对Hash索引，B+tree支持范围匹配及排序操作
+
+**索引分类：** 主键索引(PRIMARY)、唯一索引(UNIQUE)、常规索引、全文索引(FULLTEXT)
+
+- 在InnoDB存储引擎中，根据索引的存储形式，分为：^^聚集索引、二级索引^^
+    * 聚集索引：数据与索引放到一块，索引结构的叶子节点保存了行数据（row） 
+        + 必须有，且只有一个 
+    * 二级索引：将数据与索引分开存储，索引结构的叶子节点关联对应的主键 （可以存在多个）
+
+!!! Question "思考"
+
+    两条SQL语句AB，哪个执行效率高? why?
+
+    ```sql
+    select * from user where id = 10;
+    select * from user where name = 'Arm';
+    ```
+    PS: id为主键，name字段创建的有索引；
+
+    答：A性能高于B，A语句直接走聚集索引，直接返回数据；而B先查询name字段的二级索引，再查询聚集索引，即需要回表查询
 
 
 ## 面试题
