@@ -241,7 +241,7 @@ Mybatis解决JDBC的缺点：
     2. 对于B-tree，无论是叶子节点还是非叶子节点，都会保存数据，这样导致一页中存储的键值减少，指针跟着减少，要同样保存大量数据，只能增加树的高度，导致性能降低
     3. 相对Hash索引，B+tree支持范围匹配及排序操作
 
-**索引分类：** 主键索引(PRIMARY)、唯一索引(UNIQUE)、常规索引、全文索引(FULLTEXT)
+**索引分类：** 主键索引(PRIMARY)、唯一索引(UNIQUE)、常规索引(Normal) 、全文索引(FULLTEXT)
 
 - 在InnoDB存储引擎中，根据索引的存储形式，分为：^^聚集索引、二级索引^^
     * 聚集索引：数据与索引放到一块，索引结构的叶子节点保存了行数据（row） 
@@ -258,8 +258,38 @@ Mybatis解决JDBC的缺点：
     ```
     PS: id为主键，name字段创建的有索引；
 
-    答：A性能高于B，A语句直接走聚集索引，直接返回数据；而B先查询name字段的二级索引，再查询聚集索引，即需要回表查询
+    答：A性能高于B，A语句走聚集索引，直接返回数据；而B先查询name字段的二级索引，再查询聚集索引，即需要回表查询
 
+- **创建索引：** `create [unique | fulltext] index index_name on table_name(index_col_name, ...);`
+- 查看索引: `show index from table_name;`
+- 删除索引：`drop index index_name on table_name;`
+
+### SQL性能
+
+`show [session/global] status` 查看状态信息（比如insert等访问频次）
+
+- 可得知以查询为主还是增删改为主，然后进行优化
+- 若查询为主，为何定位  --> **慢查询日志**
+
+!!! Quote "慢查询日志"
+
+    慢查询日志记录了所有执行时间超过指定参数（`long_query_time`，默认10秒）的所有SQL语句的日志
+
+    - 查看是否开启: `show variables like 'slow_query_time';`
+        * 可在配置文件`/etc/my.cnf`中开启
+
+`show profiles;` 能够在做SQL优化时帮助了解时间都耗费到哪里去了
+
+- `select @@have_profiling;` 查看是否支持  --> `set profiling = 1` 开启
+    * 开启后所有的SQL语句都会被记录，此时`show profiles;`可看到每一条SQL的耗时情况
+    * `show profile for query query_id;` 指定query_id的SQL语句各个阶段的耗时情况
+
+
+!!! Note
+    
+    `EXPLAIN` 或 `DESC`命令获取 MySQL 如何执行 SELECT 语句的信息
+
+    - 直接在select语句之前加上 explain / desc
 
 ## 面试题
 
