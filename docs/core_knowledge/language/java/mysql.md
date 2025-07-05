@@ -237,16 +237,17 @@ Mybatis解决JDBC的缺点：
 
 ??? Question "为什么InnoDB存储引擎选择使用B+tree索引结构？"
 
-    1. B+ 树是一种多路平衡搜索树，具有“矮胖”的特点。相对于二叉树，层级更少，搜索效率高
+    1. B+ 树是一种多路平衡搜索树，具有“矮胖”特点。相对于二叉树，层级更少，搜索效率高
     2. 对于B-tree，无论是叶子节点还是非叶子节点，都会保存数据，这样导致一页中存储的键值减少，指针跟着减少，要同样保存大量数据，只能增加树的高度，导致性能降低
     3. 相对Hash索引，B+tree支持范围匹配及排序操作
 
-**索引分类：** 主键索引(PRIMARY)、唯一索引(UNIQUE)、常规索引(Normal) 、全文索引(FULLTEXT)
+**索引分类：** ==主键索引(PRIMARY)、唯一索引(UNIQUE)、常规索引(Normal) 、全文索引(FULLTEXT)==
 
-- 在InnoDB存储引擎中，根据索引的存储形式，分为：^^聚集索引、二级索引^^
+- 在InnoDB存储引擎中，根据索引的存储形式，分为：**^^聚集索引、二级索引^^**
     * 聚集索引：数据与索引放到一块，索引结构的叶子节点保存了行数据（row） 
         + 必须有，且只有一个 
-    * 二级索引：将数据与索引分开存储，索引结构的叶子节点关联对应的主键 （可以存在多个）
+    * 二级索引：将数据与索引分开存储，索引结构的叶子节点关联对应的主键
+        + 可以存在多个
 
 !!! Question "思考"
 
@@ -260,7 +261,8 @@ Mybatis解决JDBC的缺点：
 
     答：A性能高于B，A语句走聚集索引，直接返回数据；而B先查询name字段的二级索引，再查询聚集索引，即需要回表查询
 
-- **创建索引：** `create [unique | fulltext] index index_name on table_name(index_col_name, ...);`
+- **创建索引：** 
+    * `create [unique | fulltext] index index_name on table_name(index_col_name, ...);`
 - 查看索引: `show index from table_name;`
 - 删除索引：`drop index index_name on table_name;`
 
@@ -290,6 +292,43 @@ Mybatis解决JDBC的缺点：
     `EXPLAIN` 或 `DESC`命令获取 MySQL 如何执行 SELECT 语句的信息
 
     - 直接在select语句之前加上 explain / desc
+
+若索引了多列(联合索引)：`create index idx_user_pro_age_sta on tb_user(profession,age,status);`
+
+- **遵循最左前缀法则**：查询从索引的最左列开始，且不跳过索引中的列。若跳跃某一列，索引后面的字段索引失效
+- PS: 即联合索引的最左边的字段(即是第一个字段)必须存在，与SQL条件里的顺序无关
+
+!!! warning "索引失效情况"
+
+    1. 在联合索引中，若出现范围查询`<,>` 范围右侧列索引失效 （`>= 或 <=` 并不会失效）
+    2. 若在索引列进行运算操作，则会失效 e.g `where substring(phone, 10, 2) = '15'`
+    3. 字符串不加引号，则索引失效
+    4. 若是头部模糊查询，索引失效 e.g `where profession like '%工'`
+    5. or连接条件，若有列没有索引，则会失效 (左右两侧必须都有索引才生效)
+    6. MySQL在查询时，会评估使用索引的效率与走全表扫描的效率，若走全表扫描更快，则放弃索引，走全表扫描
+
+        - 因为索引是用来索引少量数据的，如果通过索引查询返回大批量的数据，则还不如走全表扫描来的快，此时索引就会失效
+
+**SQL提示**（优化数据库的一手段）：`use index, ignore index, force index`
+
+尽量使用覆盖索引，而不使用`select *`。 
+
+- 覆盖索引：查询使用了索引，且需要返回的列，在该索引中已经全部能够找到
+    * 即不需要回表查询，性能更高 
+
+!!! Question 
+
+    一张表, 有四个字段(id, username, password, status), 由于数据量大, 需要对以下SQL语句进行优化, 该如何进行才是最优方案:
+
+    ```sql
+    select id,username,password from tb_user where username = 'itcast';
+    ```
+
+    针对于username, password建立联合索引
+    
+    - `create index idx_user_name_pass on tb_user(username,password);`
+
+
 
 ## 面试题
 
