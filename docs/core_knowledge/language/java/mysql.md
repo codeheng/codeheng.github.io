@@ -33,6 +33,10 @@ comments: true
     * `SHOW ENGINES;` 查看当前服务器程序支持的存储引擎
             + 表的默认存储引擎为`InnoDB` 
 
+**InnoDB逻辑存储结构**：
+
+![](./assets/innoDB逻辑存储结构.jpg)
+
 ## SQL语句
 
 - DDL：数据定义语言，定义数据库对象(数据库、表、字段)
@@ -165,7 +169,6 @@ LIMIT
     
     - **即这些操作要么同时成功，要么同时失败**
 
-
 开始事务：
 
 1. `SELECT @@autocommit;`  默认是1，若set为0，则执行的DML语句都不会提交，需要手动commit
@@ -180,6 +183,11 @@ LIMIT
 - 一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态
 - 隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行
 - 持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的
+
+!!! Question "如何保证事务ACID"
+
+    - 原子性、一致性、持久性由InnoDB中的redo log和undo log保证
+    - 隔离性通过锁 + MVCC(多版本并发控制)保证
 
 **并发事务问题**：脏读、不可重复读、幻读  --> 引入事务隔离级别
 
@@ -327,6 +335,108 @@ Mybatis解决JDBC的缺点：
     针对于username, password建立联合索引
     
     - `create index idx_user_name_pass on tb_user(username,password);`
+
+??? Note "索引设计原则"
+
+    1. 对于数据量较大，且查询比较频繁的表建立索引
+    2. 对于查询条件（where）、排序（order by）、分组（group by）操作的字段建立索引
+    3. 尽量使用联合索引，减少单列索引，查询时避免回表，提高查询效率
+    4. 若是字符串类型的字段，字段的长度较长，可以针对于字段的特点，建立前缀索引
+
+        - e.g. 为tb_user表的email字段，建立长度为5的前缀索引:
+         - `create index idx_email_5 on tb_user(email(5));` 
+
+### SQL优化
+
+**插入：** (主键顺序插入性能 > 乱序插入)
+
+- 若大量数据插入  --> load指令
+
+```sql
+set global local_infile = 1; --开启从本地加载文件导入数据的开关
+
+load data local infile "E:/code/sql_data/sql_1000w/tb_sku1.sql" into table `tb_sku` fields terminated by ',' lines terminated by '\n';
+```
+
+## 视图
+
+> 视图（View）是一种虚拟存在的表。视图中的数据并不在数据库中实际存在
+>
+> 视图只保存了查询的SQL逻辑，不保存查询结果
+
+- 创建：`create view view_name as select语句;`
+- 查看创建视图：`show create view view_name;`
+    * 查看视图数据：`select * from view_name;` 
+- 修改: `alter view view_name as select语句`
+- 删除：`drop view view_name;`
+
+!!! Note "视图作用"
+
+    1. 简化用户对数据的理解，经常使用的查询可以被定义为视图，从而使得用户不必为以后的操作每次指定全部的条件
+    2. 通过视图用户只能查询和修改他们所能见到的数据
+
+### 存储过程
+
+> 存储过程是事先经过编译并存储在数据库中的一段 SQL 语句的集合，可提高数据处理的效率
+
+```sql
+-- 创建：
+create procedure 存储过程名称([ 参数列表 ])
+begin
+    -- SQL语句
+end;
+
+-- 调用：
+call 名称([参数])
+```
+
+## 锁
+
+> 锁是计算机协调多个进程或线程并发访问某一资源的机制  (数据并发访问的一致性、有效性)
+
+### 全局锁
+
+> 锁定数据库中的所有表，对整个数据库实例加锁 （仅可读）
+
+应用场景：全库的逻辑备份，对所有的表进行锁定，从而获取一致性视图，保证数据的完整
+
+- 加全局锁: `flush tables with read lock;`
+- 备份（在shell中）：`mysqldump  -uroot –p123  test > test.sql`
+- 释放锁：`unlock tables;`
+
+
+### 表级锁
+
+> 每次操作锁住整张表，锁定粒度大，发生锁冲突的概率最高，并发度最低
+加锁：`lock tables 表名 read/write;`
+
+- **表锁**: 
+    * read lock：客户端1对指定表加了读锁，不会影响客户端2的读，但是会阻塞其写
+    * write lock: 客户端1对指定表加了写锁，客户端2的读/写均阻塞
+- **元数据锁(meta data lock, MDL)**：维护表元数据(表结构)的数据一致性
+- **意向锁**: 
+    * 意向共享锁IS：由语句`select ... lock in share mode`添加。与表锁read lock兼容，与表锁write lock互斥
+    * 意向排他锁IX: 由`insert、update、delete、select...for update`添加。与表锁read lock及write lock都互斥，意向锁之间不会互斥
+
+!!! Note "意向锁"
+
+    客户端1，在执行DML操作时，会对涉及的行加行锁，同时也会对该表加上意向锁
+
+    其他客户端，在对这张表加表锁的时候，会根据该表上所加的意向锁来判定是否可以成功加表锁，而不用逐行判断行锁情况
+
+
+### 行级锁
+
+> 每次操作锁住对应的行数据，锁定粒度最小，发生锁冲突的概率最低，并发度最高（在InnoDB存储引擎中）
+
+行锁是通过对索引上的索引项加锁来实现的，而非对记录加锁
+
+- 共享锁S：允许一个事务去读一行，阻止其他事务获得相同数据集的排他锁
+- 排他锁X：允许获取排他锁的事务更新数据，阻止其他事务获得相同数据集的共享锁和排他锁
+
+## InnoDB引擎
+
+
 
 
 
