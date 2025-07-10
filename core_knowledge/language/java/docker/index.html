@@ -2506,6 +2506,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定基础镜像
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5661,6 +5670,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定基础镜像
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5677,11 +5695,6 @@
 
 
 
-  <h1>Docker</h1>
-
-<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 722 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 26 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 3 分钟</p>
-</div>
 <h2 id="_1">介绍</h2>
 <p>Docker是一个虚拟环境容器(Container)，可以将开发环境、代码、配置文件等一并打包到这个容器中，并发布和应用到任意平台中</p>
 <p>Why docker ?  &rarr; 为了解决环境配置的问题</p>
@@ -5693,14 +5706,32 @@
 <p>安装详见<a href="https://www.docker.com/get-started/">官网下载</a></p>
 <p>启动Docker : <code>sudo systemctl enable/start docker</code></p>
 <p><strong>镜像</strong>：容器的模板（类比为软件安装包，而容器是安装出来的软件）</p>
-<p>查看下载的所有镜像：<code>docker images</code>  &rarr; 镜像仓库<a href="https://hub.docker.com/">DockerHub</a></p>
 <ul>
-<li>从仓库下载镜像：<code>docker pull docker.io/library/nginx:latest</code><ul>
+<li>查看下载的所有镜像：<code>docker images</code>  </li>
+</ul>
+<p>负责管理镜像推拉能力的服务即docker registry</p>
+<ul>
+<li>
+<p>基于此能力可以搭建各种官网或私人仓库 e.g.官方仓库<a href="https://hub.docker.com/">DockerHub</a>、清华<a href="https://mirrors.tuna.tsinghua.edu.cn/">Tuna</a></p>
+</li>
+<li>
+<p>从仓库下载镜像：<code>docker pull docker.io/library/nginx:latest</code></p>
+<ul>
 <li>docker.io仓库地址；library命名空间；latest即tag版本号</li>
 </ul>
 </li>
 <li>删除镜像: <code>docker rmi [imageID/Repository]</code> </li>
 </ul>
+<div class="admonition question">
+<p class="admonition-title">Docker VS. 虚拟机</p>
+<ul>
+<li>虚拟机自带完整操作系统</li>
+<li>容器只包含OS的核心依赖库和配置文件等必备组件<ul>
+<li>容器本质是一个自带独立运行环境的特殊进程 </li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="docker-run">docker run</h3>
 <p><strong>创建并运行容器</strong>：<code>docker run [Repository/ID]</code> (若没有指定名字，则会随机分配)</p>
 <p>参数<code>-d</code> 即容器后台执行</p>
@@ -5776,7 +5807,58 @@ $<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </spa
 <blockquote>
 <p>Dockerfile 是一个文本文件，包含了构建Docker镜像的所有指令</p>
 </blockquote>
+<details class="示例">
+<summary>示例</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python-main.py</label><label for="__tabbed_1_2">Dockerfile</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uvicorn</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;World&quot;</span><span class="p">}</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">uvicorn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8100</span><span class="p">)</span>        
+</code></pre></div>
+<p>访问 <a href="http://local:8100/">http://local:8100/</a>, 将展示: <code>{"Hello": "World"}</code></p>
+</div>
+<div class="tabbed-block">
+<p>```dockerfile</p>
+<h1 id="_2">指定基础镜像</h1>
+</div>
+</div>
+</div>
+</details>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 901 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 49 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 4 分钟</p>
+</div>
+<div class="highlight"><pre><span></span><code>    FROM python:3.13-slim
+    WORKDIR /app
+    # 复制文件到容器/app目录下
+    COPY . /app
+    # 安装依赖
+    RUN pip install -r requirements.txt
+    # 设置端口
+    EXPOSE 8100
+    # 设置容器启动时执行的命令
+    CMD [&quot;python&quot;, &quot;app.py&quot;]
+    ```
+
+=== &quot;requirements.txt&quot;
+
+    ```txt
+    fastapi
+    uvicorn     
+    ```
+</code></pre></div>
 <p><code>$ docker build -t docker_test .</code>  点代表在当前目录下构建</p>
+<ul>
+<li><code>-t</code> 后表示docker镜像的名字   (PS: docker需要进行开启状态)</li>
+</ul>
+<p>启动：<code>$ docker run -d -p 8100:8100 docker_test</code></p>
 <p><strong>Docker网络</strong>：</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>list
 NETWORK<span class="w"> </span>ID<span class="w">     </span>NAME<span class="w">      </span>DRIVER<span class="w">    </span>SCOPE
@@ -5785,9 +5867,15 @@ efd12bd5e7f7<span class="w">   </span>host<span class="w">      </span>host<span
 a9783dcc9bf1<span class="w">   </span>none<span class="w">      </span>null<span class="w">      </span><span class="nb">local</span>
 </code></pre></div>
 <p>上述三个为默认网络，无法删除</p>
-<p>Docker Compose 定义和运行多容器，使用<code>yml</code>文件管理多个容器</p>
+<p>Docker Compose 定义和运行多容器，使用<code>yml</code>文件管理多个容器，说明部署文件有哪些，顺序是如何及CPU/Memory等信息</p>
 <ul>
-<li>轻量级，适合个人使用，若对于企业级服务器集群，需要大规模容器管理 &rarr; Kubernetes</li>
+<li>
+<p>执行命令<code>docker-compose up</code> 解析yml文件，将容器按顺序部署</p>
+</li>
+<li>
+<p><strong>优点：轻量级，适合个人使用</strong></p>
+</li>
+<li>若对于企业级服务器集群，需要大规模容器管理 &rarr; Kubernetes</li>
 </ul>
 
 
@@ -5811,7 +5899,7 @@ a9783dcc9bf1<span class="w">   </span>none<span class="w">      </span>null<span
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月1日 12:16:32 UTC">2025年7月1日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月10日 13:49:51 UTC">2025年7月10日</span>
   </span>
 
     
