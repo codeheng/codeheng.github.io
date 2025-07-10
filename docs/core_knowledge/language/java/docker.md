@@ -19,11 +19,21 @@ Why docker ?  --> 为了解决环境配置的问题
 
 **镜像**：容器的模板（类比为软件安装包，而容器是安装出来的软件）
 
-查看下载的所有镜像：`docker images`  --> 镜像仓库[DockerHub](https://hub.docker.com/)
+- 查看下载的所有镜像：`docker images`  
+
+负责管理镜像推拉能力的服务即docker registry
+
+- 基于此能力可以搭建各种官网或私人仓库 e.g.官方仓库[DockerHub](https://hub.docker.com/)、清华[Tuna](https://mirrors.tuna.tsinghua.edu.cn/)
 
 - 从仓库下载镜像：`docker pull docker.io/library/nginx:latest`
     * docker.io仓库地址；library命名空间；latest即tag版本号
 - 删除镜像: `docker rmi [imageID/Repository]` 
+
+!!! Question "Docker VS. 虚拟机"
+
+    - 虚拟机自带完整操作系统
+    - 容器只包含OS的核心依赖库和配置文件等必备组件
+        * 容器本质是一个自带独立运行环境的特殊进程 
 
 ### docker run 
 
@@ -115,7 +125,53 @@ Why docker ?  --> 为了解决环境配置的问题
 
 > Dockerfile 是一个文本文件，包含了构建Docker镜像的所有指令
 
+??? 示例
+
+    === "Python-main.py"
+
+        ```python
+        from fastapi import FastAPI
+        import uvicorn
+        app = FastAPI()
+
+        @app.get("/")
+        def read_root():
+            return {"Hello": "World"}
+
+        if __name__ == "__main__":
+            uvicorn.run(app, host="0.0.0.0", port=8100)        
+        ```
+
+        访问 http://local:8100/, 将展示: `{"Hello": "World"}`
+    
+    === "Dockerfile"
+
+        ```dockerfile
+        # 指定基础镜像
+        FROM python:3.13-slim
+        WORKDIR /app
+        # 复制文件到容器/app目录下
+        COPY . /app
+        # 安装依赖
+        RUN pip install -r requirements.txt
+        # 设置端口
+        EXPOSE 8100
+        # 设置容器启动时执行的命令
+        CMD ["python", "app.py"]
+        ```
+
+    === "requirements.txt"
+
+        ```txt
+        fastapi
+        uvicorn     
+        ```
+
 `$ docker build -t docker_test .`  点代表在当前目录下构建
+
+- `-t` 后表示docker镜像的名字   (PS: docker需要进行开启状态)
+
+启动：`$ docker run -d -p 8100:8100 docker_test`
 
 
 **Docker网络**：
@@ -130,6 +186,9 @@ a9783dcc9bf1   none      null      local
 
 上述三个为默认网络，无法删除
 
-Docker Compose 定义和运行多容器，使用`yml`文件管理多个容器
+Docker Compose 定义和运行多容器，使用`yml`文件管理多个容器，说明部署文件有哪些，顺序是如何及CPU/Memory等信息
 
-- 轻量级，适合个人使用，若对于企业级服务器集群，需要大规模容器管理 --> Kubernetes
+- 执行命令`docker-compose up` 解析yml文件，将容器按顺序部署
+
+- **优点：轻量级，适合个人使用**
+- 若对于企业级服务器集群，需要大规模容器管理 --> Kubernetes
