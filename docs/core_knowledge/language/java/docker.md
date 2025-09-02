@@ -171,8 +171,7 @@ Why docker ?  --> 为了解决环境配置的问题
 
 - `-t` 后表示docker镜像的名字   (PS: docker需要进行开启状态)
 
-启动：`$ docker run -d -p 8100:8100 docker_test`
-
+启动：`$ docker run -d -p 8100:8100 docker_test`  
 
 **Docker网络**：
 
