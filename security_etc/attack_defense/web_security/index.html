@@ -96,6 +96,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#xss" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3395,6 +3400,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    web安全
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3406,6 +3424,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL注入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csrfssrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF/SSRF
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5655,6 +5717,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL注入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csrfssrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF/SSRF
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5672,8 +5769,143 @@
   <h1>web安全</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约 0 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间不到 1 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约 1260 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 15 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间 4 分钟</p>
 </div>
+<blockquote>
+<p>Web指所有基于 HTTP 或者其他超文本传输协议开发的应用，包含网页、App、API接口等</p>
+<p>通过 HTTP等文本协议，在客户端和服务端之间进行数据交换。客户端需要将服务端传出的数据展示渲染出来，服务端需要将客户端传入的数据进行对应的处理</p>
+</blockquote>
+<h2 id="xss">XSS</h2>
+<blockquote>
+<p>Cross-Site Scripting，跨站脚本攻击。浏览器中插入一段恶意的JavaScript脚本，从而窃取你的隐私信息或者仿冒你进行操作</p>
+</blockquote>
+<p>攻击类型：<strong>反射型XSS、基于DOM的以及持久(存储)型XSS</strong></p>
+<div class="admonition note">
+<p class="admonition-title">对比</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">反射型XSS</label><label for="__tabbed_1_2">基于DOM的XSS</label><label for="__tabbed_1_3">持久性XSS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>浏览器 → 后端  → 浏览器</p>
+<p><code>&lt;/h3&gt;&lt;script&gt;alert('xss');&lt;/script&gt;&lt;h3&gt;</code></p>
+<p>通过开头的<code>&lt;/h3&gt;</code>和结尾的<code>&lt;h3&gt;</code>，将原本的<code>&lt;h3&gt;</code>标签进行闭合，中间通过<code>&lt;script&gt;</code>标签插入JS代码并执行，就完成了整个反射型XSS的流程</p>
+<p>适合前后端一体化应用中，必须用户点击带有特定参数的链接才能引起</p>
+</div>
+<div class="tabbed-block">
+<p>URL → 浏览器</p>
+<p>和反射型类似，只不过不需要经过服务端，而是通过JS修改DOM</p>
+</div>
+<div class="tabbed-block">
+<p>浏览器 → 后端  → 数据库  → 后端 → 浏览器</p>
+<p>将恶意的JS脚本写入正常的服务端数据库中，只要用户使用业务功能，就会被注入JS脚本</p>
+<p>存储用户的输入并对它们进行展示的地方，都可能出现持久型XSS。e.g. 搜索结果、评论</p>
+</div>
+</div>
+</div>
+</div>
+<p>通过XSS，攻击者能做什么？</p>
+<ul>
+<li>窃取Cookie：通过<code>document.cookie</code>获得Cookie信息</li>
+<li>未授权操作: 利用JS特性，直接代替用户在HTML进行各类操作</li>
+<li>键盘记录和钓鱼：伪造登陆框</li>
+</ul>
+<p>如何进行防护？(XSS防护的核心原则就是验证)</p>
+<ul>
+<li>验证输入 或 验证输出<ul>
+<li>展示用户内容的时候去进行验证，而不是当用户输入的时候就去验证</li>
+<li>验证过程，优先采用编码的方式来完成</li>
+</ul>
+</li>
+<li>检测和过滤：白名单规则</li>
+<li>CSP(内容安全策略): 在服务端返回的HTTP header 里面添加一个CSP选项</li>
+</ul>
+<h2 id="sql">SQL注入</h2>
+<blockquote>
+<p>通过构造一些恶意的输入参数，在应用拼接SQL语句的时候，去篡改正常的SQL语意，从而执行黑客所控制的SQL查询功能</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="err">修改</span><span class="n">where语句</span><span class="err">（通过</span><span class="ss">" or ""="</span><span class="err">）</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Username</span><span class="w"> </span><span class="o">=</span><span class="ss">"admin"</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Password</span><span class="w"> </span><span class="o">=</span><span class="ss">"123456"</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Username</span><span class="w"> </span><span class="o">=</span><span class="ss">""</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Password</span><span class="w"> </span><span class="o">=</span><span class="ss">""</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="ss">""</span><span class="o">=</span><span class="ss">""</span>
+
+<span class="err">（</span><span class="ss">""</span><span class="o">=</span><span class="ss">""</span><span class="err">的结果是</span><span class="w"> </span><span class="k">true</span><span class="err">，当有一个</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="err">是</span><span class="k">true</span><span class="err">，最终结果就一定是</span><span class="k">true</span><span class="err">）</span>
+
+<span class="mi">2</span><span class="p">.</span><span class="w"> </span><span class="err">执行任意语句：利用分号将原本的</span><span class="n">SQL语句进行分割</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Users</span><span class="w"> </span><span class="p">(</span><span class="n">Username</span><span class="p">,</span><span class="w"> </span><span class="n">Password</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="ss">"test"</span><span class="p">,</span><span class="ss">"000000"</span><span class="p">);</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Users</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>通过SQL注入，能做什么？</strong></p>
+<ul>
+<li>绕过验证</li>
+<li>任意篡改数据</li>
+<li>窃取数据(拖库)<ul>
+<li><code>SELECT * FROM Users WHERE UserId = 1 UNION SELECT * FROM Users</code></li>
+</ul>
+</li>
+<li>消耗资源: 利用while打造死循环操作</li>
+</ul>
+<p><strong>如何防止SQL注入？</strong></p>
+<ul>
+<li>PreparedStatement：将SQL语句的解析和实际执行过程分开，解析：数据库驱动</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM Users WHERE UserId = ?"</span><span class="p">;</span>
+<span class="n">PreparedStatement</span><span class="w"> </span><span class="n">statement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="n">statement</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">userId</span><span class="p">);</span><span class="w"> </span>
+<span class="n">ResultSet</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">statement</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+</code></pre></div>
+<ul>
+<li>使用存储过程</li>
+<li>和上述类似，存储过程防注入是将解析SQL的过程，由数据库驱动转移到了数据库本身</li>
+<li>验证输入：防护效果最弱</li>
+</ul>
+<h2 id="csrfssrf">CSRF/SSRF</h2>
+<blockquote>
+<p><strong>跨站请求伪造攻击(CSRF)</strong>：黑客通过JS脚本窃取你保存在网页中的身份信息(Cookie中)，通过仿冒你，让你的浏览器发起伪造的请求，最终执行黑客定义的操作</p>
+<p>（黑客控制浏览器发起伪造攻击）</p>
+</blockquote>
+<ul>
+<li>通过自动提交表单的形式来发起攻击的，通过抓包分析出相关接口所需要的参数，从而构造对应的 form 表单 （CSRF 在传播和攻击成本上都低于 XSS）</li>
+</ul>
+<p>防护办法1：<strong>CSRF Token</strong></p>
+<ul>
+<li>CSRF Token每次用户正常访问页面时，服务端随机生成返回给浏览器。每一次接口调用，携带均不同。黑客无法提前猜测，即无法构造正确的表单</li>
+</ul>
+<p>防护办法2：<strong>二次验证</strong></p>
+<ul>
+<li>已登录但仍需输入独立的支付密码（仅用户知道，黑客无法获取）</li>
+</ul>
+<blockquote>
+<p><strong>服务端请求伪造(SSRF)</strong>：黑客控制服务端发起一个其定义的内网请求，从而获取到内网数据 </p>
+</blockquote>
+<p>服务器有代理请求的功能：用户输入URL(如某个图片资源)，然后server会向这个URL发起请求，通过访问其他的服务端资源来完成正常的页面展示</p>
+<ul>
+<li>利用这个代理发起请求的功能，黑客可以提交一个内网的地址，实现对内网任意服务的访问<ul>
+<li>（即内网穿透：让外网的设备找到处于内网的设备）</li>
+</ul>
+</li>
+<li>黑客可以利用SSRF向内网发起任意的HTTP请求，后果：<ul>
+<li><strong>内网探测</strong></li>
+<li><strong>文件读取</strong>：选择不同的协议类型，读取server的文件内容e.g.<code>file://</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">内网探测举例</p>
+<p>请求的地址: <code>https://image.baidu.com/search/detail?objurl=http://s1.sinaimg.cn/picture.jpg</code></p>
+<ul>
+<li><code>http://s1.sinaimg.cn/picture.jpg</code>会返回图片，所以网页会正常展示</li>
+</ul>
+<p>黑客构造一个恶意的请求地址：<code>https://image.baidu.com/search/detail?objurl=127.0.0.1:3306</code></p>
+<ul>
+<li>不断重复尝试不同的IP和端口号，一点一点探测出整个内网的结构</li>
+</ul>
+</div>
+<p>常见防护手段：</p>
+<ul>
+<li><strong>白名单限制</strong>：目标URL进行限制</li>
+<li><strong>协议和资源类型限制</strong></li>
+<li><strong>请求端限制</strong> ：尽量使用POST，避免GET</li>
+</ul>
 
 
 
@@ -5696,7 +5928,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年9月26日 08:10:36 UTC">2025年9月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年9月28日 08:50:18 UTC">2025年9月28日</span>
   </span>
 
     
