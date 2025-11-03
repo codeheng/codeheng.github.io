@@ -74,6 +74,9 @@ nav:
       - CSAPP:
         - core_knowledge/lab/csapp/index.md
         - DataLab: core_knowledge/lab/csapp/01datalab.md
+    - Exam:
+      - 金监管: core_knowledge/exam/RFRA-CS.md
+      - 金融经济: core_knowledge/exam/financial_economics.md
 
   - 🔐安全:
     - security_etc/index.md
@@ -99,7 +102,7 @@ nav:
     - 安全攻防:
       - 介绍: security_etc/attack_defense/intro_attack_defense.md
       - web安全: security_etc/attack_defense/web_security.md
-
+      - 防御工具: security_ect/attack_defense/defense_tools.md
 
     - 区块链: 
       - 概述: security_etc/blockchain/1-blockchain.md
@@ -139,6 +142,8 @@ nav:
       - 实验:
         - 库: security_etc/paper/tool/lib.md
         - 密码学符号: security_etc/paper/tool/symbol.md
+  
+  
   - 🔍杂项:
     - mess/index.md
     - 工具收集: mess/tool.md
