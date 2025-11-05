@@ -5982,7 +5982,7 @@
 <h2 id="_1">介绍</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>无证书公钥密码体制(certificateless public key cryptography，CL-PKC)</strong> 是在基于身份的公钥密码体制 (identity-based public key cryptography，ID-PKC)的基础上提出来的一种新型公钥密码体制<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">5</a></sup></p>
+<p><strong>无证书公钥密码体制(certificateless public key cryptography，CL-PKC)</strong> 是在基于身份的公钥密码体制 (identity-based public key cryptography，ID-PKC)的基础上提出来的一种新型公钥密码体制<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <p><strong>没有密钥托管问题，不需要使用证书</strong></p>
 </div>
 <p>公钥密码(Public-key)即非对称加密——<strong>Q:如何保证用户公钥的真实性和有效性？</strong> </p>
@@ -5992,7 +5992,7 @@
 </ul>
 </li>
 </ul>
-<p><ins>84年,Shamir<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup> 提出了基于身份的密码系统</ins>, 避免了基于PKI的传统公钥密码系统中对证书的使用和验证过程。<strong>用户的公钥是公开、可以唯一确定用户身份的信息即ID</strong>，故不需要查找公钥，即无需公钥证书的存在。</p>
+<p><ins>84年,Shamir<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> 提出了基于身份的密码系统</ins>, 避免了基于PKI的传统公钥密码系统中对证书的使用和验证过程。<strong>用户的公钥是公开、可以唯一确定用户身份的信息即ID</strong>，故不需要查找公钥，即无需公钥证书的存在。</p>
 <ul>
 <li>但存在私钥托管的问题<ul>
 <li>由 <strong>可信第三方PKG(private key generation)</strong> 利用它掌握的系统唯一主密钥产生</li>
@@ -6000,7 +6000,7 @@
 </ul>
 </li>
 </ul>
-<p>CL-PKC正是解决上述问题，由Al-Riyami和Paterson<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">2</a></sup> 于2003年而提出 (称为AP定义)</p>
+<p>CL-PKC正是解决上述问题，由Al-Riyami和Paterson<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 于2003年而提出 (称为AP定义)</p>
 <p><strong>在CL-PKC中，存在KGC，它拥有系统的主密钥</strong></p>
 <ul>
 <li>KGC 的作用是根据用户的身份和系统主密钥计算 <strong>用户的部分私钥</strong>，并安全地传送给用户</li>
@@ -6074,13 +6074,13 @@
 <p>在普通无证书签名基础上，就可以研究特殊性质的无证书签名(如: 群/环签名、聚合签名、代理签名、不可否认签名等)</p>
 <h3 id="clas">无证书聚合签名(CLAS)</h3>
 <blockquote>
-<p>聚合签名<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">6</a></sup> : 把n个来自不同签名者对n个不同消息的签名，通过一种 <strong>有效算法</strong> 压缩成单个签名。持有聚合签名的验证人可通过 <strong>确定的验证算法</strong> 检验其有效性, 判定n个签名人对这n条消息的分别认可</p>
+<p>聚合签名<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> : 把n个来自不同签名者对n个不同消息的签名，通过一种 <strong>有效算法</strong> 压缩成单个签名。持有聚合签名的验证人可通过 <strong>确定的验证算法</strong> 检验其有效性, 判定n个签名人对这n条消息的分别认可</p>
 <ul>
 <li>可以有效地减少签名验证的计算代价和通信开销</li>
 </ul>
 </blockquote>
 <p>涉及KGC、an aggregate signature generator、 set <span class="arithmatex">\(\mathbb{U}\)</span> of n users <span class="arithmatex">\(U_1,...,U_n\)</span></p>
-<p><strong>算法描述：</strong> （来自文献<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">3</a></sup>）</p>
+<p><strong>算法描述：</strong> （来自文献<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>）</p>
 <ol>
 <li>Setup: <span class="arithmatex">\((params, msk) \leftarrow \lambda\)</span> (由KGC执行)</li>
 <li>Partial-Private-Key-Extract：<span class="arithmatex">\(D_i \leftarrow (ID_i, params, msk)\)</span> (由KGC执行)</li>
@@ -6101,7 +6101,7 @@
 <li>Aggregate Verify: <span class="arithmatex">\(T/F \leftarrow (\Delta, \mathbb{U}, ID_i, pk_i, \sigma)\)</span></li>
 </ol>
 <details class="warning">
-<summary>另外（参考文献<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">7</a></sup>）</summary>
+<summary>另外（参考文献<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>）</summary>
 <p>将CLAS应用于Internet of Vehicles并在standard model进行安全性分析，而非ROM下 （利用双线性映射）</p>
 <p><strong>System model模型图如下：</strong></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/Iov_clas.jpg" data-desc-position="bottom"><img alt="" src="../assets/Iov_clas.jpg"></a></p>
@@ -6144,31 +6144,31 @@
 <p>签密把公钥加密和数字签名结合在一起</p>
 <p>In cryptography, <strong>signcryption</strong> is a public-key primitive that simultaneously performs the functions of both digital signature and encryption</p>
 </blockquote>
-<p>在文献<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">4</a></sup>中对 传统的“先签名后加密”的方式进行优化，并提出 <strong>签密</strong></p>
+<p>在文献<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>中对 传统的“先签名后加密”的方式进行优化，并提出 <strong>签密</strong></p>
 <p>于是就出现了基于 <strong>无证书签密</strong> 等相关研究</p>
 <div class="footnote">
 <hr>
 <ol>
+<li id="fn:1">
+<p>张福泰,孙银霞,张磊,耿曼曼,李素娟.无证书公钥密码体制研究.软件学报,2011,22(6):1316-1332&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
 <li id="fn:2">
-<p>Shamir A. Identity-Based cryptosystems and signature schemes. In: Blakely GR, Chaum D, eds. Advances in Cryptology-Crypto’84. LNCS 196. Heidelberg: Springer-Verlag, 1985. 47−53.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Shamir A. Identity-Based cryptosystems and signature schemes. In: Blakely GR, Chaum D, eds. Advances in Cryptology-Crypto’84. LNCS 196. Heidelberg: Springer-Verlag, 1985. 47−53.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p>Al-Riyami SS, Paterson KG. Certificateless public key cryptography. In: Laih CS, ed. Proc. of the ASIACRYPT 2003. LNCS 2894, Berlin: Springer-Verlag, 2003. 452−473&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-<li id="fn:5">
-<p>Zhang, Lei, and Futai Zhang. "A new certificateless aggregate signature scheme." Computer Communications 32.6 (2009): 1079-1085.&nbsp;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 3 in the text">↩</a></p>
-</li>
-<li id="fn:7">
-<p>ZHENG Y L. Digital signcryption or how to achieve cost （signature &amp; encryption） ≪ cost （signature） +cost （encryption）［C］//Proceedings of the 17<sup>th</sup> Annual International Cryptology Conference on Advances in Cryptology. New York，USA：ACM Press，1997：165-179&nbsp;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 4 in the text">↩</a></p>
-</li>
-<li id="fn:1">
-<p>张福泰,孙银霞,张磊,耿曼曼,李素娟.无证书公钥密码体制研究.软件学报,2011,22(6):1316-1332&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 5 in the text">↩</a></p>
+<p>Al-Riyami SS, Paterson KG. Certificateless public key cryptography. In: Laih CS, ed. Proc. of the ASIACRYPT 2003. LNCS 2894, Berlin: Springer-Verlag, 2003. 452−473&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 <li id="fn:4">
-<p>Boneh D, Gentry C, Lynn B, Shacham H. Aggregate and verifiably encrypted signatures from bilinear maps. In: Biham E, ed. Proc. of the EUROCRPYT 2003. LNCS2656, Heidelberg: Springer-Verlag, 2003. 416-432. [doi: 10.1007/3-540-39200-9_26]&nbsp;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 6 in the text">↩</a></p>
+<p>Boneh D, Gentry C, Lynn B, Shacham H. Aggregate and verifiably encrypted signatures from bilinear maps. In: Biham E, ed. Proc. of the EUROCRPYT 2003. LNCS2656, Heidelberg: Springer-Verlag, 2003. 416-432. [doi: 10.1007/3-540-39200-9_26]&nbsp;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>Zhang, Lei, and Futai Zhang. "A new certificateless aggregate signature scheme." Computer Communications 32.6 (2009): 1079-1085.&nbsp;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
 </li>
 <li id="fn:6">
-<p>Deng, Lunzhi, et al. "Certificateless Aggregate Signature Scheme With Security Proofs in the Standard Model Suitable for Internet of Vehicles." IEEE Internet of Things Journal (2024).&nbsp;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 7 in the text">↩</a></p>
+<p>Deng, Lunzhi, et al. "Certificateless Aggregate Signature Scheme With Security Proofs in the Standard Model Suitable for Internet of Vehicles." IEEE Internet of Things Journal (2024).&nbsp;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:7">
+<p>ZHENG Y L. Digital signcryption or how to achieve cost （signature &amp; encryption） ≪ cost （signature） +cost （encryption）［C］//Proceedings of the 17<sup>th</sup> Annual International Cryptology Conference on Advances in Cryptology. New York，USA：ACM Press，1997：165-179&nbsp;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">↩</a></p>
 </li>
 </ol>
 </div>
