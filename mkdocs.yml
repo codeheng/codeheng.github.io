@@ -77,6 +77,7 @@ nav:
     - Exam:
       - 金监管: core_knowledge/exam/RFRA-CS.md
       - 金融经济: core_knowledge/exam/financial_economics.md
+      - 面试: core_knowledge/exam/interview.md
 
   - 🔐安全:
     - security_etc/index.md
