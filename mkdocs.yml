@@ -77,8 +77,7 @@ nav:
     - Exam:
       - 金监管: core_knowledge/exam/RFRA-CS.md
       - 金融经济: core_knowledge/exam/financial_economics.md
-      - 面试: core_knowledge/exam/interview.md
-
+  
   - 🔐安全:
     - security_etc/index.md
     - CS161:
@@ -183,11 +182,12 @@ nav:
     - 2025年度总结: life/2025/2025final.md
     - 2026:
       - 上半年: life/2026/2026_first.md
+      - 毕业记录: life/2026/2026_graduation.md
   
   - 💪Workout:
     - workout/index.md
     - Zone 2: workout/zone2.md
-    - 血压: workout/blood_pressure.md
+    - 血压和血糖: workout/bp_bs.md
     - 饮食: workout/food.md
     - 健身记录: workout/records.md
     - 健身动作: workout/fitness_moves.md
