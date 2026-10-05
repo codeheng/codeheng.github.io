@@ -7433,17 +7433,17 @@ PONG
 <details class="example">
 <summary>示例</summary>
 <p><strong>配置文件</strong>：</p>
-<div class="highlight"><pre><span></span><code>spring:
-redis:
-    host: 127.0.0.1
-    port: 5379
-    # password: 123 本redis中并未设置密码
-    lettuce:
-    pool:
-        max-active: 8  #最大连接
-        max-idle: 8   #最大空闲连接
-        min-idle: 0   #最小空闲连接
-        max-wait: 100ms #连接等待时间
+<div class="highlight"><pre><span></span><code><span class="nt">spring</span><span class="p">:</span>
+<span class="nt">redis</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5379</span>
+<span class="w">    </span><span class="c1"># password: 123 本redis中并未设置密码</span>
+<span class="w">    </span><span class="nt">lettuce</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pool</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max-active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span><span class="w">  </span><span class="c1">#最大连接</span>
+<span class="w">        </span><span class="nt">max-idle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span><span class="w">   </span><span class="c1">#最大空闲连接</span>
+<span class="w">        </span><span class="nt">min-idle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">   </span><span class="c1">#最小空闲连接</span>
+<span class="w">        </span><span class="nt">max-wait</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span><span class="w"> </span><span class="c1">#连接等待时间</span>
 </code></pre></div>
 <p><strong>测试代码</strong>：</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@SpringBootTest</span>
